@@ -1,0 +1,18 @@
+{
+  "slug": "rlang",
+  "language": "R",
+  "repository": "https://github.com/exercism/xrlang",
+  "active": false,
+  "problems": [
+
+  ],
+  "deprecated": [
+
+  ],
+  "ignored": [
+
+  ],
+  "foregone": [
+
+  ]
+}
