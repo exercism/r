@@ -1,7 +1,7 @@
 {
-  "slug": "rlang",
+  "slug": "r",
   "language": "R",
-  "repository": "https://github.com/exercism/xrlang",
+  "repository": "https://github.com/exercism/xr",
   "active": false,
   "problems": [
 

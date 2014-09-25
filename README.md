@@ -1,4 +1,4 @@
-# xRlang
+# xR
 
 Exercism problems in R
 
