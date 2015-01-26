@@ -1,7 +1,7 @@
 {
   "slug": "r",
   "language": "R",
-  "repository": "https://github.com/exercism/xr",
+  "repository": "https://github.com/morphatic/xr",
   "active": true,
   "problems": [
     "hello-world",
