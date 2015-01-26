@@ -4,15 +4,13 @@
   "repository": "https://github.com/exercism/xr",
   "active": true,
   "problems": [
-    "hello-world"
+    "hello-world",
+    "hello-variables"
   ],
   "deprecated": [
-
   ],
   "ignored": [
-
   ],
   "foregone": [
-
   ]
 }
