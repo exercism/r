@@ -4,7 +4,7 @@ test.hello.variables <- function() {
   filename <- "example.R"
   
   # check for hello-world.R
-  if (file.exists("hello-variables.R")) filename <- "hello-world.R"
+  if (file.exists("hello-variables.R")) filename <- "hello-variables.R"
   
   # load the code to be tested
   source(filename)
