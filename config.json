@@ -5,7 +5,8 @@
   "active": true,
   "problems": [
     "hello-world",
-    "hello-variables"
+    "hello-variables",
+    "operate"
   ],
   "deprecated": [
   ],
