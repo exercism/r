@@ -1,18 +1,17 @@
 {
   "slug": "r",
   "language": "R",
-  "repository": "https://github.com/exercism/xr",
-  "active": false,
+  "repository": "https://github.com/morphatic/xr",
+  "active": true,
   "problems": [
-
+    "hello-world",
+    "hello-variables",
+    "operate"
   ],
   "deprecated": [
-
   ],
   "ignored": [
-
   ],
   "foregone": [
-
   ]
 }
