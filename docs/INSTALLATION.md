@@ -1,23 +1,27 @@
-If R isn't already available on your system download and install the latest binary for your platform from [the R project website](http://cran.r-project.org/).
+## Install the R runtime
+Visit the [CRAN homepage](https://cran.r-project.org/). There you will find download links for Linux, Mac OSX, and Windows. Download and run the installer for your operating system.
 
-## Packages
+If you are using Windows, you may also need to install the [Rtools](https://cran.r-project.org/bin/windows/Rtools/) suite, as some packages may depend on it. Mac users may need to install XCode (particularly its command-line tools) for the same reason.
 
-The [R Package Index](http://cran.r-project.org/web/packages/) contains thousands of packages.
-Pretty much each of them is installable by running `library("packagename")` from within your R code.
+## Install the RStudio IDE
+RStudio is a popular cross-platform integrated development environment (IDE) for programming in R (and also supports other languages like Python, JavaScript, and Markdown). Using RStudio will make writing your code solutions and running tests easier.
 
-## Downloading the Test Runner
+Download and install the [current stable version of RStudio](https://www.rstudio.com/products/rstudio/download/). Or, alternatively, get the [preview version](https://www.rstudio.com/products/rstudio/download/preview/) of an upcoming release.
 
-### Linux/Mac users
+## Install the R packages for running tests
+The test runner for the specs is the [`testthat`](https://github.com/hadley/testthat) library from Hadley Wickham, which is a popular choice for R library authors. We also download the [`devtools`](https://github.com/hadley/devtools) library, which is necessary for some parts of the workflow.
 
-Download the `run_tests` R script, save it to `/usr/local/bin`, and make it executable:
+To install these libraries, type the following in your RStudio console (or wherever you are using R).
 
-```bash
-$ curl https://raw.githubusercontent.com/morphatic/xr/master/bin/run_tests.R -o /usr/local/bin/run_tests
-$ chmod +x /usr/local/bin/run_tests
+
+```{R}
+install.packages("testthat")
+install.packages("devtools")
 ```
 
-### Windows users
+While it is unlikely that you will _need_ to install packages to solve the exercism problems, you may want to bring in a general-purpose utility packages like [`magrittr`](https://github.com/smbache/magrittr) that suit your programming style. To install and load a package like `magrittr`:
 
-1. Download [run_tests.R](https://raw.githubusercontent.com/morphatic/xr/master/bin/run_tests.R) and [run_tests.bat](https://raw.githubusercontent.com/morphatic/xr/master/bin/run_tests.bat)
-1. Save them to `C:\Program Files\R\R-X.X.X\bin` where `X.X.X` refers the version of R you have
-1. Make sure that `C:\Program Files\R\R-X.X.X\bin` has been added to your `PATH` variable. (If you don't know what [a `PATH` variable](http://en.wikipedia.org/wiki/PATH_%28variable%29) is, here's [an easy-to-use `PATH` editor](https://patheditor2.codeplex.com/). You can add the R directory in either the User or System `PATH`.)
+```{R}
+install.packages("magrittr")
+library(magrittr)
+```
