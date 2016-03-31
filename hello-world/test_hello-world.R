@@ -1,3 +1,6 @@
+source('./hello_world.R')
+require(testthat)
+
 test_that("no name", {
   expect_equal(hello_world(), "Hello, World!")
 })
