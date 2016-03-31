@@ -4,7 +4,8 @@
   "repository": "https://github.com/exercism/xr",
   "active": false,
   "problems": [
-    "hello-world"
+    "hello-world",
+    "word-count"
   ],
   "deprecated": [
 
