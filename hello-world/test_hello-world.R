@@ -1,5 +1,5 @@
 source('./hello_world.R')
-require(testthat)
+suppressPackageStartupMessages({ require(testthat) })
 
 test_that("no name", {
   expect_equal(hello_world(), "Hello, World!")
@@ -12,3 +12,5 @@ test_that("sample name", {
 test_that("other sample name", {
   expect_equal(hello_world("Bob"), "Hello, Bob!")
 })
+
+print("All tests passed!")
