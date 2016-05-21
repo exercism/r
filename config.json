@@ -5,7 +5,11 @@
   "checklist_issue": 5,
   "active": false,
   "problems": [
+    "anagram",
+    "bob",
     "hello-world",
+    "luhn",
+    "space-age",
     "word-count"
   ],
   "deprecated": [
