@@ -44,14 +44,14 @@ test_that("asking gibberish", {
 })
 
 test_that("talking forcefully", {
-  input <- "Let&#39;s go make out behind the gym!"
+  input <- "Let's go make out behind the gym!"
   expect_equal(bob(input),
     "Whatever."
   )
 })
 
 test_that("using acronyms in regular speech", {
-  input <- "It&#39;s OK if you don&#39;t want to go to the DMV."
+  input <- "It's OK if you don't want to go to the DMV."
   expect_equal(bob(input),
     "Whatever."
   )
@@ -180,7 +180,8 @@ test_that("ending with whitespace", {
 
 test_that("other whitespace", {
   input <- "
- 	  "
+
+ 	  "
   expect_equal(bob(input),
     "Fine. Be that way!"
   )
