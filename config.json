@@ -4,14 +4,6 @@
   "repository": "https://github.com/exercism/xr",
   "checklist_issue": 5,
   "active": false,
-  "problems": [
-    "anagram",
-    "bob",
-    "hello-world",
-    "luhn",
-    "space-age",
-    "word-count"
-  ],
   "deprecated": [
 
   ],
@@ -21,5 +13,37 @@
   ],
   "foregone": [
 
+  ],
+  "exercises": [
+    {
+      "difficulty": 1,
+      "slug": "anagram",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "bob",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "hello-world",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "luhn",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "space-age",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "word-count",
+      "topics": []
+    }
   ]
 }
