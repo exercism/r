@@ -44,6 +44,11 @@
       "difficulty": 1,
       "slug": "word-count",
       "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "difference-of-squares",
+      "topics": []
     }
   ]
 }
