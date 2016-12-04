@@ -49,6 +49,11 @@
       "difficulty": 1,
       "slug": "difference-of-squares",
       "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "hamming",
+      "topics": []
     }
   ]
 }
