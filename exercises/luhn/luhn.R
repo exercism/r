@@ -17,3 +17,9 @@ checksum <- function() {
 is_valid <- function() {
 
 }
+
+
+# addends returns the vector of numbers that follow the luhn algorithm
+addends <- function(input) {
+
+}
