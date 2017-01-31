@@ -54,6 +54,11 @@
       "difficulty": 1,
       "slug": "hamming",
       "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "leap",
+      "topics": []
     }
   ]
 }
