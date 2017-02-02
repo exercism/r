@@ -64,6 +64,11 @@
       "difficulty": 1,
       "slug": "raindrops",
       "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "sum-of-multiples",
+      "topics": []
     }
   ]
 }
