@@ -54,6 +54,21 @@
       "difficulty": 1,
       "slug": "hamming",
       "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "leap",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "raindrops",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "sum-of-multiples",
+      "topics": []
     }
   ]
 }
