@@ -1,4 +1,4 @@
-source('./hello_world.R')
+source('./hello-world.R')
 suppressPackageStartupMessages({ require(testthat) })
 
 test_that("no name", {
