@@ -79,6 +79,11 @@
       "difficulty": 1,
       "slug": "secret-handshake",
       "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "phone-number",
+      "topics": []
     }
   ]
 }
