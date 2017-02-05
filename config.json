@@ -69,6 +69,16 @@
       "difficulty": 1,
       "slug": "sum-of-multiples",
       "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "grains",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "secret-handshake",
+      "topics": []
     }
   ]
 }
