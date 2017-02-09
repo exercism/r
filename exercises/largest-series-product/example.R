@@ -3,7 +3,7 @@ largestSeriesProduct <- function(digits, span){
   nums <- as.numeric(unlist(strsplit(digits, "")))
   
   if (any(is.na(nums)) || span < 0 || span > length(nums)) {
-    return (-1)
+    stop("Non-numeric characters or span less than digit length")
   }
   
   if (span == 0) {

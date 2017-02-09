@@ -58,7 +58,7 @@ test_that("reports zero if all spans include zero", {
 test_that("rejects span longer than string length", {
   digits <- "123"
   span <- 4
-  expect_equal(largestSeriesProduct(digits, span), -1)
+  expect_error(largestSeriesProduct(digits, span))
 })
 
 # There may be some confusion about whether this should be 1 or error.
@@ -92,19 +92,19 @@ test_that("reports 1 for nonempty string and empty product (0 span)", {
 test_that("rejects empty string and nonzero span", {
   digits <- ""
   span <- 1
-  expect_equal(largestSeriesProduct(digits, span), -1)
+  expect_error(largestSeriesProduct(digits, span))
 })
 
 test_that("rejects invalid character in digits", {
   digits <- "1234a5"
   span <- 2
-  expect_equal(largestSeriesProduct(digits, span), -1)
+  expect_error(largestSeriesProduct(digits, span))
 })
 
 test_that("rejects negative span", {
   digits <- "12345"
   span <- -1
-  expect_equal(largestSeriesProduct(digits, span), -1)
+  expect_error(largestSeriesProduct(digits, span))
 })
 
 print("All tests passed!")
