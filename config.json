@@ -89,6 +89,11 @@
       "difficulty": 1,
       "slug": "sieve",
       "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "largest-series-product",
+      "topics": []
     }
   ]
 }
