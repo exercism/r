@@ -1,0 +1,3 @@
+isPerfect <- function(n){
+  
+}
