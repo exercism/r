@@ -94,6 +94,11 @@
       "difficulty": 1,
       "slug": "largest-series-product",
       "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "scrabble-score",
+      "topics": []
     }
   ]
 }
