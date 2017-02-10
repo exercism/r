@@ -114,6 +114,11 @@
       "difficulty": 1,
       "slug": "rotational-cipher",
       "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "tournament",
+      "topics": []
     }
   ]
 }
