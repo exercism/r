@@ -1,4 +1,4 @@
-source('./is_valid.R')
+source('./luhn.R')
 suppressPackageStartupMessages({ require(testthat) })
 
 test_that("single digit strings can not be valid", {
