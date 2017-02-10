@@ -109,6 +109,11 @@
       "difficulty": 1,
       "slug": "pascals-triangle",
       "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "rotational-cipher",
+      "topics": []
     }
   ]
 }
