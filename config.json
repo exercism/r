@@ -117,6 +117,11 @@
     },
     {
       "difficulty": 1,
+      "slug": "tournament",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
       "slug": "rna-transcription",
       "topics": []
     }
