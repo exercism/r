@@ -1,5 +1,5 @@
 source('./secret-handshake.R')
-suppressPackageStartupMessages({ require(testthat) })
+library(testthat)
 
 test_that("wink for 1", {
   expect_equal(handshake(1), c("wink"))

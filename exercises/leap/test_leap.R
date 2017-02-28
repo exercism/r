@@ -1,5 +1,5 @@
 source('./leap.R')
-suppressPackageStartupMessages({ require(testthat) })
+library(testthat)
 
 test_that("year not divisible by 4: common year", {
   year <- 2015

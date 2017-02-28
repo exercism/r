@@ -1,5 +1,5 @@
 source('./sum_of_multiples.R')
-suppressPackageStartupMessages({ require(testthat) })
+library(testthat)
 
 test_that("Case 1", {
   expect_equal(sum_of_multiples(c(3,5), 1), 0)

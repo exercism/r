@@ -1,5 +1,5 @@
 source('./anagram.R')
-suppressPackageStartupMessages({ require(testthat) })
+library(testthat)
 
 test_that("no matches", {
   subject <- "diaper"

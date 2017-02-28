@@ -1,5 +1,5 @@
 source('./difference-of-squares.R')
-suppressPackageStartupMessages({ require(testthat) })
+library(testthat)
 
 test_that("difference of squares 0", {
   input <- 0

@@ -1,5 +1,5 @@
 source('./hamming.R')
-suppressPackageStartupMessages({ require(testthat) })
+library(testthat)
 
 test_that("identical strands", {
   strand1 <-"A"
