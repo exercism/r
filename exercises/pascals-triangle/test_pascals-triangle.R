@@ -1,5 +1,5 @@
 source('./pascals-triangle.R')
-suppressPackageStartupMessages({ require(testthat) })
+library(testthat)
 
 test_that("zero rows", {
   expect_equal(pascalsTriangle(0), list())

@@ -1,5 +1,5 @@
 source('./isogram.R')
-suppressPackageStartupMessages({ require(testthat) })
+library(testthat)
 
 test_that("empty string", {
   word <- ""

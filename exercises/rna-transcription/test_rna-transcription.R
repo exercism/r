@@ -1,5 +1,5 @@
 source('./rna-transcription.R')
-suppressPackageStartupMessages({ require(testthat) })
+library(testthat)
 
 test_that("rna complement of cytosine is guanine", {
   dna <- "C"

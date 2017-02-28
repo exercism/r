@@ -1,5 +1,5 @@
 source('./largest-series-product.R')
-suppressPackageStartupMessages({ require(testthat) })
+library(testthat)
 
 test_that("finds the largest product if span equals length", {
   digits <- "29"

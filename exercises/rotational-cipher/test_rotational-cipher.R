@@ -1,5 +1,5 @@
 source('./rotational-cipher.R')
-suppressPackageStartupMessages({ require(testthat) })
+library(testthat)
 
 test_that("rotate a by 1", {
   text <- "a"

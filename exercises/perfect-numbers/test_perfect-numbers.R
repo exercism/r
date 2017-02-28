@@ -1,5 +1,5 @@
 source('./perfect-number.R')
-suppressPackageStartupMessages({ require(testthat) })
+library(testthat)
 
 test_that("first perfect number", {
   n <- 6

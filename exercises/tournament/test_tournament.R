@@ -1,5 +1,5 @@
 source('./tournament.R')
-suppressPackageStartupMessages({ require(testthat) })
+library(testthat)
 
 options(stringsAsFactors = FALSE)
 

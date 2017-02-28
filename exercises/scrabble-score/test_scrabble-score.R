@@ -1,5 +1,5 @@
 source('./scrabble-score.R')
-suppressPackageStartupMessages({ require(testthat) })
+library(testthat)
 
 test_that("lowercase letter", {
   input <- "a"
