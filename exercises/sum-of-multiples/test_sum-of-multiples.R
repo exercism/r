@@ -1,4 +1,4 @@
-source('./sum_of_multiples.R')
+source('./sum-of-multiples.R')
 library(testthat)
 
 test_that("Case 1", {
