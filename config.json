@@ -90,5 +90,10 @@
       "slug": "sieve",
       "topics": []
     }
+    {
+      "difficulty": 1,
+      "slug": "prime-factors",
+      "topics": []
+    }
   ]
 }
