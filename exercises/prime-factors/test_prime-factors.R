@@ -1,5 +1,5 @@
-source('./prime_factors.R')
-suppressPackageStartupMessages({ require(testthat) })
+source('./prime-factors.R')
+suppressPackageStartupMessages({ library(testthat) })
 
 test_that("no factors", {
   number <- 1
