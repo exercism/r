@@ -94,6 +94,46 @@
       "difficulty": 1,
       "slug": "prime-factors",
       "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "largest-series-product",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "scrabble-score",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "perfect-numbers",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "pascals-triangle",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "rotational-cipher",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "tournament",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "rna-transcription",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "isogram",
+      "topics": []
     }
   ]
 }
