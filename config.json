@@ -92,6 +92,11 @@
     },
     {
       "difficulty": 1,
+      "slug": "prime-factors",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
       "slug": "largest-series-product",
       "topics": []
     },

@@ -1,81 +1,69 @@
 source('./luhn.R')
 suppressPackageStartupMessages({ require(testthat) })
 
-test_that("check digit", {
-  input <- 34567
-  expect_equal(check_digit(input),
-    7
-  )
+test_that("single digit strings can not be valid", {
+  input <- "1"
+  expect_equal(is_valid(input), FALSE)
 })
 
-test_that("check digit with input ending in zero", {
-  input <- 91370
-  expect_equal(check_digit(input),
-    0
-  )
+test_that("A single zero is invalid", {
+  input <- "0"
+  expect_equal(is_valid(input), FALSE)
 })
 
-test_that("check addends", {
-  input <- 12121
-  expect_equal(addends(input),
-    c(1,4,1,4,1)
-  )
+test_that("simple valid sin", {
+  input <- " 5 9 "
+  expect_equal(is_valid(input), TRUE)
 })
 
-test_that("check too large addends", {
-  input <- 8631
-  expect_equal(addends(input),
-    c(7,6,6,1)
-  )
+test_that("valid Canadian SIN", {
+  input <- "046 454 286"
+  expect_equal(is_valid(input), TRUE)
 })
 
-test_that("checksum", {
-  input <- 4913
-  expect_equal(checksum(input),
-    22
-  )
+test_that("invalid Canadian SIN", {
+  input <- "046 454 287"
+  expect_equal(is_valid(input), FALSE)
 })
 
-test_that("checksum of larger number", {
-  input <- 201773
-  expect_equal(checksum(input),
-    21
-  )
+test_that("invalid credit card", {
+  input <- "8273 1232 7352 0569"
+  expect_equal(is_valid(input), FALSE)
 })
 
-test_that("check invalid number", {
-  input <- 738
-  expect_equal(is_valid(input),
-    FALSE
-  )
+test_that("valid strings with a non-digit added become invalid", {
+  input <- "046a 454 286"
+  expect_equal(is_valid(input), FALSE)
 })
 
-test_that("check valid number", {
-  input <- 8739567
-  expect_equal(is_valid(input),
-    TRUE
-  )
+test_that("punctuation is not allowed", {
+  input <- "055-444-285"
+  expect_equal(is_valid(input), FALSE)
 })
 
-test_that("create valid number", {
-  input <- 123
-  expect_equal(luhn(input),
-    1230
-  )
+test_that("symbols are not allowed", {
+  input <- "055£ 444$ 285"
+  expect_equal(is_valid(input), FALSE)
 })
 
-test_that("create larger valid number", {
-  input <- 873956
-  expect_equal(luhn(input),
-    8739567
-  )
+test_that("single zero with space is invalid", {
+  input <- " 0"
+  expect_equal(is_valid(input), FALSE)
 })
 
-test_that("create even larger valid number", {
-  input <- 837263756
-  expect_equal(luhn(input),
-    8372637564
-  )
+test_that("lots of zeros are valid", {
+  input <- " 00000"
+  expect_equal(is_valid(input), TRUE)
+})
+
+test_that("another valid sin", {
+  input <- "055 444 285"
+  expect_equal(is_valid(input), TRUE)
+})
+
+test_that("nine doubled is nine", {
+  input <- "091"
+  expect_equal(is_valid(input), TRUE)
 })
 
 print("All tests passed!")

@@ -1,35 +1,23 @@
-# Convert a number to a valid number, if it isn't already.
-luhn <- function(input) {
-  if (is_valid(input)) {
-    return(input)
-  }
-  diff <- (10 - checksum(10*input)) %% 10
-  return(10 * input + diff)
-}
-
-# Get the check digit
-check_digit <- function(input) {
-  as.numeric(substring(input,nchar(input))) 
-}
-
-# Compute the checksum
-checksum <- function(input) {
-  sum(addends(input))
-}
-
 # Determine whether the number is valid.
 is_valid <- function(input) {
-  checksum(input) %% 10 == 0
-}
-
-# addends returns the vector of numbers that follow the luhn algorithm
-addends <- function(input) {
-  check <- check_digit(input)
-  v <- as.numeric(strsplit(as.character(input),"")[[1]])
-  # counting from right double value of every second digit
-  start_seq <- ifelse(length(v) %% 2 == 1, 0, 1)
-  v2 <- replace(v,seq(start_seq,length(v),2),v[seq(start_seq,length(v),2)]*2)
-  v2 <- ifelse(v2 > 9, v2 - 9, v2)
-  replace_vals <- v2[seq(start_seq,length(v),2)]
-  replace(v,seq(start_seq,length(v),2),replace_vals)
+  
+  # Strip spaces, check length & check for invalid characters
+  input_vector <- strsplit(gsub(pattern = " ", replacement = "", input), "")[[1]]
+  if (length(input_vector) < 2 || any(grepl("[^[:digit:]]", input_vector))) {
+    return (FALSE)
+  }
+  
+  # Convert to numeric
+  num_vector <- as.numeric(input_vector)
+  
+  # Double every second digit starting from the right
+  num_vector <- rev(num_vector)
+  num_vector[seq(2,length(num_vector),2)] = num_vector[seq(2,length(num_vector),2)]*2
+  
+  # Subtract 9 if > 9 (can apply to all since no digit can be greater than 9 before doubling)
+  num_vector <- ifelse(num_vector > 9, num_vector - 9, num_vector)
+  
+  # Check checksum is divisible by 10
+  sum(num_vector) %% 10 == 0
+  
 }
