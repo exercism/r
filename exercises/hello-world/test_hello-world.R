@@ -1,5 +1,5 @@
 source('./hello-world.R')
-suppressPackageStartupMessages({ require(testthat) })
+library(testthat)
 
 test_that("no name", {
   expect_equal(hello_world(), "Hello, World!")

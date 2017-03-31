@@ -1,5 +1,5 @@
 source('./luhn.R')
-suppressPackageStartupMessages({ require(testthat) })
+library(testthat)
 
 test_that("single digit strings can not be valid", {
   input <- "1"

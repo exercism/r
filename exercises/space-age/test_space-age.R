@@ -1,5 +1,5 @@
 source('./space-age.R')
-suppressPackageStartupMessages({ require(testthat) })
+library(testthat)
 
 test_that("Age on Earth", {
   seconds <- 1000000000

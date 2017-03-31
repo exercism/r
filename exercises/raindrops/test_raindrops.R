@@ -1,5 +1,5 @@
 source('./raindrops.R')
-suppressPackageStartupMessages({ require(testthat) })
+library(testthat)
 
 test_that("the sound for 1 is 1", {
   number <- 1

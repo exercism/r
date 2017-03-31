@@ -1,5 +1,5 @@
 source('./bob.R')
-suppressPackageStartupMessages({ require(testthat) })
+library(testthat)
 
 test_that("stating something", {
   input <- "Tom-ay-to, tom-aaaah-to."

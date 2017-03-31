@@ -1,5 +1,5 @@
-source('./square.R')
-suppressPackageStartupMessages({ require(testthat) })
+source('./grains.R')
+library(testthat)
 
 test_that("Case 1", {
   expect_equal(square(1), 1)

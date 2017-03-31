@@ -1,5 +1,5 @@
 source('./phone-number.R')
-suppressPackageStartupMessages({ require(testthat) })
+library(testthat)
 
 test_that("cleans the number", {
   expect_equal(parsePhoneNumber("(123) 456-7890"), "1234567890")

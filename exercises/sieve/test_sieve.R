@@ -1,5 +1,5 @@
 source('./sieve.R')
-suppressPackageStartupMessages({ require(testthat) })
+library(testthat)
 
 test_that("no primes under two", {
   expect_equal(sieve(1), c())
