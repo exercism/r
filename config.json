@@ -17,42 +17,7 @@
   "exercises": [
     {
       "difficulty": 1,
-      "slug": "anagram",
-      "topics": []
-    },
-    {
-      "difficulty": 1,
-      "slug": "bob",
-      "topics": []
-    },
-    {
-      "difficulty": 1,
       "slug": "hello-world",
-      "topics": []
-    },
-    {
-      "difficulty": 1,
-      "slug": "luhn",
-      "topics": []
-    },
-    {
-      "difficulty": 1,
-      "slug": "space-age",
-      "topics": []
-    },
-    {
-      "difficulty": 1,
-      "slug": "word-count",
-      "topics": []
-    },
-    {
-      "difficulty": 1,
-      "slug": "difference-of-squares",
-      "topics": []
-    },
-    {
-      "difficulty": 1,
-      "slug": "hamming",
       "topics": []
     },
     {
@@ -62,67 +27,12 @@
     },
     {
       "difficulty": 1,
-      "slug": "raindrops",
+      "slug": "bob",
       "topics": []
     },
     {
       "difficulty": 1,
-      "slug": "sum-of-multiples",
-      "topics": []
-    },
-    {
-      "difficulty": 1,
-      "slug": "grains",
-      "topics": []
-    },
-    {
-      "difficulty": 1,
-      "slug": "secret-handshake",
-      "topics": []
-    },
-    {
-      "difficulty": 1,
-      "slug": "phone-number",
-      "topics": []
-    },
-    {
-      "difficulty": 1,
-      "slug": "sieve",
-      "topics": []
-    },
-    {
-      "difficulty": 1,
-      "slug": "prime-factors",
-      "topics": []
-    },
-    {
-      "difficulty": 1,
-      "slug": "largest-series-product",
-      "topics": []
-    },
-    {
-      "difficulty": 1,
-      "slug": "scrabble-score",
-      "topics": []
-    },
-    {
-      "difficulty": 1,
-      "slug": "perfect-numbers",
-      "topics": []
-    },
-    {
-      "difficulty": 1,
-      "slug": "pascals-triangle",
-      "topics": []
-    },
-    {
-      "difficulty": 1,
-      "slug": "rotational-cipher",
-      "topics": []
-    },
-    {
-      "difficulty": 1,
-      "slug": "tournament",
+      "slug": "hamming",
       "topics": []
     },
     {
@@ -132,7 +42,97 @@
     },
     {
       "difficulty": 1,
+      "slug": "difference-of-squares",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "raindrops",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "grains",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "anagram",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "space-age",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "sum-of-multiples",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "word-count",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "phone-number",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "rotational-cipher",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "scrabble-score",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
       "slug": "isogram",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "perfect-numbers",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "prime-factors",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "sieve",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "largest-series-product",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "luhn",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "secret-handshake",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "pascals-triangle",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "tournament",
       "topics": []
     }
   ]
