@@ -104,7 +104,7 @@ The example solution doesn't have to be perfect, but should pass all of the test
 The test suite should be derived from the respective `x-common/exercises/<exercise-name>/canonical-data.json` and comply to some formatting and coding standards (to get an idea you can look at some of the existing tests).
 
 ### Running tests
-To run the tests for an exercise, simply run `source('test_<exercise-name>.R')` from within the exercise's directory (note that when testing locally you'll need to comment out the first line of `test_<exercise-name>.R` which sources (the empty) `<exercise-name>.R` and replace this with `source('example.R')`)
+To run the tests for an exercise, simply run `source('test_<exercise-name>.R')` from within the exercise's directory. Note that when testing locally you'll need to (temporarily) replace the first line of `test_<exercise-name>.R` (which sources `<exercise-name>.R`) with `source('example.R')`.
 
 The example solutions must pass the tests without failures. Additionally the tests should not run longer than a few seconds.
 
@@ -113,7 +113,7 @@ In order to be accepted by Travis-CI, every exercise must be registered in `conf
 ### Style guide
 Given that there are a variety of R style guides in circulation, at this stage we don't enforce a particular style guide, but our preference is to have R code in this repository follow Hadley Wickham's [R style guide](http://adv-r.had.co.nz/Style.html).
 
-You are thus encouraged to run [`lintr`](https://github.com/jimhester/lintr) on your R scripts before opening a [pull request](#writing-a-pull-request) in order to check that your code adheres to the style guide before submitting it for review.
+You are thus encouraged to run [`lintr`](https://github.com/jimhester/lintr) on your R scripts before opening a [pull request](#writing-a-pull-request) in order to check that your code adheres to this style guide before submitting it for review.
 
 ## License
 
