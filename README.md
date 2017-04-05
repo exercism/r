@@ -7,7 +7,7 @@ Exercism problems in R
 - [Asking for help](#asking-for-help)
 - [How to contribute](#how-to-contribute)
   * [Reporting or fixing bugs](#reporting-or-fixing-bugs)
-  * [Reviewing issues and pull requests](#reviewing-issues-and-pull)
+  * [Reviewing issues and pull requests](#reviewing-issues-and-pull-requests)
   * [Porting exercises](#porting-exercises)
   * [Updating an exercise test suite](#updating-an-exercise-test-suite)
 - [Repository structure and conventions](#repository-structure-and-conventions)
@@ -22,11 +22,9 @@ Exercism problems in R
 - [R Style Guide](#style-guide)
 
 ### Asking for help
-When in doubt just ask!
+If stuck or in doubt just ask! We try our best to be friendly and helpful, so don't be shy!
 - [gitter support](https://gitter.im/exercism/support): general questions about exercism, setup, track content etc.
 - [gitter dev](https://gitter.im/exercism/dev): technical questions.
-
-We aim to be as friendly and helpful as possible, so don't be afraid or shy!
 
 ### How to contribute
 As a first step we recommend you read the [contributing guide](https://github.com/exercism/x-common/blob/master/CONTRIBUTING.md).
@@ -96,23 +94,23 @@ To report a bug you should [create an issue](https://help.github.com/articles/cr
 ### Writing a pull request
 To fix a bug you should [create a pull request from a fork](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) [here](https://github.com/exercism/xr/pulls). See also [here](https://github.com/exercism/x-common/blob/master/CONTRIBUTING.md#git-basics) for more information.
 
-### Development Dependencies
-You'll need to have a recent version of [R](https://cran.r-project.org/) installed on your system, as well as the `testthat` package (run `install.packages('testthat') from the R console to install it`) in order to run tests.
+### Development dependencies
+You'll need to have a recent version of [R](https://cran.r-project.org/) installed on your system, as well as the `testthat` package (run `install.packages('testthat')` from the R console to install) in order to run tests.
 
-### Example Solution
+### Example solution
 The example solution doesn't have to be perfect, but should pass all of the tests and ideally also strive for a healthy balance of human readability and computational efficiency.
 
-### Test Suite
+### Test suite
 The test suite should be derived from the respective `x-common/exercises/<exercise-name>/canonical-data.json` and comply to some formatting and coding standards (to get an idea you can look at some of the existing tests).
 
-### Running Tests
+### Running tests
 To run the tests for an exercise, simply run `source('test_<exercise-name>.R')` from within the exercise's directory (note that when testing locally you'll need to comment out the first line of `test_<exercise-name>.R` which sources (the empty) `<exercise-name>.R` and replace this with `source('example.R')`)
 
 The example solutions must pass the tests without failures. Additionally the tests should not run longer than a few seconds.
 
 In order to be accepted by Travis-CI, every exercise must be registered in `config.json`.
 
-### Style Guide
+### Style guide
 Given that there are a variety of R style guides in circulation, at this stage we don't enforce a particular style guide, but our preference is to have R code in this repository follow Hadley Wickham's [R style guide](http://adv-r.had.co.nz/Style.html).
 
 You are thus encouraged to run [`lintr`](https://github.com/jimhester/lintr) on your R scripts before opening a [pull request](#writing-a-pull-request) in order to check that your code adheres to the style guide before submitting it for review.
@@ -125,4 +123,3 @@ Copyright (c) 2014 Katrina Owen, _@kytrinyx.com
 
 ## R icon
 The R logo was created by [Hadley Wickham](https://github.com/hadley) and others at [RStudio](https://www.rstudio.com/). The original file is licensed under version [4.0 of the Creative Commons Attribution-Share Alike license](https://creativecommons.org/licenses/by-sa/4.0/). We have adapted it, changing the colour scheme, for use on Exercism.
-
