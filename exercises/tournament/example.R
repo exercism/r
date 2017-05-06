@@ -21,11 +21,8 @@ tournament <- function(input) {
     }
     
   }
-  results$MP <- as.numeric(results$MP)
-  results$W <- as.numeric(results$W)
-  results$D <- as.numeric(results$D)
-  results$L <- as.numeric(results$L)
-  results$P <- as.numeric(results$P)
+  
+  results[,2:6] <- sapply(results[,2:6], as.numeric)
   
   output <- aggregate(.~Team, results[-1,], sum)
   output <- output[order(-output$P,output$Team), ]
