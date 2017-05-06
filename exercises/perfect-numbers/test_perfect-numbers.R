@@ -1,4 +1,4 @@
-source('./perfect-number.R')
+source('./perfect-numbers.R')
 library(testthat)
 
 test_that("first perfect number", {
