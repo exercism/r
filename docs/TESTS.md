@@ -12,7 +12,7 @@ You can check that the package is installed successfully by running:
 
 # Running Tests
 
-Each problem will have a script named something like `test_<exercise-name>.R` (e.g. `test_hello-world.R`). 
+Each problem will have a script named `test_<exercise-name>.R` (e.g. `test_hello-world.R`). 
 
 To run the tests for an exercise, simply execute this R script.
 
@@ -23,3 +23,5 @@ Note however, that the `source()` command on the first line of the test script w
 - update the first line of the test script e.g. `source('exercism/R/hello-world/test_hello-world.R')`
 
 If you prefer, you can also run the tests from the command line with `Rscript path_to_exercise_directory/test_<exercise-name>.R` (e.g. `Rscript hello-world/test_hello-world.R`)
+
+Another convenient way to run these tests is to make use of [testthat's `auto_test` function](https://www.rdocumentation.org/packages/testthat/topics/auto_test). Since exercism code and tests are located in the same folder, use this same path for both the `code_path` and `test_path` parameters. After running `auto_test()`, the tests for the exercise will be executed automatically each time you update/save your R code for the exercise. This can help facilitate rapid iteration while working on your solution.
