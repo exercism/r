@@ -84,3 +84,5 @@ test_that("disallow second strand longer", {
   strand2 <- "AGTG"
   expect_error(hamming(strand1, strand2))
 })
+
+print("All tests passed!")
