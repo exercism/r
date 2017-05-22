@@ -1,4 +1,4 @@
-source('./grains.R')
+source("./grains.R")
 library(testthat)
 
 test_that("Case 1", {

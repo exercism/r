@@ -1,4 +1,4 @@
-source('./space-age.R')
+source("./space-age.R")
 library(testthat)
 
 test_that("Age on Earth", {
@@ -33,7 +33,7 @@ test_that("Age on Saturn", {
 
 test_that("Age on Uranus", {
   seconds <- 3210123456
-  expect_equal(space_age(seconds,"uranus"), 1.21)
+  expect_equal(space_age(seconds, "uranus"), 1.21)
 })
 
 test_that("Age on Neptune", {

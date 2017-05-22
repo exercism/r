@@ -1,4 +1,4 @@
-source('./rotational-cipher.R')
+source("./rotational-cipher.R")
 library(testthat)
 
 test_that("rotate a by 1", {

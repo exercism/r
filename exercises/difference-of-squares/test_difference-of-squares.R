@@ -1,4 +1,4 @@
-source('./difference-of-squares.R')
+source("./difference-of-squares.R")
 library(testthat)
 
 test_that("difference of squares 0", {
@@ -20,4 +20,3 @@ test_that("difference of squares 100", {
   input <- 100
   expect_equal(difference_of_squares(input), 25164150)
 })
-

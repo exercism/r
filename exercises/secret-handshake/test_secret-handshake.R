@@ -1,4 +1,4 @@
-source('./secret-handshake.R')
+source("./secret-handshake.R")
 library(testthat)
 
 test_that("wink for 1", {

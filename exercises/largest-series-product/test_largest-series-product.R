@@ -1,4 +1,4 @@
-source('./largest-series-product.R')
+source("./largest-series-product.R")
 library(testthat)
 
 test_that("finds the largest product if span equals length", {

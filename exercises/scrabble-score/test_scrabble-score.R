@@ -1,4 +1,4 @@
-source('./scrabble-score.R')
+source("./scrabble-score.R")
 library(testthat)
 
 test_that("lowercase letter", {
