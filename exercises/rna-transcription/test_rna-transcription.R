@@ -1,4 +1,4 @@
-source('./rna-transcription.R')
+source("./rna-transcription.R")
 library(testthat)
 
 test_that("rna complement of cytosine is guanine", {

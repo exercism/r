@@ -1,4 +1,4 @@
-source('./luhn.R')
+source("./luhn.R")
 library(testthat)
 
 test_that("single digit strings can not be valid", {

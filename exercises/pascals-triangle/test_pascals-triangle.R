@@ -1,4 +1,4 @@
-source('./pascals-triangle.R')
+source("./pascals-triangle.R")
 library(testthat)
 
 test_that("zero rows", {

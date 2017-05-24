@@ -1,4 +1,4 @@
-source('./hello-world.R')
+source("./hello-world.R")
 library(testthat)
 
 test_that("no name", {

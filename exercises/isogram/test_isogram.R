@@ -1,4 +1,4 @@
-source('./isogram.R')
+source("./isogram.R")
 library(testthat)
 
 test_that("empty string", {

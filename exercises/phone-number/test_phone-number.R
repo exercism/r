@@ -1,4 +1,4 @@
-source('./phone-number.R')
+source("./phone-number.R")
 library(testthat)
 
 test_that("cleans the number", {

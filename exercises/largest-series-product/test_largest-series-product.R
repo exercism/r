@@ -1,4 +1,4 @@
-source('./largest-series-product.R')
+source("./largest-series-product.R")
 library(testthat)
 
 test_that("finds the largest product if span equals length", {
@@ -66,13 +66,13 @@ test_that("rejects span longer than string length", {
 #   There is one 0-character string contained in the empty string.
 #   That's the empty string itself.
 #   The empty product is 1 (the identity for multiplication).
-#   Therefore LSP('', 0) is 1.
-#   It's NOT the case that LSP('', 0) takes max of an empty list.
+#   Therefore LSP("", 0) is 1.
+#   It's NOT the case that LSP("", 0) takes max of an empty list.
 #   So there is no error.
-# Compare against LSP('123', 4):
-#   There are zero 4-character strings in '123'.
-#   So LSP('123', 4) really DOES take the max of an empty list.
-#   So LSP('123', 4) errors and LSP('', 0) does NOT.
+# Compare against LSP("123", 4):
+#   There are zero 4-character strings in "123".
+#   So LSP("123", 4) really DOES take the max of an empty list.
+#   So LSP("123", 4) errors and LSP("", 0) does NOT.
 
 test_that("reports 1 for empty string and empty product (0 span)", {
   digits <- ""
@@ -80,7 +80,7 @@ test_that("reports 1 for empty string and empty product (0 span)", {
   expect_equal(largestSeriesProduct(digits, span), 1)
 })
 
-# As above, there is one 0-character string in '123'.
+# As above, there is one 0-character string in "123".
 # So again no error. It's the empty product, 1.
 
 test_that("reports 1 for nonempty string and empty product (0 span)", {

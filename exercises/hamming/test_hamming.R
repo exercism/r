@@ -1,4 +1,4 @@
-source('./hamming.R')
+source("./hamming.R")
 library(testthat)
 
 test_that("identical strands", {
