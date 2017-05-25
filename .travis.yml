@@ -1,6 +1,14 @@
 ---
-language: bash
+language: R
+cache: packages
+r:
+  - oldrel
+  - release
+  - devel
+install:
+- R -e "install.packages('testthat')"
+- R -e "install.packages('jsonlite')"
 script:
 - bin/fetch-configlet
 - bin/configlet .
-sudo: false
+- R -e "source('bin/run_tests.R')"
