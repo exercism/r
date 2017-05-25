@@ -85,18 +85,6 @@ test_that("talking forcefully", {
                  "Whoa, chill out!")
   })
 
-test_that("shouting with umlauts", {
-  input <- "ÜMLÄÜTS!"
-  expect_equal(bob(input),
-               "Whoa, chill out!")
-})
-
-test_that("calmly speaking with umlauts", {
-  input <- "ÜMLäÜTS!"
-  expect_equal(bob(input),
-               "Whatever.")
-})
-
 test_that("shouting with no exclamation mark", {
   input <- "I HATE YOU"
   expect_equal(bob(input),
