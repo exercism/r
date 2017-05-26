@@ -8,6 +8,8 @@ r:
 install:
 - R -e "install.packages('testthat')"
 - R -e "install.packages('jsonlite')"
+- R -e "install.packages('lintr')"
+- R -e "install.packages('magrittr')"
 script:
 - bin/fetch-configlet
 - bin/configlet .

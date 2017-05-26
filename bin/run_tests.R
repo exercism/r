@@ -1,5 +1,6 @@
 library(jsonlite)
 library(testthat)
+library(magrittr)
 
 test_exercise <- function(exercise) {
   
