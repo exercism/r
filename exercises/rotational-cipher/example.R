@@ -1,22 +1,22 @@
 rotate <- function(text, key) {
   
   # Split string into character vector
-  textVector <- unlist(strsplit(text, ""))
+  text_vector <- unlist(strsplit(text, ""))
   
   # Record which characters are upper case
-  upperCase <- toupper(textVector) == textVector
+  upper_case <- toupper(text_vector) == text_vector
   
   # Rotate letter characters
-  rotationIndex <- (match(tolower(textVector), letters)+key-1) %% 26 + 1
-  rotatedVector <- letters[rotationIndex]
+  rotation_index <- (match(tolower(text_vector), letters) + key - 1) %% 26 + 1
+  rotated_vector <- letters[rotation_index]
   
   # Restore non-letter characters in rotated character vector
-  rotatedVector[is.na(rotatedVector)] <- textVector[is.na(rotatedVector)]
+  rotated_vector[is.na(rotated_vector)] <- text_vector[is.na(rotated_vector)]
   
   # Restore upper case characters
-  rotatedVector[upperCase] <- toupper(rotatedVector[upperCase])
+  rotated_vector[upper_case] <- toupper(rotated_vector[upper_case])
   
   # Collapse character vector into string
-  paste(rotatedVector, collapse = "")
+  paste(rotated_vector, collapse = "")
   
 }

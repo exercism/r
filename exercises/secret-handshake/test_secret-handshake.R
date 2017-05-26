@@ -34,11 +34,13 @@ test_that("reversing no actions still gives no actions", {
 })
 
 test_that("all possible actions", {
-  expect_equal(handshake(15), c("wink", "double blink", "close your eyes", "jump"))
+  expect_equal(handshake(15), 
+               c("wink", "double blink", "close your eyes", "jump"))
 })
 
 test_that("reverse all possible actions", {
-  expect_equal(handshake(31), c("jump", "close your eyes", "double blink", "wink"))
+  expect_equal(handshake(31), 
+               c("jump", "close your eyes", "double blink", "wink"))
 })
 
 test_that("do nothing for zero", {

@@ -1,3 +1,3 @@
-pascalsTriangle <- function(n) {
-  
+pascals_triangle <- function(n) {
+
 }

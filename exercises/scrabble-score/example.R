@@ -1,4 +1,4 @@
-scrabbleScore <- function(input){
+scrabble_score <- function(input){
   
   # Letter                           Value
   # A, E, I, O, U, L, N, R, S, T       1
@@ -9,11 +9,12 @@ scrabbleScore <- function(input){
   # J, X                               8
   # Q, Z                               10
   
-  letterScore <- c(1,3,3,2,1,4,2,4,1,8,5,1,3,1,1,3,10,1,1,1,1,4,4,8,4,10)
-  names(letterScore) <- LETTERS
+  letter_score <- c(1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 
+                    1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10)
+  names(letter_score) <- LETTERS
   
   chars <- unlist(strsplit(input, ""))
   
-  sum(letterScore[toupper(chars)])
+  sum(letter_score[toupper(chars)])
   
 }

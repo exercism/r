@@ -11,21 +11,27 @@ tournament <- function(input) {
     }
     else {
       # Process result
-      if (match[3]=="draw") {
-        results <- rbind(results, c(match[1], 1, 0, 1, 0, 1), c(match[2], 1, 0, 1, 0, 1))
-      } else if (match[3]=="win") {
-        results <- rbind(results, c(match[1], 1, 1, 0, 0, 3), c(match[2], 1, 0, 0, 1, 0))
+      if (match[3] == "draw") {
+        results <- rbind(results, 
+                         c(match[1], 1, 0, 1, 0, 1), 
+                         c(match[2], 1, 0, 1, 0, 1))
+      } else if (match[3] == "win") {
+        results <- rbind(results, 
+                         c(match[1], 1, 1, 0, 0, 3), 
+                         c(match[2], 1, 0, 0, 1, 0))
       } else {
-        results <- rbind(results, c(match[2], 1, 1, 0, 0, 3), c(match[1], 1, 0, 0, 1, 0))
+        results <- rbind(results, 
+                         c(match[2], 1, 1, 0, 0, 3), 
+                         c(match[1], 1, 0, 0, 1, 0))
       }
     }
     
   }
   
-  results[,2:6] <- sapply(results[,2:6], as.numeric)
+  results[, 2:6] <- sapply(results[, 2:6], as.numeric)
   
-  output <- aggregate(.~Team, results[-1,], sum)
-  output <- output[order(-output$P,output$Team), ]
+  output <- aggregate(.~Team, results[-1, ], sum)
+  output <- output[order(-output$P, output$Team), ]
   row.names(output) <- 1:nrow(output)
   output
   

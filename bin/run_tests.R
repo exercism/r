@@ -1,16 +1,7 @@
-#!/usr/bin/Rscript
-
 library(jsonlite)
 library(testthat)
 
-config <- jsonlite::fromJSON("config.json")
-
-temp_dir <- "temp" 
-
-dir.create(temp_dir)
-setwd(temp_dir)
-
-for (exercise in config$exercises$slug) {
+test_exercise <- function(exercise) {
   
   solution_file <- paste0(exercise, ".R")
   test_file <- paste0("test_", exercise, ".R")
@@ -29,5 +20,15 @@ for (exercise in config$exercises$slug) {
   
 }
 
+# create temp directory for testing purposes
+temp_dir <- "temp" 
+dir.create(temp_dir)
+setwd(temp_dir)
+
+# read config and test all exercises
+config <- fromJSON(file.path("..", "config.json"))
+lapply(config$exercises$slug, test_exercise)
+
+# clean up
 setwd(dir = "../")
 unlink("temp", recursive = TRUE)
