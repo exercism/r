@@ -1,5 +1,8 @@
 # xR
 
+[![Build Status](https://travis-ci.org/exercism/xr.svg?branch=master)](https://travis-ci.org/exercism/xr)
+[![Gitter](https://badges.gitter.im/exercism/dev.svg)](https://gitter.im/exercism/dev?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+
 Exercism problems in R
 
 ## Contributing Guide
@@ -52,8 +55,19 @@ A general description of all the files and directories can be found [here](https
 
 #### Directory structure
 ```bash
+├── .gitignore
+├── .travis.yml
+├── .github
+│ └── stale.yml
+├── config.json
+├── README.md
+└── LICENSE
+├── img
+│ └── icon.png
 ├── bin
-│ └── fetch‐configlet
+│ ├── fetch‐configlet
+│ ├── run_lints.R
+│ └── run_tests.R
 ├── docs
 │ ├── ABOUT.md
 │ ├── INSTALLATION.md
@@ -62,31 +76,24 @@ A general description of all the files and directories can be found [here](https
 │ └── TESTS.md
 └── exercises
   ├── TRACK_HINTS.md
-  └── <exercise-name>
+  ├── <exercise-name>
   │ ├── <exercise-name>.R
-  │ └── example.R
+  │ ├── example.R
   │ └── test_<exercise-name>.R
-  └── <exercise-name>
+  ├── <exercise-name>
   │ ├── <exercise-name>.R
-  │ └── example.R
+  │ ├── example.R
   │ └── test_<exercise-name>.R
   └── ...
-└── img
-  └── icon.png
-├── .gitignore
-├── .travis.yml
-├── LICENSE
-├── README.md
-└── config.json
 ```
 - `config.json`: Note that every exercise has to be registered here, with a unique name and a difficulty. The sequence order in this file determines the default order in which the exercises are fetched.
 
 #### Exercise structure
 Each exercise has the following structure:
-- `HINTS.md` is an optional file containing instructions and/or hints. It is used together with the respective `description.md` for the exercise from [x-common](https://github.com/exercism/x-common) to build the `README.md` file.
 - `<exercise-name>.R` usually contains an empty function declaration, as a starting point for the required solution.
 - `example.R` is the source code of the sample solution.
 - `test_<exercise-name>.R` is the [test suite](#test-suite).
+- `HINTS.md` is an optional file containing instructions and/or hints. It is used together with the respective `description.md` for the exercise from [x-common](https://github.com/exercism/x-common) to build the `README.md` file.
 
 ### Writing an issue
 To report a bug you should [create an issue](https://help.github.com/articles/creating-an-issue/) [here](https://github.com/exercism/xr/issues).
@@ -104,16 +111,28 @@ The example solution doesn't have to be perfect, but should pass all of the test
 The test suite should be derived from the respective `x-common/exercises/<exercise-name>/canonical-data.json` and comply to some formatting and coding standards (to get an idea you can look at some of the existing tests).
 
 ### Running tests
-To run the tests for an exercise, simply run `source('test_<exercise-name>.R')` from within the exercise's directory. Note that when testing locally you'll need to (temporarily) replace the first line of `test_<exercise-name>.R` (which sources `<exercise-name>.R`) with `source('example.R')`.
+To run the tests for just a single exercise, run `source('test_<exercise-name>.R')` from within the exercise's directory. Note that when testing locally you'll need to replace the first line of `test_<exercise-name>.R` (which sources `<exercise-name>.R`) with `source('example.R')`. If you do this, remember to change it back before submitting any pull requests.
+
+Alternatively, to run tests for all exercises at once, simply run `source("bin/run_tests.R")`.
 
 The example solutions must pass the tests without failures. Additionally the tests should not run longer than a few seconds.
 
-In order to be accepted by Travis-CI, every exercise must be registered in `config.json`.
+In order to be accepted by Travis-CI, each exercise must be registered in `config.json`.
 
 ### Style guide
-Given that there are a variety of R style guides in circulation, at this stage we don't enforce a particular style guide, but our preference is to have R code in this repository follow Hadley Wickham's [R style guide](http://adv-r.had.co.nz/Style.html).
+There are a variety of R style guides in circulation and opinions on the topic can vary widely which does make it hard to settle on specific standards. Our preference is to have R code in this repository follow Hadley Wickham's [R style guide](http://adv-r.had.co.nz/Style.html).
 
 You are thus encouraged to run [`lintr`](https://github.com/jimhester/lintr) on your R scripts before opening a [pull request](#writing-a-pull-request) in order to check that your code adheres to this style guide before submitting it for review.
+
+Note however that at the moment only the following linting rules are strictly enforced:
+
+- line length should be less than 80 characters
+- objects should not be in camelCase, snake_case is preferred
+- the assignment operator <- should be used
+- all commas should be followed by a space (but not preceded by one)
+- no absolute paths should be used
+
+To perform these specific checks locally, run `source("bin/run_lints.R")`.
 
 ## License
 
