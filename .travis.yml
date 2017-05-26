@@ -12,3 +12,4 @@ script:
 - bin/fetch-configlet
 - bin/configlet .
 - R -e "source('bin/run_tests.R')"
+- R -e "source('bin/run_lints.R')"
