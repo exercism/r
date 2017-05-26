@@ -13,4 +13,4 @@ test_that("other sample name", {
   expect_equal(hello_world("Bob"), "Hello, Bob!")
 })
 
-print("All tests passed!")
+print("All tests passed for exercise: hello-world")

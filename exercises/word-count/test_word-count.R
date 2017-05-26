@@ -67,4 +67,4 @@ test_that("normalize case", {
                      list("go" = 3, "stop" = 2))
 })
 
-print("All tests passed!")
+print("All tests passed for exercise: word-count")

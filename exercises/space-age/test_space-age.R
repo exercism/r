@@ -41,4 +41,4 @@ test_that("Age on Neptune", {
   expect_equal(space_age(seconds, "neptune"), 1.58)
 })
 
-print("All tests passed!")
+print("All tests passed for exercise: space-age")

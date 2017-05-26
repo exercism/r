@@ -61,4 +61,4 @@ test_that("rotate all letters", {
   expect_equal(rotate(text, key), "Gur dhvpx oebja sbk whzcf bire gur ynml qbt.")
 })
 
-print("All tests passed!")
+print("All tests passed for exercise: rotational-cipher")

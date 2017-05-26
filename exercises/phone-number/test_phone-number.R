@@ -41,4 +41,4 @@ test_that("invalid with right number of digits but letters mixed in", {
   expect_equal(parsePhoneNumber("1a2b3c4d5e6f7g8h9i0j"), NULL)
 })
 
-print("All tests passed!")
+print("All tests passed for exercise: phone-number")

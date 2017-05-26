@@ -56,4 +56,4 @@ test_that("entire alphabet available", {
   expect_equal(scrabbleScore(input), 87)
 })
 
-print("All tests passed!")
+print("All tests passed for exercise: scrabble-score")

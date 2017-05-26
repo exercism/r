@@ -20,3 +20,5 @@ test_that("difference of squares 100", {
   input <- 100
   expect_equal(difference_of_squares(input), 25164150)
 })
+
+print("All tests passed for exercise: difference-of-squares")

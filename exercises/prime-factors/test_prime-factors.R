@@ -44,4 +44,4 @@ test_that("factors include a large prime", {
                c(11, 9539, 894119))
 })
 
-print("All tests passed!")
+print("All tests passed for exercise: prime-factors")
