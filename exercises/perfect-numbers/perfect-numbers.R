@@ -1,3 +1,3 @@
-isPerfect <- function(n){
+is_perfect <- function(n){
   
 }

@@ -85,4 +85,4 @@ test_that("disallow second strand longer", {
   expect_error(hamming(strand1, strand2))
 })
 
-print("All tests passed!")
+print("All tests passed for exercise: hamming")

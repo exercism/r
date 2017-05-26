@@ -114,20 +114,6 @@ test_that("eliminates anagrams with the same checksum", {
                c())
 })
 
-test_that("detects unicode anagrams", {
-  subject <- "ΑΒΓ"
-  candidates <- c("ΒΓΑ", "ΒΓΔ", "γβα")
-  expect_equal(anagram(subject, candidates),
-               c("ΒΓΑ", "γβα"))
-})
-
-test_that("eliminates misleading unicode anagrams", {
-  subject <- "ΑΒΓ"
-  candidates <- c("ABΓ")
-  expect_equal(anagram(subject, candidates),
-               c())
-})
-
 test_that("capital word is not own anagram", {
   subject <- "BANANA"
   candidates <- c("Banana")
@@ -142,4 +128,4 @@ test_that("anagrams must use all letters exactly once", {
                c())
 })
 
-print("All tests passed!")
+print("All tests passed for exercise: anagram")

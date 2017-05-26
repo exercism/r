@@ -1,6 +1,6 @@
-isPerfect <- function(n){
+is_perfect <- function(n){
   
-  findFactors <- function(n) {
+  find_factors <- function(n) {
     factors <- c()
     for (i in 2:floor(n^0.5 + 1)) {
       
@@ -17,6 +17,6 @@ isPerfect <- function(n){
     unique(factors)
   }
   
-  sum(findFactors(n)) + 1 == n
+  sum(find_factors(n)) + 1 == n
   
 }

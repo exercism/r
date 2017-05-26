@@ -21,4 +21,4 @@ test_that("year divisible by 400: leap year", {
   expect_equal(leap(year), TRUE)
 })
 
-print("All tests passed!")
+print("All tests passed for exercise: leap")

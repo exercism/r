@@ -41,4 +41,4 @@ test_that("made-up name that is an isogram", {
   expect_equal(is_isogram(word), TRUE)
 })
 
-print("All tests passed!")
+print("All tests passed for exercise: isogram")

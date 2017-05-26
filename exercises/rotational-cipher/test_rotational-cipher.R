@@ -58,7 +58,8 @@ test_that("rotate punctuation", {
 test_that("rotate all letters", {
   text <- "The quick brown fox jumps over the lazy dog."
   key <- 13
-  expect_equal(rotate(text, key), "Gur dhvpx oebja sbk whzcf bire gur ynml qbt.")
+  expect_equal(rotate(text, key), 
+               "Gur dhvpx oebja sbk whzcf bire gur ynml qbt.")
 })
 
-print("All tests passed!")
+print("All tests passed for exercise: rotational-cipher")

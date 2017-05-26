@@ -1,3 +1,3 @@
-scrabbleScore <- function(input){
+scrabble_score <- function(input){
   
 }

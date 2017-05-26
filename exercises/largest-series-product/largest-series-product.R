@@ -1,3 +1,3 @@
-largestSeriesProduct <- function(digits, span){
-  
+largest_series_product <- function(digits, span){
+
 }

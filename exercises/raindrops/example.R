@@ -1,28 +1,29 @@
 raindrops <- function(number) {
   
-  Pling <- ''
-  Plang <- ''
-  Plong <- ''
+  pling <- ''
+  plang <- ''
+  plong <- ''
   
   # If the number has 3 as a factor, output 'Pling'.
   if (number %% 3 == 0) {
-    Pling <- 'Pling'
+    pling <- 'Pling'
   }
   # If the number has 5 as a factor, output 'Plang'.
   if (number %% 5 == 0) {
-    Plang <- 'Plang'
+    plang <- 'Plang'
   }
   # If the number has 7 as a factor, output 'Plong'.
   if (number %% 7 == 0) {
-    Plong <- 'Plong'
+    plong <- 'Plong'
   }
   
-  PlingPlangPlong <- paste(Pling, Plang, Plong, sep = "")
+  plingplangplong <- paste(pling, plang, plong, sep = "")
   
-  # If the number does not have 3, 5, or 7 as a factor, just pass the number's digits straight through.
-  if (PlingPlangPlong == "") {
-    PlingPlangPlong = as.character(number)
+  # If the number does not have 3, 5, or 7 as a factor, 
+  # just pass the number's digits straight through
+  if (plingplangplong == "") {
+    plingplangplong <- as.character(number)
   }
   
-  PlingPlangPlong
+  plingplangplong
 }
