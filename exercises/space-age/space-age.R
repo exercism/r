@@ -1,3 +1,3 @@
-space_age <- function() {
+space_age <- function(seconds, planet) {
 
 }

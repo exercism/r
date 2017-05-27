@@ -1,3 +1,3 @@
-prime_factors <- function() {
+prime_factors <- function(number) {
   
 }

@@ -1,3 +1,3 @@
-word_count <- function() {
+word_count <- function(input) {
 
 }

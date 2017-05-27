@@ -1,3 +1,3 @@
-anagram <- function() {
+anagram <- function(subject, candidates) {
 
 }
