@@ -134,11 +134,6 @@ Note however that at the moment only the following linting rules are strictly en
 
 To perform these specific checks locally, run `source("bin/run_lints.R")`.
 
-## License
-
-The MIT License (MIT)
-
-Copyright (c) 2014 Katrina Owen, _@kytrinyx.com
 
 ## R icon
 The R logo was created by [Hadley Wickham](https://github.com/hadley) and others at [RStudio](https://www.rstudio.com/). The original file is licensed under version [4.0 of the Creative Commons Attribution-Share Alike license](https://creativecommons.org/licenses/by-sa/4.0/). We have adapted it, changing the colour scheme, for use on Exercism.
