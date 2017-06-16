@@ -11,8 +11,13 @@ test_that("A single zero is invalid", {
   expect_equal(is_valid(input), FALSE)
 })
 
-test_that("simple valid sin", {
-  input <- " 5 9 "
+test_that("a simple valid SIN that remains valid if reversed", {
+  input <- "059"
+  expect_equal(is_valid(input), TRUE)
+})
+
+test_that("a simple valid SIN that becomes invalid if reversed", {
+  input <- "59"
   expect_equal(is_valid(input), TRUE)
 })
 
@@ -32,7 +37,7 @@ test_that("invalid credit card", {
 })
 
 test_that("valid strings with a non-digit added become invalid", {
-  input <- "046a 454 286"
+  input <- "055a 444 285"
   expect_equal(is_valid(input), FALSE)
 })
 
@@ -51,8 +56,8 @@ test_that("single zero with space is invalid", {
   expect_equal(is_valid(input), FALSE)
 })
 
-test_that("lots of zeros are valid", {
-  input <- " 00000"
+test_that("more than a single zero is valid", {
+  input <- "0000 0"
   expect_equal(is_valid(input), TRUE)
 })
 
