@@ -1,5 +1,13 @@
 is_perfect <- function(n){
   
+  # catch invalid input
+  if (n <= 0)
+    stop("Classification is only possible for natural numbers.")
+  
+  # catch edge cases
+  if (n %in% c(1, 2))
+    return("deficient")
+  
   find_factors <- function(n) {
     factors <- c()
     for (i in 2:floor(n^0.5 + 1)) {
@@ -17,6 +25,10 @@ is_perfect <- function(n){
     unique(factors)
   }
   
-  sum(find_factors(n)) + 1 == n
+  sum <- sum(find_factors(n)) + 1
   
+  # alternative to multiple if/else statements
+  dplyr::case_when(sum == n ~ return("perfect"),
+                   sum >= n ~ return("abundant"),
+                   sum <= n ~ return("deficient"))
 }

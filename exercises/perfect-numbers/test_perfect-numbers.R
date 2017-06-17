@@ -1,59 +1,76 @@
 source("./perfect-numbers.R")
 library(testthat)
 
-test_that("first perfect number", {
+test_that("Smallest perfect number is classified correctly", {
   n <- 6
-  expect_equal(is_perfect(n), TRUE)
+  expect_equal(is_perfect(n), "perfect")
 })
 
-test_that("no perfect number", {
-  n <- 8
-  expect_equal(is_perfect(n), FALSE)
-})
-
-test_that("second perfect number", {
+test_that("Medium perfect number is classified correctly", {
   n <- 28
-  expect_equal(is_perfect(n), TRUE)
+  expect_equal(is_perfect(n), "perfect")
 })
 
-test_that("abundant", {
-  n <- 20
-  expect_equal(is_perfect(n), FALSE)
-})
-
-test_that("answer to the ultimate question of life", {
-  n <- 42
-  expect_equal(is_perfect(n), FALSE)
-})
-
-test_that("third perfect number", {
-  n <- 496
-  expect_equal(is_perfect(n), TRUE)
-})
-
-test_that("odd abundant", {
-  n <- 945
-  expect_equal(is_perfect(n), FALSE)
-})
-
-test_that("fourth perfect number", {
-  n <- 8128
-  expect_equal(is_perfect(n), TRUE)
-})
-
-test_that("fifth perfect number", {
+test_that("Large perfect number is classified correctly", {
   n <- 33550336
-  expect_equal(is_perfect(n), TRUE)
+  expect_equal(is_perfect(n), "perfect")
 })
 
-test_that("sixth perfect number", {
-  n <- 8589869056
-  expect_equal(is_perfect(n), TRUE)
+
+
+test_that("Smallest abundant number is classified correctly", {
+  n <- 12
+  expect_equal(is_perfect(n), "abundant")
 })
 
-test_that("seventh perfect number", {
-  n <- 137438691328
-  expect_equal(is_perfect(n), TRUE)
+test_that("Medium abundant number is classified correctly", {
+  n <- 30
+  expect_equal(is_perfect(n), "abundant")
 })
+
+test_that("Large abundant number is classified correctly", {
+  n <- 33550335
+  expect_equal(is_perfect(n), "abundant")
+})
+
+
+
+test_that("Smallest prime deficient number is classified correctly", {
+  n <- 2
+  expect_equal(is_perfect(n), "deficient")
+})
+
+test_that("Smallest non-prime deficient number is classified correctly", {
+  n <- 4
+  expect_equal(is_perfect(n), "deficient")
+})
+
+test_that("Medium deficient number is classified correctly", {
+  n <- 32
+  expect_equal(is_perfect(n), "deficient")
+})
+
+test_that("Large deficient number is classified correctly", {
+  n <- 33550337
+  expect_equal(is_perfect(n), "deficient")
+})
+
+test_that("Edge case (no factors other than itself) is classified correctly", {
+  n <- 1
+  expect_equal(is_perfect(n), "deficient")
+})
+
+
+
+test_that("Zero is rejected (not a natural number)", {
+  n <- 0
+  expect_error(is_perfect(n))
+})
+
+test_that("Negative integer is rejected (not a natural number)", {
+  n <- -1
+  expect_error(is_perfect(n))
+})
+
 
 print("All tests passed for exercise: perfect-numbers")
