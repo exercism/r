@@ -1,6 +1,6 @@
-# xR
+# Exercism R Track
 
-[![Build Status](https://travis-ci.org/exercism/xr.svg?branch=master)](https://travis-ci.org/exercism/xr)
+[![Build Status](https://travis-ci.org/exercism/r.svg?branch=master)](https://travis-ci.org/exercism/r)
 [![Gitter](https://badges.gitter.im/exercism/dev.svg)](https://gitter.im/exercism/dev?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 Exercism problems in R
@@ -39,7 +39,7 @@ Typical examples for a bug: A typo, a missing test case, an unclear or ambiguous
 - If you have a fix you can [write a pull request](#writing-a-pull-request).
 
 #### Reviewing issues and pull requests
-If you have a dedicated opinion you are welcome to [write a comment](https://help.github.com/articles/commenting-on-a-pull-request/) for an [issue](https://github.com/exercism/xr/issues) or a [pull request](https://github.com/exercism/xr/pulls).
+If you have a dedicated opinion you are welcome to [write a comment](https://help.github.com/articles/commenting-on-a-pull-request/) for an [issue](https://github.com/exercism/r/issues) or a [pull request](https://github.com/exercism/r/pulls).
 Please be detailed and include motivations or relevant links to support your opinion.
 
 #### Porting exercises

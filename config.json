@@ -1,7 +1,7 @@
 {
   "slug": "r",
   "language": "R",
-  "repository": "https://github.com/exercism/xr",
+  "repository": "https://github.com/exercism/r",
   "checklist_issue": 5,
   "active": false,
   "deprecated": [
