@@ -28,7 +28,9 @@ is_perfect <- function(n){
   sum <- sum(find_factors(n)) + 1
   
   # alternative to multiple if/else statements
-  dplyr::case_when(sum == n ~ return("perfect"),
-                   sum >= n ~ return("abundant"),
-                   sum <= n ~ return("deficient"))
+  type <- dplyr::case_when(sum == n ~ "perfect",
+                             sum > n ~ "abundant",
+                             sum < n ~ "deficient")
+  
+  type
 }
