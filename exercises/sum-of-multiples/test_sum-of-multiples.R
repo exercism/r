@@ -49,4 +49,4 @@ test_that("Case 12", {
   expect_equal(sum_of_multiples(c(), 10000), 0)
 })
 
-print("All tests passed for exercise: sum-of-multiples")
+message("All tests passed for exercise: sum-of-multiples")

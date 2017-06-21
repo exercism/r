@@ -56,4 +56,4 @@ test_that("seventh perfect number", {
   expect_equal(is_perfect(n), TRUE)
 })
 
-print("All tests passed for exercise: perfect-numbers")
+message("All tests passed for exercise: perfect-numbers")

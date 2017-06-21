@@ -172,4 +172,4 @@ test_that("invalid match result", {
                ))
 })
 
-print("All tests passed for exercise: tournament")
+message("All tests passed for exercise: tournament")

@@ -51,4 +51,4 @@ test_that("do nothing if lower 5 bits not set", {
   expect_equal(handshake(32), c())
 })
 
-print("All tests passed for exercise: secret-handshake")
+message("All tests passed for exercise: secret-handshake")
