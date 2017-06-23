@@ -62,4 +62,4 @@ test_that("rotate all letters", {
                "Gur dhvpx oebja sbk whzcf bire gur ynml qbt.")
 })
 
-print("All tests passed for exercise: rotational-cipher")
+message("All tests passed for exercise: rotational-cipher")

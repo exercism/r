@@ -92,4 +92,4 @@ test_that("the sound for 3125 is Plang as it has a factor 5", {
   expect_equal(raindrops(number), "Plang")
 })
 
-print("All tests passed for exercise: raindrops")
+message("All tests passed for exercise: raindrops")

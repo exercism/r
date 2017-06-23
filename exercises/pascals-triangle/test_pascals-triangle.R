@@ -29,4 +29,4 @@ test_that("null/no rows", {
   expect_error(pascals_triangle(NULL))
 })
 
-print("All tests passed for exercise: pascals-triangle")
+message("All tests passed for exercise: pascals-triangle")

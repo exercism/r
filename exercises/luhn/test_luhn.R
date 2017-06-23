@@ -71,4 +71,4 @@ test_that("nine doubled is nine", {
   expect_equal(is_valid(input), TRUE)
 })
 
-print("All tests passed for exercise: luhn")
+message("All tests passed for exercise: luhn")

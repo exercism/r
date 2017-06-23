@@ -45,4 +45,4 @@ test_that("returns the total number of square on the board", {
   expect_equal(total(), 18446744073709551615)
 })
 
-print("All tests passed for exercise: grains")
+message("All tests passed for exercise: grains")

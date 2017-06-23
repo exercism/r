@@ -45,4 +45,4 @@ test_that("invalid if exchange code does not start with 2-9", {
   expect_equal(parse_phone_number("(223) 056-7890"), NULL)
 })
 
-print("All tests passed for exercise: phone-number")
+message("All tests passed for exercise: phone-number")

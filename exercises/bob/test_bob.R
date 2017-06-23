@@ -161,4 +161,4 @@ test_that("non-question ending with whitespace", {
                "Whatever.")
 })
 
-print("All tests passed for exercise: bob")
+message("All tests passed for exercise: bob")

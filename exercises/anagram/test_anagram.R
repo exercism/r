@@ -128,4 +128,4 @@ test_that("anagrams must use all letters exactly once", {
                c())
 })
 
-print("All tests passed for exercise: anagram")
+message("All tests passed for exercise: anagram")
