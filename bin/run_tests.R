@@ -21,15 +21,23 @@ test_exercise <- function(exercise) {
   
 }
 
-# create temp directory for testing purposes
-temp_dir <- "temp" 
-dir.create(temp_dir)
-setwd(temp_dir)
+run_tests <- function() {
 
-# read config and test all exercises
-config <- fromJSON(file.path("..", "config.json"))
-lapply(config$exercises$slug, test_exercise)
+  # create temp directory for testing purposes
+  temp_dir <- "temp" 
+  dir.create(temp_dir)
+  setwd(temp_dir)
+  
+  on.exit({
+    # clean up on exit
+    setwd(dir = "../")
+    unlink("temp", recursive = TRUE)
+  })
+  
+  # read config and test all exercises
+  config <- fromJSON(file.path("..", "config.json"))
+  lapply(config$exercises$slug, test_exercise)
+    
+}
 
-# clean up
-setwd(dir = "../")
-unlink("temp", recursive = TRUE)
+run_tests()

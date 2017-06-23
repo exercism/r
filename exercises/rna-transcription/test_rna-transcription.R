@@ -41,4 +41,4 @@ test_that("DNA correctly handles partially invalid input", {
   expect_error(to_rna(dna))
 })
 
-print("All tests passed for exercise: rna-transcription")
+message("All tests passed for exercise: rna-transcription")

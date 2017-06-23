@@ -73,4 +73,4 @@ test_that("Negative integer is rejected (not a natural number)", {
 })
 
 
-print("All tests passed for exercise: perfect-numbers")
+message("All tests passed for exercise: perfect-numbers")

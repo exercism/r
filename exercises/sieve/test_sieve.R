@@ -35,4 +35,4 @@ test_that("find primes up to 1000", {
                  967, 971, 977, 983, 991, 997))
 })
 
-print("All tests passed for exercise: sieve")
+message("All tests passed for exercise: sieve")

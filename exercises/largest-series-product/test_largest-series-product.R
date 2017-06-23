@@ -107,4 +107,4 @@ test_that("rejects negative span", {
   expect_error(largest_series_product(digits, span))
 })
 
-print("All tests passed for exercise: largest-series-product")
+message("All tests passed for exercise: largest-series-product")
