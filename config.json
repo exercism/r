@@ -178,6 +178,13 @@
       "topics": [
 
       ]
+    },
+    {
+      "difficulty": 2,
+      "slug": "beer-song",
+      "topics": [ 
+        
+      ]
     }
   ]
 }
