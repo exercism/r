@@ -1,13 +1,3 @@
-lyrics <- function(first, last) {
-  # compile song from dynamic number of verses
-  song <- c()
-  for (i in seq(first, last)) {
-    song <- c(song, verse(i))
-  }
-  
-  paste(song, collapse = "\n")
-}
-
 verse <- function(number) {
   # construct different verses
   if (number == 2) {
@@ -29,3 +19,14 @@ verse <- function(number) {
       number, number, number - 1)
   }
 }
+
+lyrics <- function(first, last) {
+  # compile song from dynamic number of verses
+  song <- c()
+  for (i in seq(first, last)) {
+    song <- c(song, verse(i))
+  }
+  
+  paste(song, collapse = "\n")
+}
+
