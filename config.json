@@ -125,6 +125,13 @@
     },
     {
       "difficulty": 1,
+      "slug": "beer-song",
+      "topics": [ 
+        
+      ]
+    },
+    {
+      "difficulty": 1,
       "slug": "perfect-numbers",
       "topics": [
 
@@ -177,13 +184,6 @@
       "slug": "tournament",
       "topics": [
 
-      ]
-    },
-    {
-      "difficulty": 2,
-      "slug": "beer-song",
-      "topics": [ 
-        
       ]
     }
   ]
