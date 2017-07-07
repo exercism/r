@@ -10,6 +10,7 @@ install:
 - R -e "install.packages('jsonlite')"
 - R -e "install.packages('lintr')"
 - R -e "install.packages('magrittr')"
+- R -e "install.packages('microbenchmark')"
 script:
 - bin/fetch-configlet
 - bin/configlet .

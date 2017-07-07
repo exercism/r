@@ -45,4 +45,15 @@ test_that("returns the total number of square on the board", {
   expect_equal(total(), 18446744073709551615)
 })
 
+# assist the "optimize for speed" instruction
+test_that("benchmarking", {
+  warning(
+    capture_output(
+      print = TRUE,
+      microbenchmark:::print.microbenchmark(
+        microbenchmark::microbenchmark(
+          total()
+        ))))
+})
+
 message("All tests passed for exercise: grains")
