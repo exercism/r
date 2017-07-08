@@ -45,6 +45,8 @@ test_that("returns the total number of square on the board", {
   expect_equal(total(), 18446744073709551615)
 })
 
+message("All tests passed for exercise: grains")
+
 # assist the "optimize for speed" instruction
 test_that("benchmarking", {
   warning(
@@ -55,5 +57,3 @@ test_that("benchmarking", {
           total()
         ))))
 })
-
-message("All tests passed for exercise: grains")
