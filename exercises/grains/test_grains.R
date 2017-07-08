@@ -49,11 +49,6 @@ message("All tests passed for exercise: grains")
 
 # assist the "optimize for speed" instruction
 test_that("benchmarking", {
-  warning(
-    capture_output(
-      print = TRUE,
-      microbenchmark:::print.microbenchmark(
-        microbenchmark::microbenchmark(
-          total()
-        ))))
+  warning(capture_output(print = TRUE,
+                         microbenchmark::microbenchmark(total())))
 })
