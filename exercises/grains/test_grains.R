@@ -48,7 +48,9 @@ test_that("returns the total number of square on the board", {
 message("All tests passed for exercise: grains")
 
 # assist the "optimize for speed" instruction
-test_that("benchmarking", {
-  warning(capture_output(print = TRUE,
-                         microbenchmark::microbenchmark(total())))
-})
+if ("microbenchmark" %in% rownames(installed.packages())) {
+  test_that("benchmarking", {
+    warning(capture_output(print = TRUE,
+                           microbenchmark::microbenchmark(total())))
+  })
+}
