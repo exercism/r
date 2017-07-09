@@ -12,6 +12,6 @@ install:
 - R -e "install.packages('magrittr')"
 script:
 - bin/fetch-configlet
-- bin/configlet .
+- bin/configlet lint .
 - R -e "source('bin/run_tests.R')"
 - R -e "source('bin/run_lints.R')"
