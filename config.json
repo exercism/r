@@ -4,184 +4,256 @@
   "repository": "https://github.com/exercism/r",
   "checklist_issue": 5,
   "active": false,
-  "deprecated": [
-
-  ],
   "foregone": [
 
   ],
   "exercises": [
     {
-      "difficulty": 1,
+      "uuid": "285404a4-d8f8-469d-b183-920b08ba2430",
       "slug": "hello-world",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
       "topics": [
 
       ]
     },
     {
-      "difficulty": 1,
+      "uuid": "4be11d9f-db6a-4edd-af35-7d33d2dc9c0f",
       "slug": "leap",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
       "topics": [
 
       ]
     },
     {
-      "difficulty": 1,
+      "uuid": "da01ce65-8c7d-4646-ace4-c067d92f656b",
       "slug": "bob",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
       "topics": [
 
       ]
     },
     {
-      "difficulty": 1,
+      "uuid": "dcc7171a-6b7d-4749-a300-a7270a095486",
       "slug": "hamming",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
       "topics": [
 
       ]
     },
     {
-      "difficulty": 1,
+      "uuid": "12e17ede-ff59-45d1-8c66-b07b7ede5702",
       "slug": "rna-transcription",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
       "topics": [
 
       ]
     },
     {
-      "difficulty": 1,
+      "uuid": "6a562684-5938-4ad9-b042-7b44a8cc4561",
       "slug": "difference-of-squares",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
       "topics": [
 
       ]
     },
     {
-      "difficulty": 1,
+      "uuid": "955604ef-266f-42c9-abde-ce0fdc2d33ad",
       "slug": "raindrops",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
       "topics": [
 
       ]
     },
     {
-      "difficulty": 1,
+      "uuid": "fb1b7105-98f5-4f4f-8f5c-c410844cc4d3",
       "slug": "grains",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
       "topics": [
 
       ]
     },
     {
-      "difficulty": 1,
+      "uuid": "105a3de5-3dea-4880-927a-6eed89a97a07",
       "slug": "anagram",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
       "topics": [
 
       ]
     },
     {
-      "difficulty": 1,
+      "uuid": "b8b3a324-8d62-49d4-ba28-886883e5c549",
       "slug": "space-age",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
       "topics": [
 
       ]
     },
     {
-      "difficulty": 1,
+      "uuid": "581b968c-f78f-4b60-9eb0-8c73eeeb96af",
       "slug": "sum-of-multiples",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
       "topics": [
 
       ]
     },
     {
-      "difficulty": 1,
+      "uuid": "a7cbf043-504b-4fc8-b7fb-33a88ac7962d",
       "slug": "word-count",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
       "topics": [
 
       ]
     },
     {
-      "difficulty": 1,
+      "uuid": "e5166378-e3fc-4393-b4f8-4c36da444c56",
       "slug": "phone-number",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
       "topics": [
 
       ]
     },
     {
-      "difficulty": 1,
+      "uuid": "8bde91c5-2fe7-4f8d-91ec-ed05284b9a49",
       "slug": "rotational-cipher",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
       "topics": [
 
       ]
     },
     {
-      "difficulty": 1,
+      "uuid": "c82dfe0c-77c9-4a3b-8110-962a9547ac64",
       "slug": "scrabble-score",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
       "topics": [
 
       ]
     },
     {
-      "difficulty": 1,
+      "uuid": "4ea6d28b-f2bd-4785-ad9f-8eed6a9c67eb",
       "slug": "isogram",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
       "topics": [
 
       ]
     },
     {
-      "difficulty": 1,
+      "uuid": "3fd2d6dd-6d4d-4b7f-9f1e-0de11899dcb5",
       "slug": "beer-song",
-      "topics": [ 
-        
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+
       ]
     },
     {
-      "difficulty": 1,
+      "uuid": "cef7ba44-5b9a-4fc3-b853-9b598e743ba8",
       "slug": "perfect-numbers",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
       "topics": [
 
       ]
     },
     {
-      "difficulty": 1,
+      "uuid": "ee849e23-d709-4e4a-ab89-07a87e13e4fb",
       "slug": "prime-factors",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
       "topics": [
 
       ]
     },
     {
-      "difficulty": 1,
+      "uuid": "dabc8218-8ab8-4918-85d3-0afd5b6791c6",
       "slug": "sieve",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
       "topics": [
 
       ]
     },
     {
-      "difficulty": 1,
+      "uuid": "a1b4bde3-2ee7-42dd-85c5-4303ae546d15",
       "slug": "largest-series-product",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
       "topics": [
 
       ]
     },
     {
-      "difficulty": 1,
+      "uuid": "33157f48-a2d9-4fae-a9c8-5df547473f1a",
       "slug": "luhn",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
       "topics": [
 
       ]
     },
     {
-      "difficulty": 1,
+      "uuid": "eacc30e1-d02c-4ccb-b1f7-3d4f16358726",
       "slug": "secret-handshake",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
       "topics": [
 
       ]
     },
     {
-      "difficulty": 1,
+      "uuid": "f3e93545-7466-4635-b508-7e02517fdf06",
       "slug": "pascals-triangle",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
       "topics": [
 
       ]
     },
     {
-      "difficulty": 1,
+      "uuid": "acf63670-7e56-47c1-9f33-7ec076d5270f",
       "slug": "tournament",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
       "topics": [
 
       ]
