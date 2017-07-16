@@ -30,7 +30,7 @@ If stuck or in doubt just ask! We try our best to be friendly and helpful, so do
 - [gitter dev](https://gitter.im/exercism/dev): technical questions.
 
 ### How to contribute
-As a first step we recommend you read the [contributing guide](https://github.com/exercism/x-common/blob/master/CONTRIBUTING.md).
+As a first step we recommend you read the [contributing guide](https://github.com/exercism/docs/blob/master/contributing-to-language-tracks/README.md).
 
 #### Reporting or fixing bugs
 Typical examples for a bug: A typo, a missing test case, an unclear or ambiguous problem description.
@@ -43,15 +43,15 @@ If you have a dedicated opinion you are welcome to [write a comment](https://hel
 Please be detailed and include motivations or relevant links to support your opinion.
 
 #### Porting exercises
-Here is the [list of missing exercises](http://exercism.io/languages/r/todo). See here for more information about [porting an exercise](https://github.com/exercism/x-common/blob/master/CONTRIBUTING.md#porting-an-exercise-to-another-language-track).
+Here is the [list of missing exercises](http://exercism.io/languages/r/todo). See here for more information about [porting an exercise](https://github.com/exercism/docs/blob/master/contributing-to-language-tracks/README.md#porting-an-exercise-to-another-language-track).
 Of course you can also add a totally new exercise, but it might be a good idea to first discuss it in one of [our forums](#asking-for-help).
 
 #### Updating an exercise test suite
-Updating the test suite of an existing exercise is a special case because it usually affects all languages. Read more about it [here](https://github.com/exercism/x-common/blob/master/CONTRIBUTING.md#updating-an-exercise-test-suite).
+Updating the test suite of an existing exercise is a special case because it usually affects all languages. Read more about it [here](https://github.com/exercism/docs/blob/master/contributing-to-language-tracks/README.md#updating-an-exercise-test-suite).
 Note that the test suite must run within a couple of seconds.
 
 ### Repository structure and conventions
-A general description of all the files and directories can be found [here](https://github.com/exercism/x-common/blob/master/CONTRIBUTING.md#track-anatomy).
+A general description of all the files and directories can be found [here](https://github.com/exercism/docs/blob/master/contributing-to-language-tracks/README.md#track-anatomy).
 
 #### Directory structure
 ```bash
@@ -99,7 +99,7 @@ Each exercise has the following structure:
 To report a bug you should [create an issue](https://help.github.com/articles/creating-an-issue/) [here](https://github.com/exercism/xr/issues).
 
 ### Writing a pull request
-To fix a bug you should [create a pull request from a fork](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) [here](https://github.com/exercism/xr/pulls). See also [here](https://github.com/exercism/x-common/blob/master/CONTRIBUTING.md#git-basics) for more information.
+To fix a bug you should [create a pull request from a fork](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) [here](https://github.com/exercism/xr/pulls). See also [here](https://github.com/exercism/docs/blob/master/contributing-to-language-tracks/README.md#git-basics) for more information.
 
 ### Development dependencies
 You'll need to have a recent version of [R](https://cran.r-project.org/) installed on your system, as well as the `testthat` package (run `install.packages('testthat')` from the R console to install) in order to run tests.
