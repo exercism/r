@@ -125,7 +125,8 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-
+        "lists",
+        "mathematics"
       ]
     },
     {
@@ -135,7 +136,8 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-
+        "strings",
+        "transforming"
       ]
     },
     {
@@ -145,7 +147,8 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-
+        "parsing",
+        "transforming"
       ]
     },
     {
@@ -155,7 +158,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-
+        "strings"
       ]
     },
     {
@@ -165,7 +168,8 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-
+        "strings",
+        "transforming"
       ]
     },
     {
@@ -175,7 +179,8 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-
+        "strings",
+        "filtering"
       ]
     },
     {
@@ -185,7 +190,8 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-
+        "control-flow (if-else statements)",
+        "text formatting"
       ]
     },
     {
@@ -195,7 +201,8 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-
+        "integers",
+        "control-flow (if-else statements)"
       ]
     },
     {
@@ -205,7 +212,8 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-
+        "integers",
+        "mathematics"
       ]
     },
     {
@@ -215,7 +223,8 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-
+        "filtering",
+        "mathematics"
       ]
     },
     {
@@ -225,7 +234,9 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-
+        "strings", 
+        "integers", 
+        "transforming"
       ]
     },
     {
@@ -235,7 +246,9 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-
+        "strings", 
+        "algorithms", 
+        "transforming"
       ]
     },
     {
@@ -245,7 +258,8 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-
+        "control-flow (if-else statements)",
+        "bitwise operations"
       ]
     },
     {
@@ -255,7 +269,8 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-
+        "control-flow (if-else statements)",
+        "mathematics"
       ]
     },
     {
@@ -265,7 +280,8 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-
+        "text-formatting",
+        "parsing"
       ]
     }
   ]
