@@ -205,7 +205,7 @@
       "uuid": "dabc8218-8ab8-4918-85d3-0afd5b6791c6",
       "slug": "sieve",
       "core": false,
-      "unlocked_by": ["prime-factors", "leap"],
+      "unlocked_by": "prime-factors",
       "difficulty": 1,
       "topics": [
         "filtering",
