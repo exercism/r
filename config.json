@@ -63,7 +63,8 @@
     {
       "uuid": "6a562684-5938-4ad9-b042-7b44a8cc4561",
       "slug": "difference-of-squares",
-      "core": true,
+      "core": false,
+      "unlocked_by": null,
       "difficulty": 1,
       "topics": [
         "integers",
@@ -83,7 +84,8 @@
     {
       "uuid": "fb1b7105-98f5-4f4f-8f5c-c410844cc4d3",
       "slug": "grains",
-      "core": true,
+      "core": false,
+      "unlocked_by": null,
       "difficulty": 1,
       "topics": [
         "integers", 
@@ -103,7 +105,8 @@
     {
       "uuid": "b8b3a324-8d62-49d4-ba28-886883e5c549",
       "slug": "space-age",
-      "core": true,
+      "core": false,
+      "unlocked_by": null,
       "difficulty": 1,
       "topics": [
         "floating-point numbers"
@@ -185,6 +188,7 @@
       "uuid": "cef7ba44-5b9a-4fc3-b853-9b598e743ba8",
       "slug": "perfect-numbers",
       "core": false,
+      "unlocked_by": "leap",
       "difficulty": 1,
       "topics": [
         "integers",
@@ -194,7 +198,8 @@
     {
       "uuid": "ee849e23-d709-4e4a-ab89-07a87e13e4fb",
       "slug": "prime-factors",
-      "core": true,
+      "core": false,
+      "unlocked_by": "sum-of-multiples",
       "difficulty": 1,
       "topics": [
         "integers",
@@ -226,7 +231,8 @@
     {
       "uuid": "33157f48-a2d9-4fae-a9c8-5df547473f1a",
       "slug": "luhn",
-      "core": true,
+      "core": false,
+      "unlocked_by": "phone-number",
       "difficulty": 1,
       "topics": [
         "strings", 
@@ -237,7 +243,8 @@
     {
       "uuid": "eacc30e1-d02c-4ccb-b1f7-3d4f16358726",
       "slug": "secret-handshake",
-      "core": true,
+      "core": false,
+      "unlocked_by": "perfect-numbers",
       "difficulty": 2,
       "topics": [
         "control-flow (if-else statements)",
@@ -247,7 +254,8 @@
     {
       "uuid": "f3e93545-7466-4635-b508-7e02517fdf06",
       "slug": "pascals-triangle",
-      "core": true,
+      "core": false,
+      "unlocked_by": "perfect-numbers",
       "difficulty": 2,
       "topics": [
         "control-flow (if-else statements)",
@@ -257,7 +265,8 @@
     {
       "uuid": "acf63670-7e56-47c1-9f33-7ec076d5270f",
       "slug": "tournament",
-      "core": true,
+      "core": false,
+      "unlocked_by": "phone-number",
       "difficulty": 2,
       "topics": [
         "text-formatting",
