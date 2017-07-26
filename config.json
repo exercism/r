@@ -210,7 +210,7 @@
       "uuid": "dabc8218-8ab8-4918-85d3-0afd5b6791c6",
       "slug": "sieve",
       "core": false,
-      "unlocked_by": "prime-factors",
+      "unlocked_by": "sum-of-multiples",
       "difficulty": 1,
       "topics": [
         "filtering",
@@ -244,7 +244,7 @@
       "uuid": "eacc30e1-d02c-4ccb-b1f7-3d4f16358726",
       "slug": "secret-handshake",
       "core": false,
-      "unlocked_by": "perfect-numbers",
+      "unlocked_by": "raindrops",
       "difficulty": 2,
       "topics": [
         "control-flow (if-else statements)",
@@ -255,7 +255,7 @@
       "uuid": "f3e93545-7466-4635-b508-7e02517fdf06",
       "slug": "pascals-triangle",
       "core": false,
-      "unlocked_by": "perfect-numbers",
+      "unlocked_by": "sum-of-multiples",
       "difficulty": 2,
       "topics": [
         "control-flow (if-else statements)",
