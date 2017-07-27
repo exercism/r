@@ -14,8 +14,8 @@
       "core": true,
       "difficulty": 1,
       "topics": [
-        "text formatting",
-        "optional values"
+        "text_formatting",
+        "optional_values"
       ]
     },
     {
@@ -35,7 +35,7 @@
       "core": true,
       "difficulty": 1,
       "topics": [
-        "control-flow (if-else statements)",
+        "control_flow_conditionals",
         "strings"
       ]
     },
@@ -77,7 +77,7 @@
       "core": true,
       "difficulty": 1,
       "topics": [
-        "text formatting", 
+        "text_formatting", 
         "filtering"
       ]
     },
@@ -109,7 +109,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "floating-point numbers"
+        "floating_point_numbers"
       ]
     },
     {
@@ -180,8 +180,8 @@
       "unlocked_by": "bob",
       "difficulty": 2,
       "topics": [
-        "control-flow (if-else statements)",
-        "text formatting"
+        "control_flow_conditionals",
+        "text_formatting"
       ]
     },
     {
@@ -192,7 +192,7 @@
       "difficulty": 1,
       "topics": [
         "integers",
-        "control-flow (if-else statements)"
+        "control_flow_conditionals"
       ]
     },
     {
@@ -247,8 +247,8 @@
       "unlocked_by": "raindrops",
       "difficulty": 2,
       "topics": [
-        "control-flow (if-else statements)",
-        "bitwise operations"
+        "control_flow_conditionals",
+        "bitwise_ operations"
       ]
     },
     {
@@ -258,7 +258,7 @@
       "unlocked_by": "sum-of-multiples",
       "difficulty": 2,
       "topics": [
-        "control-flow (if-else statements)",
+        "control_flow_conditionals",
         "mathematics"
       ]
     },
@@ -269,7 +269,7 @@
       "unlocked_by": "phone-number",
       "difficulty": 2,
       "topics": [
-        "text-formatting",
+        "text_formatting",
         "parsing"
       ]
     }
