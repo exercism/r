@@ -13,7 +13,7 @@ expect_equal_pairs <- function(object, expected) {
   }
 }
 
-test_that("empty strand", {
+test_that("all zeros for empty strand", {
   expect_equal_pairs(nucleotide_count(""),
                      list(
                        A = 0,
@@ -23,7 +23,7 @@ test_that("empty strand", {
                      ))
 })
 
-test_that("strand with repeated nucleotide", {
+test_that("3 zeros & 1 count for strand with a single repeated nucleotide", {
   expect_equal_pairs(nucleotide_count("GGGGGGG"),
                      list(
                        A = 0,
@@ -33,7 +33,7 @@ test_that("strand with repeated nucleotide", {
                      ))
 })
 
-test_that("strand with multiple nucleotides", {
+test_that("correct counts for strand with multiple nucleotides", {
   expect_equal_pairs(nucleotide_count(
     "AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC"),
     list(
@@ -44,7 +44,7 @@ test_that("strand with multiple nucleotides", {
     ))
 })
 
-test_that("strand with invalid nucleotides", {
+test_that("error for strand with invalid nucleotides", {
   expect_error(nucleotide_count("AGXXACT"))
 })
 
