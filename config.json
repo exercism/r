@@ -291,6 +291,13 @@
       "topics": [
 
       ]
+    },
+    {
+      "difficulty": 1,
+      "slug": "collatz-conjecture",
+      "topics": [
+
+      ]
     }
   ]
 }
