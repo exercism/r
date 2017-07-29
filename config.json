@@ -270,6 +270,27 @@
         "text_formatting",
         "parsing"
       ]
+    },
+    {
+      "difficulty": 1,
+      "slug": "nucleotide-count",
+      "topics": [
+
+      ]
+    },
+    {
+      "difficulty": 1,
+      "slug": "pangram",
+      "topics": [
+
+      ]
+    },
+    {
+      "difficulty": 1,
+      "slug": "triangle",
+      "topics": [
+
+      ]
     }
   ]
 }
