@@ -275,8 +275,8 @@
       "uuid": "a81a1820-5da7-4e6e-99f2-17d71d37bd99",
       "slug": "nucleotide-count",
       "core": false,
-      "unlocked_by": null,
-      "difficulty": 1,
+      "unlocked_by": "word-count",
+      "difficulty": 2,
       "topics": [
         "lists",
         "transforming"
@@ -286,8 +286,8 @@
       "uuid": "022148a9-0c8f-42f3-8f32-2cc1cb5d7f7e",
       "slug": "pangram",
       "core": false,
-      "unlocked_by": null,
-      "difficulty": 1,
+      "unlocked_by": "anagam",
+      "difficulty": 2,
       "topics": [
         "regular_expressions",
         "strings"
@@ -297,8 +297,8 @@
       "uuid": "d3b2f968-32e2-4df7-a29a-f02ba2c7d581",
       "slug": "triangle",
       "core": false,
-      "unlocked_by": null,
-      "difficulty": 1,
+      "unlocked_by": "sum-of-multiples",
+      "difficulty": 3,
       "topics": [
         "classes",
         "mathematics"
@@ -308,8 +308,8 @@
       "uuid": "4f38e325-587f-4a80-8c8f-6c45ec710e80",
       "slug": "collatz-conjecture",
       "core": false,
-      "unlocked_by": null,
-      "difficulty": 1,
+      "unlocked_by": "sum-of-multiples",
+      "difficulty": 2,
       "topics": [
         "control_flow_conditionals",
         "recursion"
