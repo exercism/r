@@ -30,16 +30,6 @@
       ]
     },
     {
-      "uuid": "da01ce65-8c7d-4646-ace4-c067d92f656b",
-      "slug": "bob",
-      "core": true,
-      "difficulty": 2,
-      "topics": [
-        "control_flow_conditionals",
-        "strings"
-      ]
-    },
-    {
       "uuid": "dcc7171a-6b7d-4749-a300-a7270a095486",
       "slug": "hamming",
       "core": true,
@@ -90,6 +80,16 @@
       "topics": [
         "integers", 
         "mathematics"
+      ]
+    },
+    {
+      "uuid": "da01ce65-8c7d-4646-ace4-c067d92f656b",
+      "slug": "bob",
+      "core": true,
+      "difficulty": 2,
+      "topics": [
+        "control_flow_conditionals",
+        "strings"
       ]
     },
     {
