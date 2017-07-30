@@ -33,7 +33,7 @@
       "uuid": "da01ce65-8c7d-4646-ace4-c067d92f656b",
       "slug": "bob",
       "core": true,
-      "difficulty": 1,
+      "difficulty": 2,
       "topics": [
         "control_flow_conditionals",
         "strings"
@@ -96,7 +96,7 @@
       "uuid": "105a3de5-3dea-4880-927a-6eed89a97a07",
       "slug": "anagram",
       "core": true,
-      "difficulty": 1,
+      "difficulty": 3,
       "topics": [
         "strings", 
         "filtering"
@@ -116,7 +116,7 @@
       "uuid": "581b968c-f78f-4b60-9eb0-8c73eeeb96af",
       "slug": "sum-of-multiples",
       "core": true,
-      "difficulty": 1,
+      "difficulty": 2,
       "topics": [
         "lists",
         "mathematics"
@@ -136,7 +136,7 @@
       "uuid": "e5166378-e3fc-4393-b4f8-4c36da444c56",
       "slug": "phone-number",
       "core": true,
-      "difficulty": 1,
+      "difficulty": 2,
       "topics": [
         "parsing",
         "transforming"
@@ -146,7 +146,7 @@
       "uuid": "8bde91c5-2fe7-4f8d-91ec-ed05284b9a49",
       "slug": "rotational-cipher",
       "core": true,
-      "difficulty": 1,
+      "difficulty": 3,
       "topics": [
         "strings"
       ]
@@ -156,7 +156,7 @@
       "slug": "scrabble-score",
       "core": false,
       "unlocked_by": "word-count",
-      "difficulty": 1,
+      "difficulty": 2,
       "topics": [
         "strings",
         "transforming"
@@ -167,7 +167,7 @@
       "slug": "isogram",
       "core": false,
       "unlocked_by": "anagram",
-      "difficulty": 1,
+      "difficulty": 2,
       "topics": [
         "strings",
         "filtering"
@@ -178,7 +178,7 @@
       "slug": "beer-song",
       "core": false,
       "unlocked_by": "bob",
-      "difficulty": 2,
+      "difficulty": 3,
       "topics": [
         "control_flow_conditionals",
         "text_formatting"
@@ -189,7 +189,7 @@
       "slug": "perfect-numbers",
       "core": false,
       "unlocked_by": "leap",
-      "difficulty": 1,
+      "difficulty": 2,
       "topics": [
         "integers",
         "control_flow_conditionals"
@@ -200,7 +200,7 @@
       "slug": "prime-factors",
       "core": false,
       "unlocked_by": "sum-of-multiples",
-      "difficulty": 1,
+      "difficulty": 3,
       "topics": [
         "integers",
         "mathematics"
@@ -211,7 +211,7 @@
       "slug": "sieve",
       "core": false,
       "unlocked_by": "sum-of-multiples",
-      "difficulty": 1,
+      "difficulty": 3,
       "topics": [
         "filtering",
         "mathematics"
@@ -221,7 +221,7 @@
       "uuid": "a1b4bde3-2ee7-42dd-85c5-4303ae546d15",
       "slug": "largest-series-product",
       "core": true,
-      "difficulty": 2,
+      "difficulty": 3,
       "topics": [
         "strings", 
         "integers", 
@@ -233,7 +233,7 @@
       "slug": "luhn",
       "core": false,
       "unlocked_by": "phone-number",
-      "difficulty": 1,
+      "difficulty": 3,
       "topics": [
         "strings", 
         "algorithms", 
@@ -256,7 +256,7 @@
       "slug": "pascals-triangle",
       "core": false,
       "unlocked_by": "sum-of-multiples",
-      "difficulty": 2,
+      "difficulty": 3,
       "topics": [
         "control_flow_conditionals",
         "mathematics"
@@ -267,7 +267,7 @@
       "slug": "tournament",
       "core": false,
       "unlocked_by": "phone-number",
-      "difficulty": 2,
+      "difficulty": 4,
       "topics": [
         "text_formatting",
         "parsing"
