@@ -1,7 +1,7 @@
 source("./collatz-conjecture.R")
 library(testthat)
 
-test_that("Input of one results in zero steps", {
+test_that("Input of 1 results in 0 steps", {
   expect_equal(collatz_step_counter(1), 0)
 })
 
@@ -17,7 +17,7 @@ test_that("Input which results in large number of even and odd steps", {
   expect_equal(collatz_step_counter(1000000), 152)
 })
 
-test_that("Input of zero results in an error", {
+test_that("Input of 0 results in an error", {
   expect_error(collatz_step_counter(0))
 })
 
