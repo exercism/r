@@ -12,12 +12,12 @@
     },
     {
       "github_username": "katrinleinweber",
-      "show_on_website": false,
+      "show_on_website": true,
       "alumnus": false,
       "name": null,
-      "bio": null,
-      "link_text": null,
-      "link_url": null,
+      "bio": "I struggled to apply R to my own PhD research data in 2013. A Science Craft grad school course finally got me started when I decided to use another, well-formated data set. Since then, I have found R to be a lifeline for data analysis and teaching myself and others one or the other programming skill :-)   R may not be pretty, but it gets the job done.",
+      "link_text": "KonScience podcast (mostly German)",
+      "link_url": "www.konscience.de/archiv/recorded-talks/",
       "avatar_url": null
     },
     {
