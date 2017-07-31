@@ -314,6 +314,18 @@
         "control_flow_conditionals",
         "recursion"
       ]
+    },
+    {
+      "uuid": "2f7b585f-f82f-4dca-9588-2df3250184e6",
+      "slug": "allergies",
+      "core": false,
+      "unlocked_by": "sum-of-multiples",
+      "difficulty": 3,
+      "topics": [
+        "lists",
+        "filtering",
+        "control_flow_conditionals"
+      ]
     }
   ]
 }
