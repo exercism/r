@@ -12,11 +12,7 @@ allergy <- function(num) {
   )
   
   check_allergy <- function(allergy, val) {
-    if (val %% (allergy*2) >= allergy) {
-      return(TRUE)
-    } else {
-      FALSE
-    }
+    val %% (allergy * 2) >= allergy
   }
   
   allergies <- lapply(allergy_list, check_allergy, num)
