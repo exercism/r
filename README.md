@@ -120,7 +120,7 @@ The example solutions must pass the tests without failures. Additionally the tes
 In order to be accepted by Travis-CI, each exercise must be registered in `config.json`.
 
 ### Style guide
-There are a variety of R style guides in circulation and opinions on the topic can vary widely which does make it hard to settle on specific standards. Our preference is to have R code in this repository follow Hadley Wickham's [R style guide](http://adv-r.had.co.nz/Style.html).
+There are a variety of R style guides in circulation and opinions on the topic can vary widely which does make it hard to settle on specific standards. Our preference is to have R code in this repository follow the [tidyverse style guide](http://style.tidyverse.org/).
 
 You are thus encouraged to run [`lintr`](https://github.com/jimhester/lintr) on your R scripts before opening a [pull request](#writing-a-pull-request) in order to check that your code adheres to this style guide before submitting it for review.
 
@@ -131,6 +131,7 @@ Note however that at the moment only the following linting rules are strictly en
 - the assignment operator <- should be used
 - all commas should be followed by a space (but not preceded by one)
 - no absolute paths should be used
+- infix operators (+, -, =, <-) should have spaces around them
 
 To perform these specific checks locally, run `source("bin/run_lints.R")`.
 
