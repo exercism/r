@@ -6,9 +6,9 @@ sieve <- function(limit) {
   nums[1] <- FALSE
   for (i in 2:limit) {
     if (nums[i]) {
-      div <- floor(limit/i)
-      if (div > 1){
-        nums[i*2:div] <- FALSE  
+      div <- floor(limit / i)
+      if (div > 1) {
+        nums[i * 2:div] <- FALSE  
       }
     }
   }
