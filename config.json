@@ -286,7 +286,7 @@
       "uuid": "022148a9-0c8f-42f3-8f32-2cc1cb5d7f7e",
       "slug": "pangram",
       "core": false,
-      "unlocked_by": "anagam",
+      "unlocked_by": "anagram",
       "difficulty": 2,
       "topics": [
         "regular_expressions",
