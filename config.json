@@ -314,6 +314,19 @@
         "control_flow_conditionals",
         "recursion"
       ]
+    },
+    {
+      "uuid": "82c43534-86ff-4b5a-9519-1501a15721bf",
+      "slug": "crypto-square",
+      "core": false,
+      "unlocked_by": "rotational-cipher",
+      "difficulty": 4,
+      "topics": [
+        "strings",
+        "text_formatting",
+        "regular_expressions",
+        "transforming"
+      ]
     }
   ]
 }
