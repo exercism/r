@@ -1,7 +1,7 @@
 {
   "language": "R",
-  "checklist_issue": 5,
   "active": true,
+  "blurb": "R is an interpreted, open source programming language with powerful data manipulation and graphical capabilities. It has a thriving package ecosystem and is one of the most popular languages for data science.",
   "foregone": [
 
   ],
