@@ -1,30 +1,32 @@
+library(magrittr)
+
 allergy <- function(num) {
   
-  allergy_list <- list(
-    cats = 128,
-    pollen = 64,
-    chocolate = 32,
-    tomatoes = 16,
-    strawberries = 8,
-    shellfish = 4,
-    peanuts = 2,
-    eggs = 1
+  allergy_list <- c(
+    "eggs",
+    "peanuts",
+    "shellfish",
+    "strawberries",
+    "tomatoes",
+    "chocolate",
+    "pollen",
+    "cats"
   )
   
   check_allergy <- function(allergy, val) {
-    val %% (allergy * 2) >= allergy
+    intToBits(val)[which(allergy_list == allergy)] %>% as.logical()
   }
   
-  allergies <- lapply(allergy_list, check_allergy, num)
+  allergies <- sapply(allergy_list, check_allergy, num)
   
-  structure(allergies, class = 'allergy')
+  structure(allergy_list[allergies], class = 'allergy')
   
 }
 
 allergic_to <- function(allergy_object, allergy) {
-  allergy_object[[allergy]]
+  allergy %in% allergy_object
 }
 
 list_allergies <- function(allergy_object) {
-  names(which(allergy_object == TRUE))
+  as.vector(allergy_object)
 }
