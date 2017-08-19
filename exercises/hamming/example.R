@@ -4,5 +4,5 @@ hamming <- function(strand1, strand2) {
   }
   strand1 <- strsplit(strand1, "")[[1]]
   strand2 <- strsplit(strand2, "")[[1]]
-  length(strand1) - sum(strand1 == strand2)
+  sum(strand1 != strand2)
 }

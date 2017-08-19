@@ -1,6 +1,3 @@
-library(jsonlite)
-library(testthat)
-library(magrittr)
 
 test_exercise <- function(exercise) {
   
@@ -35,7 +32,7 @@ run_tests <- function() {
   })
   
   # read config and test all exercises
-  config <- fromJSON(file.path("..", "config.json"))
+  config <- jsonlite::fromJSON(file.path("..", "config.json"))
   lapply(config$exercises$slug, test_exercise)
     
 }
