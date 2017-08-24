@@ -19,7 +19,7 @@ allergy <- function(num) {
   
   allergies <- sapply(allergy_list, check_allergy, num)
   
-  structure(allergy_list[allergies], class = 'allergy')
+  structure(allergy_list[allergies], class = "allergy")
   
 }
 
