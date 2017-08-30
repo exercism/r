@@ -1,3 +1,3 @@
-is_perfect <- function(n){
+number_type <- function(n){
   
 }
