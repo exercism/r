@@ -1,4 +1,4 @@
-is_perfect <- function(n){
+number_type <- function(n){
   
   # catch invalid input
   if (n <= 0)
