@@ -46,3 +46,5 @@ test_that("returns the total number of square on the board", {
 })
 
 message("All tests passed for exercise: grains")
+
+source("../../bin/microbenchmark.R")
