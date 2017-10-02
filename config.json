@@ -326,6 +326,17 @@
         "filtering",
         "control_flow_conditionals"
       ]
+    },
+    {
+      "uuid": "7cad82d6-0db6-d680-4133-81d850d6e7a925454a0",
+      "slug": "diamond",
+      "core": false,
+      "unlocked_by": "pascals-triangle",
+      "difficulty": 3,
+      "topics": [
+        "text-formatting",
+        "control-flow-(loops)"
+      ]
     }
   ]
 }
