@@ -5,7 +5,7 @@ test_that("Degenerate case with a single 'A' row", {
   expect_equal(diamond("A"), "A")
 })
 
-test_that("Degenerate case with no row containing 3 distinct groups of spaces", {
+test_that("Degenerate case with no row having 3 distinct groups of spaces", {
   expect_equal(diamond("B"), paste(sep = "\n",
                                   " A ",
                                   "B B",
