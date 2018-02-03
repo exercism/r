@@ -67,4 +67,9 @@ test_that("normalize case", {
                      list("go" = 3, "stop" = 2))
 })
 
+test_that("multiple whitespaces", {
+  expect_equal_pairs(word_count(" multiple   whitespaces "),
+                     list("multiple" = 1, "whitespaces" = 1))
+})
+
 message("All tests passed for exercise: word-count")
