@@ -313,8 +313,8 @@
     },
     {
       "core": false,
-      "slug": "allergies",
       "difficulty": 3,
+      "slug": "allergies",
       "topics": [
         "control_flow_conditionals",
         "filtering",
