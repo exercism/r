@@ -8,6 +8,9 @@ bob <- function(input) {
   if (input == "") {
     return("Fine. Be that way!")
   }
+  if (toupper(input) == input && tolower(input) != input && endsWith(input, "?")) {
+    return("Calm down, I know what I'm doing!")
+  }
   if (toupper(input) == input && tolower(input) != input) {
     return("Whoa, chill out!")
   }
