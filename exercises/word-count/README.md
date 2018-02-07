@@ -4,13 +4,12 @@ Given a phrase, count the occurrences of each word in that phrase.
 
 For example for the input `"olly olly in come free"`
 
-```plain
+```text
 olly: 2
 in: 1
 come: 1
 free: 1
 ```
-
 
 ## Installation
 See [this guide](https://github.com/exercism/xr/blob/master/docs/INSTALLATION.md) for instructions on how to setup your local R environment.
