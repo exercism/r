@@ -335,7 +335,8 @@
         "regular_expressions",
         "transforming"
       ]
-    },
+    }
+  ],
   "foregone": [],
   "language": "R"
 }
