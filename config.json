@@ -324,6 +324,19 @@
       "uuid": "2f7b585f-f82f-4dca-9588-2df3250184e6"
     },
     {
+      "uuid": "82c43534-86ff-4b5a-9519-1501a15721bf",
+      "slug": "crypto-square",
+      "core": false,
+      "unlocked_by": "rotational-cipher",
+      "difficulty": 4,
+      "topics": [
+        "strings",
+        "text_formatting",
+        "regular_expressions",
+        "transforming"
+      ]
+    },
+    {
       "uuid": "7cad82d6-0db6-d680-4133-81d850d6e7a925454a0",
       "slug": "diamond",
       "core": false,
