@@ -54,7 +54,7 @@ test_that("talking forcefully", {
   test_that("forceful question", {
   input <- "WHAT THE HELL WERE YOU THINKING?"
   expect_equal(bob(input),
-  "Whoa, chill out!"
+  "Calm down, I know what I'm doing!"
   )
   })
   
