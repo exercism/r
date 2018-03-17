@@ -343,8 +343,8 @@
       "unlocked_by": "pascals-triangle",
       "difficulty": 3,
       "topics": [
-        "text-formatting",
-        "control-flow-(loops)"
+        "text_formatting",
+        "control_flow_loops"
       ]
     }
   ],
