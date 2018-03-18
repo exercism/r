@@ -246,7 +246,7 @@
       "uuid": "eacc30e1-d02c-4ccb-b1f7-3d4f16358726"
     },
     {
-      "core": false,
+      "core": true,
       "difficulty": 3,
       "slug": "pascals-triangle",
       "topics": [
@@ -343,8 +343,8 @@
       "unlocked_by": "pascals-triangle",
       "difficulty": 3,
       "topics": [
-        "text-formatting",
-        "control-flow-(loops)"
+        "text_formatting",
+        "control_flow_loops"
       ]
     }
   ],
