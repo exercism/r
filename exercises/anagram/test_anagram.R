@@ -1,3 +1,4 @@
+context("anagram")
 source("./anagram.R")
 library(testthat)
 
