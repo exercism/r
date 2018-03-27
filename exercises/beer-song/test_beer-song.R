@@ -1,3 +1,4 @@
+context("beer song")
 source("./beer-song.R")
 library(testthat)
 
