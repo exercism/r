@@ -1,3 +1,4 @@
+context("raindrops")
 source("./raindrops.R")
 library(testthat)
 

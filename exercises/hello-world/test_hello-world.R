@@ -1,3 +1,4 @@
+context("hello world")
 source("./hello-world.R")
 library(testthat)
 

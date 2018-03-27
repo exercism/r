@@ -1,3 +1,4 @@
+context("pascals triangle")
 source("./pascals-triangle.R")
 library(testthat)
 

@@ -1,3 +1,4 @@
+context("crypto square")
 source("./crypto-square.R")
 library(testthat)
 

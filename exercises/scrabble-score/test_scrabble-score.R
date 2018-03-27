@@ -1,3 +1,4 @@
+context("scrabble score")
 source("./scrabble-score.R")
 library(testthat)
 

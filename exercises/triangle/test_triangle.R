@@ -1,3 +1,4 @@
+context("triangle")
 source("./triangle.R")
 library(testthat)
 

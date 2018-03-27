@@ -1,3 +1,4 @@
+context("word count")
 source("./word-count.R")
 library(testthat)
 

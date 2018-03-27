@@ -1,3 +1,4 @@
+context("prime factors")
 source("./prime-factors.R")
 suppressPackageStartupMessages({
   library(testthat)

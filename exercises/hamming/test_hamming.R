@@ -1,3 +1,4 @@
+context("hamming")
 source("./hamming.R")
 library(testthat)
 

@@ -1,3 +1,4 @@
+context("grains")
 source("./grains.R")
 library(testthat)
 

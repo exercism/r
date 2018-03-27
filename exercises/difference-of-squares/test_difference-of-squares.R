@@ -1,3 +1,4 @@
+context("difference of squares")
 source("./difference-of-squares.R")
 library(testthat)
 

@@ -1,3 +1,4 @@
+context("bob")
 source("./bob.R")
 library(testthat)
 

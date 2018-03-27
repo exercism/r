@@ -1,3 +1,4 @@
+context("rotational cipher")
 source("./rotational-cipher.R")
 library(testthat)
 

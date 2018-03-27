@@ -1,3 +1,4 @@
+context("secret handshake")
 source("./secret-handshake.R")
 library(testthat)
 

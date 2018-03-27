@@ -1,3 +1,4 @@
+context("collatz conjecture")
 source("./collatz-conjecture.R")
 library(testthat)
 

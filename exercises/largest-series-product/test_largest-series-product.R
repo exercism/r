@@ -1,3 +1,4 @@
+context("largest series product")
 source("./largest-series-product.R")
 library(testthat)
 

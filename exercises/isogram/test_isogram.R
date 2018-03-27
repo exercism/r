@@ -1,3 +1,4 @@
+context("isogram")
 source("./isogram.R")
 library(testthat)
 

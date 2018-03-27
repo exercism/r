@@ -1,3 +1,4 @@
+context("nucleotide count")
 source("./nucleotide-count.R")
 library(testthat)
 

@@ -1,3 +1,4 @@
+context("luhn")
 source("./luhn.R")
 library(testthat)
 

@@ -1,3 +1,4 @@
+context("sum of multiples")
 source("./sum-of-multiples.R")
 library(testthat)
 

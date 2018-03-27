@@ -1,3 +1,4 @@
+context("pangram")
 source("./pangram.R")
 library(testthat)
 

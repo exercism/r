@@ -1,3 +1,4 @@
+context("diamond")
 source("./diamond.R")
 library(testthat)
 

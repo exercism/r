@@ -1,3 +1,4 @@
+context("tournament")
 source("./tournament.R")
 library(testthat)
 

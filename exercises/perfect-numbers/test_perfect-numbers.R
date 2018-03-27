@@ -1,3 +1,4 @@
+context("perfect numbers")
 source("./perfect-numbers.R")
 library(testthat)
 

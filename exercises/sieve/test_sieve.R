@@ -1,3 +1,4 @@
+context("sieve")
 source("./sieve.R")
 library(testthat)
 

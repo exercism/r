@@ -1,3 +1,4 @@
+context("space age")
 source("./space-age.R")
 library(testthat)
 

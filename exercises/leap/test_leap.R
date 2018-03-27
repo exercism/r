@@ -1,3 +1,4 @@
+context("leap")
 source("./leap.R")
 library(testthat)
 
