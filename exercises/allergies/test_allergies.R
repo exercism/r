@@ -1,3 +1,4 @@
+context("allergies")
 source("./allergies.R")
 library(testthat)
 
