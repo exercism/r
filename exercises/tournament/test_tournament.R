@@ -1,6 +1,7 @@
-context("tournament")
 source("./tournament.R")
 library(testthat)
+
+context("tournament")
 
 options(stringsAsFactors = FALSE)
 

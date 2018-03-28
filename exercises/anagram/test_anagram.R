@@ -1,6 +1,7 @@
-context("anagram")
 source("./anagram.R")
 library(testthat)
+
+context("anagram")
 
 test_that("no matches", {
   subject <- "diaper"

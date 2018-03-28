@@ -1,6 +1,7 @@
-context("scrabble score")
 source("./scrabble-score.R")
 library(testthat)
+
+context("scrabble score")
 
 test_that("lowercase letter", {
   input <- "a"

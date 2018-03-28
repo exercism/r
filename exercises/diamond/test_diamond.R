@@ -1,6 +1,7 @@
-context("diamond")
 source("./diamond.R")
 library(testthat)
+
+context("diamond")
 
 test_that("Degenerate case with a single 'A' row", {
   expect_equal(diamond("A"), "A")

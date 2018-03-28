@@ -1,8 +1,9 @@
-context("prime factors")
 source("./prime-factors.R")
 suppressPackageStartupMessages({
   library(testthat)
 })
+
+context("prime factors")
 
 test_that("no factors", {
   number <- 1

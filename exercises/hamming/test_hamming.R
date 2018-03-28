@@ -1,6 +1,7 @@
-context("hamming")
 source("./hamming.R")
 library(testthat)
+
+context("hamming")
 
 test_that("identical strands", {
   strand1 <- "A"

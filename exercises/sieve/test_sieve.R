@@ -1,6 +1,7 @@
-context("sieve")
 source("./sieve.R")
 library(testthat)
+
+context("sieve")
 
 test_that("no primes under two", {
   expect_equal(sieve(1), c())

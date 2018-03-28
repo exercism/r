@@ -1,6 +1,7 @@
-context("secret handshake")
 source("./secret-handshake.R")
 library(testthat)
+
+context("secret handshake")
 
 test_that("wink for 1", {
   expect_equal(handshake(1), c("wink"))

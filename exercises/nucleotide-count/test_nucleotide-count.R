@@ -1,6 +1,7 @@
-context("nucleotide count")
 source("./nucleotide-count.R")
 library(testthat)
+
+context("nucleotide count")
 
 # When comparing lists, all.equal expects the objects to be in the same order
 # This expectation instead checks that a) the set of names are the same and

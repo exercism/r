@@ -1,6 +1,7 @@
-context("space age")
 source("./space-age.R")
 library(testthat)
+
+context("space age")
 
 test_that("Age on Earth", {
   seconds <- 1000000000

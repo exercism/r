@@ -1,6 +1,7 @@
-context("beer song")
 source("./beer-song.R")
 library(testthat)
+
+context("beer song")
 
 test_that("first generic verse", {
   expect_equal(

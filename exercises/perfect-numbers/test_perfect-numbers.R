@@ -1,6 +1,7 @@
-context("perfect numbers")
 source("./perfect-numbers.R")
 library(testthat)
+
+context("perfect numbers")
 
 test_that("Smallest perfect number is classified correctly", {
   n <- 6

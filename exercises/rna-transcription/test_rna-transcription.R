@@ -1,6 +1,7 @@
-context("rna transcription")
 source("./rna-transcription.R")
 library(testthat)
+
+context("rna transcription")
 
 test_that("RNA complement of cytosine is guanine", {
   dna <- "C"

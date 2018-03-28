@@ -1,6 +1,7 @@
-context("sum of multiples")
 source("./sum-of-multiples.R")
 library(testthat)
+
+context("sum of multiples")
 
 test_that("Case 1", {
   expect_equal(sum_of_multiples(c(3, 5), 1), 0)

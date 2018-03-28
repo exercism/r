@@ -1,6 +1,7 @@
-context("allergies")
 source("./allergies.R")
 library(testthat)
+
+context("allergies")
 
 test_that("no allergies means not allergic", {
   x <- allergy(0)

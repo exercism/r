@@ -1,6 +1,7 @@
-context("word count")
 source("./word-count.R")
 library(testthat)
+
+context("word count")
 
 # When comparing lists, all.equal expects the objects to be in the same order
 # This expectation instead checks that a) the set of names are the same and

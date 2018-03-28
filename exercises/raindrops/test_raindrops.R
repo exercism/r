@@ -1,6 +1,7 @@
-context("raindrops")
 source("./raindrops.R")
 library(testthat)
+
+context("raindrops")
 
 test_that("the sound for 1 is 1", {
   number <- 1

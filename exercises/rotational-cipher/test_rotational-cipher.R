@@ -1,6 +1,7 @@
-context("rotational cipher")
 source("./rotational-cipher.R")
 library(testthat)
+
+context("rotational cipher")
 
 test_that("rotate a by 1", {
   text <- "a"

@@ -1,6 +1,7 @@
-context("crypto square")
 source("./crypto-square.R")
 library(testthat)
+
+context("crypto square")
 
 test_that("Lowercase", {
   expect_equal(normalized_plaintext("Hello"), "hello")

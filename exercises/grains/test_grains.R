@@ -1,6 +1,7 @@
-context("grains")
 source("./grains.R")
 library(testthat)
+
+context("grains")
 
 test_that("Case 1", {
   expect_equal(square(1), 1)
