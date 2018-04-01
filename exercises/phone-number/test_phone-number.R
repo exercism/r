@@ -1,6 +1,8 @@
 source("./phone-number.R")
 library(testthat)
 
+context("phone number")
+
 test_that("cleans the number", {
   expect_equal(parse_phone_number("(223) 456-7890"), "2234567890")
 })

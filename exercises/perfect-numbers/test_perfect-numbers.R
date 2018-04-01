@@ -1,6 +1,8 @@
 source("./perfect-numbers.R")
 library(testthat)
 
+context("perfect numbers")
+
 test_that("Smallest perfect number is classified correctly", {
   n <- 6
   expect_equal(number_type(n), "perfect")

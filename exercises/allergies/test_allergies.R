@@ -1,6 +1,8 @@
 source("./allergies.R")
 library(testthat)
 
+context("allergies")
+
 test_that("no allergies means not allergic", {
   x <- allergy(0)
   expect_false(allergic_to(x, "peanuts"))

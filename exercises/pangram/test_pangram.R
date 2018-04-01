@@ -1,6 +1,8 @@
 source("./pangram.R")
 library(testthat)
 
+context("pangram")
+
 test_that("sentence empty", {
     expect_false(is_pangram(""))
 })

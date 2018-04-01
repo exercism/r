@@ -3,6 +3,8 @@ suppressPackageStartupMessages({
   library(testthat)
 })
 
+context("prime factors")
+
 test_that("no factors", {
   number <- 1
   expect_equal(prime_factors(number),

@@ -1,6 +1,8 @@
 source("./rna-transcription.R")
 library(testthat)
 
+context("rna transcription")
+
 test_that("RNA complement of cytosine is guanine", {
   dna <- "C"
   expect_equal(to_rna(dna), "G")

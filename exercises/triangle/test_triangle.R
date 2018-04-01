@@ -1,6 +1,8 @@
 source("./triangle.R")
 library(testthat)
 
+context("triangle")
+
 test_that("true if all sides are equal", {
   expect_is(triangle(2, 2, 2), "equilateral")
 })

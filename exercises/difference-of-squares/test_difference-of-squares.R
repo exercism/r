@@ -1,6 +1,8 @@
 source("./difference-of-squares.R")
 library(testthat)
 
+context("difference of squares")
+
 test_that("difference of squares 0", {
   input <- 0
   expect_equal(difference_of_squares(input), 0)

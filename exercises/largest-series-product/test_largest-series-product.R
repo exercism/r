@@ -1,6 +1,8 @@
 source("./largest-series-product.R")
 library(testthat)
 
+context("largest series product")
+
 test_that("finds the largest product if span equals length", {
   digits <- "29"
   span <- 2

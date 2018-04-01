@@ -1,6 +1,8 @@
 source("./tournament.R")
 library(testthat)
 
+context("tournament")
+
 options(stringsAsFactors = FALSE)
 
 test_that("typical input", {

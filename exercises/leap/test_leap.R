@@ -1,6 +1,8 @@
 source("./leap.R")
 library(testthat)
 
+context("leap")
+
 test_that("year not divisible by 4: common year", {
   year <- 2015
   expect_equal(leap(year), FALSE)

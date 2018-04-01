@@ -1,6 +1,8 @@
 source("./bob.R")
 library(testthat)
 
+context("bob")
+
 test_that("stating something", {
   input <- "Tom-ay-to, tom-aaaah-to."
   expect_equal(bob(input),

@@ -1,6 +1,8 @@
 source("./collatz-conjecture.R")
 library(testthat)
 
+context("collatz conjecture")
+
 test_that("Input of 1 results in 0 steps", {
   expect_equal(collatz_step_counter(1), 0)
 })

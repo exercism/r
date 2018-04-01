@@ -1,6 +1,8 @@
 source("./isogram.R")
 library(testthat)
 
+context("isogram")
+
 test_that("empty string", {
   word <- ""
   expect_equal(is_isogram(word), TRUE)

@@ -1,6 +1,8 @@
 source("./space-age.R")
 library(testthat)
 
+context("space age")
+
 test_that("Age on Earth", {
   seconds <- 1000000000
   expect_equal(space_age(seconds, "earth"), 31.69)

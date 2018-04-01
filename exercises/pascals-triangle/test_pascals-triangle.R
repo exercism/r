@@ -1,6 +1,8 @@
 source("./pascals-triangle.R")
 library(testthat)
 
+context("pascals triangle")
+
 test_that("zero rows", {
   expect_equal(pascals_triangle(0), list())
 })
