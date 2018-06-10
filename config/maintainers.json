@@ -2,34 +2,34 @@
   "docs_url": "https://github.com/exercism/docs/blob/master/maintaining-a-track/maintainer-configuration.md",
   "maintainers": [
     {
-      "alumnus": false,
-      "avatar_url": null,
-      "bio": "I was introduced to R during my statistics undergrad in 2006 and have been trying to learn to use it properly ever since! I love the power, flexibility and expressiveness of the language, and hope I can help others to appreciate it too.",
       "github_username": "jonmcalder",
+      "alumnus": false,
+      "show_on_website": true,
+      "name": "Jon Calder",
       "link_text": "My Website",
       "link_url": "http://joncalder.co.za",
-      "name": "Jon Calder",
-      "show_on_website": true
+      "avatar_url": null,
+      "bio": "I was introduced to R during my statistics undergrad in 2006 and have been trying to learn to use it properly ever since! I love the power, flexibility and expressiveness of the language, and hope I can help others to appreciate it too."
     },
     {
-      "alumnus": false,
-      "avatar_url": null,
-      "bio": "I struggled to apply R to my own PhD research data in 2013. A Science Craft grad school course finally got me started when I decided to use another, well-formated data set. Since then, I have found R to be a lifeline for data analysis and teaching myself and others one or the other programming skill :-)   R may not be pretty, but it gets the job done.",
       "github_username": "katrinleinweber",
+      "alumnus": false,
+      "show_on_website": true,
+      "name": null,
       "link_text": "GitHub",
       "link_url": "https://github.com/katrinleinweber",
-      "name": null,
-      "show_on_website": true
+      "avatar_url": null,
+      "bio": "I struggled to apply R to my own PhD research data in 2013. A Science Craft grad school course finally got me started when I decided to use another, well-formated data set. Since then, I have found R to be a lifeline for data analysis and teaching myself and others one or the other programming skill :-)   R may not be pretty, but it gets the job done."
     },
     {
-      "alumnus": false,
-      "avatar_url": null,
-      "bio": null,
       "github_username": "jonboiser",
+      "alumnus": false,
+      "show_on_website": false,
+      "name": null,
       "link_text": null,
       "link_url": null,
-      "name": null,
-      "show_on_website": false
+      "avatar_url": null,
+      "bio": null
     }
   ]
 }
