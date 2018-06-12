@@ -8,6 +8,7 @@
       "uuid": "285404a4-d8f8-469d-b183-920b08ba2430",
       "core": true,
       "unlocked_by": null,
+      "auto_approve": true,
       "difficulty": 1,
       "topics": [
         "optional_values",
