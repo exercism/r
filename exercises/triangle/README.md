@@ -28,7 +28,7 @@ a single line. Feel free to add your own code/tests to check for degenerate tria
 For this exercise you will need to implement a simple S3 class. If you are not familiar with S3, a great starting point is the [chapter on S3](http://adv-r.hadley.nz/s3.html) in Hadley Wickham's book Advanced R.
 
 ## Installation
-See [this guide](https://github.com/exercism/xr/blob/master/docs/INSTALLATION.md) for instructions on how to setup your local R environment.
+See [this guide](https://github.com/exercism/r/blob/master/docs/INSTALLATION.md) for instructions on how to setup your local R environment.
 
 ## How to implement your solution
 In each problem folder, there is a file named `<exercise_name>.R` containing a function that returns a `NULL` value. Place your implementation inside the body of the function.
