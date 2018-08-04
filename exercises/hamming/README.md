@@ -37,7 +37,7 @@ not work. The general handling of this situation (e.g., raising an
 exception vs returning a special value) may differ between languages.
 
 ## Installation
-See [this guide](https://github.com/exercism/r/blob/master/docs/INSTALLATION.md) for instructions on how to setup your local R environment.
+See [this guide](https://exercism.io/tracks/r/installation) for instructions on how to setup your local R environment.
 
 ## How to implement your solution
 In each problem folder, there is a file named `<exercise_name>.R` containing a function that returns a `NULL` value. Place your implementation inside the body of the function.

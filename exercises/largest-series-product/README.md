@@ -14,7 +14,7 @@ For the input `'73167176531330624919225119674426574742355349194934'`,
 the largest product for a series of 6 digits is 23520.
 
 ## Installation
-See [this guide](https://github.com/exercism/r/blob/master/docs/INSTALLATION.md) for instructions on how to setup your local R environment.
+See [this guide](https://exercism.io/tracks/r/installation) for instructions on how to setup your local R environment.
 
 ## How to implement your solution
 In each problem folder, there is a file named `<exercise_name>.R` containing a function that returns a `NULL` value. Place your implementation inside the body of the function.
