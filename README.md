@@ -43,7 +43,7 @@ If you have a dedicated opinion you are welcome to [write a comment](https://hel
 Please be detailed and include motivations or relevant links to support your opinion.
 
 #### Porting exercises
-Here is the [list of missing exercises](http://exercism.io/languages/r/todo). See here for more information about [porting an exercise](https://github.com/exercism/docs/blob/master/contributing-to-language-tracks/README.md#porting-an-exercise-to-another-language-track).
+See here for more information about [porting an exercise](https://github.com/exercism/docs/blob/master/you-can-help/implement-an-exercise-from-specification.md).
 Of course you can also add a totally new exercise, but it might be a good idea to first discuss it in one of [our forums](#asking-for-help).
 
 #### Updating an exercise test suite
