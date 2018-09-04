@@ -360,6 +360,17 @@
         "control_flow_loops",
         "text_formatting"
       ]
+    },
+    {
+      "slug": "acronym",
+      "uuid": "54e60174-4833-418c-b9af-2fcb5722b1d6",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "strings",
+        "filtering"
+      ]
     }
   ]
 }
