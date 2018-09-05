@@ -1,0 +1,3 @@
+acronym <- function(input) {
+    
+}
