@@ -1,17 +1,16 @@
-# Bob
+# Two Fer
 
-Bob is a lackadaisical teenager. In conversation, his responses are very limited.
+`Two-fer` or `2-fer` is short for two for one. One for you and one for me.
 
-Bob answers 'Sure.' if you ask him a question.
+```text
+"One for X, one for me."
+```
 
-He answers 'Whoa, chill out!' if you yell at him.
+When X is a name or "you".
 
-He answers 'Calm down, I know what I'm doing!' if you yell a question at him.
+If the given name is "Alice", the result should be "One for Alice, one for me."
+If no name is given, the result should be "One for you, one for me."
 
-He says 'Fine. Be that way!' if you address him without actually saying
-anything.
-
-He answers 'Whatever.' to anything else.
 
 ## Installation
 See [this guide](https://exercism.io/tracks/r/installation) for instructions on how to setup your local R environment.
@@ -24,7 +23,7 @@ Inside of RStudio, simply execute the `test_<exercise_name>.R` script. This can 
 
 ## Source
 
-Inspired by the 'Deaf Grandma' exercise in Chris Pine's Learn to Program tutorial. [http://pine.fm/LearnToProgram/?Chapter=06](http://pine.fm/LearnToProgram/?Chapter=06)
+[https://en.wikipedia.org/wiki/Two-fer](https://en.wikipedia.org/wiki/Two-fer)
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
