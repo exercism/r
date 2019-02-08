@@ -28,4 +28,13 @@ test_that("Punctuation without whitespace", {
   expect_equal(acronym(input), "CMOS")
 })
 
+test_that("Very long abbreviation", {
+  input <- paste(
+    "Rolling On The Floor Laughing So Hard ",
+    "That My Dogs Came Over And Licked Me",
+    sep = "")
+  expect_equal(acronym(input), "ROTFLSHTMDCOALM")
+})
+
 message("All tests passed for exercise: acronym")
+
