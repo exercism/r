@@ -378,8 +378,8 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "strings",
-        "filtering"
+        "filtering",
+        "strings"
       ]
     }
   ]
