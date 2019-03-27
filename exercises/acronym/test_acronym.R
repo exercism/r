@@ -36,5 +36,19 @@ test_that("Very long abbreviation", {
   expect_equal(acronym(input), "ROTFLSHTMDCOALM")
 })
 
-message("All tests passed for exercise: acronym")
+test_that("Consecutive delimiters", {
+  input <- "Something - I made up from thin air"
+  expect_equal(acronym(input), "SIMUFTA")
+})
 
+test_that("Apostrophes", {
+  input <- "Halley's Comet"
+  expect_equal(acronym(input), "HC")
+})
+
+test_that("Underscore emphasis", {
+  input <- "The Road _Not_ Taken"
+  expect_equal(acronym(input), "TRNT")
+})
+
+message("All tests passed for exercise: acronym")
