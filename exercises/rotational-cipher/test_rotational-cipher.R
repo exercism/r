@@ -64,4 +64,18 @@ test_that("rotate all letters", {
                "Gur dhvpx oebja sbk whzcf bire gur ynml qbt.")
 })
 
+test_that("rotate through the alphabet an arbitrary number of times", {
+  text <- "The quick brown fox jumps over the lazy dog."
+  key <- 13 + (123 * 26)
+  expect_equal(rotate(text, key),
+               "Gur dhvpx oebja sbk whzcf bire gur ynml qbt.")
+})
+
+test_that("rotate backwards", {
+  text <- "The quick brown fox jumps over the lazy dog."
+  key <- 13 - (123 * 26)
+  expect_equal(rotate(text, key),
+               "Gur dhvpx oebja sbk whzcf bire gur ynml qbt.")
+})
+
 message("All tests passed for exercise: rotational-cipher")
