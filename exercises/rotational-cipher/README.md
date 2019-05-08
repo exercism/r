@@ -4,7 +4,7 @@ Create an implementation of the rotational cipher, also sometimes called the Cae
 
 The Caesar cipher is a simple shift cipher that relies on
 transposing all the letters in the alphabet using an integer key
-between `0` and `26`. Using a key of `0` or `26` will always yield
+(both positive or negative). Using the same key will always yield
 the same output due to modular arithmetic. The letter is shifted
 for as many values as the value of the key.
 
@@ -28,7 +28,9 @@ Ciphertext is written out in the same formatting as the input including spaces a
 - ROT0  `c` gives `c`
 - ROT26 `Cool` gives `Cool`
 - ROT13 `The quick brown fox jumps over the lazy dog.` gives `Gur dhvpx oebja sbk whzcf bire gur ynml qbt.`
+- ROT39 `The quick brown fox jumps over the lazy dog.` gives `Gur dhvpx oebja sbk whzcf bire gur ynml qbt.`
 - ROT13 `Gur dhvpx oebja sbk whzcf bire gur ynml qbt.` gives `The quick brown fox jumps over the lazy dog.`
+- ROT-13 `Gur dhvpx oebja sbk whzcf bire gur ynml qbt.` gives `The quick brown fox jumps over the lazy dog.`
 
 ## Installation
 See [this guide](https://exercism.io/tracks/r/installation) for instructions on how to setup your local R environment.
