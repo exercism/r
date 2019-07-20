@@ -1,12 +1,20 @@
-fizz_buzz<-function(input){
+fizz_buzz <- function(input) {
   condition<-function(i){
     if(i%%3==0 && i%%5==0){
       return("Fizz Buzz")
     }else if(i%%3==0){
       return("Fizz")
+    }else if(i%%5==0){
+      return("Buzz")
     }else{
       return(i)
     }
   }
   return (sapply(seq(1,input),condition))
 }
+
+
+
+
+
+
