@@ -6,11 +6,25 @@ Print numbers from 1 to n with the following exceptions:
 2. When a number is a multiple of 5, then print "Buzz"
 3. When a number is both a multiple of 3 and a multiple of 5, then print "Fizz Buzz"
 
-For example, when n=16 you should have a vector of strings returned as below:
+For example, when n=16 you should have an output as below (Hint: use `cat()`):
 
 ```text
- [1] "1"         "2"         "Fizz"      "4"         "Buzz"      "Fizz"      "7"         "8"         "Fizz"      "Buzz"      "11"       
-[12] "Fizz"      "13"        "14"        "Fizz Buzz" "16"  
+1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+11
+Fizz
+13
+14
+Fizz Buzz
+16
 ```
 
 ## Installation

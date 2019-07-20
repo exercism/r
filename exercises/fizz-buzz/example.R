@@ -1,4 +1,4 @@
-fizz_buzz <- function(input) {
+fizz_buzz = function(input) {
   condition<-function(i){
     if(i%%3==0 && i%%5==0){
       return("Fizz Buzz")
@@ -10,7 +10,9 @@ fizz_buzz <- function(input) {
       return(i)
     }
   }
-  return (sapply(seq(1,input),condition))
+  
+  out<-sapply(seq(1,input),condition)
+  return (cat(out,sep="\n"))
 }
 
 
