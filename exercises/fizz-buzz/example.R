@@ -1,5 +1,5 @@
 fizz_buzz <- function(input) {
-  condition<-function(i){
+  condition <- function(i){
     if(i %% 3 == 0 && i %% 5 == 0){
       return("Fizz Buzz")
     }else if(i %% 3 == 0){
@@ -11,7 +11,7 @@ fizz_buzz <- function(input) {
     }
   }
   
-  out <- sapply(seq(1,input), condition)
+  out <- sapply(seq(1, input), condition)
   return (cat(out, sep = "\n"))
 }
 
