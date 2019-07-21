@@ -1,7 +1,7 @@
 source("./fizz-buzz.R")
 library(testthat)
 
-ans10="1
+ans10 <- "1
 2
 Fizz
 4
@@ -12,7 +12,7 @@ Fizz
 Fizz
 Buzz"
   
-ans100="1
+ans100 <- "1
 2
 Fizz
 4
@@ -113,9 +113,9 @@ Fizz
 Fizz
 Buzz"
 
-test_that("Vector of strings match",{
-  expect_identical(fizz_buzz(10),cat(ans10) )
-  expect_identical(fizz_buzz(100),cat(ans100) )
+test_that("Vector of strings match", {
+  expect_identical(fizz_buzz(10), cat(ans10) )
+  expect_identical(fizz_buzz(100), cat(ans100) )
 })
 
 message("All tests passed for exercise: fizz-buzz")
