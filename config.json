@@ -386,7 +386,7 @@
       "slug": "fizz-buzz",
       "uuid": "b35ca909-3389-4427-810f-775aa174001f",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "raindrops",
       "difficulty": 1,
       "topics": [
         "control_flow_conditionals",

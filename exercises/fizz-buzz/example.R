@@ -1,22 +1,16 @@
 fizz_buzz <- function(input) {
-  condition <- function(i){
-    if(i %% 3 == 0 && i %% 5 == 0){
+  condition <- function(i) {
+    if (i %% 3 == 0 && i %% 5 == 0) {
       return("Fizz Buzz")
-    }else if(i %% 3 == 0){
+    } else if (i %% 3 == 0) {
       return("Fizz")
-    }else if(i %% 5 == 0){
+    } else if (i %% 5 == 0) {
       return("Buzz")
-    }else{
+    } else {
       return(i)
     }
   }
-  
+
   out <- sapply(seq(1, input), condition)
-  return (cat(out, sep = "\n"))
+  return(out)
 }
-
-
-
-
-
-
