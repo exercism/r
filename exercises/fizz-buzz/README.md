@@ -21,9 +21,7 @@ Inside of RStudio, simply execute the `test_<exercise_name>.R` script. This can 
 
 "Fizz-Buzz" originated as a children's game that helped children learn to divide. It is now regularly used in coding interviews. 
 
-1. [Rosetta Code](https://rosettacode.org/wiki/FizzBuzz) 
-2. [Code Golf](https://code-golf.io/fizz-buzz)
-
+1. [Actual Source](https://imranontech.com/2007/01/24/using-fizzbuzz-to-find-developers-who-grok-coding/D)
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.

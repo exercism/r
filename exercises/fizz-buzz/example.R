@@ -1,5 +1,5 @@
 fizz_buzz <- function(input) {
-  condition <- function(i) {
+  replace_number <- function(i) {
     if (i %% 3 == 0 && i %% 5 == 0) {
       return("Fizz Buzz")
     } else if (i %% 3 == 0) {
@@ -11,6 +11,6 @@ fizz_buzz <- function(input) {
     }
   }
 
-  out <- sapply(seq(1, input), condition)
+  out <- sapply(seq(1, input), replace_number)
   return(out)
 }
