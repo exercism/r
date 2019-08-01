@@ -93,13 +93,13 @@ Each exercise has the following structure:
 - `<exercise-name>.R` usually contains an empty function declaration, as a starting point for the required solution.
 - `example.R` is the source code of the sample solution.
 - `test_<exercise-name>.R` is the [test suite](#test-suite).
-- `HINTS.md` is an optional file containing instructions and/or hints. It is used together with the respective `description.md` for the exercise from [x-common](https://github.com/exercism/x-common) to build the `README.md` file.
+- `HINTS.md` is an optional file containing instructions and/or hints. It is used together with the respective `description.md` for the exercise from [problem-specifications](https://github.com/exercism/problem-specifications) to build the `README.md` file.
 
 ### Writing an issue
-To report a bug you should [create an issue](https://help.github.com/articles/creating-an-issue/) [here](https://github.com/exercism/xr/issues).
+To report a bug you should [create an issue](https://help.github.com/articles/creating-an-issue/) [here](https://github.com/exercism/r/issues).
 
 ### Writing a pull request
-To fix a bug you should [create a pull request from a fork](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) [here](https://github.com/exercism/xr/pulls). See also [here](https://github.com/exercism/docs/blob/master/contributing-to-language-tracks/README.md#git-basics) for more information.
+To fix a bug you should [create a pull request from a fork](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) from [here](https://github.com/exercism/r/pulls). See also [our Git Basics information](https://github.com/exercism/docs/blob/master/contributing/git-basics.md).
 
 ### Development dependencies
 You'll need to have a recent version of [R](https://cran.r-project.org/) installed on your system, as well as the `testthat` package (run `install.packages('testthat')` from the R console to install) in order to run tests.
@@ -108,7 +108,7 @@ You'll need to have a recent version of [R](https://cran.r-project.org/) install
 The example solution doesn't have to be perfect, but should pass all of the tests and ideally also strive for a healthy balance of human readability and computational efficiency.
 
 ### Test suite
-The test suite should be derived from the respective `x-common/exercises/<exercise-name>/canonical-data.json` and comply to some formatting and coding standards (to get an idea you can look at some of the existing tests).
+The test suite should be derived from the respective `problem-specifications/exercises/<exercise-name>/canonical-data.json` and comply to some formatting and coding standards (to get an idea you can look at some of the existing tests).
 
 ### Running tests
 To run the tests for just a single exercise, run `source('test_<exercise-name>.R')` from within the exercise's directory. Note that when testing locally you'll need to replace the first line of `test_<exercise-name>.R` (which sources `<exercise-name>.R`) with `source('example.R')`. If you do this, remember to change it back before submitting any pull requests.
