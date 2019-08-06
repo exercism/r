@@ -21,12 +21,18 @@ test_that("encrypt() checks that a is coprime with m", {
 # check decrypt() function
 test_that("decrypt() returns correct string", {
   expect_identical(decrypt("ybty", 5, 7), "test")
-  expect_identical(decrypt("kqlfd jzvgy tpaet icdhm rtwly kqlon ubstx", 19, 13), "thequickbrownfoxjumpsoverthelazydog")
+  expect_identical(
+    decrypt("kqlfd jzvgy tpaet icdhm rtwly kqlon ubstx", 19, 13),
+    "thequickbrownfoxjumpsoverthelazydog"
+    )
 })
 
 test_that("decrypt() accounts for whitespace", {
   expect_identical(decrypt(" ybt y", 5, 7), "test")
-  expect_identical(decrypt("kqlfd jzvgy tpaet icdhm rtwly kqlon ubstx", 19, 13), "thequickbrownfoxjumpsoverthelazydog")
+  expect_identical(
+    decrypt("kqlfd jzvgy tpaet icdhm rtwly kqlon ubstx", 19, 13),
+    "thequickbrownfoxjumpsoverthelazydog"
+    )
 })
 
 test_that("decrypt() checks that a is coprime with m", {

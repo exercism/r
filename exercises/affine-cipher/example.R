@@ -13,9 +13,9 @@ encrypt <- function(message, a, b) {
     stop("a and 26 must be co-prime")
   }
 
-  parsedMessage <- tolower(gsub(" ", "", message)) # removed whitespace & lower-cased
-  splitList <- strsplit(parsedMessage, "")[[1]] # list of letters
-  x <- match(splitList, letters) - 1 # index of letters
+  parsedmessage <- tolower(gsub(" ", "", message)) # removed whitespace & lower-cased
+  splitlist <- strsplit(parsedmessage, "")[[1]] # list of letters
+  x <- match(splitlist, letters) - 1 # index of letters
 
   # E(x) = (ax + b) mod m
   return(paste(letters[ ((a * x + b) %% m) + 1], collapse = ""))
@@ -48,9 +48,9 @@ decrypt <- function(encryption, a, b) {
     return(1)
   }
 
-  parsedEncryption <- gsub(" ", "", encryption) # removed whitespace
-  splitList <- strsplit(parsedEncryption, "")[[1]] # list of letters
-  y <- (match(splitList, letters) - 1) # index of letters
+  parsedencryption <- gsub(" ", "", encryption) # removed whitespace
+  splitlist <- strsplit(parsedencryption, "")[[1]] # list of letters
+  y <- (match(splitlist, letters) - 1) # index of letters
 
   # D(y) = a^-1(y - b) mod m
   return(paste(letters[((mmi(a, m) * (y - b)) %% m) + 1], collapse = ""))
