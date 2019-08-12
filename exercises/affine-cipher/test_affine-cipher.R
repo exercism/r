@@ -1,14 +1,6 @@
 source("./affine-cipher.R")
 library(testthat)
 
-
-#check normalise function
-
-#check mmi function
-
-# check gcd function 
-
-# check encrypt() function
 test_that("encrypt() returns correct string", {
   expect_identical(encrypt("test", 5, 7), "ybty")
 })
@@ -25,7 +17,6 @@ test_that("encrypt() checks that a is coprime with m", {
   expect_error(encrypt("jknkasd", 18, 13))
 })
 
-# check decrypt() function
 test_that("decrypt() returns correct string", {
   expect_identical(decrypt("ybty", 5, 7), "test")
   expect_identical(
