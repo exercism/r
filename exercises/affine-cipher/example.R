@@ -1,27 +1,17 @@
-
-# normalise function 
-# - remove whitespace 
-# - make all lower case
 normalise<-function(text){
   return(tolower(gsub(" ", "", text)))
 }
 
-#lookup index of letter
-lookupIndex<-function(normalisedtext){
-  # list of letters
-  splitlist <- strsplit(parsedplaintext, "")[[1]]
-  # index of letters
-  return(match(splitlist, letters) - 1)
+lookupindex<-function(normalisedtext){
+  letterslist <- strsplit(normalisedtext, "")[[1]]
+  return(match(letterslist, letters) - 1)
 }
 
-#find gcd 
 gcd <- function(x, y) {
   r <- x %% y
   return(ifelse(r, gcd(y, r), y))
 }
 
-# computes the modulo multiplicative inverse of a^m
-# a^-1 = mmi( a mod m)=mmi(a,m)
 mmi <- function(a, m) {
   a <- a %% m
   for (x in 1:m) {
@@ -32,36 +22,28 @@ mmi <- function(a, m) {
   return(1)
 }
 
-# encrypts plaintext
 encrypt <- function(plaintext, a, b) {
   m <- 26
-
-  # must check a and m are coprime
+  
   if (gcd(a, m) != 1) {
     stop(paste('a=',a,' and m=',m,'is coprime'))
   }
   
-  #normalise text input
   normalisedplaintext<-normalise(plaintext) 
-  x<-lookupIndex(normalisedencryption)
-
-
-  # E(x) = (ax + b) mod m
+  x<-lookupindex(normalisedplaintext)
+  
   return(paste(letters[ ((a * x + b) %% m) + 1], collapse = ""))
 }
 
-# decrypts encryption
 decrypt <- function(encryption, a, b) {
   m <- 26
-
-  # must check a and m are coprime
+  
   if (gcd(a, m) != 1) {
     stop("a and 26 must be co-prime")
   }
-
-  normalisedencryption<-normalise(plaintext)
-  y<-lookupIndex(normalisedencryption)
-
-  # D(y) = a^-1(y - b) mod m
+  
+  normalisedencryption<-normalise(encryption)
+  y<-lookupindex(normalisedencryption)
+  
   return(paste(letters[((mmi(a, m) * (y - b)) %% m) + 1], collapse = ""))
 }
