@@ -104,6 +104,8 @@ To fix a bug you should [create a pull request from a fork](https://help.github.
 ### Development dependencies
 You'll need to have a recent version of [R](https://cran.r-project.org/) installed on your system, as well as the `testthat` package (run `install.packages('testthat')` from the R console to install) in order to run tests.
 
+Optionally, you may also want to install [pre-commit](https://pre-commit.com/) in order to make use of the suggested pre-commit hooks (these will assist with automated code style checks etc). See the [Style Guide](#style-guide) for more info.
+
 ### Example solution
 The example solution doesn't have to be perfect, but should pass all of the tests and ideally also strive for a healthy balance of human readability and computational efficiency.
 
@@ -135,6 +137,12 @@ Note however that at the moment only the following linting rules are strictly en
 
 To perform these specific checks locally, run `source("bin/run_lints.R")`.
 
+We also recommend using [styler](https://github.com/r-lib/styler). You can have styler run automatically (when making code commits) by making use of a [pre-commit](https://pre-commit.com) hook.
+
+Simply follow the installation instructions available [here](https://pre-commit.com/#install)
+and then from the terminal run `pre-commit install` in your repo. The hooks defined in `.pre-commit-config.yaml` will then run automatically on any subsequent commits. This should help deal with most of the linting requirements.
+
+You can run `pre-commit autoupdate` occassionally to update the hook revisions.
 
 ## R icon
 The R logo was created by [Hadley Wickham](https://github.com/hadley) and others at [RStudio](https://www.rstudio.com/). The original file is licensed under version [4.0 of the Creative Commons Attribution-Share Alike license](https://creativecommons.org/licenses/by-sa/4.0/). We have adapted it, changing the colour scheme, for use on Exercism.
