@@ -22,9 +22,9 @@ The algorithm is as below:
 1. the encryption function is:
  
   `E(x) = (ax + b) mod m`
-  -  where `x` is the letter's index from 0 - length of alphabet - 1
-  -  `m` is the length of the alphabet. For the roman alphabet `m == 26`.
-  -  and `a` and `b` make the key
+  *  where `x` is the letter's index from 0 to length of alphabet - 1
+  *  `m` is the length of the alphabet. For the roman alphabet `m == 26`.
+  *  and `a` and `b` make the key
   
   Alphabet | x
 a | 0 |
@@ -38,10 +38,10 @@ etc.. | etc..
 2. the decryption function is:
  
   `D(y) = a^-1(y - b) mod m`
-  -  where `y` is the numeric value of an encrypted letter, ie. `y = E(x)`
-  -  it is important to note that `a^-1` is the modular multiplicative inverse
+  *  where `y` is the numeric value of an encrypted letter, ie. `y = E(x)`
+  *  it is important to note that `a^-1` is the modular multiplicative inverse
      of `a mod m`
-  -  the modular multiplicative inverse of `a` only exists if `a` and `m` are
+  *  the modular multiplicative inverse of `a` only exists if `a` and `m` are
      coprime.
      
   Alphabet | y
@@ -56,33 +56,33 @@ etc.. | etc..
 3. To find the MMI of `a`:
 
   `an mod m = 1`
-  -  where `n` is the modular multiplicative inverse of `a mod m`
+  *  where `n` is the modular multiplicative inverse of `a mod m`
   
 ## Caveats
 
 You must also check for the following:
-- `a` is coprime with `m`, otherwise, an error is returned. The statement `a` and `m` are coprime means that the greatest common divisor of `a` and `m` equals 1.
-- all encryptions have whitespace removed before applying the algorithm
-- all encryptions have whitespace removed before applying the algorithm
-- all messages are converted lower case before applying the algorithm
+* `a` is coprime with `m`, otherwise, an error is returned. The statement `a` and `m` are coprime means that the greatest common divisor of `a` and `m` equals 1.
+* all encryptions have whitespace removed before applying the algorithm
+* all encryptions have whitespace removed before applying the algorithm
+* all messages are converted lower case before applying the algorithm
 
 ## Examples
 
- - Encoding `test` gives `ybty` with the key a=5 b=7
- - Decoding `ybty` gives `test` with the key a=5 b=7
- - Decoding `ybty` gives `lqul` with the wrong key a=11 b=7
- - Decoding `kqlfd jzvgy tpaet icdhm rtwly kqlon ubstx`
+ * Encoding `test` gives `ybty` with the key a=5 b=7
+ * Decoding `ybty` gives `test` with the key a=5 b=7
+ * Decoding `ybty` gives `lqul` with the wrong key a=11 b=7
+ * Decoding `kqlfd jzvgy tpaet icdhm rtwly kqlon ubstx`
    - gives `thequickbrownfoxjumpsoverthelazydog` with the key a=19 b=13
- - Encoding `test` with the key a=18 b=13
+ * Encoding `test` with the key a=18 b=13
    - gives `Error: a and m must be coprime.`
 
 ### Examples of finding a Modular Multiplicative Inverse (MMI)
 
-  - simple example:
+  1. simple example:
     - `9 mod 26 = 9`
     - `9 * 3 mod 26 = 27 mod 26 = 1`
     - `3` is the MMI of `9 mod 26`
-  - a more complicated example:
+  2. a more complicated example:
     - `15 mod 26 = 15`
     - `15 * 7 mod 26 = 105 mod 26 = 1`
     - `7` is the MMI of `15 mod 26`

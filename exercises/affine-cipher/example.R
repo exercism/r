@@ -1,24 +1,50 @@
-# encrypts message
-encrypt <- function(message, a, b) {
-  m <- 26
 
-  # computes the greatest common divisor of numbers x and y
-  gcd <- function(x, y) {
-    r <- x %% y
-    return(ifelse(r, gcd(y, r), y))
+# normalise function 
+# - remove whitespace 
+# - make all lower case
+normalise<-function(text){
+  return(tolower(gsub(" ", "", text)))
+}
+
+#lookup index of letter
+lookupIndex<-function(normalisedtext){
+  # list of letters
+  splitlist <- strsplit(parsedplaintext, "")[[1]]
+  # index of letters
+  return(match(splitlist, letters) - 1)
+}
+
+#find gcd 
+gcd <- function(x, y) {
+  r <- x %% y
+  return(ifelse(r, gcd(y, r), y))
+}
+
+# computes the modulo multiplicative inverse of a^m
+# a^-1 = mmi( a mod m)=mmi(a,m)
+mmi <- function(a, m) {
+  a <- a %% m
+  for (x in 1:m) {
+    if ((a * x) %% m == 1) {
+      return(x)
+    }
   }
+  return(1)
+}
+
+# encrypts plaintext
+encrypt <- function(plaintext, a, b) {
+  m <- 26
 
   # must check a and m are coprime
   if (gcd(a, m) != 1) {
-    stop("a and 26 must be co-prime")
+    stop(paste('a=',a,' and m=',m,'is coprime'))
   }
+  
+  #normalise text input
+  normalisedplaintext<-normalise(plaintext) 
+  x<-lookupIndex(normalisedencryption)
 
-  # removed whitespace & lower-cased
-  parsedmessage <- tolower(gsub(" ", "", message))
-  # list of letters
-  splitlist <- strsplit(parsedmessage, "")[[1]]
-  # index of letters
-  x <- match(splitlist, letters) - 1
 
   # E(x) = (ax + b) mod m
   return(paste(letters[ ((a * x + b) %% m) + 1], collapse = ""))
@@ -28,35 +54,13 @@ encrypt <- function(message, a, b) {
 decrypt <- function(encryption, a, b) {
   m <- 26
 
-  # computes the greatest common divisor of numbers x and y
-  gcd <- function(x, y) {
-    r <- x %% y
-    return(ifelse(r, gcd(y, r), y))
-  }
-
   # must check a and m are coprime
   if (gcd(a, m) != 1) {
     stop("a and 26 must be co-prime")
   }
 
-  # computes the modulo multiplicative inverse of a^m
-  # a^-1 = mmi( a mod m)=mmi(a,m)
-  mmi <- function(a, m) {
-    a <- a %% m
-    for (x in 1:m) {
-      if ((a * x) %% m == 1) {
-        return(x)
-      }
-    }
-    return(1)
-  }
-
-  # removed whitespace
-  parsedencryption <- gsub(" ", "", encryption)
-  # list of letters
-  splitlist <- strsplit(parsedencryption, "")[[1]]
-  # index of letters
-  y <- (match(splitlist, letters) - 1)
+  normalisedencryption<-normalise(plaintext)
+  y<-lookupIndex(normalisedencryption)
 
   # D(y) = a^-1(y - b) mod m
   return(paste(letters[((mmi(a, m) * (y - b)) %% m) + 1], collapse = ""))

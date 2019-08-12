@@ -1,6 +1,13 @@
 source("./affine-cipher.R")
 library(testthat)
 
+
+#check normalise function
+
+#check mmi function
+
+# check gcd function 
+
 # check encrypt() function
 test_that("encrypt() returns correct string", {
   expect_identical(encrypt("test", 5, 7), "ybty")
