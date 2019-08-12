@@ -1,8 +1,8 @@
-normalise<-function(text){
+normalise <- function(text) {
   return(tolower(gsub(" ", "", text)))
 }
 
-lookupindex<-function(normalisedtext){
+lookupindex <- function(normalisedtext) {
   letterslist <- strsplit(normalisedtext, "")[[1]]
   return(match(letterslist, letters) - 1)
 }
@@ -24,26 +24,26 @@ mmi <- function(a, m) {
 
 encrypt <- function(plaintext, a, b) {
   m <- 26
-  
+
   if (gcd(a, m) != 1) {
-    stop(paste('a=',a,' and m=',m,'is coprime'))
+    stop(paste("a=", a, " and m=", m, "is coprime"))
   }
-  
-  normalisedplaintext<-normalise(plaintext) 
-  x<-lookupindex(normalisedplaintext)
-  
+
+  normalisedplaintext <- normalise(plaintext)
+  x <- lookupindex(normalisedplaintext)
+
   return(paste(letters[ ((a * x + b) %% m) + 1], collapse = ""))
 }
 
 decrypt <- function(encryption, a, b) {
   m <- 26
-  
+
   if (gcd(a, m) != 1) {
     stop("a and 26 must be co-prime")
   }
-  
-  normalisedencryption<-normalise(encryption)
-  y<-lookupindex(normalisedencryption)
-  
+
+  normalisedencryption <- normalise(encryption)
+  y <- lookupindex(normalisedencryption)
+
   return(paste(letters[((mmi(a, m) * (y - b)) %% m) + 1], collapse = ""))
 }

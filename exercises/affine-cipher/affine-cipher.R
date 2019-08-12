@@ -1,18 +1,18 @@
-normalise<-function(text){
-  
+normalise <- function(text) {
+
 }
-lookupindex<-function(normalisedtext){
-  
+lookupindex <- function(normalisedtext) {
+
 }
-gcd<-function(x,y){
-  
-}  
-mmi<-function(a,m){
-  
+gcd <- function(x, y) {
+
 }
-encrypt<-function(plaintext,a,b){
-  
+mmi <- function(a, m) {
+
 }
-decrypt<-function(encryption,a,b){
-  
+encrypt <- function(plaintext, a, b) {
+
+}
+decrypt <- function(encryption, a, b) {
+
 }
