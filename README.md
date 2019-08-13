@@ -142,7 +142,7 @@ We also recommend using [styler](https://github.com/r-lib/styler). You can have 
 Simply follow the installation instructions available [here](https://pre-commit.com/#install)
 and then from the terminal run `pre-commit install` in your repo. The hooks defined in `.pre-commit-config.yaml` will then run automatically on any subsequent commits. This should help deal with most of the linting requirements.
 
-You can run `pre-commit autoupdate` occassionally to update the hook revisions.
+You can run `pre-commit autoupdate` occasionally to update the hook revisions.
 
 ## R icon
 The R logo was created by [Hadley Wickham](https://github.com/hadley) and others at [RStudio](https://www.rstudio.com/). The original file is licensed under version [4.0 of the Creative Commons Attribution-Share Alike license](https://creativecommons.org/licenses/by-sa/4.0/). We have adapted it, changing the colour scheme, for use on Exercism.
