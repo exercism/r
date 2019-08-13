@@ -26,7 +26,7 @@ Exercism problems in R
 
 ### Asking for help
 If stuck or in doubt just ask! We try our best to be friendly and helpful, so don't be shy!
-- [gitter support](https://gitter.im/exercism/support): general questions about exercism, setup, track content etc.
+- [gitter support](https://gitter.im/exercism/support): general questions about Exercism, setup, track content, etc.
 - [gitter dev](https://gitter.im/exercism/dev): technical questions.
 
 ### How to contribute
