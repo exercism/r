@@ -10,8 +10,8 @@ its new numeric value.
 
 To make an affine cipher, you must create two main functions:
 
-1. `encrypt(plaintext,a,b)`: A function to encrpt a plaintext/message with keys `a` and `b`
-2. `decrypt(encryption,a,b)`: A function to decrypt an encrypted plaintext/message with keys `a` and `b`
+1. `encrypt(plaintext, a, b)`: A function to encrpt a plaintext/message with keys `a` and `b`
+2. `decrypt(encryption, a, b)`: A function to decrypt an encrypted plaintext/message with keys `a` and `b`
 
 In order to help to break down the problem into smaller pieces, you must create 4 utility functions. 
 
@@ -30,7 +30,7 @@ The algorithm is as below:
  
   `E(x) = (ax + b) mod m`
   *  where `x` is the letter's index from 0 to (length of alphabet - 1)
-  *  `m` is the length of the alphabet. For the roman alphabet `m == 26`.
+  *  `m` is the length of the alphabet. For the Roman alphabet `m == 26`.
   *  and `a` and `b` make the key
   
   Alphabet | x
@@ -40,7 +40,7 @@ c | 2 |
 d | 3 |
 e | 4 |
 f | 5 |
-etc.. | etc..
+etc. | etc.
   
 2. the decryption function is:
  
@@ -58,11 +58,11 @@ c | 2 |
 d | 3 |
 e | 4 |
 f | 5 |
-etc.. | etc..
+etc. | etc.
 
 3. To find the GCD of two numbers: 
 
-The easiest way to execute this is to compute this is to use the Euclidean Algorithm. The benefits of using the euclidean algorithm is that it is commutative, i.e. `gcd(x,y) = gcd(y,x)`.
+The easiest way to execute this is to compute the Euclidean Algorithm. The benefits of using the Euclidean algorithm is that it is commutative, i.e. `gcd(x,y) = gcd(y,x)`.
 
 4. To find the MMI of `a`:
 
@@ -89,7 +89,7 @@ You must also check for the following:
 
  * The greatest common divisor of two prime numbers is 1
  * The greatest common divisor of 8 and 24 is 8
- * The greatest commond divisor of 60 and 9 is 3
+ * The greatest common divisor of 60 and 9 is 3
    
 ### Examples of finding a Modular Multiplicative Inverse (MMI)
 
