@@ -38,17 +38,6 @@
       ]
     },
     {
-      "slug": "hamming",
-      "uuid": "dcc7171a-6b7d-4749-a300-a7270a095486",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 1,
-      "topics": [
-        "filtering",
-        "strings"
-      ]
-    },
-    {
       "slug": "raindrops",
       "uuid": "955604ef-266f-42c9-abde-ce0fdc2d33ad",
       "core": true,
@@ -60,14 +49,25 @@
       ]
     },
     {
-      "slug": "bob",
-      "uuid": "da01ce65-8c7d-4646-ace4-c067d92f656b",
+      "slug": "hamming",
+      "uuid": "dcc7171a-6b7d-4749-a300-a7270a095486",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "filtering",
+        "strings"
+      ]
+    },
+    {
+      "slug": "phone-number",
+      "uuid": "e5166378-e3fc-4393-b4f8-4c36da444c56",
       "core": true,
       "unlocked_by": null,
       "difficulty": 2,
       "topics": [
-        "control_flow_conditionals",
-        "strings"
+        "parsing",
+        "transforming"
       ]
     },
     {
@@ -93,23 +93,23 @@
       ]
     },
     {
-      "slug": "phone-number",
-      "uuid": "e5166378-e3fc-4393-b4f8-4c36da444c56",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 2,
-      "topics": [
-        "parsing",
-        "transforming"
-      ]
-    },
-    {
       "slug": "rotational-cipher",
       "uuid": "8bde91c5-2fe7-4f8d-91ec-ed05284b9a49",
       "core": true,
       "unlocked_by": null,
       "difficulty": 3,
       "topics": [
+        "strings"
+      ]
+    },
+    {
+      "slug": "bob",
+      "uuid": "da01ce65-8c7d-4646-ace4-c067d92f656b",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "control_flow_conditionals",
         "strings"
       ]
     },
