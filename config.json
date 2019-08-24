@@ -49,28 +49,6 @@
       ]
     },
     {
-      "slug": "rna-transcription",
-      "uuid": "12e17ede-ff59-45d1-8c66-b07b7ede5702",
-      "core": false,
-      "unlocked_by": "hamming",
-      "difficulty": 1,
-      "topics": [
-        "strings",
-        "transforming"
-      ]
-    },
-    {
-      "slug": "difference-of-squares",
-      "uuid": "6a562684-5938-4ad9-b042-7b44a8cc4561",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 1,
-      "topics": [
-        "integers",
-        "math"
-      ]
-    },
-    {
       "slug": "raindrops",
       "uuid": "955604ef-266f-42c9-abde-ce0fdc2d33ad",
       "core": true,
@@ -79,16 +57,6 @@
       "topics": [
         "filtering",
         "text_formatting"
-      ]
-    },
-    {
-      "slug": "grains",
-      "uuid": "fb1b7105-98f5-4f4f-8f5c-c410844cc4d3",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 1,
-      "topics": [
-        "integers"
       ]
     },
     {
@@ -111,27 +79,6 @@
       "topics": [
         "filtering",
         "strings"
-      ]
-    },
-    {
-      "slug": "space-age",
-      "uuid": "b8b3a324-8d62-49d4-ba28-886883e5c549",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 1,
-      "topics": [
-        "floating_point_numbers"
-      ]
-    },
-    {
-      "slug": "sum-of-multiples",
-      "uuid": "581b968c-f78f-4b60-9eb0-8c73eeeb96af",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 2,
-      "topics": [
-        "lists",
-        "math"
       ]
     },
     {
@@ -164,6 +111,59 @@
       "difficulty": 3,
       "topics": [
         "strings"
+      ]
+    },
+    {
+      "slug": "rna-transcription",
+      "uuid": "12e17ede-ff59-45d1-8c66-b07b7ede5702",
+      "core": false,
+      "unlocked_by": "hamming",
+      "difficulty": 1,
+      "topics": [
+        "strings",
+        "transforming"
+      ]
+    },
+    {
+      "slug": "difference-of-squares",
+      "uuid": "6a562684-5938-4ad9-b042-7b44a8cc4561",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "integers",
+        "math"
+      ]
+    },
+    {
+      "slug": "grains",
+      "uuid": "fb1b7105-98f5-4f4f-8f5c-c410844cc4d3",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "integers"
+      ]
+    },
+    {
+      "slug": "space-age",
+      "uuid": "b8b3a324-8d62-49d4-ba28-886883e5c549",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "floating_point_numbers"
+      ]
+    },
+    {
+      "slug": "sum-of-multiples",
+      "uuid": "581b968c-f78f-4b60-9eb0-8c73eeeb96af",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "lists",
+        "math"
       ]
     },
     {
