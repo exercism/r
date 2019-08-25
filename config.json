@@ -128,7 +128,7 @@
       "slug": "difference-of-squares",
       "uuid": "6a562684-5938-4ad9-b042-7b44a8cc4561",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "leap",
       "difficulty": 1,
       "topics": [
         "integers",
