@@ -139,7 +139,7 @@
       "slug": "grains",
       "uuid": "fb1b7105-98f5-4f4f-8f5c-c410844cc4d3",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "leap",
       "difficulty": 1,
       "topics": [
         "integers"
@@ -149,7 +149,7 @@
       "slug": "space-age",
       "uuid": "b8b3a324-8d62-49d4-ba28-886883e5c549",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "leap",
       "difficulty": 1,
       "topics": [
         "floating_point_numbers"
@@ -159,7 +159,7 @@
       "slug": "sum-of-multiples",
       "uuid": "581b968c-f78f-4b60-9eb0-8c73eeeb96af",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "anagram",
       "difficulty": 2,
       "topics": [
         "lists",
@@ -215,7 +215,7 @@
       "slug": "prime-factors",
       "uuid": "ee849e23-d709-4e4a-ab89-07a87e13e4fb",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "anagram",
       "difficulty": 3,
       "topics": [
         "integers",
@@ -226,7 +226,7 @@
       "slug": "sieve",
       "uuid": "dabc8218-8ab8-4918-85d3-0afd5b6791c6",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "leap",
       "difficulty": 3,
       "topics": [
         "filtering",
@@ -237,7 +237,7 @@
       "slug": "largest-series-product",
       "uuid": "a1b4bde3-2ee7-42dd-85c5-4303ae546d15",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "rotational-cipher",
       "difficulty": 3,
       "topics": [
         "integers",
@@ -273,7 +273,7 @@
       "slug": "pascals-triangle",
       "uuid": "f3e93545-7466-4635-b508-7e02517fdf06",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "rotational-cipher",
       "difficulty": 3,
       "topics": [
         "control_flow_conditionals",
@@ -317,7 +317,7 @@
       "slug": "triangle",
       "uuid": "d3b2f968-32e2-4df7-a29a-f02ba2c7d581",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "anagram",
       "difficulty": 3,
       "topics": [
         "classes"
@@ -327,7 +327,7 @@
       "slug": "collatz-conjecture",
       "uuid": "4f38e325-587f-4a80-8c8f-6c45ec710e80",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "leap",
       "difficulty": 2,
       "topics": [
         "control_flow_conditionals",
@@ -339,7 +339,7 @@
       "slug": "allergies",
       "uuid": "2f7b585f-f82f-4dca-9588-2df3250184e6",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "hamming",
       "difficulty": 3,
       "topics": [
         "control_flow_conditionals",
@@ -364,7 +364,7 @@
       "slug": "diamond",
       "uuid": "7cad82d6-0db6-d680-4133-81d850d6e7a925454a0",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "rotational-cipher",
       "difficulty": 3,
       "topics": [
         "control_flow_loops",
@@ -375,7 +375,7 @@
       "slug": "acronym",
       "uuid": "54e60174-4833-418c-b9af-2fcb5722b1d6",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "raindrops",
       "difficulty": 1,
       "topics": [
         "filtering",
