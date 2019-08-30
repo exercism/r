@@ -103,6 +103,17 @@
       ]
     },
     {
+      "slug": "tournament",
+      "uuid": "acf63670-7e56-47c1-9f33-7ec076d5270f",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": [
+        "parsing",
+        "text_formatting"
+      ]
+    },
+    {
       "slug": "bob",
       "uuid": "da01ce65-8c7d-4646-ace4-c067d92f656b",
       "core": false,
@@ -278,17 +289,6 @@
       "topics": [
         "control_flow_conditionals",
         "math"
-      ]
-    },
-    {
-      "slug": "tournament",
-      "uuid": "acf63670-7e56-47c1-9f33-7ec076d5270f",
-      "core": true,
-      "unlocked_by": "rotational-cipher",
-      "difficulty": 4,
-      "topics": [
-        "parsing",
-        "text_formatting"
       ]
     },
     {
