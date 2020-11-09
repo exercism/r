@@ -1,0 +1,68 @@
+# This workflow will do a clean install of the dependencies and run tests across different versions
+#
+# Replace <track> with the track name
+# Replace <image-name> with an image to run the jobs on
+# Replace <action to setup tooling> with a github action to setup tooling on the image
+# Replace <install dependencies> with a cli command to install the dependencies
+# Replace <code-extensions> with file extensions that should trigger the workflow
+#
+# Find Github Actions to setup tooling here:
+# - https://github.com/actions/?q=setup&type=&language=
+# - https://github.com/actions/starter-workflows/tree/main/ci
+# - https://github.com/marketplace?type=actions&query=setup
+#
+# Requires scripts:
+# - bin/run_lints.R
+# - bin/run_tests.R
+
+name: r / main
+
+on:
+  push:
+    branches: [master, main]
+  workflow_dispatch:
+
+jobs:
+  precheck:
+    runs-on: ubuntu-18.04
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use <setup tooling>
+        uses: r-lib/actions/setup-R@v1
+        with:
+          r-version: 3.6.3
+
+      - name: Install project dependencies
+        run: |
+          install.packages(c("testthat", "jsonlite", "lintr", "magrittr"))
+        shell: Rscript {0}
+
+      - name: Run exercism/r ci pre-check (checks config, lint code) for all exercises
+        run: |
+          source("bin/run_lints.R")
+        shell: Rscript {0}
+
+  ci:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        R: [ '3.6.3', '4.0.3' ]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use <setup tooling> ${{ matrix.version }}
+        uses: r-lib/actions/setup-R@v1
+        with:
+          r-version: ${{ matrix.R }}
+
+      - name: Install project dependencies
+        run: |
+          install.packages(c("testthat", "jsonlite", "lintr", "magrittr"))
+        shell: Rscript {0}
+
+      - name: Run exercism/r ci (runs tests) for all exercises
+        run: |
+          source("bin/run_tests.R")
+        shell: Rscript {0}
