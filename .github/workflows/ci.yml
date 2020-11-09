@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@master
       
       - uses: r-lib/actions/setup-R@v1
         with:
@@ -51,7 +51,7 @@ jobs:
         R: [ '3.6.3', '4.0.3' ]
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@master
       
       - uses: r-lib/actions/setup-R@v1
         with:
