@@ -28,6 +28,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      
       - uses: r-lib/actions/setup-R@v1
         with:
           r-version: 3.6.3
@@ -51,6 +52,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      
       - uses: r-lib/actions/setup-R@v1
         with:
           r-version: ${{ matrix.R }}
