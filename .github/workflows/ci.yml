@@ -24,10 +24,10 @@ on:
 
 jobs:
   precheck:
-    runs-on: ubuntu-latest
+    runs-on: macOS-latest
 
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       
       - uses: r-lib/actions/setup-R@v1
         with:
@@ -44,14 +44,14 @@ jobs:
         shell: Rscript {0}
 
   ci:
-    runs-on: ubuntu-latest
+    runs-on: macOS-latest
 
     strategy:
       matrix:
         R: [ '3.6.3', '4.0.3' ]
 
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       
       - uses: r-lib/actions/setup-R@v1
         with:
