@@ -8,11 +8,11 @@ jobs:
   lint:
   runs-on: ubuntu-latest
 
-steps:
-  - uses: actions/checkout@v2
+  steps:
+    - uses: actions/checkout@v2
 
-- name: Fetch configlet
-uses: exercism/github-actions/configlet-ci@master
+    - name: Fetch configlet
+      uses: exercism/github-actions/configlet-ci@master
 
-- name: Configlet Linter
-run: configlet lint .
+    - name: Configlet Linter
+      run: configlet lint .
