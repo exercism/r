@@ -24,12 +24,11 @@ on:
 
 jobs:
   precheck:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
-      - name: Use <setup tooling>
-        uses: r-lib/actions/setup-R@v1
+      - uses: r-lib/actions/setup-R@v1
         with:
           r-version: 3.6.3
 
@@ -52,8 +51,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Use <setup tooling> ${{ matrix.version }}
-        uses: r-lib/actions/setup-R@v1
+      - uses: r-lib/actions/setup-R@v1
         with:
           r-version: ${{ matrix.R }}
 
