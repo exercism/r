@@ -1,0 +1,59 @@
+# This workflow will do a clean install of the dependencies and run tests across different versions
+#
+# Requires scripts:
+# - bin/run_lints.R
+# - bin/run_tests.R
+
+name: r / main
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+  workflow_dispatch:
+
+jobs:
+  precheck:
+    runs-on: macOS-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      
+      - uses: r-lib/actions/setup-R@v1
+        with:
+          r-version: 3.6.3
+
+      - name: Install project dependencies
+        run: |
+          install.packages(c("testthat", "jsonlite", "lintr", "magrittr"))
+        shell: Rscript {0}
+
+      - name: Run exercism/r ci pre-check (checks config, lint code) for all exercises
+        run: |
+          source("bin/run_lints.R")
+        shell: Rscript {0}
+
+  ci:
+    runs-on: macOS-latest
+
+    strategy:
+      matrix:
+        R: [ '3.6.3', '4.0.3' ]
+
+    steps:
+      - uses: actions/checkout@v2
+      
+      - uses: r-lib/actions/setup-R@v1
+        with:
+          r-version: ${{ matrix.R }}
+
+      - name: Install project dependencies
+        run: |
+          install.packages(c("testthat", "jsonlite", "lintr", "magrittr"))
+        shell: Rscript {0}
+
+      - name: Run exercism/r ci (runs tests) for all exercises
+        run: |
+          source("bin/run_tests.R")
+        shell: Rscript {0}
