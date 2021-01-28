@@ -392,6 +392,19 @@
         "control_flow_conditionals",
         "text_formatting"
       ]
+    },
+    {
+      "slug": "affine-cipher",
+      "uuid": "9bc3f040-9e4b-4ed0-b23c-3ae565e83a59",
+      "core": false,
+      "unlocked_by": "rotational-cipher",
+      "difficulty": 4,
+      "topics": [
+        "control_flow_conditionals",
+        "math",
+        "recursion",
+        "algorithms"
+      ]
     }
   ]
 }
