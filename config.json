@@ -2,6 +2,7 @@
   "language": "R",
   "active": true,
   "blurb": "R is an interpreted, open source programming language with powerful data manipulation and graphical capabilities. It has a thriving package ecosystem and is one of the most popular languages for data science.",
+  "version": 3,
   "exercises": [
     {
       "slug": "hello-world",
