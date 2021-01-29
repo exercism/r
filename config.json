@@ -1,6 +1,12 @@
 {
   "language": "R",
   "active": true,
+  "status": {
+    "concept_exercises": false,
+    "test_runner": false,
+    "representer": false,
+    "analyzer": false
+  },
   "blurb": "R is an interpreted, open source programming language with powerful data manipulation and graphical capabilities. It has a thriving package ecosystem and is one of the most popular languages for data science.",
   "version": 3,
   "exercises": [
