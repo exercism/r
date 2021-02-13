@@ -1,3 +1,5 @@
+# Installation
+
 ## Install the R runtime
 Visit the [CRAN homepage](https://cran.r-project.org/). There you will find download links for Linux, Mac OSX, and Windows. Download and run the installer for your operating system.
 

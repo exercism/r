@@ -1,3 +1,5 @@
+# About
+
 R is an open source, programming *lingua franca* of statistics. 
 It was created by **R**oss Ihaka and **R**obert Gentleman at the University of Auckland, who wanted a language that was better suited to statistical computing and easier to use than comparable software designed by computer scientists.
 
