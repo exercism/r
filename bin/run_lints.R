@@ -2,14 +2,21 @@ library(lintr)
 
 linters <- list(
   a = line_length_linter(80),
-  b = camel_case_linter,
+  b = object_name_linter(styles = "snake_case"),
   c = assignment_linter,
   d = commas_linter,
-  e = absolute_paths_linter,
+  e = absolute_path_linter,
   f = infix_spaces_linter
 )
 
-files <- list.files(path = "exercises", pattern = ".+\\.R$", recursive = TRUE, full.names = TRUE)
+files <- list.files(
+  path = "exercises",
+  pattern = ".+\\.R$",
+  all.files = TRUE,
+  full.names = TRUE,
+  recursive = TRUE,
+  ignore.case = TRUE
+)
 lints <- lintr:::flatten_lints(lapply(files, function(file) {
   if (interactive()) {
     message(".", appendLF = FALSE)
