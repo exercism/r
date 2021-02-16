@@ -444,6 +444,50 @@
     ]
   },
   "concepts": [],
-  "key_features": [],
-  "tags": []
+  "key_features": [
+    {
+      "icon": "features-oop",
+      "title": "Domain Specific",
+      "content": "R is a language and environment for statistical computing and graphics."
+    },
+    {
+      "icon": "features-strongly-typed",
+      "title": "Cross-platform",
+      "content": "It is free, open source, and available on every major platform."
+    },
+    {
+      "icon": "features-functional",
+      "title": "Multi-paradigm",
+      "content": "R has a functional programming foundation, but facilitates procedural or object-oriented approaches."
+    },
+    {
+      "icon": "features-lazy",
+      "title": "Metaprogramming",
+      "content": "R’s metaprogramming capabilities allow for magically succinct and concise functions."
+    },
+    {
+      "icon": "features-declarative",
+      "title": "Tooling",
+      "content": "R provides powerful tools for data manipulation, visualisation, modelling, and machine learning."
+    },
+    {
+      "icon": "features-generic",
+      "title": "Community",
+      "content": "R has a diverse and welcoming community."
+    }
+  ],
+  "tags": [
+    "paradigm/functional",
+    "paradigm/object_oriented",
+    "typing/dynamic",
+    "execution_mode/interpreted",
+    "platform/windows",
+    "platform/mac",
+    "platform/linux",
+    "runtime/language_specific",
+    "used_for/artificial_intelligence",
+    "used_for/scientific_calculations",
+    "used_for/scripts",
+    "used_for/web_development"
+  ]
 }
