@@ -14,6 +14,20 @@
     "indent_style": "space",
     "indent_size": 2
   },
+  "files": {
+    "solution": [
+      "%{kebab_slug}.R"
+    ],
+    "test": [
+      "test_%{kebab_slug}.R"
+    ],
+    "example": [
+      ".meta/example.R"
+    ],
+    "exemplar": [
+      ".meta/examplar.R"
+    ]
+  },
   "exercises": {
     "concept": [],
     "practice": [
