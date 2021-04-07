@@ -1,8 +1,14 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "fizz-buzz.R"
+    ],
+    "test": [
+      "test_fizz-buzz.R"
+    ],
+    "example": [
+      ".meta/example.R"
+    ]
   }
 }
