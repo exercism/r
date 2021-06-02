@@ -8,9 +8,15 @@
     "zacchaeusluke"
   ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "triangle.R"
+    ],
+    "test": [
+      "test_triangle.R"
+    ],
+    "example": [
+      ".meta/example.R"
+    ]
   },
   "source": "The Ruby Koans triangle project, parts 1 & 2",
   "source_url": "http://rubykoans.com"

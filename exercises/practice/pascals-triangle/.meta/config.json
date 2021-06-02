@@ -8,9 +8,15 @@
     "zacchaeusluke"
   ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "pascals-triangle.R"
+    ],
+    "test": [
+      "test_pascals-triangle.R"
+    ],
+    "example": [
+      ".meta/example.R"
+    ]
   },
   "source": "Pascal's Triangle at Wolfram Math World",
   "source_url": "http://mathworld.wolfram.com/PascalsTriangle.html"

@@ -11,9 +11,15 @@
     "zacchaeusluke"
   ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "difference-of-squares.R"
+    ],
+    "test": [
+      "test_difference-of-squares.R"
+    ],
+    "example": [
+      ".meta/example.R"
+    ]
   },
   "source": "Problem 6 at Project Euler",
   "source_url": "http://projecteuler.net/problem=6"

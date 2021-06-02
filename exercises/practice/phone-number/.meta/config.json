@@ -9,9 +9,15 @@
     "zacchaeusluke"
   ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "phone-number.R"
+    ],
+    "test": [
+      "test_phone-number.R"
+    ],
+    "example": [
+      ".meta/example.R"
+    ]
   },
   "source": "Event Manager by JumpstartLab",
   "source_url": "http://tutorials.jumpstartlab.com/projects/eventmanager.html"

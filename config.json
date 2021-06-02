@@ -4,7 +4,7 @@
   "active": true,
   "status": {
     "concept_exercises": false,
-    "test_runner": false,
+    "test_runner": true,
     "representer": false,
     "analyzer": false
   },
@@ -12,7 +12,11 @@
   "version": 3,
   "online_editor": {
     "indent_style": "space",
-    "indent_size": 2
+    "indent_size": 2,
+    "highlightjs_language": "r"
+  },
+  "test_runner": {
+    "average_run_time": 2.0
   },
   "files": {
     "solution": [
@@ -406,7 +410,7 @@
       {
         "slug": "diamond",
         "name": "Diamond",
-        "uuid": "7cad82d6-0db6-d680-4133-81d850d6e7a925454a0",
+        "uuid": "65448eb4-5ec0-4bf7-a803-af26ac1d8c28",
         "practices": [],
         "prerequisites": [],
         "difficulty": 3,

@@ -9,9 +9,15 @@
     "zacchaeusluke"
   ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "leap.R"
+    ],
+    "test": [
+      "test_leap.R"
+    ],
+    "example": [
+      ".meta/example.R"
+    ]
   },
   "source": "JavaRanch Cattle Drive, exercise 3",
   "source_url": "http://www.javaranch.com/leap.jsp"

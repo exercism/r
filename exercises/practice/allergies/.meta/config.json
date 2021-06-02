@@ -8,9 +8,15 @@
     "zacchaeusluke"
   ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "allergies.R"
+    ],
+    "test": [
+      "test_allergies.R"
+    ],
+    "example": [
+      ".meta/example.R"
+    ]
   },
   "source": "Jumpstart Lab Warm-up",
   "source_url": "http://jumpstartlab.com"

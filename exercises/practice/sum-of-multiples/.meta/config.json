@@ -9,9 +9,15 @@
     "zacchaeusluke"
   ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "sum-of-multiples.R"
+    ],
+    "test": [
+      "test_sum-of-multiples.R"
+    ],
+    "example": [
+      ".meta/example.R"
+    ]
   },
   "source": "A variation on Problem 1 at Project Euler",
   "source_url": "http://projecteuler.net/problem=1"

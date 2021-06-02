@@ -13,9 +13,15 @@
     "zacchaeusluke"
   ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "word-count.R"
+    ],
+    "test": [
+      "test_word-count.R"
+    ],
+    "example": [
+      ".meta/example.R"
+    ]
   },
   "source": "This is a classic toy problem, but we were reminded of it by seeing it in the Go Tour."
 }

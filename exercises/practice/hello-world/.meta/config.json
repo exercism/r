@@ -10,9 +10,15 @@
     "zacchaeusluke"
   ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "hello-world.R"
+    ],
+    "test": [
+      "test_hello-world.R"
+    ],
+    "example": [
+      ".meta/example.R"
+    ]
   },
   "source": "This is an exercise to introduce users to using Exercism",
   "source_url": "http://en.wikipedia.org/wiki/%22Hello,_world!%22_program"

@@ -8,9 +8,15 @@
     "zacchaeusluke"
   ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "rna-transcription.R"
+    ],
+    "test": [
+      "test_rna-transcription.R"
+    ],
+    "example": [
+      ".meta/example.R"
+    ]
   },
   "source": "Hyperphysics",
   "source_url": "http://hyperphysics.phy-astr.gsu.edu/hbase/Organic/transcription.html"

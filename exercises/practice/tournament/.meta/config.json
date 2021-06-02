@@ -8,8 +8,14 @@
     "zacchaeusluke"
   ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "tournament.R"
+    ],
+    "test": [
+      "test_tournament.R"
+    ],
+    "example": [
+      ".meta/example.R"
+    ]
   }
 }

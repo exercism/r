@@ -9,9 +9,15 @@
     "zacchaeusluke"
   ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "secret-handshake.R"
+    ],
+    "test": [
+      "test_secret-handshake.R"
+    ],
+    "example": [
+      ".meta/example.R"
+    ]
   },
   "source": "Bert, in Mary Poppins",
   "source_url": "http://www.imdb.com/title/tt0058331/quotes/qt0437047"

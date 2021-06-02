@@ -8,9 +8,15 @@
     "zacchaeusluke"
   ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "beer-song.R"
+    ],
+    "test": [
+      "test_beer-song.R"
+    ],
+    "example": [
+      ".meta/example.R"
+    ]
   },
   "source": "Learn to Program by Chris Pine",
   "source_url": "http://pine.fm/LearnToProgram/?Chapter=06"

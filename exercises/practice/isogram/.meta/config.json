@@ -8,9 +8,15 @@
     "zacchaeusluke"
   ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "isogram.R"
+    ],
+    "test": [
+      "test_isogram.R"
+    ],
+    "example": [
+      ".meta/example.R"
+    ]
   },
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Isogram"

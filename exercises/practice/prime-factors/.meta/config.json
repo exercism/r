@@ -9,9 +9,15 @@
     "zacchaeusluke"
   ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "prime-factors.R"
+    ],
+    "test": [
+      "test_prime-factors.R"
+    ],
+    "example": [
+      ".meta/example.R"
+    ]
   },
   "source": "The Prime Factors Kata by Uncle Bob",
   "source_url": "http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata"

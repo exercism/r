@@ -10,9 +10,15 @@
     "zacchaeusluke"
   ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "luhn.R"
+    ],
+    "test": [
+      "test_luhn.R"
+    ],
+    "example": [
+      ".meta/example.R"
+    ]
   },
   "source": "The Luhn Algorithm on Wikipedia",
   "source_url": "http://en.wikipedia.org/wiki/Luhn_algorithm"
