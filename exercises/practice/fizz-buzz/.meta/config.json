@@ -1,6 +1,11 @@
 {
   "blurb": "Print numbers from 1 to n replacing multiples of 3 and 5 with 'Fizz' and 'Buzz'",
-  "authors": [],
+  "authors": [
+    "tintinthong"
+  ],
+  "contributors": [
+    "katrinleinweber"
+  ],
   "files": {
     "solution": [
       "fizz-buzz.R"

@@ -1,6 +1,14 @@
 {
   "blurb": "The classical introductory exercise. Just say \"Hello, World!\"",
-  "authors": [],
+  "authors": [
+    "jonboiser"
+  ],
+  "contributors": [
+    "jonmcalder",
+    "katrinleinweber",
+    "ttnagata",
+    "zacchaeusluke"
+  ],
   "files": {
     "solution": [
       "hello-world.R"
