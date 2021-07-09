@@ -1,3 +1,3 @@
-hello_world <- function(name = "World") {
-  paste("Hello, ", name, "!", sep = "")
+hello_world <- function() {
+  "Hello, World!"
 }
