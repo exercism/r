@@ -37,4 +37,11 @@ test_that("find primes up to 1000", {
                  967, 971, 977, 983, 991, 997))
 })
 
+test_that("Provided solution doesn't use division operators", {
+  division_operators <- c("/", "%", "sqrt", "\\^", "exp")
+  division_operators_regex <- paste(division_operators, collapse = "|")
+  use_division_operator <- any(grepl(division_operators_regex, capture.output(sieve)))
+  expect_false(use_division_operator)
+}
+
 message("All tests passed for exercise: sieve")
