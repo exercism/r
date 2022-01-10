@@ -23,8 +23,5 @@ been marked are prime.
 The wikipedia article has a useful graphic that explains the algorithm:
 https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
 
-Notice that this is a very specific algorithm, and the tests don't check
-that you've implemented the algorithm, only that you've come up with the
-correct list of primes. A good first test is to check that you do not use
-division or remainder operations (div, /, mod or % depending on the
-language).
+Notice that this is a very specific algorithm that requires **not** to use
+division or derived operations (remainder, square root, exponent etc.).
