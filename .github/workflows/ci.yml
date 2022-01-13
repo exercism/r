@@ -15,12 +15,12 @@ on:
 
 jobs:
   precheck:
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2.4.0
       
-      - uses: r-lib/actions/setup-R@v1
+      - uses: r-lib/actions/setup-R@v2
         with:
           r-version: 3.6.3
 
@@ -35,16 +35,16 @@ jobs:
         shell: Rscript {0}
 
   ci:
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        R: [ '3.6.3', '4.0.3' ]
+        R: [ '3.6.3', '4.1.2' ]
 
     steps:
       - uses: actions/checkout@v2.4.0
       
-      - uses: r-lib/actions/setup-R@v1
+      - uses: r-lib/actions/setup-R@v2
         with:
           r-version: ${{ matrix.R }}
 
