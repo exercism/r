@@ -53,4 +53,10 @@ test_that("DNA correctly handles NULL input", {
   expect_error(to_rna(dna))
 })
 
+test_that("DNA correctly handles vector input", {
+  dna <- rep("ACGTGGTCTTAA", times = 3)
+  rna <- rep("UGCACCAGAAUU", times = 3)
+  expect_equal(to_rna(dna), rna)
+})
+
 message("All tests passed for exercise: rna-transcription")
