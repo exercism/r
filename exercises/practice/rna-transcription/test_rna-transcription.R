@@ -43,4 +43,14 @@ test_that("DNA correctly handles partially invalid input", {
   expect_error(to_rna(dna))
 })
 
+test_that("DNA correctly handles empty input", {
+  dna <- ""
+  expect_error(to_rna(dna))
+})
+
+test_that("DNA correctly handles NULL input", {
+  dna <- NULL
+  expect_error(to_rna(dna))
+})
+
 message("All tests passed for exercise: rna-transcription")
