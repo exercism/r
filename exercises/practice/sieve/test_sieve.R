@@ -40,7 +40,7 @@ test_that("find primes up to 1000", {
 test_that("division not used", {
   division_ops <- c("/", "%", "sqrt", "\\^", "exp")
   division_ops <- paste(division_ops, collapse = "|")
-  use_division <- any(grepl(division_ops, withVisible(sieve)$value))
+  use_division <- any(grepl(division_ops, deparse(sieve)))
   expect_false(use_division)
 }
 
