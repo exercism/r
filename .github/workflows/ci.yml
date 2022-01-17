@@ -4,7 +4,7 @@
 # - bin/run_lints.R
 # - bin/run_tests.R
 
-name: r / main
+name: Exercise tests
 
 on:
   push:
