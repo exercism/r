@@ -1,6 +1,6 @@
 # Exercism R Track
 
-[![Build Status](https://github.com/exercism/r/workflows/ci.yml/badge.svg)](https://github.com/exercism/r/actions/workflows/ci.yml)
+[![Build Status](https://github.com/exercism/r/workflows/Exercise%20tests/badge.svg)](https://github.com/exercism/r/actions/workflows/ci.yml)
 [![Gitter](https://badges.gitter.im/exercism/dev.svg)](https://gitter.im/exercism/dev?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 Exercism problems in R
