@@ -71,8 +71,3 @@ If you have any questions regarding implementing the exercise, please post them 
 [docs-features-of-v3]: https://github.com/exercism/v3/blob/main/docs/features-of-v3.md
 [anatomy-of-a-concept-exercise]: https://www.youtube.com/watch?v=gkbBqd7hPrA
 [reference]: https://github.com/exercism/v3/blob/main/reference/README.md
-
-
-
-
-[docs-concepts]: https://github.com/exercism/docs/blob/main/building/tracks/concepts.md
