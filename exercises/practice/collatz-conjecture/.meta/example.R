@@ -1,7 +1,6 @@
 collatz_scalar <- function(num) {
-
   if (num <= 0) {
-    stop("Only positive numbers are allowed")
+    stop("Only positive integers are allowed")
   } else if (num == 1) {
     return(0)
   } else if (num %% 2 == 0) {
@@ -9,7 +8,6 @@ collatz_scalar <- function(num) {
   } else {
     return(1 + collatz_step_counter(3 * num + 1))
   }
-
 }
 
 collatz_step_counter <- Vectorize(collatz_scalar)
