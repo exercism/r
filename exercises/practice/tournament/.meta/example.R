@@ -30,7 +30,7 @@ tournament <- function(input) {
   
   results[, 2:6] <- sapply(results[, 2:6], as.numeric)
   
-  output <- aggregate(.~Team, results[-1, ], sum)
+  output <- aggregate(. ~ Team, results[-1, ], sum)
   output <- output[order(-output$P, output$Team), ]
   row.names(output) <- 1:nrow(output)
   output
