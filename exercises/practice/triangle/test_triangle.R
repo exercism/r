@@ -4,7 +4,7 @@ library(testthat)
 context("triangle")
 
 test_that("true if all sides are equal", {
-  expect_is(triangle(2, 2, 2), "equilateral")
+  expect_equal(triangle(2, 2, 2), "equilateral")
 })
 
 test_that("false if any side is unequal", {
@@ -20,23 +20,23 @@ test_that("not equilateral if sides are zero", {
 })
 
 test_that("sides may be floats", {
-  expect_is(triangle(0.5, 0.5, 0.5), "equilateral")
+  expect_equal(triangle(0.5, 0.5, 0.5), "equilateral")
 })
 
 test_that("isosceles if last two sides are equal", {
-  expect_is(triangle(3, 4, 4), "isosceles")
+  expect_equal(triangle(3, 4, 4), "isosceles")
 })
 
 test_that("isosceles if first two sides are equal", {
-  expect_is(triangle(4, 4, 3), "isosceles")
+  expect_equal(triangle(4, 4, 3), "isosceles")
 })
 
 test_that("isosceles if first and last sides are equal", {
-  expect_is(triangle(4, 3, 4), "isosceles")
+  expect_equal(triangle(4, 3, 4), "isosceles")
 })
 
 test_that("equilateral triangles are also isosceles", {
-  expect_is(triangle(4, 4, 4), "isosceles")
+  expect_equal(triangle(4, 4, 4), "isosceles")
 })
 
 test_that("not isosceles if no sides are equal", {
@@ -48,11 +48,11 @@ test_that("not isosceles if triangle inequality is violated", {
 })
 
 test_that("sides may be floats", {
-  expect_is(triangle(0.5, 0.4, 0.5), "isosceles")
+  expect_equal(triangle(0.5, 0.4, 0.5), "isosceles")
 })
 
 test_that("scalene if no sides are equal", {
-  expect_is(triangle(5, 4, 6), "scalene")
+  expect_equal(triangle(5, 4, 6), "scalene")
 })
 
 test_that("not scalene if all sides are equal", {
@@ -68,7 +68,7 @@ test_that("not scalene if triangle inequality is violated", {
 })
 
 test_that("sides may be floats", {
-  expect_is(triangle(0.5, 0.4, 0.6), "scalene")
+  expect_equal(triangle(0.5, 0.4, 0.6), "scalene")
 })
 
 message("All tests passed for exercise: triangle")
