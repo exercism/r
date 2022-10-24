@@ -1,7 +1,6 @@
 # Exercism R Track
 
 [![Build Status](https://github.com/exercism/r/workflows/Exercise%20tests/badge.svg)](https://github.com/exercism/r/actions/workflows/ci.yml)
-[![Gitter](https://badges.gitter.im/exercism/dev.svg)](https://gitter.im/exercism/dev?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 Exercism problems in R
 
@@ -25,9 +24,7 @@ Exercism problems in R
 - [R Style Guide](#style-guide)
 
 ### Asking for help
-If stuck or in doubt just ask! We try our best to be friendly and helpful, so don't be shy!
-- [gitter support](https://gitter.im/exercism/support): general questions about Exercism, setup, track content, etc.
-- [gitter dev](https://gitter.im/exercism/dev): technical questions.
+If stuck or in doubt just ask in the [Exercism forum][forum]! We try our best to be friendly and helpful, so don't be shy!
 
 ### How to contribute
 As a first step we recommend you read the [contributing guide](https://github.com/exercism/docs/blob/master/contributing-to-language-tracks/README.md).
@@ -146,3 +143,5 @@ You can run `pre-commit autoupdate` occasionally to update the hook revisions.
 
 ## R icon
 The R logo was created by [Hadley Wickham](https://github.com/hadley) and others at [RStudio](https://www.rstudio.com/). The original file is licensed under version [4.0 of the Creative Commons Attribution-Share Alike license](https://creativecommons.org/licenses/by-sa/4.0/). We have adapted it, changing the colour scheme, for use on Exercism.
+
+[forum]: https://forum.exercism.org/
