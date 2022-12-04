@@ -1,5 +1,4 @@
 {
-  "blurb": "Tally the results of a small football competition.",
   "authors": [
     "jonmcalder"
   ],
@@ -17,5 +16,6 @@
     "example": [
       ".meta/example.R"
     ]
-  }
+  },
+  "blurb": "Tally the results of a small football competition."
 }
