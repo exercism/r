@@ -6,7 +6,8 @@ saddle_point <- function(input) {
   dims <- dim(input)
   for (row in 1:dims[1]) {
     for (col in 1:dims[2]) {
-      if (input[row, col] == min(input[, col]) && input[row, col] == max(input[row, ])) {
+      if (input[row, col] == min(input[, col]) &&
+        input[row, col] == max(input[row, ])) {
         points <- rbind(points, data.frame(row = row, col = col))
       }
     }

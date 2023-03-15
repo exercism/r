@@ -66,7 +66,8 @@ test_that("Can identify saddle points in a non square matrix", {
   )
 })
 
-test_that("Can identify that saddle points in a single column matrix are those with the minimum value", {
+test_that("Can identify that saddle points in a single column matrix are those
+          with the minimum value", {
   expect_equal(
     saddle_point(
       matrix(c(2, 1, 4, 1), nrow = 4, ncol = 1)
@@ -75,7 +76,8 @@ test_that("Can identify that saddle points in a single column matrix are those w
   )
 })
 
-test_that("Can identify that saddle points in a single row matrix are those with the maximum value", {
+test_that("Can identify that saddle points in a single row matrix are those
+          with the maximum value", {
   expect_equal(
     saddle_point(
       matrix(c(2, 5, 3, 5), nrow = 1, ncol = 4, byrow = TRUE)
