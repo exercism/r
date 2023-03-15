@@ -1,5 +1,7 @@
 {
-  "authors": [],
+  "authors": [
+    "jonmcalder"
+  ],
   "files": {
     "solution": [
       "saddle-points.R"
