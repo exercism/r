@@ -3,9 +3,12 @@ etl <- function(input) {
     unlist(input, use.names = FALSE),
     rep(names(input), lengths(input))
   )
-  output <- output |>
-    tolower() |>
-    sort()
+  output <- sort(tolower(output))
 
-  setNames(output |> names() |> as.numeric(), output) |> as.list()
+  as.list(
+    setNames(
+      as.numeric(names(output)),
+      output
+    )
+  )
 }
