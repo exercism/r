@@ -1,5 +1,7 @@
 {
-  "authors": [],
+  "authors": [
+    "jonmcalder"
+  ],
   "files": {
     "solution": [
       "etl.R"
