@@ -2,6 +2,9 @@
   "authors": [
     "jonmcalder"
   ],
+  "contributors": [
+    "simisc"
+  ],
   "files": {
     "solution": [
       "saddle-points.R"
