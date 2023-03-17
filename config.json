@@ -458,6 +458,18 @@
           "text_formatting",
           "transforming"
         ]
+      },
+      {
+        "slug": "saddle-points",
+        "name": "Saddle Points",
+        "uuid": "9d9e994c-5bfd-40c1-9528-f72726d4f9e5",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "loops",
+          "math"
+        ]
       }
     ]
   },
