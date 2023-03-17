@@ -275,6 +275,19 @@
         ]
       },
       {
+        "slug": "etl",
+        "name": "ETL",
+        "uuid": "85da6686-83eb-4ff8-ad76-ca7031361ca6",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "lists",
+          "strings",
+          "transforming"
+        ]
+      },
+      {
         "slug": "allergies",
         "name": "Allergies",
         "uuid": "2f7b585f-f82f-4dca-9588-2df3250184e6",
