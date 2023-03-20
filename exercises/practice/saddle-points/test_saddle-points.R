@@ -15,9 +15,9 @@ test_that("Can identify single saddle point", {
 test_that("Can identify that empty matrix has no saddle points", {
   expect_equal(
     saddle_point(
-      c()
+      matrix(nrow = 0, ncol = 0)
     ),
-    data.frame()
+    data.frame(row = numeric(), col = numeric())
   )
 })
 
@@ -26,7 +26,7 @@ test_that("Can identify lack of saddle points when there are none", {
     saddle_point(
       matrix(c(1, 2, 3, 3, 1, 2, 2, 3, 1), nrow = 3, ncol = 3, byrow = TRUE)
     ),
-    data.frame()
+    data.frame(row = numeric(), col = numeric())
   )
 })
 

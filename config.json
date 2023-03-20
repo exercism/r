@@ -281,6 +281,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3,
+        "status": "beta",
         "topics": [
           "lists",
           "strings",
@@ -479,6 +480,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3,
+        "status": "beta",
         "topics": [
           "loops",
           "math"
