@@ -1,2 +1,2 @@
-fizz_buzz <- function(input) {
+fizz_buzz <- function(n) {
 }
