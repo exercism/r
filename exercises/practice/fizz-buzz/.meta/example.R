@@ -1,5 +1,5 @@
 fizz_buzz <- function(n) {
-  print <- function(n) {
+  print_number <- function(n) {
     if (n %% 15 == 0) {
       "Fizz Buzz"
     } else if (n %% 3 == 0) {
@@ -11,5 +11,5 @@ fizz_buzz <- function(n) {
     }
   }
   
-  sapply(1:n, print)
+  sapply(1:n, print_number)
 }
