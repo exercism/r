@@ -1,16 +1,15 @@
-fizz_buzz <- function(input) {
-  replace_number <- function(i) {
-    if (i %% 3 == 0 && i %% 5 == 0) {
-      return("Fizz Buzz")
-    } else if (i %% 3 == 0) {
-      return("Fizz")
-    } else if (i %% 5 == 0) {
-      return("Buzz")
+fizz_buzz <- function(n) {
+  print_number <- function(n) {
+    if (n %% 15 == 0) {
+      "Fizz Buzz"
+    } else if (n %% 3 == 0) {
+      "Fizz"
+    } else if (n %% 5 == 0) {
+      "Buzz"
     } else {
-      return(i)
+      paste(n)
     }
   }
-
-  out <- sapply(seq(1, input), replace_number)
-  return(out)
+  
+  sapply(1:n, print_number)
 }
