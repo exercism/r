@@ -486,6 +486,19 @@
           "math"
         ]
       }
+      {
+        "slug": "darts",
+        "name": "Darts",
+        "uuid": "",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1,
+        "status": "wip",
+        "topics": [
+          "control_flow_conditionals",
+          "math"
+        ]
+      }
     ]
   },
   "concepts": [],
