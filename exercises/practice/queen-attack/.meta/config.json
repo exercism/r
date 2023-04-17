@@ -1,5 +1,5 @@
 {
-  "authors": [],
+  "authors": ["colinleach"],
   "files": {
     "solution": [
       "queen-attack.R"

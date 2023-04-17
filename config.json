@@ -495,7 +495,8 @@
         "difficulty": 1,
         "status": "wip",
         "topics": [
-          
+          "lists",
+          "logic"
         ]
       }
     ]
