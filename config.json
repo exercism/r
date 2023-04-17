@@ -520,7 +520,8 @@
         "difficulty": 1,
         "status": "active",
         "topics": [
-          
+          "lists",
+          "logic"
         ]
       }
     ]
