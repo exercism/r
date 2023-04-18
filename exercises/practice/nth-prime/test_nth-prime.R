@@ -29,4 +29,4 @@ test_that("there is no zeroth prime", {
 })
 
 
-message("All tests passed for exercise: luhn")
+message("All tests passed for exercise: nth-prime")
