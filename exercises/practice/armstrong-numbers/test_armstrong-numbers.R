@@ -39,12 +39,4 @@ test_that("Seven-digit number that is not an Armstrong number", {
   expect_equal(is_armstrong_number(9926314), FALSE)
 })
 
-# test_that("Armstrong number containing seven zeroes", {
-#   expect_equal(is_armstrong_number(186709961001538790100634132976990), TRUE)
-# })
-# 
-# test_that("The largest and last Armstrong number", {
-#   expect_equal(is_armstrong_number(115132219018763992565095597973971522401), TRUE)
-# })
-
 message("All tests passed for exercise: armstrong-numbers")

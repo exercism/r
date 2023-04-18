@@ -492,8 +492,8 @@
         "uuid": "c17ef56b-7418-428b-ac9d-37dbd28de32e",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 1,
-        "status": "wip",
+        "difficulty": 2,
+        "status": "active",
         "topics": [
           "math"
         ]
