@@ -22,7 +22,7 @@ prime <- function(n) {
   # Python does this with `itertools.choice()`. Is there an equivalent in R?
   known_count <- 2
   number <- 6
-  while (TRUE) {
+  repeat {
     for (candidate in c(number - 1, number + 1)) {
       if (known_count >= n) return(known[n]) # result!
       if (is_prime(candidate)) {
