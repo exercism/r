@@ -493,7 +493,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3,
-        "status": "wip",
+        "status": "active",
         "topics": [
           "control_flow_conditionals",
           "loops",
