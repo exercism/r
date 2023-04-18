@@ -87,4 +87,4 @@ test_that("cannot attack", {
   expect_equal(can_attack(queen1, queen2), FALSE)
 })
 
-message("All tests passed for exercise: hamming")
+message("All tests passed for exercise: queen-attack")
