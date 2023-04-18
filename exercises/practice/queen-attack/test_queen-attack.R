@@ -79,7 +79,9 @@ test_that("can attack on fourth diagonal", {
   expect_equal(can_attack(queen1, queen2), TRUE)
 })
 
-test_that("cannot attack if falling diagonals are only the same when reflected across the longest falling diagonal", {
+# cannot attack if falling diagonals are only the same when reflected 
+# across the longest falling diagonal
+test_that("cannot attack", {
   queen1 <- create(4, 1)
   queen2 <- create(2, 5)
   expect_equal(can_attack(queen1, queen2), FALSE)
