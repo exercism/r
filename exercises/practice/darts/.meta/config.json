@@ -2,8 +2,6 @@
   "authors": [
     "colinleach"
   ],
-  "contributors": [
-  ],
   "files": {
     "solution": [
       "darts.R"
