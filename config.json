@@ -485,6 +485,18 @@
           "loops",
           "math"
         ]
+      },
+      {
+        "slug": "nth-prime",
+        "name": "Nth Prime",
+        "uuid": "96b66be6-7e08-4ea6-8684-c21d3ce32900",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1,
+        "status": "wip",
+        "topics": [
+          "math"
+        ]
       }
     ]
   },
