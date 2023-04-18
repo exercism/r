@@ -4,7 +4,7 @@ create <- function(row, col) {
   if (col < 0) stop("column not positive")
   if (col > 7) stop("column not on board")
   
-  list(row=row, col=col)
+  list(row = row, col = col)
 }
 
 can_attack <- function(queen1, queen2) {

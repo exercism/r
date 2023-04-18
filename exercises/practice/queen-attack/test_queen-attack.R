@@ -8,7 +8,7 @@ context("queen-attack")
 test_that("queen with a valid position", {
   row <- 2
   col <- 2
-  expect_equal(create(row, col), list(row=row, col=col))
+  expect_equal(create(row, col), list(row = row, col = col))
 })
 
 test_that("queen must have positive row", {
