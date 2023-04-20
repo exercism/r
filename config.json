@@ -72,6 +72,19 @@
         ]
       },
       {
+        "slug": "darts",
+        "name": "Darts",
+        "uuid": "ddbd717d-a6b5-40fc-9dc8-3526e7409091",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1,
+        "status": "active",
+        "topics": [
+          "control_flow_conditionals",
+          "math"
+        ]
+      },
+      {
         "slug": "raindrops",
         "name": "Raindrops",
         "uuid": "955604ef-266f-42c9-abde-ce0fdc2d33ad",
@@ -483,19 +496,6 @@
         "status": "beta",
         "topics": [
           "loops",
-          "math"
-        ]
-      },
-      {
-        "slug": "darts",
-        "name": "Darts",
-        "uuid": "ddbd717d-a6b5-40fc-9dc8-3526e7409091",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1,
-        "status": "active",
-        "topics": [
-          "control_flow_conditionals",
           "math"
         ]
       }
