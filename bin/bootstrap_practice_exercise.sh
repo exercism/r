@@ -11,7 +11,7 @@ fi
 
 SLUG="$1"
 exercise_dir="exercises/practice/${SLUG}"
-prototype_dir="../r_exercises/$(SLUG)"
+prototype_dir="../r_exercises/${SLUG}"
 
 # build configlet
 echo "Fetching latest version of configlet..."
