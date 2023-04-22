@@ -498,6 +498,18 @@
           "loops",
           "math"
         ]
+      },
+      {
+        "slug": "clock",
+        "name": "Clock",
+        "uuid": "9e563264-8e28-47e2-bf46-7d906d22fc83",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "integers",
+          "text_formatting"
+        ]
       }
     ]
   },
