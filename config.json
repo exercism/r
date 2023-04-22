@@ -498,7 +498,18 @@
           "loops",
           "math"
         ]
-      }
+      },
+      {
+        "slug": "complex-numbers",
+        "name": "Complex Numbers",
+        "uuid": "0af9d842-762a-4054-b230-eaed7c0f937e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5,
+        "topics": [
+           "math"
+        ]
+   }
     ]
   },
   "concepts": [],

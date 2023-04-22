@@ -1,0 +1,17 @@
+{
+  "authors": ["colinleach"],
+  "files": {
+    "solution": [
+      "complex-numbers.R"
+    ],
+    "test": [
+      "test_complex-numbers.R"
+    ],
+    "example": [
+      ".meta/example.R"
+    ]
+  },
+  "blurb": "Implement complex numbers.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Complex_number"
+}
