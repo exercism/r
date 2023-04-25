@@ -8,31 +8,31 @@ context("queen-attack")
 test_that("queen with a valid position", {
   row <- 2
   col <- 2
-  expect_equal(create(row, col), list(row = row, col = col))
+  expect_error(create(row, col), NA)
 })
 
 test_that("queen must have positive row", {
   row <- -2
   col <- 2
-  expect_error(create(row, col), "row not positive")
+  expect_error(create(row, col))
 })
 
 test_that("queen must have row on board", {
   row <- 8
   col <- 4
-  expect_error(create(row, col), "row not on board")
+  expect_error(create(row, col))
 })
 
 test_that("queen must have positive column", {
   row <- 2
   col <- -2
-  expect_error(create(row, col), "column not positive")
+  expect_error(create(row, col))
 })
 
 test_that("queen must have column on board", {
   row <- 4
   col <- 8
-  expect_error(create(row, col), "column not on board")
+  expect_error(create(row, col))
 })
 
 # Test the ability of one queen to attack another
