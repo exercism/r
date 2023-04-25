@@ -3,11 +3,6 @@ create <- function(row, col) {
   if (row > 7) stop("row not on board")
   if (col < 0) stop("column not positive")
   if (col > 7) stop("column not on board")
-<<<<<<< HEAD
-
-=======
-  
->>>>>>> queen-attack
   list(row = row, col = col)
 }
 
