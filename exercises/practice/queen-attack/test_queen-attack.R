@@ -8,7 +8,7 @@ context("queen-attack")
 test_that("queen with a valid position", {
   row <- 2
   col <- 2
-  expect_error(create(row, col), NA)
+  expect_no_error(create(row, col))
 })
 
 test_that("queen must have positive row", {
