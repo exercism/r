@@ -510,6 +510,19 @@
         "topics": [
           "math"
         ]
+      },
+      {
+        "slug": "queen-attack",
+        "name": "Queen Attack",
+        "uuid": "50a29cbf-a782-4d71-9127-94d110f3c893",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1,
+        "status": "active",
+        "topics": [
+          "lists",
+          "logic"
+        ]
       }
     ]
   },
