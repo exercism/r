@@ -1,0 +1,11 @@
+{
+  "authors": ["colinleach"],
+  "contributors": [],
+  "files": {
+    "solution": ["vehicle-purchase.R"],
+    "test": ["test_vehicle-purchase.R"],
+    "exemplar": [".meta/exemplar.R"]
+  },
+  "forked_from": ["javascript/vehicle-purchase"],
+  "blurb": "Learn about comparison and conditionals while preparing for your next vehicle purchase"
+}
