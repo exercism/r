@@ -1,0 +1,11 @@
+{
+  "authors": ["colinleach"],
+  "contributors": [],
+  "files": {
+    "solution": ["annalyns-infiltration.R"],
+    "test": ["test_annalyns-infiltration.R"],
+    "exemplar": [".meta/exemplar.R"]
+  },
+  "forked_from": ["Csharp/annalyns-infiltration"],
+  "blurb": "Learn about booleans by contributing to a strategy game"
+}
