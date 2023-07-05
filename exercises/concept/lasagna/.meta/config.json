@@ -9,3 +9,18 @@
   },
   "forked_from": ["csharp/basics", "ruby/basics"]
 }
+
+{
+  "authors": ["jonmcalder"],
+  "contributors": ["colinleach"],
+  "files": {
+    "solution": ["lasagna.R"],
+    "test": ["test_lasagna.R"],
+    "exemplar": [".meta/exemplar.R"]
+  },
+  "forked_from": [
+    "csharp/basics", 
+    "ruby/basics"
+  ],
+  "blurb": "Learn the basics of R by following a lasagna recipe."
+}
