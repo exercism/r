@@ -526,7 +526,13 @@
       }
     ]
   },
-  "concepts": [],
+  "concepts": [
+    {
+      "uuid": "2751b6f2-7d71-4397-b063-9bf927a57756",
+      "slug": "booleans",
+      "name": "Booleans"
+    }
+  ],
   "key_features": [
     {
       "icon": "scientific",
