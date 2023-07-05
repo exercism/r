@@ -219,17 +219,7 @@
         "difficulty": 2,
         "topics": [
           "control_flow_conditionals",
-          "math",      {
-            "slug": "lasagna",
-            "name": "Lasagna",
-            "uuid": "c588a036-76cb-447a-b872-758197c15821",
-            "concepts": [
-              "basics"
-            ],
-            "prerequisites": [],
-            "status": "wip"
-          },
-    
+          "math",    
           "recursion"
         ]
       },
