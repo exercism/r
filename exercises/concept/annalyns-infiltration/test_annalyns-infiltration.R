@@ -108,7 +108,7 @@ test_that("Can signal prisoner if archer is sleeping and prisoner is awake", {
   )
 })
 
-test_that("Cannot signal prisoner if archer is awake and prisoner is sleeping", {
+test_that("Cannot signal prisoner if archer is awake, prisoner is sleeping", {
   archer_is_awake <- TRUE
   prisoner_is_awake <- FALSE
   expect_equal(
