@@ -2,7 +2,9 @@
 
 ## Variables and assignment
 
-R is a dynamically typed language, so in general it is not necessary to specify the type of a variable. The default `mode` is `numeric`, usually implemented as a double-precision float. To force use of 32-bit integers use a `L` suffix:
+R is a dynamically typed language, so in general it is not necessary to specify the type of a variable. 
+The default `mode` is `numeric`, usually implemented as a double-precision float. 
+To force use of 32-bit integers use a `L` suffix:
 
 ```R
 > class(50)
