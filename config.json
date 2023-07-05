@@ -33,7 +33,18 @@
     ]
   },
   "exercises": {
-    "concept": [],
+    "concept": [
+      {
+        "slug": "lasagna",
+        "name": "Lasagna",
+        "uuid": "c588a036-76cb-447a-b872-758197c15821",
+        "concepts": [
+          "basics"
+        ],
+        "prerequisites": [],
+        "status": "wip"
+      }
+    ],
     "practice": [
       {
         "slug": "hello-world",
@@ -210,7 +221,17 @@
         "difficulty": 2,
         "topics": [
           "control_flow_conditionals",
-          "math",
+          "math",      {
+            "slug": "lasagna",
+            "name": "Lasagna",
+            "uuid": "c588a036-76cb-447a-b872-758197c15821",
+            "concepts": [
+              "basics"
+            ],
+            "prerequisites": [],
+            "status": "wip"
+          },
+    
           "recursion"
         ]
       },
@@ -526,7 +547,13 @@
       }
     ]
   },
-  "concepts": [],
+  "concepts": [
+    {
+      "uuid": "4df4ac9c-49a2-4892-8314-f9ca24d962ff",
+      "slug": "basics",
+      "name": "Basics"
+    }
+  ],
   "key_features": [
     {
       "icon": "scientific",
