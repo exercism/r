@@ -540,6 +540,11 @@
       "uuid": "d75c1a77-9733-45b0-ae21-2b4f0f313ef4",
       "slug": "basics",
       "name": "Basics"
+    },
+    {
+      "uuid": "a36663b0-cfb7-4007-a7d3-1d106ed023fb",
+      "slug": "vectors",
+      "name": "Vectors"
     }
   ],
   "key_features": [
