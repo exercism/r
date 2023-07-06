@@ -7,7 +7,7 @@ The goal of this exercise is to teach the student about conditionals in R.
 
 ## Learning objectives
 
-- Know that the relational operators are `==`, `!=`, `>=`, `<=`.
+- Know that the relational operators include `==`, `!=`, `>=`, `<=`.
 - Know the syntax of a block if-else.
 - Know about the `ifelse()` function.
 
@@ -22,6 +22,7 @@ The Concepts this exercise unlocks are:
 
 - `vectors`
 - `loops`
+- `switch`
 
 ## Prerequisites
 
