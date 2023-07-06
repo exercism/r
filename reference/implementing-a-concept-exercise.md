@@ -1,6 +1,6 @@
 # How to implement an R concept exercise
 
-This document describes how to implement a concept exercise for the R track.
+This document describes how to implement a concept exercise for the R track. To see plans for the learning syllabus please refer to [#252](https://github.com/exercism/r/issues/252).
 
 **Please please please read the docs before starting.** Posting PRs without reading these docs will be a lot more frustrating for you during the review cycle, and exhaust Exercism's maintainers' time. So, before diving into the implementation, please read the following documents:
 
