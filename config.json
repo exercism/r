@@ -528,6 +528,12 @@
   },
   "concepts": [
     {
+      "uuid": "d75c1a77-9733-45b0-ae21-2b4f0f313ef4",
+      "slug": "basics",
+      "name": "Basics"
+
+    },
+    {
       "uuid": "2751b6f2-7d71-4397-b063-9bf927a57756",
       "slug": "booleans",
       "name": "Booleans"
