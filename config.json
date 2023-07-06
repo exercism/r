@@ -41,6 +41,18 @@
         "concepts": ["basics"],
         "prerequisites": [],
         "status": "wip"
+      },
+      {
+        "slug": "elyses-enchantments",
+        "name": "Elyses Enchantments",
+        "uuid": "9c499085-2d1a-48d4-ab73-6fa1f848fc30",
+        "concepts": [
+          "vectors"
+        ],
+        "prerequisites": [
+          "conditionals"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
