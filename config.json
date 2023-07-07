@@ -33,7 +33,16 @@
     ]
   },
   "exercises": {
-    "concept": [],
+    "concept": [
+      {
+        "slug": "lasagna",
+        "name": "Lasagna",
+        "uuid": "6fd75bbd-8654-4d6a-80b5-29344ceb8a48",
+        "concepts": ["basics"],
+        "prerequisites": [],
+        "status": "wip"
+      }
+    ],
     "practice": [
       {
         "slug": "hello-world",
@@ -531,6 +540,11 @@
       "uuid": "1b02da6d-97c7-41ca-b096-41201794b7cc",
       "slug": "conditionals",
       "name": "Conditionals"
+    },
+    {
+      "uuid": "d75c1a77-9733-45b0-ae21-2b4f0f313ef4",
+      "slug": "basics",
+      "name": "Basics"
     }
   ],
   "key_features": [
