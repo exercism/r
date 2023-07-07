@@ -40,7 +40,7 @@ jobs:
 
     strategy:
       matrix:
-        R: [ '3.6.3', '4.1.2' ]
+        R: [ '4.1.2' ]
 
     steps:
       - uses: actions/checkout@v3
