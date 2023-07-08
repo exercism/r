@@ -540,6 +540,11 @@
       "uuid": "d75c1a77-9733-45b0-ae21-2b4f0f313ef4",
       "slug": "basics",
       "name": "Basics"
+    },
+    {
+      "uuid": "18919f40-a3fe-45f3-b181-84ec82bfa785",
+      "slug": "vector-filtering",
+      "name": "Vector Filtering"
     }
   ],
   "key_features": [
