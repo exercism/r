@@ -41,6 +41,18 @@
         "concepts": ["basics"],
         "prerequisites": [],
         "status": "wip"
+      },
+      {
+        "slug": "bird-watcher",
+        "name": "Bird Watcher",
+        "uuid": "ceac4ca0-3bfe-4ca7-9b83-3c9d465ef67f",
+        "concepts": [
+          "vector-filtering"
+        ],
+        "prerequisites": [
+          "vectors"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
