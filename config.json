@@ -41,6 +41,18 @@
         "concepts": ["basics"],
         "prerequisites": [],
         "status": "wip"
+      },
+      {
+        "slug": "elyses-analytic-enchantments",
+        "name": "Elyses Analytic Enchantments",
+        "uuid": "2d6c9880-efce-4e57-8abf-d702087b6082",
+        "concepts": [
+          "vector-filtering"
+        ],
+        "prerequisites": [
+          "vectors"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
