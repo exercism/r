@@ -540,6 +540,11 @@
       "uuid": "d75c1a77-9733-45b0-ae21-2b4f0f313ef4",
       "slug": "basics",
       "name": "Basics"
+    },
+    {
+      "uuid": "85db3d8c-dfec-424c-9682-caa8611db8f8",
+      "slug": "set-operations",
+      "name": "Set Operations"
     }
   ],
   "key_features": [
