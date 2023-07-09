@@ -1,8 +1,6 @@
 source("./annalyns-infiltration.R")
 library(testthat)
 
-context("annalyns-infiltration")
-
 # 1) can_fast_attack
 
 test_that("Cannot execute fast attack if knight is awake", {

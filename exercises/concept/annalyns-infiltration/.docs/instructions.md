@@ -29,7 +29,7 @@ Implement the `can_fast_attack()` method that takes a boolean value that indicat
 ```R
 knight_is_awake <- TRUE
 can_fast_attack(knight_is_awake)
-# <-> FALSE
+# => FALSE
 ```
 
 ## 2. Check if the group can be spied upon
@@ -41,7 +41,7 @@ knight_is_awake <- FALSE
 archer_is_awake <- TRUE
 prisoner_is_awake <- FALSE
 can_spy(knight_is_awake, archer_is_awake, prisoner_is_awake)
-# <-> TRUE
+# => TRUE
 ```
 
 ## 3. Check if the prisoner can be signalled
@@ -52,7 +52,7 @@ Implement the `can_signal_prisoner()` method that takes two boolean values, indi
 archer_is_awake <- FALSE
 prisoner_is_awake <- TRUE
 can_signal_prisoner(archer_is_awake, prisoner_is_awake)
-# <-> TRUE
+# => TRUE
 ```
 
 ## 4. Check if the prisoner can be freed
@@ -65,5 +65,5 @@ archer_is_awake <- TRUE
 prisoner_is_awake <- FALSE
 pet_dog_is_present <- FALSE
 can_free_prisoner(knight_is_awake, archer_is_awake, prisoner_is_awake, pet_dog_is_present)
-# <-> FALSE
+# => FALSE
 ```
