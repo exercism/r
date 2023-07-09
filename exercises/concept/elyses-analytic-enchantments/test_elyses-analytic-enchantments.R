@@ -1,8 +1,6 @@
 source("./elyses-analytic-enchantments.R")
 library(testthat)
 
-context("elyses-analytic-enchantments")
-
 # does_stack_include_card
 
 test_that("when it is the first card", {
