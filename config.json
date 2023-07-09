@@ -47,6 +47,18 @@
         "status": "wip"
       },
       {
+        "slug": "annalyns-infiltration",
+        "name": "Annalyns Infiltration",
+        "uuid": "9b2d4bd3-c302-490d-9dac-3ac79c04cac3",
+        "concepts": [
+          "booleans"
+        ],
+        "prerequisites": [
+          "basics"
+        ],
+        "status": "wip"
+      },
+      {
         "slug": "lasagna",
         "name": "Lasagna",
         "uuid": "6fd75bbd-8654-4d6a-80b5-29344ceb8a48",
@@ -552,6 +564,11 @@
       "uuid": "d75c1a77-9733-45b0-ae21-2b4f0f313ef4",
       "slug": "basics",
       "name": "Basics"
+    },
+    {
+      "uuid": "2751b6f2-7d71-4397-b063-9bf927a57756",
+      "slug": "booleans",
+      "name": "Booleans"
     }
   ],
   "key_features": [
