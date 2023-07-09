@@ -1,8 +1,6 @@
 source("./bird-watcher.R")
 library(testthat)
 
-context("bird-watcher")
-
 # 1) today
 
 test_that("Today for disappointing day", {
