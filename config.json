@@ -35,6 +35,18 @@
   "exercises": {
     "concept": [
       {
+        "slug": "annalyns-infiltration",
+        "name": "Annalyns Infiltration",
+        "uuid": "9b2d4bd3-c302-490d-9dac-3ac79c04cac3",
+        "concepts": [
+          "booleans"
+        ],
+        "prerequisites": [
+          "basics"
+        ],
+        "status": "wip"
+      },
+      {
         "slug": "lasagna",
         "name": "Lasagna",
         "uuid": "6fd75bbd-8654-4d6a-80b5-29344ceb8a48",
