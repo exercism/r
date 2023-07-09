@@ -44,12 +44,35 @@ squareit <- function(x) {
 }
 ```
 
-Parentheses are needed with `function()` even if there are no parameters. The braces `{ }` are not strictly required here, but including them is considered good style.
+Functions can have zero or more arguments, separated by commas.
+Parentheses are needed with `function()` even if there are no parameters.
 
-R will automatically return the final value of a function. More generally, `return(x * x)` will work from anywhere in the function body.
+Default values can be specified for arguments, though these must come after any arguments without defaults.
+As a rather pointless example:
+
+```R
+squareit <- function(x = 42) {
+    x * x
+}
+
+> squareit()
+[1] 1764
+```
+
+The braces `{ }` are not strictly required for single-line function bodies, but including them is considered good style.
+
+R will automatically return the final value of a function, as in the examples above.
+
+`return()` can be used anywhere within the function body to make a return value explicit, but will return the specified value immediately and terminate the function without executing any of the remaining expressions in the function body. 
+
+So an explicit call to `return()` is usually only really required if one wants to exit the function early and return a specific value for some reason. 
+An example might be within an [`if-else` clause](/tracks/R/concepts/conditionals).
+
+Some developers do prefer explicit returns as a matter of code style though.
 
 Calling a function is conventional:
 
 ```R
-y <- squareit(3) # y is now 9
+> squareit(3)
+[1] 9
 ```
