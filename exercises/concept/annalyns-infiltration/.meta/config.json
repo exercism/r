@@ -1,6 +1,6 @@
 {
   "authors": ["colinleach"],
-  "contributors": [],
+  "contributors": ["jonmcalder"],
   "files": {
     "solution": ["annalyns-infiltration.R"],
     "test": ["test_annalyns-infiltration.R"],
