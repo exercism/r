@@ -1,8 +1,6 @@
 source("./cars-assemble.R")
 library(testthat)
 
-context("cars-assemble")
-
 # 1) success_rate
 
 test_that("Success rate for speed zero", {
