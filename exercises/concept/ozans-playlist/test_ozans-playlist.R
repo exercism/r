@@ -1,8 +1,6 @@
 source("./ozans-playlist.R")
 library(testthat)
 
-context("ozans-playlist")
-
 # 1) remove_duplicates
 
 test_that("works for a non-empty playlist", {
