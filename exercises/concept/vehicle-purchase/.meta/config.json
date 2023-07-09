@@ -1,6 +1,6 @@
 {
   "authors": ["colinleach"],
-  "contributors": [],
+  "contributors": ["jonmcalder"],
   "files": {
     "solution": ["vehicle-purchase.R"],
     "test": ["test_vehicle-purchase.R"],

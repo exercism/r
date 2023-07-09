@@ -1,8 +1,6 @@
 source("./vehicle-purchase.R")
 library(testthat)
 
-context("vehicle-purchase")
-
 # needs_license
 
 test_that("requires a license for a car", {
