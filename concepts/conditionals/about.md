@@ -41,6 +41,16 @@ if (x == 0) return("success")
 Looking ahead to the `vector-filtering` concept: the conditional clause in parentheses `()` must evaluate to a single `TRUE`/`FALSE`. 
 Including vectors in the comparison usually gives a vector of booleans, so these will need to be wrapped in an aggregating function such as `all()` or `any()`.
 
+```R
+> numbers <- c(4,5,7,9,10,11)
+> numbers %% 3 == 0 # gives vector of booleans
+[1] FALSE FALSE FALSE  TRUE FALSE FALSE
+
+# use any() to get a single TRUE/FALSE
+> if (any(numbers %% 3 == 0)) print("1 or more numbers are divisible by 3")
+[1] "1 or more numbers are divisible by 3"
+```
+
 ## The `ifelse` function
 
 An alternative if-else form may be useful, providing there is only only a true/false outcome.
