@@ -1,5 +1,5 @@
 {
   "authors": ["colinleach"],
-  "contributors": [],
-  "blurb": "R has if-then-else constructs and an ifelse function."
+  "contributors": ["jonmcalder"],
+  "blurb": "R has fairly conventional set of comparison operators and if-then-else constructs."
 }
