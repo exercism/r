@@ -1,9 +1,12 @@
 needs_license <- function(vehicle) {
-  vehicle %in% c("car", "truck")
+  if (vehicle == "car" || vehicle == "truck") {
+    return(TRUE)
+  }
+  FALSE
 }
 
 choose_vehicle <- function(option1, option2) {
-  min(c(option1, option2))
+  min(option1, option2)
 }
 
 calculate_resale_price <- function(original_price, age) {

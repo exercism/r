@@ -33,3 +33,14 @@ A simple `if` statement can be shortened:
 ```R
 if (x == 0) return("success")
 ```
+
+## Comparison functions
+
+There are a few useful functions that can take multiple arguments and compare them.
+
+```R
+> min(3, 1, 4) # minimum
+[1] 1
+> max(3, 1, 4) # maximum
+[1] 4
+```
