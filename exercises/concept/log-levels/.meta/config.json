@@ -1,0 +1,11 @@
+{
+  "authors": ["colinleach"],
+  "contributors": [],
+  "files": {
+    "solution": ["log-levels.R"],
+    "test": ["test_log-levels.R"],
+    "exemplar": [".meta/exemplar.R"]
+  },
+  "forked_from": ["fsharp/log-levels"],
+  "blurb": "Learn basic string manipulation in R by processing a log file."
+}

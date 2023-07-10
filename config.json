@@ -65,6 +65,18 @@
           "booleans"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "log-levels",
+        "name": "Log Levels",
+        "uuid": "6c85ef11-cd2d-4718-9f75-84c467afb2f9",
+        "concepts": [
+          "strings"
+        ],
+        "prerequisites": [
+          "lists"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
