@@ -43,7 +43,7 @@ Including vectors in the comparison usually gives a vector of booleans, so these
 
 ## The `ifelse` function
 
-An alternative if-else form may be useful, providing there is only only a true/false outcome.
+An alternative if-else form may be useful, provided there is only a true/false outcome.
 
 ```R
 y = ifelse(x > 8, "big", "small")
