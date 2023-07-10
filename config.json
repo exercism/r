@@ -53,6 +53,18 @@
         "concepts": ["basics"],
         "prerequisites": [],
         "status": "wip"
+      },
+      {
+        "slug": "cars-assemble",
+        "name": "Cars, Assemble",
+        "uuid": "4989ced7-c38a-4d0d-86ad-03d0b4792d6c",
+        "concepts": [
+          "conditionals"
+        ],
+        "prerequisites": [
+          "booleans"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
