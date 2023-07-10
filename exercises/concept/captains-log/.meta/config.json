@@ -1,0 +1,11 @@
+{
+  "authors": ["colinleach"],
+  "contributors": [],
+  "files": {
+    "solution": ["captains-log.R"],
+    "test": ["test_captains-log.R"],
+    "exemplar": [".meta/exemplar.R"]
+  },
+  "forked_from": ["elixir/captains-log"],
+  "blurb": "Help Mary with her role playing game by generating suitable random data."
+}
