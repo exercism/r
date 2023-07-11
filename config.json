@@ -569,6 +569,11 @@
       "uuid": "2751b6f2-7d71-4397-b063-9bf927a57756",
       "slug": "booleans",
       "name": "Booleans"
+    },
+    {
+      "uuid": "9de56486-6c39-4c08-9d5a-db78a524b0b1",
+      "slug": "randomness",
+      "name": "Randomness"
     }
   ],
   "key_features": [
