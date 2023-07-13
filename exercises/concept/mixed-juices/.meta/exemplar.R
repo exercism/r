@@ -35,11 +35,11 @@ limes_to_cut <- function(needed, limes) {
 # Students are free to use lapply() if they know about it:
 # unlikely at this point in the syllabus.
 order_times <- function(orders) {
-    times <- vector(length = length(orders))
-    for (i in seq_along(orders)) {
-        times[i] <- time_to_mix_juice(orders[i])
-    }
-    times
+  times <- vector(length = length(orders))
+  for (i in seq_along(orders)) {
+    times[i] <- time_to_mix_juice(orders[i])
+  }
+  times
 }
 
 remaining_orders <- function(time_left, orders) {
