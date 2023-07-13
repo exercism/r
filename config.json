@@ -65,6 +65,18 @@
           "booleans"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "blackjack",
+        "name": "Blackjack",
+        "uuid": "f76b5124-6627-47a2-b39b-acec27c0a67f",
+        "concepts": [
+          "switch"
+        ],
+        "prerequisites": [
+          "conditionals"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
