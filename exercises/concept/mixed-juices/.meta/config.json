@@ -1,0 +1,11 @@
+{
+  "authors": ["colinleach"],
+  "contributors": [],
+  "files": {
+    "solution": ["mixed-juices.R"],
+    "test": ["test_mixed-juices.R"],
+    "exemplar": [".meta/exemplar.R"]
+  },
+  "forked_from": ["javascript/mixed-juices"],
+  "blurb": "Help Li Mei operate her juice store with switch and loops"
+}
