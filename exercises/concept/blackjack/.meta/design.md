@@ -16,7 +16,9 @@ Nothing relevant to R was deliberately excluded, as this topic is relatively sel
 
 ## Concepts
 
-This exercise unlocks no other concepts.
+The Concepts this exercise unlocks are:
+
+- `loops`
 
 ## Prerequisites
 
