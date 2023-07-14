@@ -1,8 +1,5 @@
 needs_license <- function(vehicle) {
-  if (vehicle == "car" || vehicle == "truck") {
-    return(TRUE)
-  }
-  FALSE
+  vehicle == "car" || vehicle == "truck"
 }
 
 choose_vehicle <- function(option1, option2) {
