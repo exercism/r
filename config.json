@@ -35,6 +35,18 @@
   "exercises": {
     "concept": [
       {
+        "slug": "vehicle-purchase",
+        "name": "Vehicle Purchase",
+        "uuid": "d40b31f7-6c0d-46fa-8bd6-6618464c2572",
+        "concepts": [
+          "conditionals"
+        ],
+        "prerequisites": [
+          "booleans"
+        ],
+        "status": "wip"
+      },
+      {
         "slug": "annalyns-infiltration",
         "name": "Annalyns Infiltration",
         "uuid": "9b2d4bd3-c302-490d-9dac-3ac79c04cac3",
