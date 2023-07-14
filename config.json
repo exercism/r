@@ -569,6 +569,11 @@
       "uuid": "2751b6f2-7d71-4397-b063-9bf927a57756",
       "slug": "booleans",
       "name": "Booleans"
+    },
+    {
+      "uuid": "d48dec37-b0fd-4193-954a-f005c72f8eb6",
+      "slug": "loops",
+      "name": "Loops"
     }
   ],
   "key_features": [
