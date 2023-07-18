@@ -586,6 +586,11 @@
       "uuid": "2751b6f2-7d71-4397-b063-9bf927a57756",
       "slug": "booleans",
       "name": "Booleans"
+    },
+    {
+      "uuid": "d2796a75-7571-4b3c-b926-60deae310f8f",
+      "slug": "lists",
+      "name": "Lists"
     }
   ],
   "key_features": [
