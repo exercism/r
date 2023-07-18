@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://intro2r.com/using-functions-in-r.html",
+    "description": "Functions in R"
+  },
+  {
+    "url": "https://intro2r.com/vectors.html#vec_ord",
+    "description": "Ordering vectors"
+  },
+  {
+    "url": "https://intro2r.com/vectors.html#vectorisation",
+    "description": "Vectorisation"
+  }
+]

@@ -586,6 +586,11 @@
       "uuid": "2751b6f2-7d71-4397-b063-9bf927a57756",
       "slug": "booleans",
       "name": "Booleans"
+    },
+    {
+      "uuid": "68d54762-d212-4e4c-b2b7-815acd13de2c",
+      "slug": "vector-functions",
+      "name": "Vector Functions"
     }
   ],
   "key_features": [
