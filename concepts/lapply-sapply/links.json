@@ -1,0 +1,18 @@
+[
+  {
+    "url": "https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/lapply",
+    "description": "lapply: Apply a Function over a List or Vector"
+  },
+  {
+    "url": "https://www.dataquest.io/blog/apply-functions-in-r-sapply-lapply-tapply/",
+    "description": "Apply Functions in R with Examples"
+  },
+  {
+    "url": "https://www.learnbyexample.org/r-apply-functions/",
+    "description": "R Apply Family"
+  },
+  {
+    "url": "https://adv-r.hadley.nz/functionals.html",
+    "description": "Advanced R: Functionals"
+  }
+]

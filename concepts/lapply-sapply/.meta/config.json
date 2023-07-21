@@ -1,0 +1,5 @@
+{
+  "authors": ["colinleach"],
+  "contributors": [],
+  "blurb": "lapply() and sapply() will apply an unvectorized function to a vector or list"
+}
