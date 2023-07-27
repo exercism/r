@@ -16,7 +16,7 @@
     "highlightjs_language": "r"
   },
   "test_runner": {
-    "average_run_time": 2.0
+    "average_run_time": 2
   },
   "files": {
     "solution": [
@@ -35,11 +35,47 @@
   "exercises": {
     "concept": [
       {
+        "slug": "vehicle-purchase",
+        "name": "Vehicle Purchase",
+        "uuid": "d40b31f7-6c0d-46fa-8bd6-6618464c2572",
+        "concepts": [
+          "conditionals"
+        ],
+        "prerequisites": [
+          "booleans"
+        ],
+        "status": "wip"
+      },
+      {
+        "slug": "annalyns-infiltration",
+        "name": "Annalyns Infiltration",
+        "uuid": "9b2d4bd3-c302-490d-9dac-3ac79c04cac3",
+        "concepts": [
+          "booleans"
+        ],
+        "prerequisites": [
+          "basics"
+        ],
+        "status": "wip"
+      },
+      {
         "slug": "lasagna",
         "name": "Lasagna",
         "uuid": "6fd75bbd-8654-4d6a-80b5-29344ceb8a48",
         "concepts": ["basics"],
         "prerequisites": [],
+        "status": "wip"
+      },
+      {
+        "slug": "cars-assemble",
+        "name": "Cars, Assemble",
+        "uuid": "4989ced7-c38a-4d0d-86ad-03d0b4792d6c",
+        "concepts": [
+          "conditionals"
+        ],
+        "prerequisites": [
+          "booleans"
+        ],
         "status": "wip"
       }
     ],
@@ -537,6 +573,11 @@
   },
   "concepts": [
     {
+      "uuid": "1b02da6d-97c7-41ca-b096-41201794b7cc",
+      "slug": "conditionals",
+      "name": "Conditionals"
+    },
+    {
       "uuid": "d75c1a77-9733-45b0-ae21-2b4f0f313ef4",
       "slug": "basics",
       "name": "Basics"
@@ -545,6 +586,11 @@
       "uuid": "18919f40-a3fe-45f3-b181-84ec82bfa785",
       "slug": "vector-filtering",
       "name": "Vector Filtering"
+    },
+    {
+      "uuid": "2751b6f2-7d71-4397-b063-9bf927a57756",
+      "slug": "booleans",
+      "name": "Booleans"
     }
   ],
   "key_features": [

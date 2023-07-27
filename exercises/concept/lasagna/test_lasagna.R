@@ -1,3 +1,4 @@
+source("./lasagna.R")
 library(testthat)
 
 test_that("Expected minutes in the oven", {
