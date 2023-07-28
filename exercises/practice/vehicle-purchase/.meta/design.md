@@ -4,6 +4,7 @@
 ## Goal
 
 The goal of this exercise is to teach the student about conditionals in R.
+This concept was introduced by `cars-assemble` and this is intended as the second exercise.
 
 ## Learning objectives
 
