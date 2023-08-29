@@ -141,7 +141,7 @@ test_that(
 })
 
 test_that(
-  words other than themselves can be anagrams", {
+  "words other than themselves can be anagrams", {
   subject <- "LISTEN"
   candidates <- c("LISTEN", "Silent")
   expect_equal(anagram(subject, candidates),
