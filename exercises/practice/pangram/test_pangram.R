@@ -26,7 +26,7 @@ test_that("missing the letter 'h'", {
 })
 
 test_that("with underscores", {
-    expect_true(is_pangram("the_quick_brown_fox_jumps_over_the_lazy_dog")
+    expect_true(is_pangram("the_quick_brown_fox_jumps_over_the_lazy_dog"))
 })
 
 test_that("with numbers", {
