@@ -125,7 +125,7 @@ test_that("words are not anagrams of themselves", {
 })
 
 test_that(
-  "notan anagrams even if letter case is partially different", {
+  "not an anagram even if letter case is partially different", {
   subject <- "BANANA"
   candidates <- c("Banana")
   expect_equal(anagram(subject, candidates),
