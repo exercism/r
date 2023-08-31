@@ -24,11 +24,11 @@ test_that("does not detect false positives", {
                c())
 })
 
-test_that("detects multiple anagrams", {
-  subject <- "master"
-  candidates <- c("stream", "pigeon", "maters")
+test_that("detects two anagrams", {
+  subject <- "solemn"
+  candidates <- c("lemons", "cherry", "melons")
   expect_equal(anagram(subject, candidates),
-               c("stream", "maters"))
+               c("lemons", "melons"))
 })
 
 test_that("does not detect anagram subsets", {
@@ -45,7 +45,7 @@ test_that("detects anagram", {
                c("inlets"))
 })
 
-test_that("detects multiple anagrams", {
+test_that("detects three anagrams", {
   subject <- "allergy"
   candidates <-
     c("gallery", "ballerina", "regally", "clergy", "largely", "leading")
@@ -53,7 +53,15 @@ test_that("detects multiple anagrams", {
                c("gallery", "regally", "largely"))
 })
 
-test_that("does not detect indentical words", {
+test_that("detects multiple anagrams with different case", {
+  subject <- "nose"
+  candidates <-
+    c("Eons", "ONES")
+  expect_equal(anagram(subject, candidates),
+               c("Eons", "ONES"))
+})
+
+test_that("does not detect identical words", {
   subject <- "corn"
   candidates <- c("corn", "dark", "Corn", "rank", "CORN", "cron", "park")
   expect_equal(anagram(subject, candidates),
@@ -88,13 +96,6 @@ test_that("detects anagrams using case-insensitve possible matches", {
                c("Carthorse"))
 })
 
-test_that("does not detect a word as its own anagram", {
-  subject <- "banana"
-  candidates <- c("Banana")
-  expect_equal(anagram(subject, candidates),
-               c())
-})
-
 test_that("does not detect a anagram if the original word is repeated", {
   subject <- "go"
   candidates <- c("go Go GO")
@@ -116,18 +117,35 @@ test_that("eliminates anagrams with the same checksum", {
                c())
 })
 
-test_that("capital word is not own anagram", {
+test_that("words are not anagrams of themselves", {
+  subject <- "BANANA"
+  candidates <- c("BANANA")
+  expect_equal(anagram(subject, candidates),
+               c())
+})
+
+test_that(
+  "not an anagram even if letter case is partially different", {
   subject <- "BANANA"
   candidates <- c("Banana")
   expect_equal(anagram(subject, candidates),
                c())
 })
 
-test_that("anagrams must use all letters exactly once", {
-  subject <- "patter"
-  candidates <- c("tapper")
+test_that(
+  "not an anagram even if letter case is completely different", {
+  subject <- "BANANA"
+  candidates <- c("banana")
   expect_equal(anagram(subject, candidates),
                c())
+})
+
+test_that(
+  "words other than themselves can be anagrams", {
+  subject <- "LISTEN"
+  candidates <- c("LISTEN", "Silent")
+  expect_equal(anagram(subject, candidates),
+               c("Silent"))
 })
 
 message("All tests passed for exercise: anagram")
