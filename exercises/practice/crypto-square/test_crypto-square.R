@@ -36,7 +36,7 @@ test_that("54 character plaintext results in an 8x7 rectangle", {
       "groundgo",
       "dwouldha",
       "vegivenu",
-      "sroots"))
+      "sroots  "))
 })
 
 test_that("empty plaintext results in an empty encode", {
