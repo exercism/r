@@ -1,7 +1,4 @@
-library(magrittr)
-
 allergy <- function(num) {
-  
   allergy_list <- c(
     "eggs",
     "peanuts",
@@ -12,15 +9,14 @@ allergy <- function(num) {
     "pollen",
     "cats"
   )
-  
+
   check_allergy <- function(allergy, val) {
-    intToBits(val)[which(allergy_list == allergy)] %>% as.logical()
+    intToBits(val)[which(allergy_list == allergy)] |> as.logical()
   }
-  
+
   allergies <- sapply(allergy_list, check_allergy, num)
-  
+
   structure(allergy_list[allergies], class = "allergy")
-  
 }
 
 allergic_to <- function(allergy_object, allergy) {
