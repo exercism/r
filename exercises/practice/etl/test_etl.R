@@ -1,8 +1,6 @@
 source("./etl.R")
 library(testthat)
 
-context("ETL")
-
 test_that("single letter", {
   expect_equal(etl(list("1" = "A")), list(a = 1))
 })
@@ -82,5 +80,3 @@ test_that("multiple scores with multiple letters", {
     )
   )
 })
-
-message("All tests passed for exercise: ETL")

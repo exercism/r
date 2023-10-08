@@ -1,8 +1,6 @@
 source("./pascals-triangle.R")
 library(testthat)
 
-context("pascals triangle")
-
 test_that("zero rows", {
   expect_equal(pascals_triangle(0), list())
 })
@@ -30,5 +28,3 @@ test_that("negative rows", {
 test_that("null/no rows", {
   expect_error(pascals_triangle(NULL))
 })
-
-message("All tests passed for exercise: pascals-triangle")

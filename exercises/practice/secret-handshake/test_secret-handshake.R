@@ -1,8 +1,6 @@
 source("./secret-handshake.R")
 library(testthat)
 
-context("secret handshake")
-
 test_that("wink for 1", {
   expect_equal(handshake(1), c("wink"))
 })
@@ -36,13 +34,17 @@ test_that("reversing no actions still gives no actions", {
 })
 
 test_that("all possible actions", {
-  expect_equal(handshake(15), 
-               c("wink", "double blink", "close your eyes", "jump"))
+  expect_equal(
+    handshake(15),
+    c("wink", "double blink", "close your eyes", "jump")
+  )
 })
 
 test_that("reverse all possible actions", {
-  expect_equal(handshake(31), 
-               c("jump", "close your eyes", "double blink", "wink"))
+  expect_equal(
+    handshake(31),
+    c("jump", "close your eyes", "double blink", "wink")
+  )
 })
 
 test_that("do nothing for zero", {
@@ -52,5 +54,3 @@ test_that("do nothing for zero", {
 test_that("do nothing if lower 5 bits not set", {
   expect_equal(handshake(32), c())
 })
-
-message("All tests passed for exercise: secret-handshake")

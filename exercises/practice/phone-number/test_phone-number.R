@@ -1,8 +1,6 @@
 source("./phone-number.R")
 library(testthat)
 
-context("phone number")
-
 test_that("cleans the number", {
   expect_equal(parse_phone_number("(223) 456-7890"), "2234567890")
 })
@@ -46,5 +44,3 @@ test_that("invalid if area code does not start with 2-9", {
 test_that("invalid if exchange code does not start with 2-9", {
   expect_equal(parse_phone_number("(223) 056-7890"), NULL)
 })
-
-message("All tests passed for exercise: phone-number")

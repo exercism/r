@@ -1,8 +1,6 @@
 source("./queen-attack.R")
 library(testthat)
 
-context("queen-attack")
-
 # Test creation of Queens with valid and invalid positions
 
 test_that("queen with a valid position", {
@@ -79,12 +77,10 @@ test_that("can attack on fourth diagonal", {
   expect_equal(can_attack(queen1, queen2), TRUE)
 })
 
-# cannot attack if falling diagonals are only the same when reflected 
+# cannot attack if falling diagonals are only the same when reflected
 # across the longest falling diagonal
 test_that("cannot attack", {
   queen1 <- create(4, 1)
   queen2 <- create(2, 5)
   expect_equal(can_attack(queen1, queen2), FALSE)
 })
-
-message("All tests passed for exercise: queen-attack")

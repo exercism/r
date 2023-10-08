@@ -1,8 +1,6 @@
 source("./sum-of-multiples.R")
 library(testthat)
 
-context("sum of multiples")
-
 test_that("Case 1", {
   expect_equal(sum_of_multiples(c(3, 5), 1), 0)
 })
@@ -50,5 +48,3 @@ test_that("Case 11", {
 test_that("Case 12", {
   expect_equal(sum_of_multiples(c(), 10000), 0)
 })
-
-message("All tests passed for exercise: sum-of-multiples")

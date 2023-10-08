@@ -1,8 +1,6 @@
 source("./luhn.R")
 library(testthat)
 
-context("luhn")
-
 test_that("single digit strings can not be valid", {
   input <- "1"
   expect_equal(is_valid(input), FALSE)
@@ -72,5 +70,3 @@ test_that("nine doubled is nine", {
   input <- "091"
   expect_equal(is_valid(input), TRUE)
 })
-
-message("All tests passed for exercise: luhn")

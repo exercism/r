@@ -1,8 +1,6 @@
 source("./darts.R")
 library(testthat)
 
-context("darts")
-
 test_that("Missed target", {
   expect_equal(score(-9, 9), 0)
 })
@@ -54,6 +52,3 @@ test_that("Just outside the outer circle", {
 test_that("Asymmetric position between the inner and middle circles", {
   expect_equal(score(0.5, -4), 5)
 })
-
-message("All tests passed for exercise: darts")
-
