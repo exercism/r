@@ -4,7 +4,7 @@ word_count <- function(input) {
   input <- strsplit(input, "[[:space:]]")[[1]]
   input <- gsub("^'", "", input)
   input <- gsub("'$", "", input)
-  input[nchar(input) > 0] %>%
-    table() %>%
+  input[nchar(input) > 0] |>
+    table() |>
     as.list()
 }
