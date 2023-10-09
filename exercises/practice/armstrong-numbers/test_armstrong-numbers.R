@@ -1,8 +1,6 @@
 source("./armstrong-numbers.R")
 library(testthat)
 
-context("armstrong-numbers")
-
 test_that("Zero is an Armstrong number", {
   expect_equal(is_armstrong_number(0), TRUE)
 })
@@ -38,5 +36,3 @@ test_that("Seven-digit number that is an Armstrong number", {
 test_that("Seven-digit number that is not an Armstrong number", {
   expect_equal(is_armstrong_number(9926314), FALSE)
 })
-
-message("All tests passed for exercise: armstrong-numbers")

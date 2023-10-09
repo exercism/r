@@ -1,8 +1,6 @@
 source("./collatz-conjecture.R")
 library(testthat)
 
-context("collatz conjecture")
-
 test_that("Input of 1 results in 0 steps", {
   expect_equal(collatz_step_counter(1), 0)
 })
@@ -29,7 +27,6 @@ test_that("Negative input results in an error", {
 
 test_that("Answer can accept vector parameter", {
   expect_equal(collatz_step_counter(
-    c(1, 16, 12, 1000000)), (c(0, 4, 9, 152)))
+    c(1, 16, 12, 1000000)
+  ), (c(0, 4, 9, 152)))
 })
-
-message("All tests passed for exercise: collatz-conjecture")

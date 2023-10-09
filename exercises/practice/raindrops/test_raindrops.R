@@ -1,8 +1,6 @@
 source("./raindrops.R")
 library(testthat)
 
-context("raindrops")
-
 test_that("the sound for 1 is 1", {
   number <- 1
   expect_equal(raindrops(number), "1")
@@ -28,7 +26,7 @@ test_that("the sound for 6 is Pling as it has a factor 3", {
   expect_equal(raindrops(number), "Pling")
 })
 
-test_that("2 to the power 3 does not make a raindrop sound as 3 is the exponent 
+test_that("2 to the power 3 does not make a raindrop sound as 3 is the exponent
           not the base", {
   number <- 8
   expect_equal(raindrops(number), "8")
@@ -93,5 +91,3 @@ test_that("the sound for 3125 is Plang as it has a factor 5", {
   number <- 3125
   expect_equal(raindrops(number), "Plang")
 })
-
-message("All tests passed for exercise: raindrops")
