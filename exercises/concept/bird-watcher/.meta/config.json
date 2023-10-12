@@ -1,0 +1,11 @@
+{
+  "authors": ["colinleach"],
+  "contributors": [],
+  "files": {
+    "solution": ["bird-watcher.R"],
+    "test": ["test_bird-watcher.R"],
+    "exemplar": [".meta/exemplar.R"]
+  },
+  "forked_from": ["Csharp/bird-watcher"],
+  "blurb": "Learn about R vectors by keeping track of how many birds visit your garden."
+}

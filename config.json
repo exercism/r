@@ -55,6 +55,18 @@
         "status": "wip"
       },
       {
+        "slug": "bird-watcher",
+        "name": "Bird Watcher",
+        "uuid": "ceac4ca0-3bfe-4ca7-9b83-3c9d465ef67f",
+        "concepts": [
+          "vector-filtering"
+        ],
+        "prerequisites": [
+          "vectors"
+        ],
+        "status": "wip"
+      },
+      {
         "slug": "cars-assemble",
         "name": "Cars, Assemble",
         "uuid": "4989ced7-c38a-4d0d-86ad-03d0b4792d6c",
