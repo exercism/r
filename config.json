@@ -65,6 +65,18 @@
           "booleans"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "captains-log",
+        "name": "Captains Log",
+        "uuid": "bf0295ab-d4da-4cfa-8597-7689c780b5c9",
+        "concepts": [
+          "randomness"
+        ],
+        "prerequisites": [
+          "vectors"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
