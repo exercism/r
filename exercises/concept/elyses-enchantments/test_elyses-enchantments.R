@@ -1,8 +1,6 @@
 source("./elyses-enchantments.R")
 library(testthat)
 
-context("elyses-enchantments")
-
 # get_item
 
 test_that("get the first card", {
