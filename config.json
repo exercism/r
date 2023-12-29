@@ -584,6 +584,11 @@
       "name": "Basics"
     },
     {
+      "uuid": "a36663b0-cfb7-4007-a7d3-1d106ed023fb",
+      "slug": "vectors",
+      "name": "Vectors"
+    },
+    {
       "uuid": "2751b6f2-7d71-4397-b063-9bf927a57756",
       "slug": "booleans",
       "name": "Booleans"
