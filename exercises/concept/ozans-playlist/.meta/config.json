@@ -1,0 +1,11 @@
+{
+  "authors": ["colinleach"],
+  "contributors": [],
+  "files": {
+    "solution": ["ozans-playlist.R"],
+    "test": ["test_ozans-playlist.R"],
+    "exemplar": [".meta/exemplar.R"]
+  },
+  "forked_from": ["javascript/ozans-playlist"],
+  "blurb": "Use set operations to manage a playlist"
+}
