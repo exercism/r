@@ -584,6 +584,11 @@
       "name": "Basics"
     },
     {
+      "uuid": "18919f40-a3fe-45f3-b181-84ec82bfa785",
+      "slug": "vector-filtering",
+      "name": "Vector Filtering"
+    },
+    {
       "uuid": "2751b6f2-7d71-4397-b063-9bf927a57756",
       "slug": "booleans",
       "name": "Booleans"
