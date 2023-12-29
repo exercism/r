@@ -132,7 +132,7 @@ Programmers familiar with other languages might guess that `v[-1]` is a way to a
 Wrong!
 Use `tail(v)` for that.
 
-Negative indices are actually a way to ***remove*** en element:
+Negative indices are actually a way to ***remove*** an element:
 
 ```R
 > v <- c(2, 4, 6)
