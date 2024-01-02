@@ -581,6 +581,18 @@
         ],
       "difficulty": 1,
       "status": "wip"
+      },
+      {
+        "slug": "pythagorean-triplet",
+        "name": "Pythagorean Triplet",
+        "uuid": "07aae7fe-22b2-4919-83f7-1ee145216dbd",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "status": "active",
+        "topics": [
+          "math"
+        ]
       }
     ]
   },
