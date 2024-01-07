@@ -2,7 +2,7 @@
 
 There are various idiomatic approaches to solve Leap.
 You can use a chain of boolean expressions to test the conditions.
-Or you can use a [conditional expression][conditional-expression].
+Or you can use a [conditional expression][control-flow].
 
 ## General guidance
 
@@ -42,6 +42,7 @@ Since most years fit those conditions, it is the most efficient approach overall
 The conditional expression approach was faster in benchmarking when the year was a leap year or was evenly divisible by `100`,
 but those are the least likely conditions.
 
+[control-flow]: https://stat.ethz.ch/R-manual/R-patched/library/base/html/Control.html
 [arithmetic-operators]: https://stat.ethz.ch/R-manual/R-patched/library/base/html/Arithmetic.html
 [approach-boolean-chain]: https://exercism.org/tracks/r/exercises/leap/approaches/boolean-chain
 [approach-conditional-expression]: https://exercism.org/tracks/r/exercises/leap/approaches/conditional-expression
