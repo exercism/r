@@ -1,0 +1,5 @@
+{
+  "authors": ["colinleach"],
+  "contributors": [],
+  "blurb": "If matching on a value, especially a string, switch() can be more concise than if-else."
+}
