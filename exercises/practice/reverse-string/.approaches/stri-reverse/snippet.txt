@@ -1,0 +1,7 @@
+```r
+library(stringi)
+
+reverse <- function(text) {
+  stri_reverse(text)
+}
+```
