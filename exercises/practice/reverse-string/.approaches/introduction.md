@@ -3,7 +3,7 @@
 There are a surprising variety of ways to approach this exercise.
 We will start with simple approaches, considering some variations in syntax, then go on to look at vector operations and run-time performance.
 
-## General considerations.
+## General considerations
 
 Base R is relatively weak on string handling.
 Strengths include:
