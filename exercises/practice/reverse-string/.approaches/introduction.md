@@ -1,6 +1,6 @@
 # Introduction
 
-There are surprising many ways to solve this exercise.
+There are a surprising variety of ways to approach this exercise.
 We will start with simple approaches, considering some variations in syntax, then go on to look at vector operations and run-time performance.
 
 ## General considerations.
