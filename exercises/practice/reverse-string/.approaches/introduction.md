@@ -5,10 +5,11 @@ We will start with simple approaches, considering some variations in syntax, the
 
 ## General considerations
 
-Base R is relatively weak on string handling.
-Strengths include:
-- Vector handling, so we could convert the string to a vector, reverse that, then convert back to a string.
-- Libraries, that can be used to provide functionality beyond base R.
+Base R provides a reasonable set of string operations, but these have grown organically over time and can be a little inconsistent / hard to learn. Often string manipulation in base R will require the use of regular expressions and by contrast to other high-level languages like Python or Ruby some string manipulation can be a little harder to do in (base) R.
+
+However, packages such as [{stringr}](https://stringr.tidyverse.org/) and the underlying [{stringi}](https://stringi.gagolewski.com/index.html) are easy to use, expressive and efficient for manipulating strings in a myriad of ways. In practice many developers will turn to libraries such as these for manipulating strings, especially when needing to do more complex string processing.
+
+But to begin with, bearing in mind that vectors are right at the heart of R (more on that later), a natural approach to reverse a string is to convert the string to a vector of characters, reverse that, and then convert back to a string.
 
 ## Use split-reverse-paste
 
