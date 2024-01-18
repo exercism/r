@@ -120,7 +120,7 @@ See the [`vector-operations`][vector-operations] approach for further details.
 
 ## Performance
 
-Full details will be given in the [Performance article][performance-article], with just a summary here.
+Full details will be given in a Performance article (to follow soon), with just a summary here.
 
 Testing each of the approaches about 10,000 times with a single 5-character string gave the timing data below.
 
