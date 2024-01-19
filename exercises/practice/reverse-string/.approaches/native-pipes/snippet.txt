@@ -1,0 +1,5 @@
+reverse <- function(text) {
+  strsplit(text, "") |>
+    rev() |>
+    paste(collapse = "")
+}
