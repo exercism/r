@@ -39,7 +39,7 @@
     {
       "slug": "vector-operations",
       "uuid": "e8631640-4a0e-4993-8529-6685fe1ef98e",
-      "title": "TODO",
+      "title": "Vectorised solution",
       "authors": [
         "jonmcalder",
         "colinleach"
@@ -49,7 +49,7 @@
     {
       "slug": "stri-reverse",
       "uuid": "15b4c8c7-51fd-4251-8305-401b006095a8",
-      "title": "TODO",
+      "title": "stringi reverse",
       "authors": [
         "jonmcalder",
         "colinleach"
