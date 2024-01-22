@@ -1,0 +1,3 @@
+proteins <- function(bases) {
+
+}
