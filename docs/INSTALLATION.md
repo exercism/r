@@ -8,6 +8,11 @@ RStudio is a popular cross-platform integrated development environment (IDE) for
 
 Download and install the [current stable version of RStudio](https://www.rstudio.com/products/rstudio/download/). Or, alternatively, get the [preview version](https://www.rstudio.com/products/rstudio/download/preview/) of an upcoming release.
 
+## Alternatively Install Anaconda (Optional)
+Anaconda® Distribution is a Python/R data science distribution that contains conda, a package and environment manager, which helps users manage a collection of over 7,500+ open-source packages available to them.
+
+Download and install the [current stable version of RStudio](https://docs.anaconda.com/free/anaconda/install/).
+
 ## Install the R packages for running tests
 The test runner for the specs is the [`testthat`](https://github.com/hadley/testthat) library from Hadley Wickham, which is a popular choice for R package authors.
 
