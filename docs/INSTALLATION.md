@@ -22,7 +22,7 @@ To install this library, type the following in your RStudio console (or wherever
 install.packages("testthat")
 ```
 
-While it is unlikely that you will _need_ to install packages to solve the exercism problems, you may want to bring in a general-purpose utility packages like [`tidyverse`](https://github.com/tidyverse/tidyverse) that suit your programming style. To install and load a package like `tidyverse`:
+While it is unlikely that you will _need_ to install packages to solve the exercism problems, you may want to bring in a general-purpose utility package like [`tidyverse`](https://github.com/tidyverse/tidyverse) that suit your programming style. To install and load a package like `tidyverse`:
 
 ```{R}
 install.packages("tidyverse")
