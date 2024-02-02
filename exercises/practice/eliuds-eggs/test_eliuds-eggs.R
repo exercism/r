@@ -1,4 +1,4 @@
-source("./pop-count.R")
+source("./eliuds-eggs.R")
 library(testthat)
 
 test_that("0 eggs", {

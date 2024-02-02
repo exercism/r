@@ -4,10 +4,10 @@
   ],
   "files": {
     "solution": [
-      "pop-count.R"
+      "eliuds-eggs.R"
     ],
     "test": [
-      "test_pop-count.R"
+      "test_eliuds-eggs.R"
     ],
     "example": [
       ".meta/example.R"
