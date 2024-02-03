@@ -1,8 +1,6 @@
 source("./allergies.R")
 library(testthat)
 
-context("allergies")
-
 test_that("no allergies means not allergic", {
   x <- allergy(0)
   expect_false(allergic_to(x, "peanuts"))
@@ -45,42 +43,45 @@ test_that("allergic to just strawberries", {
 test_that("allergic to eggs and peanuts", {
   x <- allergy(3)
   expect_true(setequal(
-    list_allergies(x), 
-    c("eggs", "peanuts"))
-  )
+    list_allergies(x),
+    c("eggs", "peanuts")
+  ))
 })
 
 test_that("allergic to more than eggs but not peanuts", {
   x <- allergy(5)
   expect_true(setequal(
-    list_allergies(x), 
-    c("eggs", "shellfish"))
-  )
+    list_allergies(x),
+    c("eggs", "shellfish")
+  ))
 })
 
 test_that("allergic to lots of stuff", {
   x <- allergy(248)
   expect_true(setequal(
-    list_allergies(x), 
-    c("strawberries", "tomatoes", "chocolate", "pollen", "cats"))
-  )
+    list_allergies(x),
+    c("strawberries", "tomatoes", "chocolate", "pollen", "cats")
+  ))
 })
 
 test_that("allergic to everything", {
   x <- allergy(255)
   expect_true(setequal(
-    list_allergies(x), 
-    c("eggs", "peanuts", "shellfish", "strawberries", "tomatoes", 
-      "chocolate", "pollen", "cats")))
+    list_allergies(x),
+    c(
+      "eggs", "peanuts", "shellfish", "strawberries", "tomatoes",
+      "chocolate", "pollen", "cats"
+    )
+  ))
 })
 
 test_that("ignore non allergen score parts", {
   x <- allergy(509)
   expect_true(setequal(
-    list_allergies(x), 
-    c("eggs", "shellfish", "strawberries", "tomatoes", 
-      "chocolate", "pollen", "cats"))
-  )
+    list_allergies(x),
+    c(
+      "eggs", "shellfish", "strawberries", "tomatoes",
+      "chocolate", "pollen", "cats"
+    )
+  ))
 })
-
-message("All tests passed for exercise: allergies")

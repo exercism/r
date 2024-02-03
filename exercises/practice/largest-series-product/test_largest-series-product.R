@@ -1,8 +1,6 @@
 source("./largest-series-product.R")
 library(testthat)
 
-context("largest series product")
-
 test_that("finds the largest product if span equals length", {
   digits <- "29"
   span <- 2
@@ -80,5 +78,3 @@ test_that("rejects negative span", {
   span <- -1
   expect_error(largest_series_product(digits, span))
 })
-
-message("All tests passed for exercise: largest-series-product")

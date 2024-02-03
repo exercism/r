@@ -1,8 +1,6 @@
 source("./space-age.R")
 library(testthat)
 
-context("space age")
-
 test_that("Age on Earth", {
   seconds <- 1000000000
   expect_equal(space_age(seconds, "earth"), 31.69)
@@ -42,5 +40,3 @@ test_that("Age on Neptune", {
   seconds <- 8210123456
   expect_equal(space_age(seconds, "neptune"), 1.58)
 })
-
-message("All tests passed for exercise: space-age")

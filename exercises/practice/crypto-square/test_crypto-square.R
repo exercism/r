@@ -1,8 +1,6 @@
 source("./crypto-square.R")
 library(testthat)
 
-context("crypto square")
-
 test_that("Lowercase", {
   expect_equal(normalized_plaintext("Hello"), "hello")
 })
@@ -28,15 +26,20 @@ test_that("9 character plaintext results in an 3x3 rectangle", {
 })
 
 test_that("54 character plaintext results in an 8x7 rectangle", {
-  expect_equal(plaintext_segments(
-    "If man was meant to stay on the ground, god would have given us roots."), 
-    c("ifmanwas",
+  expect_equal(
+    plaintext_segments(
+      "If man was meant to stay on the ground, god would have given us roots."
+    ),
+    c(
+      "ifmanwas",
       "meanttos",
       "tayonthe",
       "groundgo",
       "dwouldha",
       "vegivenu",
-      "sroots"))
+      "sroots"
+    )
+  )
 })
 
 test_that("empty plaintext results in an empty encode", {
@@ -44,9 +47,12 @@ test_that("empty plaintext results in an empty encode", {
 })
 
 test_that("Non-empty plaintext results in the combined plaintext segments", {
-  expect_equal(encoded(
-    "If man was meant to stay on the ground, god would have given us roots."), 
-    "imtgdvsfearwermayoogoanouuiontnnlvtwttddesaohghnsseoau")
+  expect_equal(
+    encoded(
+      "If man was meant to stay on the ground, god would have given us roots."
+    ),
+    "imtgdvsfearwermayoogoanouuiontnnlvtwttddesaohghnsseoau"
+  )
 })
 
 test_that("empty plaintext results in an empty ciphertext", {
@@ -57,11 +63,12 @@ test_that("9 character plaintext results in 3 chunks of 3 characters", {
   expect_equal(ciphertext("This is fun!"), "tsf hiu isn")
 })
 
-test_that("54 character plaintext results in 7 chunks, the last two padded with 
+test_that("54 character plaintext results in 7 chunks, the last two padded with
           spaces", {
-  expect_equal(ciphertext(
-    "If man was meant to stay on the ground, god would have given us roots."), 
-    "imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau ")
+  expect_equal(
+    ciphertext(
+      "If man was meant to stay on the ground, god would have given us roots."
+    ),
+    "imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau "
+  )
 })
-
-message("All tests passed for exercise: crypto-square")

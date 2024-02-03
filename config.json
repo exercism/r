@@ -16,7 +16,7 @@
     "highlightjs_language": "r"
   },
   "test_runner": {
-    "average_run_time": 2.0
+    "average_run_time": 2
   },
   "files": {
     "solution": [
@@ -33,7 +33,54 @@
     ]
   },
   "exercises": {
-    "concept": [],
+    "concept": [
+      {
+        "slug": "annalyns-infiltration",
+        "name": "Annalyns Infiltration",
+        "uuid": "9b2d4bd3-c302-490d-9dac-3ac79c04cac3",
+        "concepts": [
+          "booleans"
+        ],
+        "prerequisites": [
+          "basics"
+        ],
+        "status": "wip"
+      },
+      {
+        "slug": "lasagna",
+        "name": "Lasagna",
+        "uuid": "6fd75bbd-8654-4d6a-80b5-29344ceb8a48",
+        "concepts": [
+          "basics"
+        ],
+        "prerequisites": [],
+        "status": "wip"
+      },
+      {
+        "slug": "elyses-enchantments",
+        "name": "Elyses Enchantments",
+        "uuid": "9c499085-2d1a-48d4-ab73-6fa1f848fc30",
+        "concepts": [
+          "vectors"
+        ],
+        "prerequisites": [
+          "conditionals"
+        ],
+        "status": "wip"
+      },
+      {
+        "slug": "cars-assemble",
+        "name": "Cars, Assemble",
+        "uuid": "4989ced7-c38a-4d0d-86ad-03d0b4792d6c",
+        "concepts": [
+          "conditionals"
+        ],
+        "prerequisites": [
+          "booleans"
+        ],
+        "status": "wip"
+      }
+    ],
     "practice": [
       {
         "slug": "hello-world",
@@ -500,6 +547,80 @@
         ]
       },
       {
+        "slug": "armstrong-numbers",
+        "name": "Armstrong Numbers",
+        "uuid": "c17ef56b-7418-428b-ac9d-37dbd28de32e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2,
+        "status": "active",
+        "topics": [
+          "math"
+        ]
+      },
+      {
+        "slug": "queen-attack",
+        "name": "Queen Attack",
+        "uuid": "50a29cbf-a782-4d71-9127-94d110f3c893",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1,
+        "status": "active",
+        "topics": [
+          "lists",
+          "logic"
+        ]
+      },
+      {
+        "slug": "vehicle-purchase",
+        "name": "Vehicle Purchase",
+        "uuid": "d40b31f7-6c0d-46fa-8bd6-6618464c2572",
+        "practices": [
+          "conditionals"
+        ],
+        "prerequisites": [
+          "booleans"
+        ],
+        "difficulty": 1,
+        "status": "wip"
+      },
+      {
+        "slug": "pythagorean-triplet",
+        "name": "Pythagorean Triplet",
+        "uuid": "07aae7fe-22b2-4919-83f7-1ee145216dbd",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "status": "active",
+        "topics": [
+          "math"
+        ]
+      },
+      {
+        "slug": "reverse-string",
+        "name": "Reverse String",
+        "uuid": "684e330d-7ee6-4151-9fc3-c1ca376136c3",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "roman-numerals",
+        "name": "Roman Numerals",
+        "uuid": "366d83ae-a069-457e-ace9-f79417ed311f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "eliuds-eggs",
+        "name": "Eliud's Eggs",
+        "uuid": "118e27fe-fe97-45fa-82cc-6480cf777e34",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
         "slug": "all-your-base",
         "name": "All Your Base",
         "uuid": "38ec462f-359e-4133-99be-7ba55a149344",
@@ -513,48 +634,69 @@
       }
     ]
   },
-  "concepts": [],
+  "concepts": [
+    {
+      "uuid": "1b02da6d-97c7-41ca-b096-41201794b7cc",
+      "slug": "conditionals",
+      "name": "Conditionals"
+    },
+    {
+      "uuid": "d75c1a77-9733-45b0-ae21-2b4f0f313ef4",
+      "slug": "basics",
+      "name": "Basics"
+    },
+    {
+      "uuid": "a36663b0-cfb7-4007-a7d3-1d106ed023fb",
+      "slug": "vectors",
+      "name": "Vectors"
+    },
+    {
+      "uuid": "2751b6f2-7d71-4397-b063-9bf927a57756",
+      "slug": "booleans",
+      "name": "Booleans"
+    }
+  ],
   "key_features": [
     {
-      "icon": "scientific",
       "title": "Domain Specific",
-      "content": "R is a language and environment for statistical computing and graphics."
+      "content": "R is a language and environment for statistical computing and graphics.",
+      "icon": "scientific"
     },
     {
-      "icon": "cross-platform",
       "title": "Cross-platform",
-      "content": "It is free, open source, and available on every major platform."
+      "content": "It is free, open source, and available on every major platform.",
+      "icon": "cross-platform"
     },
     {
-      "icon": "multi-paradigm",
       "title": "Multi-paradigm",
-      "content": "R has a functional programming foundation, but facilitates procedural or object-oriented approaches."
+      "content": "R has a functional programming foundation, but facilitates procedural or object-oriented approaches.",
+      "icon": "multi-paradigm"
     },
     {
-      "icon": "powerful",
       "title": "Metaprogramming",
-      "content": "R’s metaprogramming capabilities allow for magically succinct and concise functions."
+      "content": "R’s metaprogramming capabilities allow for magically succinct and concise functions.",
+      "icon": "powerful"
     },
     {
-      "icon": "tooling",
       "title": "Tooling",
-      "content": "R provides powerful tools for data manipulation, visualisation, modelling, and machine learning."
+      "content": "R provides powerful tools for data manipulation, visualisation, modelling, and machine learning.",
+      "icon": "tooling"
     },
     {
-      "icon": "community",
       "title": "Community",
-      "content": "R has a diverse and welcoming community."
+      "content": "R has a diverse and welcoming community.",
+      "icon": "community"
     }
   ],
   "tags": [
+    "execution_mode/interpreted",
     "paradigm/functional",
     "paradigm/object_oriented",
-    "typing/dynamic",
-    "execution_mode/interpreted",
-    "platform/windows",
-    "platform/mac",
     "platform/linux",
+    "platform/mac",
+    "platform/windows",
     "runtime/language_specific",
+    "typing/dynamic",
     "used_for/artificial_intelligence",
     "used_for/scientific_calculations",
     "used_for/scripts",

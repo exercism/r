@@ -1,12 +1,9 @@
-library(magrittr)
-
 # Determine whether the number is valid.
 is_valid <- function(input) {
-
   # Strip spaces, check length & check for invalid characters
-  input_vector <- gsub(pattern = " ", replacement = "", input) %>% 
-                    strsplit("") %>% 
-                    unlist()
+  input_vector <- gsub(pattern = " ", replacement = "", input) |>
+    strsplit("") |>
+    unlist()
   if (length(input_vector) < 2 || any(grepl("[^[:digit:]]", input_vector))) {
     return(FALSE)
   }
@@ -16,7 +13,7 @@ is_valid <- function(input) {
 
   # Double every second digit starting from the right
   num_vector <- rev(num_vector)
-  num_vector[seq(2, length(num_vector), 2)] <- 
+  num_vector[seq(2, length(num_vector), 2)] <-
     num_vector[seq(2, length(num_vector), 2)] * 2
 
   # Subtract 9 if > 9 (can apply to all since no
@@ -25,5 +22,4 @@ is_valid <- function(input) {
 
   # Check checksum is divisible by 10
   sum(num_vector) %% 10 == 0
-
 }

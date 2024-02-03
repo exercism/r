@@ -1,8 +1,6 @@
 source("./isogram.R")
 library(testthat)
 
-context("isogram")
-
 test_that("empty string", {
   word <- ""
   expect_equal(is_isogram(word), TRUE)
@@ -42,5 +40,3 @@ test_that("made-up name that is an isogram", {
   word <- "Emily Jung Schwartzkopf"
   expect_equal(is_isogram(word), TRUE)
 })
-
-message("All tests passed for exercise: isogram")

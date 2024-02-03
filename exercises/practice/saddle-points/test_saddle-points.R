@@ -1,8 +1,6 @@
 source("./saddle-points.R")
 library(testthat)
 
-context("saddle-points")
-
 test_that("Can identify single saddle point", {
   expect_equal(
     saddle_point(
@@ -85,5 +83,3 @@ test_that("Can identify that saddle points in a single row matrix are those
     data.frame(row = 1, col = c(2, 4))
   )
 })
-
-message("All tests passed for exercise: saddle-points")

@@ -1,8 +1,6 @@
 source("./grains.R")
 library(testthat)
 
-context("grains")
-
 test_that("Case 1", {
   expect_equal(square(1), 1)
 })
@@ -46,5 +44,3 @@ test_that("square greater than 64 raises an exception", {
 test_that("returns the total number of square on the board", {
   expect_equal(total(), 18446744073709551615)
 })
-
-message("All tests passed for exercise: grains")

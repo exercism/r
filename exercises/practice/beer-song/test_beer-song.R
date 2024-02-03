@@ -1,12 +1,11 @@
 source("./beer-song.R")
 library(testthat)
 
-context("beer song")
-
 test_that("first generic verse", {
   expect_equal(
     verse(99),
-    paste(sep = "\n",
+    paste(
+      sep = "\n",
       "99 bottles of beer on the wall, 99 bottles of beer.",
       "Take one down and pass it around, 98 bottles of beer on the wall.\n"
     )
@@ -16,7 +15,8 @@ test_that("first generic verse", {
 test_that("last generic verse", {
   expect_equal(
     verse(3),
-    paste(sep = "\n",
+    paste(
+      sep = "\n",
       "3 bottles of beer on the wall, 3 bottles of beer.",
       "Take one down and pass it around, 2 bottles of beer on the wall.\n"
     )
@@ -26,7 +26,8 @@ test_that("last generic verse", {
 test_that("verse 2", {
   expect_equal(
     verse(2),
-    paste(sep = "\n",
+    paste(
+      sep = "\n",
       "2 bottles of beer on the wall, 2 bottles of beer.",
       "Take one down and pass it around, 1 bottle of beer on the wall.\n"
     )
@@ -36,7 +37,8 @@ test_that("verse 2", {
 test_that("verse 1", {
   expect_equal(
     verse(1),
-    paste(sep = "\n",
+    paste(
+      sep = "\n",
       "1 bottle of beer on the wall, 1 bottle of beer.",
       "Take it down and pass it around, no more bottles of beer on the wall.\n"
     )
@@ -46,7 +48,8 @@ test_that("verse 1", {
 test_that("verse 0", {
   expect_equal(
     verse(0),
-    paste(sep = "\n",
+    paste(
+      sep = "\n",
       "No more bottles of beer on the wall, no more bottles of beer.",
       "Go to the store and buy some more, 99 bottles of beer on the wall.\n"
     )
@@ -56,7 +59,8 @@ test_that("verse 0", {
 test_that("first two verses", {
   expect_equal(
     lyrics(99, 98),
-    paste(sep = "\n",
+    paste(
+      sep = "\n",
       "99 bottles of beer on the wall, 99 bottles of beer.",
       "Take one down and pass it around, 98 bottles of beer on the wall.\n",
       "98 bottles of beer on the wall, 98 bottles of beer.",
@@ -68,7 +72,8 @@ test_that("first two verses", {
 test_that("last three verses", {
   expect_equal(
     lyrics(2, 0),
-    paste(sep = "\n",
+    paste(
+      sep = "\n",
       "2 bottles of beer on the wall, 2 bottles of beer.",
       "Take one down and pass it around, 1 bottle of beer on the wall.\n",
       "1 bottle of beer on the wall, 1 bottle of beer.",
@@ -82,7 +87,8 @@ test_that("last three verses", {
 test_that("all verses", {
   expect_equal(
     lyrics(99, 0),
-    paste(sep = "\n",
+    paste(
+      sep = "\n",
       "99 bottles of beer on the wall, 99 bottles of beer.",
       "Take one down and pass it around, 98 bottles of beer on the wall.\n",
       "98 bottles of beer on the wall, 98 bottles of beer.",
@@ -286,5 +292,3 @@ test_that("all verses", {
     )
   )
 })
-
-message("All tests passed for exercise: beer-song")

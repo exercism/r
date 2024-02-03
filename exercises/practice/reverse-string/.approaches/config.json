@@ -1,0 +1,60 @@
+{
+  "introduction": {
+    "authors": [
+      "colinleach",
+      "jonmcalder"
+    ]
+  },
+  "approaches": [
+    {
+      "uuid": "b5a796ed-874e-4998-af8e-9757e46e5d77",
+      "slug": "split-reverse",
+      "title": "Split, reverse",
+      "blurb": "Use an intermediate vector of characters.",
+      "authors": [
+        "jonmcalder",
+        "colinleach"
+      ]
+    },
+    {
+      "uuid": "223c062a-9070-4136-8aca-4adba0335898",
+      "slug": "utf8-reverse",
+      "title": "UTF-8 reverse",
+      "blurb": "Use an intermediate vector of UTF-8 codes.",
+      "authors": [
+        "jonmcalder",
+        "colinleach"
+      ]
+    },
+    {
+      "uuid": "f5d765b1-f75d-47a0-8c51-2e6ba58fca9f",
+      "slug": "native-pipes",
+      "title": "Native pipes",
+      "blurb": "Use a fuctional approach with native pipes.",
+      "authors": [
+        "jonmcalder",
+        "colinleach"
+      ]
+    },
+    {
+      "uuid": "e8631640-4a0e-4993-8529-6685fe1ef98e",
+      "slug": "vector-operations",
+      "title": "Vectorised solution",
+      "blurb": "Use code that will work on vectors of strings.",
+      "authors": [
+        "jonmcalder",
+        "colinleach"
+      ]
+    },
+    {
+      "uuid": "15b4c8c7-51fd-4251-8305-401b006095a8",
+      "slug": "stri-reverse",
+      "title": "stringi reverse",
+      "blurb": "Use the built-in stri_reverse() function from the stringi library.",
+      "authors": [
+        "jonmcalder",
+        "colinleach"
+      ]
+    }
+  ]
+}

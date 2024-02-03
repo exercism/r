@@ -1,0 +1,6 @@
+inverter <- length(digits) + 1
+roman_digits <- c()
+for (i in seq_along(digits)) {
+    roman_digits <- c(roman_digits, conversion[[inverter - i]][digits[i]])
+  }
+paste(roman_digits, collapse = "")
