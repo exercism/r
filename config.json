@@ -613,6 +613,14 @@
         "difficulty": 1
       },
       {
+        "slug": "protein-translation",
+        "name": "Protein Translation",
+        "uuid": "dc8bb817-1c79-476a-a666-bcad9455c66a",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "eliuds-eggs",
         "name": "Eliud's Eggs",
         "uuid": "118e27fe-fe97-45fa-82cc-6480cf777e34",
