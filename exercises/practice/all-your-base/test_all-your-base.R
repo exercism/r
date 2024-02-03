@@ -1,7 +1,6 @@
 source("./all-your-base.R")
 library(testthat)
 
-context("all-your-base")
 
 test_that("single bit one to decimal", {
   digits <- c(1)
