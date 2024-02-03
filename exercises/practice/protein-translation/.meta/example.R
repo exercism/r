@@ -1,4 +1,4 @@
-proteins <- function(bases) {
+translate <- function(bases) {
   if (nchar(bases) == 0) return(NULL)
 
   codons <- strsplit(bases, "(?<=.{3})", perl = TRUE)[[1]]
