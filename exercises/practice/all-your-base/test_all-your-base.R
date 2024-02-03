@@ -3,7 +3,7 @@ library(testthat)
 
 
 test_that("single bit one to decimal", {
-  digits <- c(1)
+  digits <- 1
   input_base <- 2
   output_base <- 10
   expect_equal(rebase(input_base, digits, output_base), c(1))
