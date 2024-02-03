@@ -1,3 +1,3 @@
-proteins <- function(bases) {
+translate <- function(bases) {
 
 }
