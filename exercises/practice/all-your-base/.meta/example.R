@@ -21,7 +21,7 @@ rebase <- function(from_base, digits, to_base) {
   if (to_base < 2) stop("output base must be >= 2")
 
   if (is.null(digits)) {
-    return(c(0))
+    return(0)
   }
   if (any(digits < 0) || any(digits >= from_base)) {
     stop("all digits must satisfy 0 <= d < input base")
