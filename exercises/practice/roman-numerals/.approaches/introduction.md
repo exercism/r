@@ -55,7 +55,7 @@ See [`table-lookup`][table-lookup] for details.
 In this class of approaches we:
 - Create a mapping from Roman to Arabic numbers, in some suitable format.
 - Iterate nested loops, a `for` and a `while`, in either order.
-- At each step, append the largest possible Roman number to a list and substract the correspond value from the number being converted.
+- At each step, append the largest possible Roman number to a list and substract the corresponding value from the number being converted.
 - Join the list into a string and return it.
 Depending on the implementation, there may need to be a list-reverse step.
 
