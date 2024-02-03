@@ -6,14 +6,14 @@ test_that("single bit one to decimal", {
   digits <- 1
   input_base <- 2
   output_base <- 10
-  expect_equal(rebase(input_base, digits, output_base), c(1))
+  expect_equal(rebase(input_base, digits, output_base), 1)
 })
 
 test_that("binary to single decimal", {
   digits <- c(1, 0, 1)
   input_base <- 2
   output_base <- 10
-  expect_equal(rebase(input_base, digits, output_base), c(5))
+  expect_equal(rebase(input_base, digits, output_base), 5)
 })
 
 test_that("single decimal to binary", {
@@ -62,21 +62,21 @@ test_that("empty list", {
   digits <- c()
   input_base <- 2
   output_base <- 10
-  expect_equal(rebase(input_base, digits, output_base), c(0))
+  expect_equal(rebase(input_base, digits, output_base), 0)
 })
 
 test_that("single zero", {
   digits <- c(0)
   input_base <- 10
   output_base <- 2
-  expect_equal(rebase(input_base, digits, output_base), c(0))
+  expect_equal(rebase(input_base, digits, output_base), 0)
 })
 
 test_that("multiple zeros", {
   digits <- c(0, 0, 0)
   input_base <- 10
   output_base <- 2
-  expect_equal(rebase(input_base, digits, output_base), c(0))
+  expect_equal(rebase(input_base, digits, output_base), 0)
 })
 
 test_that("leading zeros", {
