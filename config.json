@@ -50,7 +50,9 @@
         "slug": "lasagna",
         "name": "Lasagna",
         "uuid": "6fd75bbd-8654-4d6a-80b5-29344ceb8a48",
-        "concepts": ["basics"],
+        "concepts": [
+          "basics"
+        ],
         "prerequisites": [],
         "status": "wip"
       },
@@ -579,8 +581,8 @@
         "prerequisites": [
           "booleans"
         ],
-      "difficulty": 1,
-      "status": "wip"
+        "difficulty": 1,
+        "status": "wip"
       },
       {
         "slug": "pythagorean-triplet",
@@ -603,12 +605,28 @@
         "difficulty": 1
       },
       {
+        "slug": "roman-numerals",
+        "name": "Roman Numerals",
+        "uuid": "366d83ae-a069-457e-ace9-f79417ed311f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
         "slug": "protein-translation",
         "name": "Protein Translation",
         "uuid": "dc8bb817-1c79-476a-a666-bcad9455c66a",
         "practices": [],
         "prerequisites": [],
         "difficulty": 2
+      },
+      {
+        "slug": "eliuds-eggs",
+        "name": "Eliud's Eggs",
+        "uuid": "118e27fe-fe97-45fa-82cc-6480cf777e34",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
       }
     ]
   },
@@ -636,45 +654,45 @@
   ],
   "key_features": [
     {
-      "icon": "scientific",
       "title": "Domain Specific",
-      "content": "R is a language and environment for statistical computing and graphics."
+      "content": "R is a language and environment for statistical computing and graphics.",
+      "icon": "scientific"
     },
     {
-      "icon": "cross-platform",
       "title": "Cross-platform",
-      "content": "It is free, open source, and available on every major platform."
+      "content": "It is free, open source, and available on every major platform.",
+      "icon": "cross-platform"
     },
     {
-      "icon": "multi-paradigm",
       "title": "Multi-paradigm",
-      "content": "R has a functional programming foundation, but facilitates procedural or object-oriented approaches."
+      "content": "R has a functional programming foundation, but facilitates procedural or object-oriented approaches.",
+      "icon": "multi-paradigm"
     },
     {
-      "icon": "powerful",
       "title": "Metaprogramming",
-      "content": "R’s metaprogramming capabilities allow for magically succinct and concise functions."
+      "content": "R’s metaprogramming capabilities allow for magically succinct and concise functions.",
+      "icon": "powerful"
     },
     {
-      "icon": "tooling",
       "title": "Tooling",
-      "content": "R provides powerful tools for data manipulation, visualisation, modelling, and machine learning."
+      "content": "R provides powerful tools for data manipulation, visualisation, modelling, and machine learning.",
+      "icon": "tooling"
     },
     {
-      "icon": "community",
       "title": "Community",
-      "content": "R has a diverse and welcoming community."
+      "content": "R has a diverse and welcoming community.",
+      "icon": "community"
     }
   ],
   "tags": [
+    "execution_mode/interpreted",
     "paradigm/functional",
     "paradigm/object_oriented",
-    "typing/dynamic",
-    "execution_mode/interpreted",
-    "platform/windows",
-    "platform/mac",
     "platform/linux",
+    "platform/mac",
+    "platform/windows",
     "runtime/language_specific",
+    "typing/dynamic",
     "used_for/artificial_intelligence",
     "used_for/scientific_calculations",
     "used_for/scripts",
