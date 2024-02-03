@@ -1,9 +1,9 @@
 source('./protein-translation.R')
 library(testthat)
 
-# test_that("Empty RNA sequence results in no proteins", {
-#   expect_equal(proteins(""), NULL)
-# })
+test_that("Empty RNA sequence results in no proteins", {
+  expect_equal(proteins(""), NULL)
+})
 
 test_that("Methionine RNA sequence", {
   expect_equal(proteins("AUG"), 'Methionine')
