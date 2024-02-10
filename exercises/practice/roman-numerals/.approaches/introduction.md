@@ -115,5 +115,5 @@ The problem is inherently limited in scope by the design of Roman numerals, so a
 
 
 [table-lookup]: https://exercism.org/tracks/r/exercises/roman-numerals/approaches/table-lookup
-[loop-over-romans]: https://exercism.org/tracks/r/exercises/roman-numerals/approaches/loop-over-roman
+[loop-over-romans]: https://exercism.org/tracks/r/exercises/roman-numerals/approaches/loop-over-romans
 [roman]: https://stat.ethz.ch/R-manual/R-devel/library/utils/html/roman.html
