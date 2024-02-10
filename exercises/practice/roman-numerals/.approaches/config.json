@@ -7,8 +7,8 @@
   "approaches": [
     {
       "uuid": "60eab712-2ad8-4521-8194-5959fccb6a19",
-      "slug": "loop-over-digits",
-      "title": "Loop Over Digits",
+      "slug": "loop-over-romans",
+      "title": "Loop Over Romans",
       "blurb": "Test Roman Numerals from the largest down and eat the maximum possible at each step.",
       "authors": [
         "colinleach",
