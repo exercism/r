@@ -1,0 +1,8 @@
+  for (roman in names(conversion)) {
+    num <- conversion[[roman]]
+    while (num <= arabic) {
+      result <- append(result, roman)
+      arabic <- arabic - num
+    }
+  }
+  paste(result, sep = "", collapse = "")
