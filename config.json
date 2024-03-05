@@ -639,6 +639,14 @@
           "integers",
           "math"
         ]
+      },
+      {
+        "slug": "robot-simulator",
+        "name": "Robot Simulator",
+        "uuid": "67e94669-bea1-43f4-9c2f-90884676f568",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
       }
     ]
   },
