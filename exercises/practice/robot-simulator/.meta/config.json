@@ -1,5 +1,7 @@
 {
-  "authors": [],
+  "authors": [
+    "Nerwosolek"
+  ],
   "files": {
     "solution": [
       "robot-simulator.R"
