@@ -3,10 +3,10 @@ library(lintr)
 linters <- list(
   a = line_length_linter(80),
   b = object_name_linter(styles = "snake_case"),
-  c = assignment_linter,
-  d = commas_linter,
-  e = absolute_path_linter,
-  f = infix_spaces_linter
+  c = assignment_linter(),
+  d = commas_linter(),
+  e = absolute_path_linter(),
+  f = infix_spaces_linter()
 )
 
 files <- list.files(
