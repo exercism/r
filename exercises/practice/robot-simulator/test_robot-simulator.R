@@ -1,6 +1,12 @@
 source("./robot-simulator.R")
 library(testthat)
 
+test_that("Create robot -> class robot",
+          {
+            robbo = new_robot(c(0, 0), "SOUTH")
+            expect_s3_class(robbo, "robot")
+          }
+)
 test_that("Create robot -> at origin facing north",
           {
             robbo = new_robot(c(0, 0), "NORTH")
