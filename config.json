@@ -707,6 +707,7 @@
   ],
   "tags": [
     "execution_mode/interpreted",
+    "paradigm/array",
     "paradigm/functional",
     "paradigm/object_oriented",
     "platform/linux",
