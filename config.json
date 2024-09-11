@@ -648,6 +648,14 @@
         "prerequisites": [],
         "difficulty": 1,
         "status": "beta"
+      },
+      {
+        "slug": "series",
+        "name": "Series",
+        "uuid": "2ef6f027-a27c-4b00-bf1e-2969baf04a36",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
       }
     ]
   },
