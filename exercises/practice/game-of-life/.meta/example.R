@@ -1,3 +1,5 @@
+library(dplyr)
+
 tick <- function(cells) {
   coords <- expand.grid(seq_len(nrow(cells)), seq_len(ncol(cells)))
   
