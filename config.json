@@ -680,6 +680,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1
+      },
+      {
+        "slug": "high-scores",
+        "name": "High Scores",
+        "uuid": "f238872e-385b-42b9-9e4d-1725c23c2cd3",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
       }
     ]
   },
