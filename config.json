@@ -688,6 +688,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1
+      },
+      {
+        "slug": "kindergarten-garden",
+        "name": "Kindergarten Garden",
+        "uuid": "9ee61a47-5433-4459-8f42-5793500bc3b5",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
       }
     ]
   },
