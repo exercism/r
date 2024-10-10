@@ -690,6 +690,14 @@
         "difficulty": 1
       },
       {
+        "slug": "isbn-verifier",
+        "name": "ISBN Verifier",
+        "uuid": "f52be1f1-61c7-48dc-8416-fb5c1d943349",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "kindergarten-garden",
         "name": "Kindergarten Garden",
         "uuid": "9ee61a47-5433-4459-8f42-5793500bc3b5",
