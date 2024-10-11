@@ -706,6 +706,14 @@
         "difficulty": 3
       },
       {
+        "slug": "atbash-cipher",
+        "name": "Atbash Cipher",
+        "uuid": "81133e3d-4feb-4985-8852-3354e8f72847",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "rail-fence-cipher",
         "name": "Rail Fence Cipher",
         "uuid": "e4b63b53-d6ca-4a1d-8e02-e295bd2c9c65",
