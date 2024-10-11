@@ -704,6 +704,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
+      },
+      {
+        "slug": "atbash-cipher",
+        "name": "Atbash Cipher",
+        "uuid": "81133e3d-4feb-4985-8852-3354e8f72847",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
       }
     ]
   },
