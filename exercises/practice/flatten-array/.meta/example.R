@@ -1,5 +1,5 @@
 flatten <- function(input) {
-  flattened = c()
+  flattened <- c()
   
   for (element in input) {
     if (is.null(element)) next
