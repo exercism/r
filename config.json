@@ -738,12 +738,28 @@
         "difficulty": 2
       },
       {
+        "slug": "resistor-color",
+        "name": "Resistor Color",
+        "uuid": "8af70f6c-85e2-41de-b5a3-20aaacb32a26",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },      
+      {
         "slug": "resistor-color-duo",
         "name": "Resistor Color Duo",
         "uuid": "a118a447-f41d-4904-8dfa-15f45ba3a990",
         "practices": [],
         "prerequisites": [],
         "difficulty": 1
+      },
+      {
+        "slug": "simple-cipher",
+        "name": "Simple Cipher",
+        "uuid": "75f36774-7406-4234-9369-0923d1e5cc95",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
       }
     ]
   },
