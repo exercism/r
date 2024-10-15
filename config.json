@@ -752,7 +752,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1
-      },      
+      },
       {
         "slug": "resistor-color-duo",
         "name": "Resistor Color Duo",
@@ -768,6 +768,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
+      },
+      {
+        "slug": "proverb",
+        "name": "Proverb",
+        "uuid": "88b06132-be17-4105-8184-90c2d571fcb2",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
       }
     ]
   },
