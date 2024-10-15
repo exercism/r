@@ -730,6 +730,14 @@
         "difficulty": 1
       },
       {
+        "slug": "matching-brackets",
+        "name": "Matching Brackets",
+        "uuid": "8e78cebc-5e33-4670-bc87-f481bdd0bf49",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "matrix",
         "name": "Matrix",
         "uuid": "7a91501a-210f-4082-a029-a0a9fe368623",
