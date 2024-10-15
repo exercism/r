@@ -744,6 +744,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1
+      },      
+      {
+        "slug": "resistor-color-duo",
+        "name": "Resistor Color Duo",
+        "uuid": "a118a447-f41d-4904-8dfa-15f45ba3a990",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
       },
       {
         "slug": "simple-cipher",
