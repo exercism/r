@@ -1,3 +1,3 @@
-maximum_value <- function(max_wt, items) {
+maximum_value <- function(max_weight, items) {
 
 }
