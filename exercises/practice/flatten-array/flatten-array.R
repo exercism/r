@@ -1,0 +1,3 @@
+flatten <- function(input) {
+
+}

@@ -666,6 +666,14 @@
         "difficulty": 4
       },
       {
+        "slug": "gigasecond",
+        "name": "Gigasecond",
+        "uuid": "c9ba947d-8def-4a3f-bfc2-616301f6037f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
         "slug": "square-root",
         "name": "Square Root",
         "uuid": "2fdce5b8-0cf3-4557-aca8-5f607887bef0",
@@ -680,6 +688,110 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 5
+      },
+      {
+        "slug": "high-scores",
+        "name": "High Scores",
+        "uuid": "f238872e-385b-42b9-9e4d-1725c23c2cd3",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "isbn-verifier",
+        "name": "ISBN Verifier",
+        "uuid": "f52be1f1-61c7-48dc-8416-fb5c1d943349",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "kindergarten-garden",
+        "name": "Kindergarten Garden",
+        "uuid": "9ee61a47-5433-4459-8f42-5793500bc3b5",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "atbash-cipher",
+        "name": "Atbash Cipher",
+        "uuid": "81133e3d-4feb-4985-8852-3354e8f72847",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "rail-fence-cipher",
+        "name": "Rail Fence Cipher",
+        "uuid": "e4b63b53-d6ca-4a1d-8e02-e295bd2c9c65",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "flatten-array",
+        "name": "Flatten Array",
+        "uuid": "d3f7f539-dc10-4c7a-8378-7625362e8a6f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "matching-brackets",
+        "name": "Matching Brackets",
+        "uuid": "8e78cebc-5e33-4670-bc87-f481bdd0bf49",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "matrix",
+        "name": "Matrix",
+        "uuid": "7a91501a-210f-4082-a029-a0a9fe368623",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "resistor-color",
+        "name": "Resistor Color",
+        "uuid": "8af70f6c-85e2-41de-b5a3-20aaacb32a26",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "resistor-color-duo",
+        "name": "Resistor Color Duo",
+        "uuid": "a118a447-f41d-4904-8dfa-15f45ba3a990",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "simple-cipher",
+        "name": "Simple Cipher",
+        "uuid": "75f36774-7406-4234-9369-0923d1e5cc95",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "proverb",
+        "name": "Proverb",
+        "uuid": "88b06132-be17-4105-8184-90c2d571fcb2",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "run-length-encoding",
+        "name": "Run-Length Encoding",
+        "uuid": "e39b5e8b-cd91-4adf-bb1e-015367ef4f8c",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
       }
     ]
   },

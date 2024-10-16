@@ -1,9 +1,9 @@
-# This workflow will do a clean install of the dependencies and run tests across different versions
+# This workflow will do a clean install of the dependencies and run the linter
 #
 # Requires scripts:
-# - bin/run_tests.R
+# - bin/run_lints.R
 
-name: Exercise tests
+name: Lint exercises
 
 on:
   push:
@@ -13,7 +13,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  ci:
+  lint:
     runs-on: ubuntu-22.04
 
     steps:
@@ -27,15 +27,9 @@ jobs:
         with:
           cache-version: 1
           packages: |
-            testthat
-            jsonlite
-            dplyr
-            stringr
-            readr
-            purrr
-            tibble
+            lintr
 
-      - name: Run exercism/r ci (runs tests) for all exercises
+      - name: Run exercism/r ci pre-check (checks config, lint code) for all exercises
         run: |
-          source("bin/run_tests.R")
+          source("bin/run_lints.R")
         shell: Rscript {0}
