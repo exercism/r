@@ -682,6 +682,14 @@
         "difficulty": 1
       },
       {
+        "slug": "knapsack",
+        "name": "Knapsack",
+        "uuid": "cfd8e973-fd62-4ffe-8e16-faa5e34a6340",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "high-scores",
         "name": "High Scores",
         "uuid": "f238872e-385b-42b9-9e4d-1725c23c2cd3",
@@ -784,6 +792,22 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 2
+      },
+      {
+        "slug": "house",
+        "name": "House",
+        "uuid": "c08f6841-3b9a-409c-81c7-636a69e84643",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "run-length-encoding",
+        "name": "Run-Length Encoding",
+        "uuid": "e39b5e8b-cd91-4adf-bb1e-015367ef4f8c",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
       }
     ]
   },
