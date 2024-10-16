@@ -786,6 +786,14 @@
         "difficulty": 2
       },
       {
+        "slug": "zebra-puzzle",
+        "name": "Zebra Puzzle",
+        "uuid": "59e952d7-81bb-4f43-9fba-bdd7322befd0",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 8
+      },
+      {
         "slug": "twelve-days",
         "name": "Twelve Days",
         "uuid": "da138984-77d2-49a9-a553-11d2448b7bb2",
