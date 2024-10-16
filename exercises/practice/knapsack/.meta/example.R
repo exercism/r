@@ -1,5 +1,4 @@
 maximum_value <- function(max_wt, items) {
-  # This URL is > 80 chars, ignore whining from the linter:
   # nolint start
   # https://en.wikipedia.org/wiki/Knapsack_problem#Dynamic_programming_in-advance_algorithm
   # nolint end
