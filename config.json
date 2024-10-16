@@ -786,6 +786,14 @@
         "difficulty": 2
       },
       {
+        "slug": "house",
+        "name": "House",
+        "uuid": "c08f6841-3b9a-409c-81c7-636a69e84643",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "run-length-encoding",
         "name": "Run-Length Encoding",
         "uuid": "e39b5e8b-cd91-4adf-bb1e-015367ef4f8c",
