@@ -3,7 +3,7 @@ library(testthat)
 
 test_that("Random key cipher - Key is made only of lowercase letters", {
   key <- generate_key()
-  expect_true(all(grepl("^[a-z]+$", key)))
+  expect_match(key, "^[a-z]+$")
 })
 
 test_that("Random key cipher - Can encode", {
