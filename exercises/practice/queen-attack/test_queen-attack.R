@@ -38,43 +38,43 @@ test_that("queen must have column on board", {
 test_that("cannot attack", {
   queen1 <- create(2, 4)
   queen2 <- create(6, 6)
-  expect_equal(can_attack(queen1, queen2), FALSE)
+  expect_false(can_attack(queen1, queen2))
 })
 
 test_that("can attack on same row", {
   queen1 <- create(2, 4)
   queen2 <- create(2, 6)
-  expect_equal(can_attack(queen1, queen2), TRUE)
+  expect_true(can_attack(queen1, queen2))
 })
 
 test_that("can attack on same column", {
   queen1 <- create(4, 5)
   queen2 <- create(2, 5)
-  expect_equal(can_attack(queen1, queen2), TRUE)
+  expect_true(can_attack(queen1, queen2))
 })
 
 test_that("can attack on first diagonal", {
   queen1 <- create(2, 2)
   queen2 <- create(0, 4)
-  expect_equal(can_attack(queen1, queen2), TRUE)
+  expect_true(can_attack(queen1, queen2))
 })
 
 test_that("can attack on second diagonal", {
   queen1 <- create(2, 2)
   queen2 <- create(3, 1)
-  expect_equal(can_attack(queen1, queen2), TRUE)
+  expect_true(can_attack(queen1, queen2))
 })
 
 test_that("can attack on third diagonal", {
   queen1 <- create(2, 2)
   queen2 <- create(1, 1)
-  expect_equal(can_attack(queen1, queen2), TRUE)
+  expect_true(can_attack(queen1, queen2))
 })
 
 test_that("can attack on fourth diagonal", {
   queen1 <- create(1, 7)
   queen2 <- create(0, 6)
-  expect_equal(can_attack(queen1, queen2), TRUE)
+  expect_true(can_attack(queen1, queen2))
 })
 
 # cannot attack if falling diagonals are only the same when reflected
@@ -82,5 +82,5 @@ test_that("can attack on fourth diagonal", {
 test_that("cannot attack", {
   queen1 <- create(4, 1)
   queen2 <- create(2, 5)
-  expect_equal(can_attack(queen1, queen2), FALSE)
+  expect_false(can_attack(queen1, queen2))
 })
