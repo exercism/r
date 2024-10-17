@@ -778,6 +778,14 @@
         "difficulty": 3
       },
       {
+        "slug": "strain",
+        "name": "Strain",
+        "uuid": "869fcbef-a5b3-4d79-bc30-e42eeb2fd319",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
         "slug": "proverb",
         "name": "Proverb",
         "uuid": "88b06132-be17-4105-8184-90c2d571fcb2",
@@ -824,6 +832,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
+      },
+      {
+        "slug": "robot-name",
+        "name": "Robot Name",
+        "uuid": "445bd3fd-011d-4a8f-aa83-5acc53225679",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
       }
     ]
   },
