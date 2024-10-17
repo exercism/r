@@ -4,23 +4,23 @@ library(testthat)
 # needs_license
 
 test_that("requires a license for a car", {
-  expect_equal(needs_license("car"), TRUE)
+  expect_true(needs_license("car"))
 })
 
 test_that("requires a license for a truck", {
-  expect_equal(needs_license("truck"), TRUE)
+  expect_true(needs_license("truck"))
 })
 
 test_that("requires a license for a bike", {
-  expect_equal(needs_license("bike"), FALSE)
+  expect_false(needs_license("bike"))
 })
 
 test_that("requires a license for a stroller", {
-  expect_equal(needs_license("stroller"), FALSE)
+  expect_false(needs_license("stroller"))
 })
 
 test_that("requires a license for an e-scooter", {
-  expect_equal(needs_license("e-scooter"), FALSE)
+  expect_false(needs_license("e-scooter"))
 })
 
 # choose_vehicle

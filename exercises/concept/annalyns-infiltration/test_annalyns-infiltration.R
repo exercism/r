@@ -5,12 +5,12 @@ library(testthat)
 
 test_that("Cannot execute fast attack if knight is awake", {
   knight_is_awake <- TRUE
-  expect_equal(can_fast_attack(knight_is_awake), FALSE)
+  expect_false(can_fast_attack(knight_is_awake))
 })
 
 test_that("Can execute fast attack if knight is sleeping", {
   knight_is_awake <- FALSE
-  expect_equal(can_fast_attack(knight_is_awake), TRUE)
+  expect_true(can_fast_attack(knight_is_awake))
 })
 
 #  2) can_spy
