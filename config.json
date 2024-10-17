@@ -826,6 +826,14 @@
         "difficulty": 4
       },
       {
+        "slug": "binary-search",
+        "name": "Binary Search",
+        "uuid": "7b4e53cc-44c0-4be3-b036-1e08fb1ae507",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "robot-name",
         "name": "Robot Name",
         "uuid": "445bd3fd-011d-4a8f-aa83-5acc53225679",
