@@ -145,65 +145,65 @@ test_that("remove the card from the bottom", {
 test_that("an empty stack of cards", {
   stack <- c()
   stack_size <- 0
-  expect_equal(check_size_of_stack(stack, stack_size), TRUE)
+  expect_true(check_size_of_stack(stack, stack_size))
 })
 
 test_that("an empty stack of cards", {
   stack <- c()
   stack_size <- 1
-  expect_equal(check_size_of_stack(stack, stack_size), FALSE)
+  expect_false(check_size_of_stack(stack, stack_size))
 })
 
 test_that("has exactly 1 card", {
   stack <- c(7)
   stack_size <- 0
-  expect_equal(check_size_of_stack(stack, stack_size), FALSE)
+  expect_false(check_size_of_stack(stack, stack_size))
 })
 
 test_that("has exactly 1 card", {
   stack <- c(7)
   stack_size <- 1
-  expect_equal(check_size_of_stack(stack, stack_size), TRUE)
+  expect_true(check_size_of_stack(stack, stack_size))
 })
 
 test_that("has exactly 1 card", {
   stack <- c(7)
   stack_size <- 2
-  expect_equal(check_size_of_stack(stack, stack_size), FALSE)
+  expect_false(check_size_of_stack(stack, stack_size))
 })
 
 test_that("has exactly 4 cards", {
   stack <- c(2, 4, 6, 8)
   stack_size <- 3
-  expect_equal(check_size_of_stack(stack, stack_size), FALSE)
+  expect_false(check_size_of_stack(stack, stack_size))
 })
 
 test_that("has exactly 4 cards", {
   stack <- c(2, 4, 6, 8)
   stack_size <- 4
-  expect_equal(check_size_of_stack(stack, stack_size), TRUE)
+  expect_true(check_size_of_stack(stack, stack_size))
 })
 
 test_that("has exactly 4 cards", {
   stack <- c(2, 4, 6, 8)
   stack_size <- 15
-  expect_equal(check_size_of_stack(stack, stack_size), FALSE)
+  expect_false(check_size_of_stack(stack, stack_size))
 })
 
 test_that("has exactly 5 cards", {
   stack <- c(1, 3, 5, 7, 9)
   stack_size <- 3
-  expect_equal(check_size_of_stack(stack, stack_size), FALSE)
+  expect_false(check_size_of_stack(stack, stack_size))
 })
 
 test_that("has exactly 5 cards", {
   stack <- c(1, 3, 5, 7, 9)
   stack_size <- 4
-  expect_equal(check_size_of_stack(stack, stack_size), FALSE)
+  expect_false(check_size_of_stack(stack, stack_size))
 })
 
 test_that("has exactly 5 cards", {
   stack <- c(1, 3, 5, 7, 9)
   stack_size <- 5
-  expect_equal(check_size_of_stack(stack, stack_size), TRUE)
+  expect_true(check_size_of_stack(stack, stack_size))
 })
