@@ -850,6 +850,14 @@
         "difficulty": 4
       },
       {
+        "slug": "food-chain",
+        "name": "Food Chain",
+        "uuid": "ba92a70f-788f-4a4c-b16c-4577d60b048e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "nth-prime",
         "name": "Nth Prime",
         "uuid": "e61c707d-eb0d-4c37-8c0f-014db4504d3d",
