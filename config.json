@@ -858,6 +858,14 @@
         "difficulty": 4
       },
       {
+        "slug": "clock",
+        "name": "Clock",
+        "uuid": "31e35849-81fe-488a-b020-e6cd9c003a05",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "nth-prime",
         "name": "Nth Prime",
         "uuid": "e61c707d-eb0d-4c37-8c0f-014db4504d3d",
