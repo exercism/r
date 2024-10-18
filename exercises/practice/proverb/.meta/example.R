@@ -10,7 +10,7 @@ recite <- function(wanted) {
   if (is.null(wanted)) {
     return(c())
   }
-  
+
   lines <- mapply(verse_line, wanted, c(wanted[-1], NA))[-length(wanted)]
   c(unname(lines), verse_ending(wanted[[1]]))
 }
