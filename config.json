@@ -858,6 +858,14 @@
         "difficulty": 4
       },
       {
+        "slug": "food-chain",
+        "name": "Food Chain",
+        "uuid": "ba92a70f-788f-4a4c-b16c-4577d60b048e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "clock",
         "name": "Clock",
         "uuid": "31e35849-81fe-488a-b020-e6cd9c003a05",
