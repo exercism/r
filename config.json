@@ -880,6 +880,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 5
+      },
+      {
+        "slug": "killer-sudoku-helper",
+        "name": "Killer Sudoku Helper",
+        "uuid": "991e4ae4-34ec-4c5e-a9f7-b83c45919ad6",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
       }
     ]
   },
