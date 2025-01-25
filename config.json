@@ -904,6 +904,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 6
+      },
+      {
+        "slug": "sublist",
+        "name": "Sublist",
+        "uuid": "6d296795-4b8a-4ec7-8cd6-808da63cede7",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
       }
     ]
   },
