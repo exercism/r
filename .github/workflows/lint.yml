@@ -1,0 +1,35 @@
+# This workflow will do a clean install of the dependencies and run the linter
+#
+# Requires scripts:
+# - bin/run_lints.R
+
+name: Lint exercises
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+
+      - uses: r-lib/actions/setup-r@473c68190595b311a74f208fba61a8d8c0d4c247
+        with:
+          r-version: 4.3.1
+
+      - uses: r-lib/actions/setup-r-dependencies@473c68190595b311a74f208fba61a8d8c0d4c247
+        with:
+          cache-version: 1
+          packages: |
+            lintr
+
+      - name: Run exercism/r ci pre-check (checks config, lint code) for all exercises
+        run: |
+          source("bin/run_lints.R")
+        shell: Rscript {0}

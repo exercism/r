@@ -1,8 +1,6 @@
 source("./scrabble-score.R")
 library(testthat)
 
-context("scrabble score")
-
 test_that("lowercase letter", {
   input <- "a"
   expect_equal(scrabble_score(input), 1)
@@ -57,5 +55,3 @@ test_that("entire alphabet available", {
   input <- "abcdefghijklmnopqrstuvwxyz"
   expect_equal(scrabble_score(input), 87)
 })
-
-message("All tests passed for exercise: scrabble-score")

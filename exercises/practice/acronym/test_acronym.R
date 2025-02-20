@@ -1,8 +1,6 @@
 source("./acronym.R")
 library(testthat)
 
-context("acronym")
-
 test_that("Abbreviate a phrase", {
   input <- "Portable Network Graphics"
   expect_equal(acronym(input), "PNG")
@@ -32,7 +30,8 @@ test_that("Very long abbreviation", {
   input <- paste(
     "Rolling On The Floor Laughing So Hard ",
     "That My Dogs Came Over And Licked Me",
-    sep = "")
+    sep = ""
+  )
   expect_equal(acronym(input), "ROTFLSHTMDCOALM")
 })
 
@@ -50,5 +49,3 @@ test_that("Underscore emphasis", {
   input <- "The Road _Not_ Taken"
   expect_equal(acronym(input), "TRNT")
 })
-
-message("All tests passed for exercise: acronym")

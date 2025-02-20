@@ -1,8 +1,6 @@
 source("./triangle.R")
 library(testthat)
 
-context("triangle")
-
 test_that("true if all sides are equal", {
   expect_is(triangle(2, 2, 2), "equilateral")
 })
@@ -70,5 +68,3 @@ test_that("not scalene if triangle inequality is violated", {
 test_that("sides may be floats", {
   expect_is(triangle(0.5, 0.4, 0.6), "scalene")
 })
-
-message("All tests passed for exercise: triangle")

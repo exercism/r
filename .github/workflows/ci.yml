@@ -1,58 +1,39 @@
 # This workflow will do a clean install of the dependencies and run tests across different versions
 #
 # Requires scripts:
-# - bin/run_lints.R
 # - bin/run_tests.R
 
 name: Exercise tests
 
 on:
   push:
-    branches: [master, main]
+    branches: [main]
   pull_request:
-    branches: [master, main]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
-  precheck:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
-      
-      - uses: r-lib/actions/setup-r@v2
-        with:
-          r-version: 4.1.2
-          use-public-rspm: true
-
-      - name: Install project dependencies
-        run: |
-          install.packages(c("testthat", "jsonlite", "lintr", "magrittr"))
-        shell: Rscript {0}
-
-      - name: Run exercism/r ci pre-check (checks config, lint code) for all exercises
-        run: |
-          source("bin/run_lints.R")
-        shell: Rscript {0}
-
   ci:
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        R: [ '3.6.3', '4.1.2' ]
+    runs-on: ubuntu-22.04
 
     steps:
-      - uses: actions/checkout@v3
-      
-      - uses: r-lib/actions/setup-r@v2
-        with:
-          r-version: ${{ matrix.R }}
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
 
-      - name: Install project dependencies
-        run: |
-          install.packages(c("testthat", "jsonlite", "lintr", "magrittr"))
-        shell: Rscript {0}
+      - uses: r-lib/actions/setup-r@473c68190595b311a74f208fba61a8d8c0d4c247
+        with:
+          r-version: 4.3.1
+
+      - uses: r-lib/actions/setup-r-dependencies@473c68190595b311a74f208fba61a8d8c0d4c247
+        with:
+          cache-version: 1
+          packages: |
+            testthat
+            jsonlite
+            dplyr
+            stringr
+            readr
+            purrr
+            tibble
 
       - name: Run exercism/r ci (runs tests) for all exercises
         run: |

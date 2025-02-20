@@ -16,7 +16,7 @@
     "highlightjs_language": "r"
   },
   "test_runner": {
-    "average_run_time": 2.0
+    "average_run_time": 2
   },
   "files": {
     "solution": [
@@ -33,7 +33,54 @@
     ]
   },
   "exercises": {
-    "concept": [],
+    "concept": [
+      {
+        "slug": "annalyns-infiltration",
+        "name": "Annalyns Infiltration",
+        "uuid": "9b2d4bd3-c302-490d-9dac-3ac79c04cac3",
+        "concepts": [
+          "booleans"
+        ],
+        "prerequisites": [
+          "basics"
+        ],
+        "status": "wip"
+      },
+      {
+        "slug": "lasagna",
+        "name": "Lasagna",
+        "uuid": "6fd75bbd-8654-4d6a-80b5-29344ceb8a48",
+        "concepts": [
+          "basics"
+        ],
+        "prerequisites": [],
+        "status": "wip"
+      },
+      {
+        "slug": "elyses-enchantments",
+        "name": "Elyses Enchantments",
+        "uuid": "9c499085-2d1a-48d4-ab73-6fa1f848fc30",
+        "concepts": [
+          "vectors"
+        ],
+        "prerequisites": [
+          "conditionals"
+        ],
+        "status": "wip"
+      },
+      {
+        "slug": "cars-assemble",
+        "name": "Cars, Assemble",
+        "uuid": "4989ced7-c38a-4d0d-86ad-03d0b4792d6c",
+        "concepts": [
+          "conditionals"
+        ],
+        "prerequisites": [
+          "booleans"
+        ],
+        "status": "wip"
+      }
+    ],
     "practice": [
       {
         "slug": "hello-world",
@@ -509,51 +556,448 @@
         "topics": [
            "math"
         ]
-   }
+      },
+      {
+        "slug": "armstrong-numbers",
+        "name": "Armstrong Numbers",
+        "uuid": "c17ef56b-7418-428b-ac9d-37dbd28de32e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2,
+        "status": "active",
+        "topics": [
+          "math"
+        ]
+      },
+      {
+        "slug": "queen-attack",
+        "name": "Queen Attack",
+        "uuid": "50a29cbf-a782-4d71-9127-94d110f3c893",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1,
+        "status": "active",
+        "topics": [
+          "lists",
+          "logic"
+        ]
+      },
+      {
+        "slug": "vehicle-purchase",
+        "name": "Vehicle Purchase",
+        "uuid": "d40b31f7-6c0d-46fa-8bd6-6618464c2572",
+        "practices": [
+          "conditionals"
+        ],
+        "prerequisites": [
+          "booleans"
+        ],
+        "difficulty": 1,
+        "status": "wip"
+      },
+      {
+        "slug": "pythagorean-triplet",
+        "name": "Pythagorean Triplet",
+        "uuid": "07aae7fe-22b2-4919-83f7-1ee145216dbd",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "status": "active",
+        "topics": [
+          "math"
+        ]
+      },
+      {
+        "slug": "reverse-string",
+        "name": "Reverse String",
+        "uuid": "684e330d-7ee6-4151-9fc3-c1ca376136c3",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "roman-numerals",
+        "name": "Roman Numerals",
+        "uuid": "366d83ae-a069-457e-ace9-f79417ed311f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "protein-translation",
+        "name": "Protein Translation",
+        "uuid": "dc8bb817-1c79-476a-a666-bcad9455c66a",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "eliuds-eggs",
+        "name": "Eliud's Eggs",
+        "uuid": "118e27fe-fe97-45fa-82cc-6480cf777e34",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "all-your-base",
+        "name": "All Your Base",
+        "uuid": "38ec462f-359e-4133-99be-7ba55a149344",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+          "integers",
+          "math"
+        ]
+      },
+      {
+        "slug": "robot-simulator",
+        "name": "Robot Simulator",
+        "uuid": "67e94669-bea1-43f4-9c2f-90884676f568",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1,
+        "status": "beta"
+      },
+      {
+        "slug": "series",
+        "name": "Series",
+        "uuid": "2ef6f027-a27c-4b00-bf1e-2969baf04a36",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "game-of-life",
+        "name": "Conway's Game of Life",
+        "uuid": "5ba723f2-dd9e-452a-b5f3-cfe19a2650b5",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "gigasecond",
+        "name": "Gigasecond",
+        "uuid": "c9ba947d-8def-4a3f-bfc2-616301f6037f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "square-root",
+        "name": "Square Root",
+        "uuid": "2fdce5b8-0cf3-4557-aca8-5f607887bef0",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "knapsack",
+        "name": "Knapsack",
+        "uuid": "cfd8e973-fd62-4ffe-8e16-faa5e34a6340",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "high-scores",
+        "name": "High Scores",
+        "uuid": "f238872e-385b-42b9-9e4d-1725c23c2cd3",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "isbn-verifier",
+        "name": "ISBN Verifier",
+        "uuid": "f52be1f1-61c7-48dc-8416-fb5c1d943349",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "kindergarten-garden",
+        "name": "Kindergarten Garden",
+        "uuid": "9ee61a47-5433-4459-8f42-5793500bc3b5",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "atbash-cipher",
+        "name": "Atbash Cipher",
+        "uuid": "81133e3d-4feb-4985-8852-3354e8f72847",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "rail-fence-cipher",
+        "name": "Rail Fence Cipher",
+        "uuid": "e4b63b53-d6ca-4a1d-8e02-e295bd2c9c65",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "flatten-array",
+        "name": "Flatten Array",
+        "uuid": "d3f7f539-dc10-4c7a-8378-7625362e8a6f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "matching-brackets",
+        "name": "Matching Brackets",
+        "uuid": "8e78cebc-5e33-4670-bc87-f481bdd0bf49",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "matrix",
+        "name": "Matrix",
+        "uuid": "7a91501a-210f-4082-a029-a0a9fe368623",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "resistor-color",
+        "name": "Resistor Color",
+        "uuid": "8af70f6c-85e2-41de-b5a3-20aaacb32a26",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "resistor-color-duo",
+        "name": "Resistor Color Duo",
+        "uuid": "a118a447-f41d-4904-8dfa-15f45ba3a990",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "simple-cipher",
+        "name": "Simple Cipher",
+        "uuid": "75f36774-7406-4234-9369-0923d1e5cc95",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "strain",
+        "name": "Strain",
+        "uuid": "869fcbef-a5b3-4d79-bc30-e42eeb2fd319",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "proverb",
+        "name": "Proverb",
+        "uuid": "88b06132-be17-4105-8184-90c2d571fcb2",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "zebra-puzzle",
+        "name": "Zebra Puzzle",
+        "uuid": "59e952d7-81bb-4f43-9fba-bdd7322befd0",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 8
+      },
+      {
+        "slug": "twelve-days",
+        "name": "Twelve Days",
+        "uuid": "da138984-77d2-49a9-a553-11d2448b7bb2",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "house",
+        "name": "House",
+        "uuid": "c08f6841-3b9a-409c-81c7-636a69e84643",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "run-length-encoding",
+        "name": "Run-Length Encoding",
+        "uuid": "e39b5e8b-cd91-4adf-bb1e-015367ef4f8c",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "list-ops",
+        "name": "List Ops",
+        "uuid": "211cdf11-e931-4aa6-b50e-b63d9aaf40a7",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "dnd-character",
+        "name": "D&D Character",
+        "uuid": "8c617fa4-5c2f-4be3-b7dc-8f8bf8214326",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "binary-search",
+        "name": "Binary Search",
+        "uuid": "7b4e53cc-44c0-4be3-b036-1e08fb1ae507",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "robot-name",
+        "name": "Robot Name",
+        "uuid": "445bd3fd-011d-4a8f-aa83-5acc53225679",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "food-chain",
+        "name": "Food Chain",
+        "uuid": "ba92a70f-788f-4a4c-b16c-4577d60b048e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "clock",
+        "name": "Clock",
+        "uuid": "31e35849-81fe-488a-b020-e6cd9c003a05",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "nth-prime",
+        "name": "Nth Prime",
+        "uuid": "e61c707d-eb0d-4c37-8c0f-014db4504d3d",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "killer-sudoku-helper",
+        "name": "Killer Sudoku Helper",
+        "uuid": "991e4ae4-34ec-4c5e-a9f7-b83c45919ad6",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "change",
+        "name": "Change",
+        "uuid": "a625e5e9-43cf-4765-bd9a-e41135132258",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
+      },
+      {
+        "slug": "pig-latin",
+        "name": "Pig Latin",
+        "uuid": "0bade9d4-fa5b-4593-a59c-0ca5ddcad224",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
+      },
+      {
+        "slug": "sublist",
+        "name": "Sublist",
+        "uuid": "6d296795-4b8a-4ec7-8cd6-808da63cede7",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "resistor-color-trio",
+        "name": "Resistor Color Trio",
+        "uuid": "63ad9b99-31c2-47d6-9f66-ab803a1969dd",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      }
     ]
   },
-  "concepts": [],
+  "concepts": [
+    {
+      "uuid": "1b02da6d-97c7-41ca-b096-41201794b7cc",
+      "slug": "conditionals",
+      "name": "Conditionals"
+    },
+    {
+      "uuid": "d75c1a77-9733-45b0-ae21-2b4f0f313ef4",
+      "slug": "basics",
+      "name": "Basics"
+    },
+    {
+      "uuid": "a36663b0-cfb7-4007-a7d3-1d106ed023fb",
+      "slug": "vectors",
+      "name": "Vectors"
+    },
+    {
+      "uuid": "2751b6f2-7d71-4397-b063-9bf927a57756",
+      "slug": "booleans",
+      "name": "Booleans"
+    }
+  ],
   "key_features": [
     {
-      "icon": "scientific",
       "title": "Domain Specific",
-      "content": "R is a language and environment for statistical computing and graphics."
+      "content": "R is a language and environment for statistical computing and graphics.",
+      "icon": "scientific"
     },
     {
-      "icon": "cross-platform",
       "title": "Cross-platform",
-      "content": "It is free, open source, and available on every major platform."
+      "content": "It is free, open source, and available on every major platform.",
+      "icon": "cross-platform"
     },
     {
-      "icon": "multi-paradigm",
       "title": "Multi-paradigm",
-      "content": "R has a functional programming foundation, but facilitates procedural or object-oriented approaches."
+      "content": "R has a functional programming foundation, but facilitates procedural or object-oriented approaches.",
+      "icon": "multi-paradigm"
     },
     {
-      "icon": "powerful",
       "title": "Metaprogramming",
-      "content": "R’s metaprogramming capabilities allow for magically succinct and concise functions."
+      "content": "R’s metaprogramming capabilities allow for magically succinct and concise functions.",
+      "icon": "powerful"
     },
     {
-      "icon": "tooling",
       "title": "Tooling",
-      "content": "R provides powerful tools for data manipulation, visualisation, modelling, and machine learning."
+      "content": "R provides powerful tools for data manipulation, visualisation, modelling, and machine learning.",
+      "icon": "tooling"
     },
     {
-      "icon": "community",
       "title": "Community",
-      "content": "R has a diverse and welcoming community."
+      "content": "R has a diverse and welcoming community.",
+      "icon": "community"
     }
   ],
   "tags": [
+    "execution_mode/interpreted",
+    "paradigm/array",
     "paradigm/functional",
     "paradigm/object_oriented",
-    "typing/dynamic",
-    "execution_mode/interpreted",
-    "platform/windows",
-    "platform/mac",
     "platform/linux",
+    "platform/mac",
+    "platform/windows",
     "runtime/language_specific",
+    "typing/dynamic",
     "used_for/artificial_intelligence",
     "used_for/scientific_calculations",
     "used_for/scripts",

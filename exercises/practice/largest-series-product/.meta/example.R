@@ -1,6 +1,8 @@
-largest_series_product <- function(digits, span){
-
-  nums <- as.numeric(unlist(strsplit(digits, "")))
+largest_series_product <- function(digits, span) {
+  nums <- strsplit(digits, "") |>
+    unlist() |>
+    as.numeric() |>
+    suppressWarnings()
 
   if (any(is.na(nums)) || span < 0 || span > length(nums)) {
     stop("Non-numeric characters or span less than digit length")

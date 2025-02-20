@@ -1,0 +1,27 @@
+{
+  "introduction": {
+    "authors": [
+      "jonmcalder"
+    ]
+  },
+  "approaches": [
+    {
+      "uuid": "6fb5f80f-706c-4bbb-ba3e-cd53bca110bd",
+      "slug": "boolean-chain",
+      "title": "Boolean chain",
+      "blurb": "Use a chain of boolean expressions.",
+      "authors": [
+        "jonmcalder"
+      ]
+    },
+    {
+      "uuid": "aa5cd568-60e7-4d9d-9573-752ecdbb92f7",
+      "slug": "conditional-expression",
+      "title": "Conditional expression",
+      "blurb": "Use an if / else statement.",
+      "authors": [
+        "jonmcalder"
+      ]
+    }
+  ]
+}

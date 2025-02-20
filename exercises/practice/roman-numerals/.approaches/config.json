@@ -1,0 +1,29 @@
+{
+  "introduction": {
+    "authors": [
+      "colinleach"
+    ]
+  },
+  "approaches": [
+    {
+      "uuid": "60eab712-2ad8-4521-8194-5959fccb6a19",
+      "slug": "loop-over-romans",
+      "title": "Loop Over Romans",
+      "blurb": "Test Roman Numerals from the largest down and eat the maximum possible at each step.",
+      "authors": [
+        "colinleach",
+        "jonmcalder"
+      ]
+    },
+    {
+      "uuid": "6a38ebae-09ae-4cb9-a4db-083cd86b1209",
+      "slug": "table-lookup",
+      "title": "Table Lookup",
+      "blurb": "Use a 2-D lookup table to eliminate loop nesting.",
+      "authors": [
+        "colinleach",
+        "jonmcalder"
+      ]
+    }
+  ]
+}
