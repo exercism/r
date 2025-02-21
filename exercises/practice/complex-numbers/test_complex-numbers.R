@@ -1,8 +1,6 @@
 source("./complex-numbers.R")
 library(testthat)
 
-context("complex-numbers")
-
 # Real part
 
 test_that("Real part of a purely real number", {
