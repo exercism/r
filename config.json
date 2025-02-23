@@ -943,6 +943,11 @@
       "uuid": "2751b6f2-7d71-4397-b063-9bf927a57756",
       "slug": "booleans",
       "name": "Booleans"
+    },
+    {
+      "uuid": "ddba86e7-f23a-4cab-9f60-ea856a002565",
+      "slug": "complex-numbers",
+      "name": "Complex Numbers"
     }
   ],
   "key_features": [
