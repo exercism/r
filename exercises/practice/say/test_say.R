@@ -100,7 +100,7 @@ test_that("one billion", {
 test_that("a big number", {
   expect_equal(
     say(987654321123),
-    "nine hundred eighty-seven billion six hundred fifty-four million three hundred twenty-one thousand one hundred twenty-three")
+    "nine hundred eighty-seven billion six hundred fifty-four million three hundred twenty-one thousand one hundred twenty-three") # nolint
 })
 
 test_that("numbers below zero are out of range", {
