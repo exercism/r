@@ -1,4 +1,4 @@
-small.n <- c(
+small_n <- c(
   'one',
   'two',
   'three',
@@ -32,15 +32,15 @@ tens <- c(
 
 oom <- c('billion', 'million', 'thousand', '')
 
-say.group <- \(n) {
+say_group <- \(n) {
   h <- n %/% 100
   if (h == 0) sh <- c()
-  else sh <- c(small.n[h], 'hundred')
+  else sh <- c(small_n[h], 'hundred')
   r <- n %% 100
-  if (r < 20) sh <- c(sh, small.n[r])
+  if (r < 20) sh <- c(sh, small_n[r])
   else sh <- c(sh, tens[r %/% 10])
   last <- r %% 10
-  if (last > 0 && r >= 20) sh <- c(sh, '-', small.n[last])
+  if (last > 0 && r >= 20) sh <- c(sh, '-', small_n[last])
   sh
 }
 
@@ -60,9 +60,9 @@ say <- \(number) {
   sh <- c()
   for (i in 1:3) {
     if (groups[i] > 0) {
-      sh <- c(sh, say.group(groups[i]), oom[i])
+      sh <- c(sh, say_group(groups[i]), oom[i])
     }
   }
-  sh <- c(sh, say.group(groups[4]))
-  gsub(' - ', '-', paste(sh, collapse=' '))
+  sh <- c(sh, say_group(groups[4]))
+  gsub(' - ', '-', paste(sh, collapse = ' '))
 }
