@@ -947,6 +947,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 6
+      },
+      {
+        "slug": "variable-length-quantity",
+        "name": "Variable Length Quantity",
+        "uuid": "4e1b9e0f-383b-4aea-9769-27882c98cffd",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
       }
     ]
   },
