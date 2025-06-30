@@ -939,6 +939,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 5
+      },
+      {
+        "slug": "palindrome-products",
+        "name": "Palindrome Products",
+        "uuid": "2776fe9f-922b-4731-804b-0901c3b514cc",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
       }
     ]
   },
