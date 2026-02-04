@@ -32,12 +32,4 @@
 
 ## 8. Check the size of the stack
 
-- There is a method [`length`][length] in Base to retrieve the length of a collection.
-
-[push]: https://docs.julialang.org/en/v1/base/collections/#Base.push!
-[pop]: https://docs.julialang.org/en/v1/base/collections/#Base.pop!
-[pushfirst]: https://docs.julialang.org/en/v1/base/collections/#Base.pushfirst!
-[popfirst]: https://docs.julialang.org/en/v1/base/collections/#Base.popfirst!
-[insert]: https://docs.julialang.org/en/v1/base/collections/#Base.insert!
-[deleteat]: https://docs.julialang.org/en/v1/base/collections/#Base.deleteat!
-[length]: https://docs.julialang.org/en/v1/base/collections/#Base.length
+- There is a function `length` in Base to retrieve the length of a collection.
