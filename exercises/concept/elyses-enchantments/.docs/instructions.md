@@ -54,7 +54,18 @@ remove_item(stack, position)
 # => c(3, 2, 4, 8)
 ```
 
-## 5. Remove the top card from the stack
+## 5. Check the size of the stack
+
+Check whether the size of the stack is equal to `stackSize` or not.
+
+```R
+stack <- c(3, 2, 6, 4, 8)
+stack_size <- 4
+check_size_of_stack(stack, stack_size)
+# => FALSE
+```
+
+## 6. Remove the top card from the stack
 
 Make a card disappear by removing the card at the top of the stack.
 Return the adjusted stack.
@@ -65,7 +76,7 @@ remove_item_from_top(stack)
 # => c(3, 2, 6, 4)
 ```
 
-## 6. Insert a card at the bottom of the stack
+## 7. Insert a card at the bottom of the stack
 
 Make a card appear by inserting a new card at the bottom of the stack.
 Return the adjusted stack.
@@ -77,7 +88,7 @@ insert_item_at_bottom(stack, new_card)
 # => c(8, 5, 9, 7, 1)
 ```
 
-## 7. Remove a card from the bottom of the stack
+## 8. Remove a card from the bottom of the stack
 
 Make a card disappear by removing the card at the bottom of the stack.
 Return the adjusted stack.
@@ -86,15 +97,4 @@ Return the adjusted stack.
 stack <- c(8, 5, 9, 7, 1)
 remove_item_at_bottom(stack)
 # => c(5, 9, 7, 1)
-```
-
-## 8. Check the size of the stack
-
-Check whether the size of the stack is equal to `stackSize` or not.
-
-```R
-stack <- c(3, 2, 6, 4, 8)
-stack_size <- 4
-check_size_of_stack(stack, stack_size)
-# => FALSE
 ```
