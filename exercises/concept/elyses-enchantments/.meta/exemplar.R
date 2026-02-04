@@ -15,6 +15,10 @@ remove_item <- function(stack, position) {
   stack[-position]
 }
 
+check_size_of_stack <- function(stack, stack_size) {
+  length(stack) == stack_size
+}
+
 remove_item_from_top <- function(stack) {
   len <- length(stack)
   if (len > 1) {
@@ -32,8 +36,4 @@ remove_item_at_bottom <- function(stack) {
     return(stack[-1])
   }
   NULL
-}
-
-check_size_of_stack <- function(stack, stack_size) {
-  length(stack) == stack_size
 }
