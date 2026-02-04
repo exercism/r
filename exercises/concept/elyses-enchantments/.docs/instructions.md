@@ -60,7 +60,7 @@ Make a card disappear by removing the card at the top of the stack.
 Return the adjusted stack.
 
 ```R
-stack <- c(3, 2, 6, 4, 8
+stack <- c(3, 2, 6, 4, 8)
 remove_item_from_top(stack)
 # => c(3, 2, 6, 4)
 ```
