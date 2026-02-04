@@ -5,7 +5,7 @@
 - You need to translate the speed into a success rate, using the rules given in the instructions.
 - The returned value is a floating-point number.
 - The Introduction discussed `if-else` syntax.
-- R also has a `switch` function which will be covered in detail in a later Concept.
+- R also has several `switch`-like functions which will be covered in detail in a later Concept.
 
 ## 2. Calculate the production rate per hour
 
