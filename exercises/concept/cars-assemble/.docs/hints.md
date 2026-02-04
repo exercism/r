@@ -17,5 +17,5 @@
 - The hourly production rate was calculated in task 2.
 - This task requires the rate per minute.
 - Only complete, working cars are counted in this exercise, so you will need to remove part-complete cars from the count.
-- The return value must be rounded.
+- The return value must be a whole number (integer or rounded float).
 - The `Basics` Concept already discussed ways to round values.
