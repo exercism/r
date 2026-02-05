@@ -260,14 +260,6 @@
         "difficulty": 1
       },
       {
-        "slug": "roman-numerals",
-        "name": "Roman Numerals",
-        "uuid": "366d83ae-a069-457e-ace9-f79417ed311f",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
-      },
-      {
         "slug": "eliuds-eggs",
         "name": "Eliud's Eggs",
         "uuid": "118e27fe-fe97-45fa-82cc-6480cf777e34",
@@ -530,6 +522,14 @@
         "slug": "food-chain",
         "name": "Food Chain",
         "uuid": "ba92a70f-788f-4a4c-b16c-4577d60b048e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "roman-numerals",
+        "name": "Roman Numerals",
+        "uuid": "366d83ae-a069-457e-ace9-f79417ed311f",
         "practices": [],
         "prerequisites": [],
         "difficulty": 2
