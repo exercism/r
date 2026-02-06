@@ -40,6 +40,10 @@ Note that there are two sets of and/or operators.
 
 This distinction will become important, and probably clearer, in the [`vector-filtering`][concept-vector-filtering] concept.
 
+Using `&` and `|` on single values works in the above example, because these are handled as length-1 vectors.
+The behavior is subtly different to double-character operators, as only the latter are "short-circuiting": the value on the right is not evaluated if the left value is sufficient to determine the result.
+Thus `TRUE || anything` is always `TRUE`, and the `anything` is ignored.
+
 Using `&&` or `||` on vectors (length 2 or more) means that only the first element is used in the comparison, yielding a single `TRUE`/`FALSE` and probably a warning message.
 _This is probably not what you intended._
 
