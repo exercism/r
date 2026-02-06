@@ -72,6 +72,9 @@ Vector inputs are acceptable, and then a vector output is produced.
 In this case, ensure both branches result in the same type of data: numeric, character, logical, etc.
 This will be covered in the [`vector-functions`][concept-vector-functions] concept.
 
+The two results (`"big", "small"` in the above example) should be single values.
+Unfortunately, giving a longer vector here will probably cause R to do something confusing and unexpected, without giving a warning message.
+
 ## The [`if_else`][ref-if_else] function
 
 ### Background
@@ -118,7 +121,7 @@ ifelse(xs > 8, "big", "small")
 #> [1] "big"   "small" NA 
 ```
 
-You may also find that `if_else` has better error messages than the older `ifelse`.
+You may also find that `if_else` has much better error messages than the older `ifelse`.
 
 After loading the `dplyr` library, you will also have access to the [`between()`][ref-between] function.
 
