@@ -66,7 +66,7 @@ squareit <- function(x) {
 Functions can have zero or more arguments, separated by commas.
 Parentheses `()` are needed with `function()`, even if there are no parameters.
 
-Default values can be specified for function arguments, though these must come after any arguments without defaults.
+Default values can be specified for function arguments, though these must come after any arguments without defaults, and use `=` not `<-` to assign the default value.
 As a rather pointless example:
 
 ```R
