@@ -110,15 +110,15 @@ if_else(x > 8, "big", "small")
 The main difference is that `if_else` can take an optional fourth argument, for [missing][concept-nothingness] values that are represented in R by [`NA`][ref-na].
 
 ```R
-xs <- c(10, 3, NA)  # a 3-element vector
+xs <- c(3, NA, 10, NA, 4)  # a 5-element vector
 xs
-#> [1] 10  3 NA
-if_else(xs 8, "big", "small", "missing")
-#> [1] "big"     "small"   "missing"
+#> [1]  3 NA 10 NA  4
+if_else(xs > 8, "big", "small", "missing")
+#> [1] "small"   "missing" "big"     "missing" "small" 
 
 # contrast:
 ifelse(xs > 8, "big", "small")
-#> [1] "big"   "small" NA 
+#> [1] "small" NA      "big"   NA      "small"
 ```
 
 You may also find that `if_else` has much better error messages than the older `ifelse`.
