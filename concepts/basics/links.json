@@ -1,15 +1,19 @@
 [
-    {
-      "url": "https://cran.r-project.org/doc/manuals/r-release/R-intro.html",
-      "description": "An Introduction to R"
-    },
-    {
-      "url": "https://intro2r.com/",
-      "description": "An Introduction to R (an open book)"
-    },
-    {
-      "url": "https://www.youtube.com/playlist?list=PL69A9CCD816A5F3A5",
-      "description": "R Tutorial on YouTube"
-    }
-  ]
+  {
+    "url": "https://cran.r-project.org/doc/manuals/r-release/R-intro.html",
+    "description": "An Introduction to R"
+  },
+  {
+    "url": "https://intro2r.com/",
+    "description": "An Introduction to R (an open book)"
+  },
+  {
+    "url": "https://www.youtube.com/playlist?list=PL69A9CCD816A5F3A5",
+    "description": "R Tutorial on YouTube"
+  },
+  {
+    "url": "https://r4ds.hadley.nz/workflow-basics.html",
+    "description": "R for Data Science, chapter 2"
+  }    
+]
   
