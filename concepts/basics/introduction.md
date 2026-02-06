@@ -10,7 +10,11 @@ avogadro <- 6.02e23
 mystr <- "Hello, World!"
 ```
 
-Operators work conventionally:
+The preferred assignment operator is `<-` (not `=`).
+If working in RStudio, it can be entered with the keyboard shortcut `Alt-minus`.
+
+Operators are mostly conventional, but note `%/%` and `%%`:
+
 ```R
 2 + 3   # 5
 2 - 3   # -1
@@ -21,7 +25,8 @@ Operators work conventionally:
 2 ^ 3   # 8 (exponential)
 ```
 
-Also, note that `#` starts a single-line comment.
+In R, `#` starts a single-line comment.
+There is no separate syntax for multi-line comments.
 
 ## Functions
 
@@ -35,7 +40,7 @@ squareit <- function(x) {
 
 R will automatically return the final value of a function. More generally, `return(x * x)` will work from anywhere in the function body.
 
-Calling a function is conventional:
+Calling a function is simple:
 
 ```R
 y <- squareit(3) # y is now 9
