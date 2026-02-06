@@ -41,6 +41,14 @@ v[bools]
 It is a small step from there to generating the boolean vector with a conditional expression:
 
 ```R
+bools <- v >= 2
+bools
+#> [1] FALSE  TRUE  TRUE
+
+v[bools]
+#> [1] 2 3
+
+# simpler form
 v[v >= 2]
 #> [1] 2 3
 ```
@@ -52,6 +60,10 @@ v <- 1:10
 w <- 10:1
 
 # pairwise comparison
+v > w
+#> [1] FALSE FALSE FALSE FALSE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE
+
+# shorter form
 v[v > w]
 #> [1]  6  7  8  9 10
 ```
