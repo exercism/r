@@ -100,6 +100,11 @@ squareit(3)
 We will see in future Concepts that the result `9` is actually a length-1 vector rather than a scalar number.
 Hence the inclusion of `[1]` to indicate that this is the beginning of the vector.
 
+```R
+is.vector(9)
+#> [1] TRUE
+```
+
 _Most things in R are some sort of vector!_
 
 ~~~~exercism/note
