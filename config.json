@@ -249,7 +249,7 @@
           "booleans"
         ],
         "difficulty": 1,
-        "status": "wip"
+        "status": "deprecated"
       },
       {
         "slug": "reverse-string",
