@@ -62,6 +62,9 @@ For longer and more complicated expressions, it is best to use parentheses to ma
 ```R
 (TRUE || FALSE) && (FALSE && TRUE)
 #> [1] FALSE
+
+TRUE || FALSE && (FALSE && TRUE)
+#> [1] TRUE
 ```
 
 There is no infix operator for [exclusive or][wiki-xor] (i.e. A OR B, but not both). The [`xor()`][ref-xor] function can be used in this case.
