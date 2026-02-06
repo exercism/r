@@ -54,4 +54,7 @@ For longer and more complicated expressions, it is best to use parentheses to ma
 ```R
 (TRUE || FALSE) && (FALSE && TRUE)
 #> [1] FALSE
+
+TRUE || FALSE && (FALSE && TRUE)
+#> [1] TRUE
 ```
