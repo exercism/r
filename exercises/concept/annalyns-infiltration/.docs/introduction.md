@@ -16,7 +16,8 @@ typeof(TRUE)
 
 ## Boolean Operators
 
-There are six Boolean operators in R, but only three are relevant at this stage of the syllabus.
+There are five Boolean operators in R, but only three are relevant at this stage of the syllabus.
+The other two will be important when working with vectors, covered in several later Concepts.
 
 `&&` is Boolean "and".
 It evaluates to `TRUE` if the expressions on *both* sides of `&&` are `TRUE`.
@@ -53,7 +54,4 @@ For longer and more complicated expressions, it is best to use parentheses to ma
 ```R
 (TRUE || FALSE) && (FALSE && TRUE)
 #> [1] FALSE
-
-TRUE || FALSE && (FALSE && TRUE)
-#> [1] TRUE
 ```
