@@ -1,6 +1,6 @@
 # About
 
-A [`vector`][ref-vector] in R is a collection of values of the same [`type`][ref-type]: commonly [`integer`][ref-integer], [`numeric`][ref-numeric], [`character`][ref-character], [`logical`][ref-logical]; rarely [`complex`][ref-complex] or [`raw`][ref-raw].
+A [`vector`][ref-vector] (technically an `atomic vector`) in R is a collection of values of the same [`type`][ref-type]: commonly [`integer`][ref-integer], [`numeric`][ref-numeric], [`character`][ref-character], [`logical`][ref-logical]; rarely [`complex`][ref-complex] or [`raw`][ref-raw].
 They are stored contiguously in memory, similar to a C array.
 
 If given mixed inputs, R will quietly coerce them all to a common type, usually `character`, which can lead to unexpected results.
@@ -23,6 +23,7 @@ v <- c(4, 7, x)
 ```
 
 The `c()` function is very flexible, and inputs can include other vectors and ranges.
+`c()` will take any number and variety of inputs, and flatten them into a single vector.
 
 If the vector starts small and grows a lot during runtime (for example, adding values in a loop), it can be significantly faster to pre-allocate a long vector which can be filled with real data later:
 
@@ -183,7 +184,7 @@ any(v > 6)
 ```
 
 For more complicated logical expressions, it is important to use the `&` and `|` operators, which work on vectors.
-The double-character `&&` and `||` are only intended for comparing single values.
+The double-character `&&` and `||` are only intended for comparing single values, as discussed in the [Booleans Concept][concept-boolean].
 
 ```R
 v <- c(4, 7, 10)
@@ -211,6 +212,8 @@ But why are single values preceded by `[1]`?
 What appears to be a single number or letter is actually a vector of length 1.
 ~~~~
 
+We have already seen hints of this in the [Basics][concept-basics] and [Booleans][concept-booleans] Concepts with numeric and logical types.
+
 ## A word on notation
 
 The vectors described above are more formally known as [`atomic vectors`][book-atomic]. This is because they can only contain simple, indivisible (hence "atomic") values such as `numeric`, `characacter`, `boolean`. More complex structures can form `recursive vectors`, which will be introduced when [`lists`][concept-lists] are discussed.
@@ -231,3 +234,5 @@ The vectors described above are more formally known as [`atomic vectors`][book-a
 [ref-any]: https://stat.ethz.ch/R-manual/R-devel/library/base/html/any.html
 [book-atomic]: https://r4ds.had.co.nz/vectors.html#vector-basics
 [concept-lists]: https://exercism.org/tracks/r/concepts/lists
+[concept-basics]: https://exercism.org/tracks/r/concepts/basics
+[concept-booleans]: https://exercism.org/tracks/r/concepts/booleans
