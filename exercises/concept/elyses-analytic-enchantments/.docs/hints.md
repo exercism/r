@@ -16,8 +16,8 @@
 - The cards are all guaranteed to be different, making the task simpler.
 - Return either the position, or `-1`.
   - See the [Conditionals Concept][concept-conditionals] for various ways to branch if something is `TRUE` or `FALSE`.
-  - If using [`if_else`][ref-if_else] (the most modern approach, but not really required here), be aware that it is strict about both branches returning the same type of result. You may need to explicitly return a single element, rather than an array which might be empty.
-  - To get the first element of an array, just add `[1]`  after anything that returns an array. This can include:
+  - If using [`if_else`][ref-if_else] (the most modern approach, but not really required here), be aware that it is strict about both branches returning the same type of result. You may need to explicitly return a single element, rather than a vector which might be empty.
+  - To get the first element of a vector, just add `[1]`  after anything that returns a vector. This can include:
     - a subsetting operation like `v[v > 2][1]`
     - a function call like `which(v > 2)[1]`.
 
