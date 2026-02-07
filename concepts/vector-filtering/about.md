@@ -15,7 +15,7 @@ any(v > 6)
 
 The technique is much more powerful than this.
 
-## Array subsets
+## Vector subsets
 
 Selected elements of a vector can be pulled out with an index number or a vector of indices:
 
@@ -133,8 +133,31 @@ which(v > 5) # returns indices
 #> [1] 2 3
 ```
 
+## Checking if an entry exists
+
+Previous sections were about finding entries matching some criterion.
+
+If you merely need to know if the vector contains a specific element, the [`%in%`][ref-match] operator is used.
+
+```R
+3 %in% 1:5
+#> [1] TRUE
+7 %in% 1:5
+#> [1] FALSE
+```
+
+This is functionally equivalent to the following code, but much more convenient:
+
+```R
+length(v[v == 3]) > 0
+#> [1] TRUE
+```
+
+There is also a `%notin%` operator, which gives the logical `not` of `%in%`.
+
 [ref-vector]: https://stat.ethz.ch/R-manual/R-devel/library/base/html/vector.html
 [ref-all]: https://stat.ethz.ch/R-manual/R-devel/library/base/html/all.html
 [ref-any]: https://stat.ethz.ch/R-manual/R-devel/library/base/html/any.html
 [ref-which]: https://stat.ethz.ch/R-manual/R-devel/library/base/html/which.html
+[ref-match]: https://stat.ethz.ch/R-manual/R-devel/library/base/html/match.html
 [concept-vectors]: https://exercism.org/tracks/r/concepts/vectors
