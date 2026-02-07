@@ -979,6 +979,11 @@
       "uuid": "18919f40-a3fe-45f3-b181-84ec82bfa785",
       "slug": "vector-filtering",
       "name": "Vector Filtering"
+    },
+    {
+      "uuid": "68d54762-d212-4e4c-b2b7-815acd13de2c",
+      "slug": "vector-functions",
+      "name": "Vector Functions"
     }
   ],
   "key_features": [
