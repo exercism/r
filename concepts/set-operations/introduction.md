@@ -32,3 +32,5 @@ Relevant functions include `unique` (to remove duplicates), plus `union()`, `int
 setequal(set_1, c("c", "b", "a", "b")) # are elements the same after deduplication?
 [1] TRUE
 ```
+
+In each case, `set_1` and `set_2` remain unchanged.
