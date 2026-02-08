@@ -40,9 +40,11 @@ setequal(set_1, c("c", "b", "a", "b")) # are elements the same after deduplicati
 [1] TRUE
 ```
 
+In each case, the function returns a copy and leaves the arguments unchaged.
+
 ## Hash tables
 
-The vector operations described above are part of core R.
+The vector operations described above are part of base R.
 These are useful for small problems but become slow for large sets.
 
 Various third-party packages implement [hash tables][wiki-hash], to improve performance in some contexts.
