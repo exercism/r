@@ -50,7 +50,7 @@ Matching is still exact, but:
 ```R
 library(dplyr)
 
-x <- c("a", "b", "a", "d", "b", NA, "c", "e")
+x <- c("a", "b", "a", "d", "b", NA, "c", "e", "z")
 case_match(
   x,
   "a" ~ 1,
@@ -60,7 +60,8 @@ case_match(
   NA ~ 0,          # matches missing values
   .default = 100   # note the different syntax for the default
 )
-#> [1] 1 2 1 4 2 0 3 4
+#> [1]   1   2   1   4   2   0   3   4 100
+
 ```
 
 ### The [`case_when`][ref-case-when] function
