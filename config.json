@@ -991,6 +991,11 @@
       "uuid": "18919f40-a3fe-45f3-b181-84ec82bfa785",
       "slug": "vector-filtering",
       "name": "Vector Filtering"
+    },
+    {
+      "uuid": "85db3d8c-dfec-424c-9682-caa8611db8f8",
+      "slug": "set-operations",
+      "name": "Set Operations"
     }
   ],
   "key_features": [
