@@ -1,0 +1,7 @@
+{
+  "authors": [
+    "colinleach"
+  ],
+  "contributors": [],
+  "blurb": "If matching on a value, especially a string, switch() can be more concise than if-else. Newer, more flexible alternatives include case_when() and case_match()."
+}
