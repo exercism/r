@@ -993,6 +993,11 @@
       "name": "Vector Filtering"
     },
     {
+      "uuid": "85db3d8c-dfec-424c-9682-caa8611db8f8",
+      "slug": "set-operations",
+      "name": "Set Operations"
+    },
+    {
       "uuid": "f6374c07-9244-44b2-b372-3e271b0d01be",
       "slug": "nothingness",
       "name": "Nothingness"
