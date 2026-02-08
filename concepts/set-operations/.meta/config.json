@@ -3,5 +3,5 @@
     "colinleach"
   ],
   "contributors": [],
-  "blurb": "Core R provides several functions that perform set-like operations on vectors."
+  "blurb": "Base R provides several functions that perform set-like operations on vectors."
 }
