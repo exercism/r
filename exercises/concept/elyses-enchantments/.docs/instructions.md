@@ -56,7 +56,7 @@ remove_item(stack, position)
 
 ## 5. Check the size of the stack
 
-Check whether the size of the stack is equal to `stackSize` or not.
+Check whether the size of the stack is equal to `stack_size` or not.
 
 ```R
 stack <- c(3, 2, 6, 4, 8)

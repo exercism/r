@@ -19,6 +19,9 @@ x <- 10
 v <- c(4, 7, x)
 ```
 
+The `c()` function is very flexible, and inputs can include other vectors and ranges.
+`c()` will take any number and variety of inputs, and flatten them into a single vector.
+
 ## Ranges, sequences, repeats
 
 For a range of consecutive values (increasing or decreasing) you can use `:` notation
