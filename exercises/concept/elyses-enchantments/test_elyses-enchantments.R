@@ -160,14 +160,14 @@ test_that("has exactly 5 cards", {
 
 # remove_item_from_top
 
-test_that("remove the only card from the top", {
-  stack <- c(1)
-  expect_equal(remove_item_from_top(stack), c())
-})
-
 test_that("remove the card from the top", {
   stack <- c(1, 2, 3)
   expect_equal(remove_item_from_top(stack), c(1, 2))
+})
+
+test_that("remove the only card from the top", {
+  stack <- c(1)
+  expect_equal(length(remove_item_from_top(stack)), 0)
 })
 
 #
@@ -198,12 +198,12 @@ test_that("adding a different fourth card to the bottom", {
 
 # remove_item_at_bottom
 
-test_that("remove the only card from the bottom", {
-  stack <- c(1)
-  expect_equal(remove_item_at_bottom(stack), c())
-})
-
 test_that("remove the card from the bottom", {
   stack <- c(1, 2, 3)
   expect_equal(remove_item_at_bottom(stack), c(2, 3))
+})
+
+test_that("remove the only card from the bottom", {
+  stack <- c(1)
+  expect_equal(length(remove_item_at_bottom(stack)), 0)
 })
