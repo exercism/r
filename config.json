@@ -91,6 +91,18 @@
           "vectors"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "ozans-playlist",
+        "name": "Ozans Playlist",
+        "uuid": "323ff052-9238-4299-944c-c231c939ff9f",
+        "concepts": [
+          "set-operations"
+        ],
+        "prerequisites": [
+          "vectors"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
