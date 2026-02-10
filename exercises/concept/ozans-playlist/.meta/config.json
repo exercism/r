@@ -1,11 +1,20 @@
 {
-  "authors": ["colinleach"],
-  "contributors": [],
+  "authors": [
+    "colinleach"
+  ],
   "files": {
-    "solution": ["ozans-playlist.R"],
-    "test": ["test_ozans-playlist.R"],
-    "exemplar": [".meta/exemplar.R"]
+    "solution": [
+      "ozans-playlist.R"
+    ],
+    "test": [
+      "test_ozans-playlist.R"
+    ],
+    "exemplar": [
+      ".meta/exemplar.R"
+    ]
   },
-  "forked_from": ["javascript/ozans-playlist"],
+  "forked_from": [
+    "javascript/ozans-playlist"
+  ],
   "blurb": "Use set operations to manage a playlist"
 }
