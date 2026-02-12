@@ -72,6 +72,12 @@ test_that("3. adding a different fourth card at the top'", {
 
 # remove_item
 
+test_that("4. remove the second card", {
+  stack <- c(1, 2, 3, 4)
+  position <- 2
+  expect_equal(remove_item(stack, position), c(1, 3, 4))
+})
+
 test_that("4. remove the card at the bottom'", {
   stack <- c(1, 2, 3, 4)
   position <- 1
@@ -82,12 +88,6 @@ test_that("4. remove the card at the top'", {
   stack <- c(1, 2, 3, 4)
   position <- 4
   expect_equal(remove_item(stack, position), c(1, 2, 3))
-})
-
-test_that("4. remove the second card", {
-  stack <- c(1, 2, 3, 4)
-  position <- 2
-  expect_equal(remove_item(stack, position), c(1, 3, 4))
 })
 
 # check_size_of_stack
@@ -160,14 +160,14 @@ test_that("5. has exactly 5 cards", {
 
 # remove_item_from_top
 
-test_that("6. remove the only card from the top", {
-  stack <- c(1)
-  expect_equal(remove_item_from_top(stack), c())
-})
-
 test_that("6. remove the card from the top", {
   stack <- c(1, 2, 3)
   expect_equal(remove_item_from_top(stack), c(1, 2))
+})
+
+test_that("6. remove the only card from the top", {
+  stack <- c(1)
+  expect_equal(length(remove_item_from_top(stack)), 0)
 })
 
 # Insert a card at the bottom of the stack
@@ -198,17 +198,12 @@ test_that("7. adding a different fourth card to the bottom", {
 
 # remove_item_at_bottom
 
-test_that("8. remove the only card from the bottom", {
-  stack <- c(1)
-  expect_equal(remove_item_at_bottom(stack), c())
-})
-
 test_that("8. remove the card from the bottom", {
   stack <- c(1, 2, 3)
   expect_equal(remove_item_at_bottom(stack), c(2, 3))
 })
 
-test_that("remove the only card from the bottom", {
+test_that("8. remove the only card from the bottom", {
   stack <- c(1)
   expect_equal(length(remove_item_at_bottom(stack)), 0)
 })
