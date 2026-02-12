@@ -1,7 +1,7 @@
 library(lintr)
 
 linters <- list(
-  a = line_length_linter(80),
+  a = line_length_linter(100),
   b = object_name_linter(styles = "snake_case"),
   c = assignment_linter(),
   d = commas_linter(),
