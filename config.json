@@ -998,6 +998,11 @@
       "name": "Set Operations"
     },
     {
+      "uuid": "d48dec37-b0fd-4193-954a-f005c72f8eb6",
+      "slug": "loops",
+      "name": "Loops"
+    },
+    {
       "uuid": "f6374c07-9244-44b2-b372-3e271b0d01be",
       "slug": "nothingness",
       "name": "Nothingness"
