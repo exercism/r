@@ -8,6 +8,7 @@
 
 - Loop until one of the conditions in the instructions is met.
 - It may be helpful, though not required, to have a small helper function relating lime sizes to the number of wedges they make.
+- Again, the [Switch][concept-switch] Concept may suggest convenient approaches.
 - Return how many limes were actually cut.
 
 ## 3. List the times to mix each order in the queue
