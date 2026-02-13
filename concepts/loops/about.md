@@ -76,12 +76,13 @@ for (w in words) { print(w) } # the braces are optional here
 If the current iteration fails to satisfy some condition, it is possible to skip immediately to the next iteration with a `next`:
 
 ```R
-for (n in 1:10) {
-    if (is_useless(n)) next
-     
-    # we decided this iteration could be useful
-    do_something_slow(n)
+for (n in 1:5) {
+  if (n %% 2 == 0) next
+  print(n)
 }
+#> [1] 1
+#> [1] 3
+#> [1] 5
 ```
 
 If the numerical index is needed, use [`seq_along()`][ref-seq_along].
