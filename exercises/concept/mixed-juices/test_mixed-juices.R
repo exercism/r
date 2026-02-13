@@ -32,7 +32,7 @@ test_that("1. Returns the default time for all other juices.", {
 
 # limes_to_cut
 
-test_that("2. Calculates the number of limes needed to reach the target supply, with 8 available.", {
+test_that("2. Calculates the number of limes needed to reach the target supply, with 8 available.", { # nolint
   limes <- c(
     "small",
     "large",
@@ -46,7 +46,7 @@ test_that("2. Calculates the number of limes needed to reach the target supply, 
   expect_equal(limes_to_cut(42, limes), 6)
 })
 
-test_that("2. Calculates the number of limes needed to reach the target supply, with 2 available.", {
+test_that("2. Calculates the number of limes needed to reach the target supply, with 2 available.", { # nolint
   limes <- c(
     "medium",
     "small"
