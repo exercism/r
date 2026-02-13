@@ -41,14 +41,20 @@ limes_to_cut(25, c("small", "small", "large", "medium", "small"))
 
 ## 3. List the times to mix each order in the queue
 
-Li Mei likes to keep track of how long it will take to mix the orders customers are waiting for.
+Li Mei likes to keep track of how long it will take to mix the orders customers are waiting for on a monitor.
 
-Implement the `order_times` function, which takes a queue of orders and returns a vector of times to mix.
+Implement the `order_times` function, which takes a queue of orders and *prints* to stdout the time it takes to make each one.
 
 ```R
 order_times(c("Energizer", "Tropical Island"))
-# => c(1.5, 3.0)
+# => 1.5 
+# => 3
 ```
+
+~~~~exercism/note
+This exercise is quite unusual for Exercism in that it requires printing to stdout.
+The vast majority of Exercism exercises require a returned value or other side effect.
+~~~~
 
 ## 4. Finish up the shift
 

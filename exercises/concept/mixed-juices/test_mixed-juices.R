@@ -91,8 +91,8 @@ test_that("3. Correctly determines the times for 5 current orders.", {
     "All or Nothing",
     "Pure Strawberry Joy"
   )
-  expected <- c(3.0, 1.5, 2.5, 5.0, 0.5)
-  expect_equal(order_times(orders), expected)
+  expected <- "^\\[1\\] 3\\n\\[1\\] 1.5\\n\\[1\\] 2.5\\n\\[1\\] 5\\n\\[1\\] 0.5$" # nolint
+  expect_output(order_times(orders), expected)
 })
 
 test_that("3. Correctly determines the times for 9 current orders.", {
@@ -107,13 +107,13 @@ test_that("3. Correctly determines the times for 9 current orders.", {
     "Green Garden",
     "Limetime"
   )
-  expected <- c(0.5, 0.5, 2.5, 3.0, 5.0, 5.0, 5.0, 1.5, 2.5)
-  expect_equal(order_times(orders), expected)
+  expected <- "^\\[1\\] 0.5\\n\\[1\\] 0.5\\n\\[1\\] 2.5\\n\\[1\\] 3\\n\\[1\\] 5\\n\\[1\\] 5\\n\\[1\\] 5\\n\\[1\\] 1.5\\n\\[1\\] 2.5$" # nolint
+  expect_output(order_times(orders), expected)
 })
 
 test_that("3. Correctly returns an empty list if there are no orders.", {
   orders <- c()
-  expect_length(order_times(orders), 0)
+  expect_silent(order_times(orders))
 })
 
 
