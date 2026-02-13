@@ -5,7 +5,7 @@ There are basically two types of loops:
 1. Loop until a condition is satisfied.
 2. Loop over the elements in a collection.
 
-Both are possible in R], though the first may be more common.
+Both are possible in R, though the first may be more common.
 
 ## `while` and `repeat`
 
