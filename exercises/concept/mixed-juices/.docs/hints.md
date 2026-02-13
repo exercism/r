@@ -15,7 +15,7 @@
 
 - At this stage of the syllabus, the easiest approach uses a `for` loop over `orders`, but it can also be done with `seq_along`.
 - An earlier task may supply a useful function.
-- Print the times in order.
+- [`print()`][print-function] the times in order (see introduction for example).
 - You should not return anything for this exercise.
 
 ## 4. Finish up the shift
@@ -25,3 +25,4 @@
 
 [concept-switch]: https://exercism.org/tracks/r/concepts/switch
 [concept-lapply]: https://exercism.org/tracks/r/concepts/lapply
+[print-function]: https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/print

@@ -51,6 +51,11 @@ order_times(c("Energizer", "Tropical Island"))
 # => 3
 ```
 
+~~~~exercism/note
+This exercise is quite unusual for Exercism in that it requires printing to stdout.
+The vast majority of Exercism exercises require a returned value or other side effect.
+~~~~
+
 ## 4. Finish up the shift
 
 Li Mei always works until 3pm.
