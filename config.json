@@ -101,6 +101,16 @@
         ],
         "prerequisites": [
           "vectors"
+      },
+      {
+        "slug": "mixed-juices",
+        "name": "Mixed Juices",
+        "uuid": "c123a64a-e43f-4ecd-85cd-949317606e8d",
+        "concepts": [
+          "loops"
+        ],
+        "prerequisites": [
+          "switch"
         ],
         "status": "wip"
       }
@@ -1008,6 +1018,11 @@
       "uuid": "85db3d8c-dfec-424c-9682-caa8611db8f8",
       "slug": "set-operations",
       "name": "Set Operations"
+    },
+    {
+      "uuid": "d48dec37-b0fd-4193-954a-f005c72f8eb6",
+      "slug": "loops",
+      "name": "Loops"
     },
     {
       "uuid": "f6374c07-9244-44b2-b372-3e271b0d01be",
