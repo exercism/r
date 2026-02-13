@@ -91,6 +91,18 @@
           "vectors"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "mixed-juices",
+        "name": "Mixed Juices",
+        "uuid": "c123a64a-e43f-4ecd-85cd-949317606e8d",
+        "concepts": [
+          "loops"
+        ],
+        "prerequisites": [
+          "switch"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
