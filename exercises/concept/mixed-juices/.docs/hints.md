@@ -13,10 +13,10 @@
 
 ## 3. List the times to mix each order in the queue
 
-- At this stage of the syllabus, the easiest approach uses a `for` loop with `seq_along`.
+- At this stage of the syllabus, the easiest approach uses a `for` loop over `orders`, but it can also be done with `seq_along`.
 - An earlier task may supply a useful function.
-- Return a vector of times.
-- More experienced R programmers are free to use [`sapply()`][concept-lapply] if they prefer.
+- Print the times in order.
+- You should not return anything for this exercise.
 
 ## 4. Finish up the shift
 
