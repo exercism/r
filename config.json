@@ -101,6 +101,8 @@
         ],
         "prerequisites": [
           "vectors"
+        ],
+        "status": "wip"
       },
       {
         "slug": "mixed-juices",
