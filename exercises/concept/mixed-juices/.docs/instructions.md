@@ -52,8 +52,8 @@ order_times(c("Energizer", "Tropical Island"))
 ```
 
 ~~~~exercism/note
-This exercise is quite unusual for Exercism in that it requires printing to stdout.
-The vast majority of Exercism exercises require a returned value or other side effect.
+This task is quite unusual for Exercism in that it requires printing to `stdout`.
+The vast majority of exercise tasks on Exercism require a returned value and/or some other side effect.
 ~~~~
 
 ## 4. Finish up the shift
