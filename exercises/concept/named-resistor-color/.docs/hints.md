@@ -1,5 +1,7 @@
 # Hints
 
+## General
+
 Return values for the functions are of a specific type, so pay attention.
 
 ## 1. Define a named vector
