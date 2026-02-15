@@ -115,6 +115,18 @@
           "switch"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "named-resistor-color",
+        "name": "Named Resistor Color",
+        "uuid": "f0c4e105-5db7-4e35-bfe1-694e9a1c199c",
+        "concepts": [
+          "names-attribute"
+        ],
+        "prerequisites": [
+          "vector-filtering"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
