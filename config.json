@@ -360,7 +360,7 @@
           "vector-filtering"
         ],
         "prerequisites": [
-          "vector_filtering"
+          "vector-filtering"
         ],
         "difficulty": 1
       },
@@ -372,7 +372,7 @@
           "vector-filtering"
         ],
         "prerequisites": [
-          "vector_filtering"
+          "vector-filtering"
         ],
         "difficulty": 1
       },

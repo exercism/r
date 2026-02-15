@@ -10,7 +10,7 @@
       "test_named-resistor-color.R"
     ],
     "exemplar": [
-      ".meta/examplar.R"
+      ".meta/exemplar.R"
     ]
   },
   "blurb": "Use named vectors to reason about resistor colors"
