@@ -76,10 +76,10 @@ The function returns the associated ohm rating for the combination of the three 
 
 ```R
 ohms(c("yellow", "red", "orange"))
-# => 42000
+# => [1] 42000
 
 ohms(c("green", "violet", "yellow"))
-# => 570000
+# => [1] 570000
 ```
 
 [e-color-code]: https://en.wikipedia.org/wiki/Electronic_color_code
