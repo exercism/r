@@ -1037,6 +1037,11 @@
       "name": "Vector Filtering"
     },
     {
+      "uuid": "d2796a75-7571-4b3c-b926-60deae310f8f",
+      "slug": "lists",
+      "name": "Lists"
+    },
+    {
       "uuid": "85db3d8c-dfec-424c-9682-caa8611db8f8",
       "slug": "set-operations",
       "name": "Set Operations"
