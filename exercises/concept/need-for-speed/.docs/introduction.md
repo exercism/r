@@ -83,7 +83,7 @@ Simple: assigning to an element will modify if it exists or insert if it is new.
 
 ```R
 point$color <- "red"
-point$trust <- TRUE
+point[[trust]] <- TRUE
 str(point)
 #> List of 4
 #>  $ x    : num 5.3
