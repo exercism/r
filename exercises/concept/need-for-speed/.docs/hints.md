@@ -17,14 +17,14 @@
 ## 4. Drive the car
 
 - Is the battery drained? If so, should the car be updated?
-- `battery_drain` is the amount of charge lost on each turn.
-- `speed` is the distance travelled each turn.
+- `battery_drain` is the percentage amount of charge lost on each turn.
+- `speed` is the distance (in meters) travelled each turn.
 - Return an updated car, as appropriate.
 
 ## 5. Check if a remote controlled car can finish a race
 
 - How many more turns can the car complete?
-- There are no partial turns, so the [`floor`][ref-round] function may be useful.
+- There are no partial turns, so the [`floor`][ref-round] function may be useful. Alternatively, integer division `%/%` will also work with floating point values.
 - How far can the car travel in this number of turns?
 - Is it enough?
 
