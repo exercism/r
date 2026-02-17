@@ -1,5 +1,10 @@
 # Hints
 
+## General
+
+- This game goes in discrete steps.
+- When we refer to "turn" below, that means "each time `drive()` is called".
+
 ## 1. Create a remote controlled car
 
 - Return a list with 4 named elements.
@@ -8,7 +13,7 @@
 
 ## 2. Create a race track
 
-- return a length-1 list.
+- Return a length-1 list.
 
 ## 3. Check for a drained battery
 
@@ -18,13 +23,13 @@
 
 - Is the battery drained? If so, should the car be updated?
 - `battery_drain` is the charge percentage lost on each turn.
-- `speed` is the distance (in meters) travelled each turn.
+- `speed` is the distance travelled each turn.
 - Return an updated car, as appropriate.
 
 ## 5. Check if a remote controlled car can finish a race
 
 - How many more turns can the car complete?
-- There are no partial turns, so the [`floor`][ref-round] function may be useful. Alternatively, integer division `%/%` will also work with floating point values.
+- There are no partial turns, so the [`floor`][ref-round] function may be useful. Alternatively, integer division `%/%` will also work with floating point values, truncating the result.
 - How far can the car travel in this number of turns?
 - Is it enough?
 
