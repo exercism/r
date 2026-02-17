@@ -102,7 +102,7 @@ test_that("6. Store the track and whether the car can complete it.", {
   track <- new_track(20)
   car <- store_track(car, track, "Spa")
   expect_length(car, 5)
-  expect_equal(car$Spa$length, 15)
+  expect_equal(car$Spa$length, 20)
   expect_true(car$Spa$complete)
 })
 
@@ -114,9 +114,8 @@ test_that("6. Store the multiple tracks.", {
   car <- store_track(car, track1, "Spa")
   car <- store_track(car, track2, "Nürburgring")
   expect_length(car, 6)
-  expect_equal(car$Spa$length, 15)
+  expect_equal(car$Spa$length, 20)
   expect_true(car$Spa$complete)
   expect_equal(car$Nürburgring$length, 200)
   expect_false(car$Nürburgring$complete)
 })
-
