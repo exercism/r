@@ -99,7 +99,7 @@ test_that("5. Would need a partial turn at the end to finish.", {
 test_that("6. Store the track and whether the car can complete it.", {
   car <- new_car(2, 3)
   car$battery <- 25
-  track <- new_track(15)
+  track <- new_track(20)
   car <- store_track(car, track, "Spa")
   expect_length(car, 5)
   expect_equal(car$Spa$length, 15)
@@ -109,7 +109,7 @@ test_that("6. Store the track and whether the car can complete it.", {
 test_that("6. Store the multiple tracks.", {
   car <- new_car(2, 3)
   car$battery <- 25
-  track1 <- new_track(15)
+  track1 <- new_track(20)
   track2 <- new_track(200)
   car <- store_track(car, track1, "Spa")
   car <- store_track(car, track2, "Nürburgring")
@@ -119,3 +119,4 @@ test_that("6. Store the multiple tracks.", {
   expect_equal(car$Nürburgring$length, 200)
   expect_false(car$Nürburgring$complete)
 })
+
