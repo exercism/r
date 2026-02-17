@@ -55,10 +55,10 @@ Implement the `battery_drained()` function that indicates if the battery is drai
 A battery is considered drained is there is not enough to move one more time.
 
 ```R
-speed = 5;
-battery_drain = 2;
-car = new_car(speed, battery_drain);
-car = drive(car);
+speed <- 5;
+battery_drain <- 2;
+car <- new_car(speed, battery_drain);
+car <- drive(car);
 
 battery_drained(car);
 #> [1] FALSE
