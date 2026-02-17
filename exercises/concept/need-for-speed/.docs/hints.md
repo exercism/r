@@ -17,7 +17,7 @@
 ## 4. Drive the car
 
 - Is the battery drained? If so, should the car be updated?
-- `battery_drain` is the percentage amount of charge lost on each turn.
+- `battery_drain` is the charge percentage lost on each turn.
 - `speed` is the distance (in meters) travelled each turn.
 - Return an updated car, as appropriate.
 
