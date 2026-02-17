@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "colinleach"
+  ],
+  "files": {
+    "solution": [
+      "need-for-speed.R"
+    ],
+    "test": [
+      "test_need-for-speed.R"
+    ],
+    "exemplar": [
+      ".meta/exemplar.R"
+    ]
+  },
+  "forked_from": [
+    "csharp/need-for-speed",
+    "go/need-for-speed"
+  ],
+  "blurb": "Learn about lists in R by creating cars."
+}

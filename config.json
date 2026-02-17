@@ -127,6 +127,18 @@
           "vector-filtering"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "need-for-speed",
+        "name": "Need For Speed",
+        "uuid": "bdc02503-faad-484c-afa3-aaaa2509e814",
+        "concepts": [
+          "lists"
+        ],
+        "prerequisites": [
+          "names-attribute"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
