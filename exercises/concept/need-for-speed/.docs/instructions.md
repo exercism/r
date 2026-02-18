@@ -8,7 +8,7 @@ it covers the car's speed in meters and decreases the remaining battery percenta
 
 If a car's battery is below its battery drain percentage, you can't drive the car anymore.
 
-Each race track has its own distance. Cars are tested by checking if they can finish the track without running out of battery.
+Each race track has its own length. Cars are tested by checking if they can finish the track without running out of battery.
 
 ## 1. Create a remote controlled car
 
@@ -17,12 +17,12 @@ Define a `car` list with the following elements:
 - speed
 - battery_drain
 - battery
-- distance
+- distance_traveled
 
 Allow creating a remote controlled car by defining a function `new_car` that takes the speed of the car in meters,
 and the battery drain percentage as its two parameters and returns a `car` list.
 
-For a new car, the battery is at 100% and the distance is zero.
+For a new car, the battery is at 100% and the distance traveled is zero.
 
 ```R
 speed <- 5
@@ -30,23 +30,23 @@ battery_drain <- 2
 car <- new_car(speed, battery_drain)
 str(car)
 #> List of 4
-#>  $ speed        : num 5
-#>  $ battery_drain: num 2
-#>  $ battery      : num 100
-#>  $ distance     : num 0
+#>  $ speed             : num 5
+#>  $ battery_drain     : num 2
+#>  $ battery           : num 100
+#>  $ distance_traveled : num 0
 ```
 
 ## 2. Create a race track
 
-Define another list called `track` with the single element `length`.
+Define another list called `track` with the single element `track_length`.
 Allow creating a race track by defining a function `new_track` that takes the track's distance in meters:
 
 ```R
-length <- 800
-track <- new_track(length)
+track_length <- 800
+track <- new_track(track_length)
 str(track)
 #> List of 1
-#>  $ length: num 800
+#>  $ track_length: num 800
 ```
 
 ## 3. Check for a drained battery
@@ -76,15 +76,15 @@ car <- new_car(speed, battery_drain)
 car <- drive(car)
 str(car)
 #> List of 4
-#>  $ speed        : num 5
-#>  $ battery_drain: num 2
-#>  $ battery      : num 98
-#>  $ distance     : num 5
+#>  $ speed             : num 5
+#>  $ battery_drain     : num 2
+#>  $ battery           : num 98
+#>  $ distance_traveled : num 5
 ```
 
 ## 5. Check if a remote controlled car can finish a race
 
-To finish a race, a car has to be able to drive the race's distance. This means not draining its battery before having crossed the finish line. 
+To finish a race, a car has to be able to drive the race's length. This means not draining its battery before having crossed the finish line. 
 
 Implement the `can_finish` function that takes a `car` and a `track` as its parameter and returns `TRUE` if the car can finish the race; otherwise, return `FALSE`.
 
@@ -96,8 +96,8 @@ battery_drain <- 5
 car <- new_car(speed, battery_drain)
 
 name <- "track1"
-length <- 100
-track <- new_track(length)
+track_length <- 100
+track <- new_track(track_length)
 
 can_finish(car, track)
 #> [1] TRUE
@@ -113,7 +113,7 @@ can_finish(car, track)
 You have created several tracks of different lengths, and need to store whether your car can complete them if fully charged.
 
 Implement the `store_track` function which takes a car, a track and a track name, and returns an updated car with an extra element.
-This element should have the `name` of the track, and the value should be a sub-list with the `length` and whether the car can `complete` it.
+This element should have the `name` of the track, and the value should be a sub-list with the `track_length` and whether the car can `complete` it.
 
 The car supplied in the argument may not be fully charged, so be sure to reset the battery and the distance travelled before using it.
 
@@ -124,17 +124,17 @@ car <- new_car(speed, battery_drain)
 car$battery <- 50
 
 name <- "track1"
-length <- 100
-track <- new_track(length)
+track_length <- 100
+track <- new_track(track_length)
 
 track1 <- store_track(car, track, "Imola")
 str(track1)
 #> List of 5
-#>  $ speed        : num 5
-#>  $ battery_drain: num 5
-#>  $ battery      : num 100
-#>  $ distance     : num 0
-#>  $ Imola        :List of 2
-#>   ..$ length  : num 100
-#>   ..$ complete: logi TRUE
+#>  $ speed             : num 5
+#>  $ battery_drain     : num 5
+#>  $ battery           : num 100
+#>  $ distance_traveled : num 0
+#>  $ Imola             :List of 2
+#>   ..$ track_length: num 100
+#>   ..$ complete    : logi TRUE
 ```

@@ -1,7 +1,7 @@
 new_car <- function(speed, battery_drain) {
 }
 
-new_track <- function(length) {
+new_track <- function(track_length) {
 }
 
 battery_drained <- function(car) {
