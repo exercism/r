@@ -11,16 +11,16 @@ test_that("1. Create a new car.", {
   expect_equal(car$speed, speed)
   expect_equal(car$battery_drain, battery_drain)
   expect_equal(car$battery, 100)
-  expect_equal(car$distance, 0)
+  expect_equal(car$distance_traveled, 0)
 })
 
 # 2) new_track
 
 test_that("2. Create a new track.", {
-  length <- 800
-  track <- new_track(length)
+  track_length <- 800
+  track <- new_track(track_length)
   expect_length(track, 1)
-  expect_equal(track$length, length)
+  expect_equal(track$track_length, track_length)
 })
 
 # 3) battery_drained
@@ -49,7 +49,7 @@ test_that("3. Battery drained if non-zero but less than drain.", {
 test_that("4. Drive increases distance driven with speed.", {
   car <- new_car(5, 1)
   car <- drive(car)
-  expect_equal(car$distance, 5)
+  expect_equal(car$distance_traveled, 5)
 })
 
 test_that("4. Drive does not increase distance driven when battery drained.", {
@@ -57,7 +57,7 @@ test_that("4. Drive does not increase distance driven when battery drained.", {
   car <- drive(car)
   car <- drive(car)
   car <- drive(car)
-  expect_equal(car$distance, 18)
+  expect_equal(car$distance_traveled, 18)
 })
 
 # 5) can_finish
@@ -102,7 +102,7 @@ test_that("6. Store the track and whether the car can complete it.", {
   track <- new_track(20)
   car <- store_track(car, track, "Spa")
   expect_length(car, 5)
-  expect_equal(car$Spa$length, 20)
+  expect_equal(car$Spa$track_length, 20)
   expect_true(car$Spa$complete)
 })
 
@@ -114,8 +114,8 @@ test_that("6. Store the multiple tracks.", {
   car <- store_track(car, track1, "Spa")
   car <- store_track(car, track2, "Nürburgring")
   expect_length(car, 6)
-  expect_equal(car$Spa$length, 20)
+  expect_equal(car$Spa$track_length, 20)
   expect_true(car$Spa$complete)
-  expect_equal(car$Nürburgring$length, 200)
+  expect_equal(car$Nürburgring$track_length, 200)
   expect_false(car$Nürburgring$complete)
 })
