@@ -37,3 +37,36 @@ is.na(v) # test for data gaps
 ```
 
 Thus `NA` is a placeholder, warning humans that they need to make a decision about how to handle this.
+
+## Empty vectors
+
+Perhaps surprisingly, R has no standard way to check for emptiness, though some third-party packages implement their own functions such as `is.empty()`.
+
+Even generating an empty vector is not entirely obvious.
+We saw in an earlier section that `c()` with no arguments returns `NULL`, not a vector.
+
+```R
+is.vector(c())
+#> [1] FALSE
+```
+
+Functions such as `logical()` or `integer()` take an argument specifying the desired length, which can be zero.
+
+```R
+z <- logical(0)
+is.vector(z)
+#> [1] TRUE
+length(z)
+#> [1] 0
+```
+
+We can also generate a vector then remove every element, as described in the [Vectors Concept][concept-vectors].
+This results in a length-0 vector of an appropriate type.
+
+```R
+v <- 5
+v[-1]  # delete the first element
+#> numeric(0)
+```
+
+[concept-vectors]: https://exercism.org/tracks/r/concepts/vectors

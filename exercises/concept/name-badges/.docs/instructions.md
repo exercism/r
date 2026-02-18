@@ -46,7 +46,7 @@ print_name_badge(NA, "Rachel Miller", NULL)
 # => "Rachel Miller - OWNER"
 ```
 
-## 4. Calculate the total salary of emplyees with no ID
+## 4. Calculate the total salary of employees with no ID
 
 As a rough metric of how well the IDs are being issued, you want to see the combined salary of employees with no ID. 
 A high value means lots are waiting, or the problem is affecting senior people: both are bad.
@@ -60,3 +60,5 @@ salaries <- c(23, 21, 47, 35, 17, 101) * 1000
 salaries_no_id(ids, salaries)
 # => 38,000
 ```
+
+_As an untested extra learning:_ If there are no employees without ID, what is the "empty vector" that you are summing?
