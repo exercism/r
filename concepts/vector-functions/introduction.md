@@ -43,6 +43,17 @@ For sorting a vector, there is `sort()` to return the values and `order()` to re
 #> [1] 2 1 4 3 5
 ```
 
+The default is to sort in ascending order.
+Specify `decreasing = TRUE` if necessary, or use `rev()` to reverse an existing vector.
+
+```R
+v <- c("I", "am", "not", "in", "order")
+sort(v, decreasing = TRUE)
+#> [1] "order" "not"   "in"    "I"     "am"
+
+rev(1:4)
+#> [1] 4 3 2 1
+```
 There are also functions to produce cumulative vector outputs, operating on the input vector left-to-right:
 
 ```R

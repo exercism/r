@@ -56,6 +56,18 @@ order(v)
 #> [1] 2 1 4 3 5
 ```
 
+The default is to sort in ascending order.
+Specify `decreasing = TRUE` if necessary, or use [`rev()`][ref-rev] to reverse an existing vector.
+
+```R
+v <- c("I", "am", "not", "in", "order")
+sort(v, decreasing = TRUE)
+#> [1] "order" "not"   "in"    "I"     "am"
+
+rev(1:4)
+#> [1] 4 3 2 1
+```
+
 There are also functions such as [`cumsum()`][ref-cumsum] and [`cumprod()`][ref-cumprod] to produce cumulative vector outputs, operating on the input vector left-to-right:
 
 ```R
@@ -93,6 +105,7 @@ When applied to vector input, the output is a 2-D `matrix` (covered in a [later 
 [ref-mean]: https://stat.ethz.ch/R-manual/R-devel/library/base/html/mean.html
 [ref-sort]: https://stat.ethz.ch/R-manual/R-devel/library/base/html/sort.html
 [ref-order]: https://stat.ethz.ch/R-manual/R-devel/library/base/html/order.html
+[ref-rev]: https://www.rdocumentation.org/packages/DescTools/versions/0.99.9/topics/Rev
 [ref-cumsum]: https://stat.ethz.ch/R-manual/R-devel/library/base/html/cumsum.html
 [ref-cumprod]: https://search.r-project.org/CRAN/refmans/bimets/html/CUMPROD.html
 [ref-pmax]: https://search.r-project.org/CRAN/refmans/Rmpfr/html/pmax.html
