@@ -140,6 +140,18 @@
           "strings"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "need-for-speed",
+        "name": "Need For Speed",
+        "uuid": "bdc02503-faad-484c-afa3-aaaa2509e814",
+        "concepts": [
+          "lists"
+        ],
+        "prerequisites": [
+          "names-attribute"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
@@ -1050,6 +1062,11 @@
       "name": "Vector Filtering"
     },
     {
+      "uuid": "d2796a75-7571-4b3c-b926-60deae310f8f",
+      "slug": "lists",
+      "name": "Lists"
+    },
+    {
       "uuid": "85db3d8c-dfec-424c-9682-caa8611db8f8",
       "slug": "set-operations",
       "name": "Set Operations"
@@ -1068,6 +1085,11 @@
       "uuid": "be04c596-32c4-497f-9f56-7d939fe7890f",
       "slug": "names-attribute",
       "name": "Names Attribute"
+    },
+    {
+      "uuid": "f9bc1f9b-aa22-48c3-bc1d-ad2ea75a4d36",
+      "slug": "errors",
+      "name": "Errors"
     }
   ],
   "key_features": [
