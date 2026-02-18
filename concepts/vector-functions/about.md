@@ -95,6 +95,15 @@ pmax(v, w)
 
 This function and others like it also accept an arbitrary number of input vectors, not just two.
 
+The above example uses vectors of equal length.
+As discussed in the [Vector Filtering][concept-vector-filtering] Concept, R uses recycling to extend vectors which are somehow "too short".
+To repeat: _use this with care, and preferably only with a length-1 vector._
+
+```R
+pmax(v, 5)
+#> [1] 5 7 9
+```
+
 ## Vector-in, matrix-out
 
 This is less common, but it is fairly easy to write functions that are apparently scalar-in, vector out.
@@ -112,3 +121,4 @@ When applied to vector input, the output is a 2-D `matrix` (covered in a [later 
 [wiki-recursion]: https://en.wikipedia.org/wiki/Recursion_(computer_science)
 [wiki-foldl]: https://en.wikipedia.org/wiki/Fold_(higher-order_function)
 [concept-arrays-matrices]: https://exercism.org/tracks/r/concepts/arrays-matrices
+[concept-vector-filtering]: https://exercism.org/tracks/r/concepts/vector-filtering
