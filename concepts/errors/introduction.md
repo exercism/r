@@ -9,22 +9,22 @@ Some problems are too fundamental to let the program continue.
 In this case, use `stop(msg)` to immediately halt the program with an `Error` and print `msg`.
 
 ```R
-> f <- function() {
-+     stop("I have a problem")
-+ }
-> f()
-Error in f() : I have a problem
+f <- function() {
+    stop("I have a problem")
+}
+f()
+#> Error in f() : I have a problem
 ```
 
 ## `stopifnot()`
 
 Similar to an `assert` in other languages, this is a convenient wrapper for `stop()`. 
-The parameters are an arbitrary number of boolean conditions, and the program will only continue if they are all `TRUE`.
+The parameters are an arbitrary number of comma-separated boolean conditions, and the program will only continue if they are all `TRUE`.
 
 ```R
-> stopifnot(1 < 2) # continues OK
-> stopifnot(1 < 2, 1 == 2)
-Error: 1 == 2 is not TRUE
+stopifnot(1 < 2) # continues OK
+stopifnot(1 < 2, 1 == 2)
+#> Error: 1 == 2 is not TRUE
 ```
 
 ## `try()`
@@ -39,11 +39,11 @@ g <- function(val) {
   log10(val)
 }
 
-> g(3)
-[1] 0.4771213
+g(3)
+#> [1] 0.4771213
 
-> g("3")
-Error in log10(val) : non-numeric argument to mathematical function
+g("3")
+#> Error in log10(val) : non-numeric argument to mathematical function
 
 # with try() and a default value
 h <- function(val) {
@@ -52,12 +52,12 @@ h <- function(val) {
   result
 }
 
-> h(3) # works as before
-[1] 0.4771213
+h(3) # works as before
+#> [1] 0.4771213
 
-> h("3") # returns a default value plus the error message
-Error in log10(val) : non-numeric argument to mathematical function
-[1] NA
+h("3") # returns a default value plus the error message
+#> Error in log10(val) : non-numeric argument to mathematical function
+#> [1] NA
 ```
 
 ## `warning()` and `message()`
@@ -73,14 +73,14 @@ w <- function() {
   -1
 }
 
-> w()
-[1] -1
-Warning message:
-In w() : something strange happened
+w()
+#> [1] -1
+#> Warning message:
+#> In w() : something strange happened
 
 # if warnings are not wanted
-> suppressWarnings(w())
-[1] -1
+suppressWarnings(w())
+#> [1] -1
 ```
 
 The `suppressWarnings()` function can occasionally be useful within Exercism, to avoid confusing the test runner with unwanted output.

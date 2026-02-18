@@ -9,11 +9,11 @@ Some problems are too fundamental to let the program continue.
 In this case, use [`stop(msg)`][ref-stop] to immediately halt the program with an `Error` and print `msg`.
 
 ```R
-> f <- function() {
-+     stop("I have a problem")
-+ }
-> f()
-Error in f() : I have a problem
+f <- function() {
+    stop("I have a problem")
+}
+f()
+#> Error in f() : I have a problem
 ```
 
 ## `stopifnot()`
@@ -22,9 +22,9 @@ Similar to an [`assert`][wiki-assert] in other languages, [`stopifnot()`][ref-st
 The arguments are an arbitrary number of boolean conditions, separated by commas, and the program will only continue if all are `TRUE`.
 
 ```R
-> stopifnot(1 < 2) # continues OK
-> stopifnot(1 < 2, 1 == 2)
-Error: 1 == 2 is not TRUE
+stopifnot(1 < 2) # continues OK
+stopifnot(1 < 2, 1 == 2)
+#> Error: 1 == 2 is not TRUE
 ```
 
 ## `try()`
@@ -39,11 +39,11 @@ g <- function(val) {
   log10(val)
 }
 
-> g(3)
-[1] 0.4771213
+g(3)
+#> [1] 0.4771213
 
-> g("3")
-Error in log10(val) : non-numeric argument to mathematical function
+g("3")
+#> Error in log10(val) : non-numeric argument to mathematical function
 
 # with try() and a default value
 h <- function(val) {
@@ -52,12 +52,12 @@ h <- function(val) {
   result
 }
 
-> h(3) # works as before
-[1] 0.4771213
+h(3) # works as before
+#> [1] 0.4771213
 
-> h("3") # returns a default value plus the error message
+h("3") # returns a default value plus the error message
 Error in log10(val) : non-numeric argument to mathematical function
-[1] NA
+#> [1] NA
 ```
 
 ## [`warning()`][ref-warning] and [`message()`][ref-message]
@@ -76,14 +76,14 @@ w <- function() {
   -1
 }
 
-> w()
-[1] -1
-Warning message:
-In w() : something strange happened
+w()
+#> [1] -1
+#> Warning message:
+#> In w() : something strange happened
 
 # if warnings are not wanted
-> suppressWarnings(w())
-[1] -1
+suppressWarnings(w())
+#> [1] -1
 ```
 
 The [`suppressWarnings()`][ref-warning] function can occasionally be useful within Exercism, to avoid confusing the test runner with unwanted output.
