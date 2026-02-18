@@ -29,7 +29,7 @@ print_name_badge(NA, "Robert Johnson", "Procurement")
 ## 3. Print a badge for the owner
 
 Even the factory's owner has to wear a badge at all times. 
-However, an owner does not have a department and never will: he is above all the departments. 
+However, an owner does not have a department and never will: they are above all the departments. 
 In this case, the label should print `"OWNER"` instead of the department name.
 
 Extend the `print_name_badge` function. When the department is `NULL`, assume the badge belongs to the company owner.
