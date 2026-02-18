@@ -129,6 +129,19 @@
         "status": "wip"
       },
       {
+        "slug": "name-badges",
+        "name": "Name Badges",
+        "uuid": "31f8973a-5035-4b54-9670-e589fa59361b",
+        "concepts": [
+          "nothingness"
+        ],
+        "prerequisites": [
+          "vector-filtering",
+          "strings"
+        ],
+        "status": "wip"
+      },
+      {
         "slug": "need-for-speed",
         "name": "Need For Speed",
         "uuid": "bdc02503-faad-484c-afa3-aaaa2509e814",
