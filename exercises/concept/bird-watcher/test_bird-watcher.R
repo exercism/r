@@ -79,7 +79,8 @@ test_that("6. Calculate cumulative number of birds for the week", {
 
 test_that("6. Days in descending order of busyness, today is Wednesday", {
   birds_per_day <- c(2, 5, 1, 3, 0, 4, 10)
-  day_names - c("Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed")
+  day_names <- c("Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed")
   result <- c("Wed", "Fri", "Tue", "Sun", "Thu", "Sat", "Mon")
   expect_equal(busy_days_of_week(birds_per_day, day_names), result)
 })
+
