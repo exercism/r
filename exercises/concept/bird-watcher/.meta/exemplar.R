@@ -23,5 +23,5 @@ running_total <- function(birds_per_day) {
 }
 
 busy_days_of_week <- function(birds_per_day, day_names) {
-  day_names[order(birds_per_day)]
+  day_names[order(birds_per_day, decreasing = TRUE)]
 }
