@@ -1062,6 +1062,11 @@
       "name": "Vector Filtering"
     },
     {
+      "uuid": "68d54762-d212-4e4c-b2b7-815acd13de2c",
+      "slug": "vector-functions",
+      "name": "Vector Functions"
+    },
+    {
       "uuid": "d2796a75-7571-4b3c-b926-60deae310f8f",
       "slug": "lists",
       "name": "Lists"
