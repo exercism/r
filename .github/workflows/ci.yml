@@ -6,11 +6,19 @@
 name: Exercise tests
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "exercises/**"
+      - "bin/run_tests.R"
+      - ".github/workflows/ci.yml"
+  pull_request:
+    paths:
+      - "exercises/**"
+      - "bin/run_tests.R"
+      - ".github/workflows/ci.yml"
 
 jobs:
   ci:
