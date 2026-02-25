@@ -33,7 +33,7 @@ jobs:
 
       - uses: r-lib/actions/setup-r-dependencies@6f6e5bc62fba3a704f74e7ad7ef7676c5c6a2590
         with:
-          cache-version: 1
+          cache-version: 2
           packages: |
             testthat
             jsonlite
