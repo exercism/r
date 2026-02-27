@@ -12,6 +12,8 @@ There are three different log levels:
 
 You have three tasks, each of which will take a log line and ask you to do something with it.
 
+You are free to use either legacy functions from base R or the `stringr` library, and both can give short, viable solutions.
+
 ## 1. Get message from a log line
 
 Implement the `message` function to return a log line's message:
@@ -45,7 +47,3 @@ Implement the `reformat` function that reformats the log line, putting the messa
 reformat("[INFO]: Operation completed")
 #> "Operation completed (info)"
 ```
-
-## Note
-
-Students are free to use either legacy functions from base R or the `stringr` library, and both can give short, viable solutions.
