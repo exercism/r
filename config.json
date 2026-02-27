@@ -105,6 +105,18 @@
         "status": "wip"
       },
       {
+        "slug": "log-levels",
+        "name": "Log Levels",
+        "uuid": "6c85ef11-cd2d-4718-9f75-84c467afb2f9",
+        "concepts": [
+          "strings"
+        ],
+        "prerequisites": [
+          "vectors"
+        ],
+        "status": "wip"
+      },
+      {
         "slug": "mixed-juices",
         "name": "Mixed Juices",
         "uuid": "c123a64a-e43f-4ecd-85cd-949317606e8d",
