@@ -1,7 +1,6 @@
 [
-    {
-      "url": "https://r4ds.hadley.nz/strings.html",
-      "description": "Strings chapter in R for Data Science"
-    }
-  ]
-  
+  {
+    "url": "https://r4ds.hadley.nz/strings.html",
+    "description": "Strings chapter in R for Data Science"
+  }
+]

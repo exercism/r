@@ -3,5 +3,5 @@
     "colinleach"
   ],
   "contributors": [],
-  "blurb": "Base R contains a fairly small group of functions for string handling, but the stringr library is much newer and more user-friendly."
+  "blurb": "Base R contains a fairly small group of functions for string handling. The stringr library is much newer and more user-friendly."
 }

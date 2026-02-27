@@ -1,6 +1,6 @@
 # About
 
-## Introduction
+## Background
 
 A string is a piece of text between quotes.
 
@@ -14,7 +14,7 @@ typeof(mystring)
 
 Unfortunately, the terminology may be confusing to programmers familiar with other languages.
 
-Although the `type` is `character`, R makes no distinction between a single letter (called `char` in several other languages, but not in R) and a long string.
+Although the `type` is `character`, R makes no distinction between a single letter (called `char` in several other languages, but _not_ in R) and a long string.
 Both are a single item, and can be in single `' '` or double `" "` quotes interchangeably.
 
 The style guide recommends using double quotes, except when you want to use double quotes within the string without escaping them.
@@ -35,11 +35,14 @@ length(s)
 #> [1] 2
 length(s[1])  # the number of vector elements, not the string length
 #> [1] 1
+
+nchar(s[1])  # the number of characters in the string "some"
+#> [1] 4
 ```
 
 In the above example, `length(s[1])` is equivalent to `length("some")`: the number of _vector elements_, not the _string length_.
 
-Manipulating an individual string is obviously possible, but needs particular functions that will be discussed below.
+Manipulating an individual string is obviously possible, as with `nchar()` in the above example, but needs particular functions that will be discussed below.
 
 ### Escaping
 
@@ -76,7 +79,7 @@ Locales are a complex topic, so please search for documentation on your own situ
 
 ## String functions
 
-Most things are possible in base R, but many programmers find support for string manipulation rather limited and confusing.
+Most things are _possible_ in base R, but many programmers find support for string manipulation rather limited and confusing.
 
 Fortunately, there are `tidyverse` packages that are much more intuitive, flexible and self-consistent.
 
@@ -108,7 +111,7 @@ nchar("Hrōðgār") # a person in Beowulf, written in Old English
 The (_complicated!_) topic of what "character" means is beyond our scope.
 Just note a couple of points in the examples above:
 
-- Though implemented in C internally, strings in R are not `\0`-terminated (which would add 1 to the result).
+- Though implemented in C internally, strings in R are not `\0`-terminated (which would add 1 to the length).
 - Multi-byte Unicode characters are handled as you might expect/hope. "Hrōðgār" has 7 characters (also called "runes" or "code points"), but needs 10 bytes for storage.
 
 Be careful what you pass to `nchar`.
@@ -149,14 +152,14 @@ sprintf("A circle of radius %.1f has area %.2f", r, pi * r^2)
 #> [1] "A circle of radius 5.3 has area 88.25"
 ```
 
-#### [`trimws][ref-trimws]
+#### [`trimws`][ref-trimws]
 
 Leading and/or trailing whitespace can be removed with `trimws()`:
 
 ```R
-> s <- "    messy string   "
-> trimws(s)
-[1] "messy string"
+s <- "    messy string   "
+trimws(s)
+#> [1] "messy string"
 ```
 
 There is a `which = "left"` (or "right") parameter to avoid trimming both ends.
@@ -186,7 +189,7 @@ strsplit("Exercism", "")
 ```
 
 Lists will be covered in a separate [Concept][concept-lists].
-If you have not already reached that part of the syllabus, just know for now that [`unlist()`][ref-unlist] function wiil (in this case) convert a list to a vector.
+If you have not already reached that part of the syllabus, just know for now that [`unlist()`][ref-unlist] function will (in this case) convert a list to a vector.
 
 ```R
 unlist(strsplit("Exercism", ""))
@@ -196,33 +199,11 @@ unlist(strsplit("Exercism", ""))
 #### [`regexpr`][ref-grep] and [`regexpr`][ref-grep]
 
 Short for "regular expression", these functions search for occurrences of a pattern in a string, returning a list of (potentially) useful data.
-This is mentioned only for completeness: _there are better options!_
+They are mentioned only for completeness: _there are better options!_
 
 `regexpr` returns only the first occurrence, `gregexpr` returns all occurrences ("g" for "global" search).
 
 As the names imply, the pattern can be a [regex][wiki-regex], which will be covered in a [later Concept][concept-regex].
-For now, we can just work with string literals as the simplest pattern.
-
-```R
-regexpr("scr", "Javascript, Typescript")
-#> [1] 5
-attr(,"match.length")
-#> [1] 3
-attr(,"index.type")
-#> [1] "chars"
-attr(,"useBytes")
-#> [1] TRUE
-
-gregexpr("scr", "Javascript, Typescript")
-[[1]]
-#> [1]  5 17
-attr(,"match.length")
-#> [1] 3 3
-attr(,"index.type")
-#> [1] "chars"
-attr(,"useBytes")
-#> [1] TRUE
-```
 
 ~~~~exercism/advanced
 Why do these old string functions look like Unix shell commands?
@@ -296,14 +277,16 @@ Various other functions manipulate whitespace, including [`str_trim()`][ref-str_
 This is often a vital cleaning task at the start of any data science project.
 
 ```R
-str_length(c("R", "Python", "Julia"))           #> [1] 1 6 5
+# The first 3 kernels in JuPyteR notebooks:
+str_length(c("Julia", "Python", "R"))           #> [1] 1 6 5
+#> [1] 5 6 1
+str_pad(c("Julia", "Python", "R"), 8, "right")  # add spaces if necessary
+#> [1] "Julia   " "Python  " "R       "
 
-str_pad(c("R", "Python", "Julia"), 8, "right")  # add spaces if necessary
-#> [1] "R       " "Python  " "Julia   "
-str_trim("R       Python  Julia   ")   # remove leading & trailing whitespace
-#> [1] "R       Python  Julia" 
-str_squish("R       Python  Julia   ")  # trim, collapse multiple spaces    
-#> [1] "R Python Julia"
+str_trim("Julia    Python    R    ")   # remove leading & trailing whitespace
+#> [1] "Julia    Python    R"
+str_squish("Julia   Python  R    ")  # trim, collapse multiple spaces 
+#> [1] "Julia Python R"
 ```
 
 #### Subset strings
