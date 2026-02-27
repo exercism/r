@@ -1081,6 +1081,11 @@
       "name": "Vectors"
     },
     {
+      "uuid": "bf76b4a9-9d0d-48f8-81f6-2d54f04af003",
+      "slug": "strings",
+      "name": "Strings"
+    },
+    {
       "uuid": "18919f40-a3fe-45f3-b181-84ec82bfa785",
       "slug": "vector-filtering",
       "name": "Vector Filtering"
