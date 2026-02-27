@@ -3,6 +3,7 @@
 ## Background
 
 A string is a piece of text between quotes.
+Any currently-supported version of R encodes strings in UTF-8, so most world languages can be supported.
 
 ```R
 mystring <- "some text"
@@ -44,18 +45,7 @@ In the above example, `length(s[1])` is equivalent to `length("some")`: the numb
 
 Manipulating an individual string is obviously possible, as with `nchar()` in the above example, but needs particular functions that will be discussed below.
 
-### Locales
-
-Any currently-supported version of R encodes strings in UTF-8, so most world languages can be supported.
-
-```R
-"आधुनिक मानक हिन्दी"
-#> [1] "आधुनिक मानक हिन्दी"
-```
-
-Additionally, many R functions are aware of `locale`, and try to follow local conventions for string sorting, conversion to upper/lower case, dates and times, etc.
-
-## String functions
+### String functions
 
 Most things are _possible_ in base R, but many programmers find support for string manipulation rather limited and confusing.
 

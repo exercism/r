@@ -12,7 +12,7 @@
 
 ## 2. Get log level from a log line
 
-- There are various ways to pull out the desired substring, but position index may be simplest.
+- There are various ways to pull out the desired substring, but position index may be the most basic.
 - Remember to change case.
 
 ## 3. Reformat a log line
