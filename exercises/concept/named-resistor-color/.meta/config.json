@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "depial"
+  ],
+  "files": {
+    "solution": [
+      "named-resistor-color.R"
+    ],
+    "test": [
+      "test_named-resistor-color.R"
+    ],
+    "exemplar": [
+      ".meta/exemplar.R"
+    ]
+  },
+  "blurb": "Use named vectors to reason about resistor colors"
+}

@@ -29,7 +29,7 @@
       ".meta/example.R"
     ],
     "exemplar": [
-      ".meta/examplar.R"
+      ".meta/exemplar.R"
     ]
   },
   "exercises": {
@@ -89,6 +89,91 @@
         ],
         "prerequisites": [
           "vectors"
+        ],
+        "status": "wip"
+      },
+      {
+        "slug": "ozans-playlist",
+        "name": "Ozans Playlist",
+        "uuid": "323ff052-9238-4299-944c-c231c939ff9f",
+        "concepts": [
+          "set-operations"
+        ],
+        "prerequisites": [
+          "vectors"
+        ],
+        "status": "wip"
+      },
+      {
+        "slug": "log-levels",
+        "name": "Log Levels",
+        "uuid": "6c85ef11-cd2d-4718-9f75-84c467afb2f9",
+        "concepts": [
+          "strings"
+        ],
+        "prerequisites": [
+          "vectors"
+        ],
+        "status": "wip"
+      },
+      {
+        "slug": "mixed-juices",
+        "name": "Mixed Juices",
+        "uuid": "c123a64a-e43f-4ecd-85cd-949317606e8d",
+        "concepts": [
+          "loops"
+        ],
+        "prerequisites": [
+          "switch"
+        ],
+        "status": "wip"
+      },
+      {
+        "slug": "named-resistor-color",
+        "name": "Named Resistor Color",
+        "uuid": "f0c4e105-5db7-4e35-bfe1-694e9a1c199c",
+        "concepts": [
+          "names-attribute"
+        ],
+        "prerequisites": [
+          "vector-filtering"
+        ],
+        "status": "wip"
+      },
+      {
+        "slug": "name-badges",
+        "name": "Name Badges",
+        "uuid": "31f8973a-5035-4b54-9670-e589fa59361b",
+        "concepts": [
+          "nothingness"
+        ],
+        "prerequisites": [
+          "vector-filtering",
+          "strings"
+        ],
+        "status": "wip"
+      },
+      {
+        "slug": "need-for-speed",
+        "name": "Need For Speed",
+        "uuid": "bdc02503-faad-484c-afa3-aaaa2509e814",
+        "concepts": [
+          "lists"
+        ],
+        "prerequisites": [
+          "names-attribute"
+        ],
+        "status": "wip"
+      },
+      {
+        "slug": "bird-watcher",
+        "name": "Bird Watcher",
+        "uuid": "ceac4ca0-3bfe-4ca7-9b83-3c9d465ef67f",
+        "concepts": [
+          "vector-functions"
+        ],
+        "prerequisites": [
+          "vector-filtering"
         ],
         "status": "wip"
       }
@@ -320,16 +405,24 @@
         "slug": "resistor-color",
         "name": "Resistor Color",
         "uuid": "8af70f6c-85e2-41de-b5a3-20aaacb32a26",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "vector-filtering"
+        ],
+        "prerequisites": [
+          "vector-filtering"
+        ],
         "difficulty": 1
       },
       {
         "slug": "resistor-color-duo",
         "name": "Resistor Color Duo",
         "uuid": "a118a447-f41d-4904-8dfa-15f45ba3a990",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "vector-filtering"
+        ],
+        "prerequisites": [
+          "vector-filtering"
+        ],
         "difficulty": 1
       },
       {
@@ -988,6 +1081,11 @@
       "name": "Vectors"
     },
     {
+      "uuid": "bf76b4a9-9d0d-48f8-81f6-2d54f04af003",
+      "slug": "strings",
+      "name": "Strings"
+    },
+    {
       "uuid": "18919f40-a3fe-45f3-b181-84ec82bfa785",
       "slug": "vector-filtering",
       "name": "Vector Filtering"
@@ -998,14 +1096,39 @@
       "name": "Switch"
     },
     {
+      "uuid": "68d54762-d212-4e4c-b2b7-815acd13de2c",
+      "slug": "vector-functions",
+      "name": "Vector Functions"
+    },
+    {
+      "uuid": "d2796a75-7571-4b3c-b926-60deae310f8f",
+      "slug": "lists",
+      "name": "Lists"
+    },
+    {
       "uuid": "85db3d8c-dfec-424c-9682-caa8611db8f8",
       "slug": "set-operations",
       "name": "Set Operations"
     },
     {
+      "uuid": "d48dec37-b0fd-4193-954a-f005c72f8eb6",
+      "slug": "loops",
+      "name": "Loops"
+    },
+    {
       "uuid": "f6374c07-9244-44b2-b372-3e271b0d01be",
       "slug": "nothingness",
       "name": "Nothingness"
+    },
+    {
+      "uuid": "be04c596-32c4-497f-9f56-7d939fe7890f",
+      "slug": "names-attribute",
+      "name": "Names Attribute"
+    },
+    {
+      "uuid": "f9bc1f9b-aa22-48c3-bc1d-ad2ea75a4d36",
+      "slug": "errors",
+      "name": "Errors"
     }
   ],
   "key_features": [
