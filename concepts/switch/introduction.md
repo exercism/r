@@ -28,13 +28,15 @@ With integer types, no default can be given.
 The `switch` in base R is quite limited: it will only do an exact match to a single input.
 This seemed reasonable when R was first released in 1993, but needs improvement for modern usage.
 
-The `tidyverse` collection of packages is designed to supplement (and sometimes replace) base R functionality without impacting backwards compatibility.
-
-The tidyverse packages also have excellent, modern documentation.
+~~~~exercism/note
+As mentioned in the [`Conditionals`][conditionals] Concept, the `tidyverse` collection of packages is designed to supplement (and sometimes replace) base R functionality without impacting backwards compatibility.
 
 The `dplyr` package can be brought into scope by adding either `library(dplyr)` (for the single package) or `library(tidyverse)` (for the whole collection) to the top of your code.
 
-There are then two extra functions related to `switch`.
+[concept-conditionals]: https://exercism.org/tracks/r/concepts/conditionals
+~~~~
+
+The `dplyr` library provides two extra functions related to `switch`.
 
 ### The `case_match` function
 

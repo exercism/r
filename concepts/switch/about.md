@@ -28,13 +28,19 @@ Switching on an integer is slightly different: for these the default is always `
 The `switch` in base R is quite limited: it will only do an exact match to a single input.
 This seemed reasonable when R was first released in 1993, but needs improvement for modern usage.
 
-The [`tidyverse`][web-tidyverse] collection of packages is designed to supplement (and sometimes replace) base R functionality without impacting backwards compatibility.
+~~~~exercism/note
+As mentioned in the [`Conditionals`][conditionals] Concept, the [`tidyverse`][web-tidyverse] collection of packages is designed to supplement (and sometimes replace) base R functionality without impacting backwards compatibility.
 
 The tidyverse packages also have excellent, modern documentation, so following the links below will give more detail.
 
 The [`dplyr`][ref-dplyr] package can be brought into scope by adding either `library(dplyr)` (for the single package) or `library(tidyverse)` (for the whole collection) to the top of your code.
 
-There are then two extra functions related to `switch`.
+[concept-conditionals]: https://exercism.org/tracks/r/concepts/conditionals
+[web-tidyverse]: https://tidyverse.org/
+[ref-dplyr]: https://dplyr.tidyverse.org/
+~~~~
+
+The `dplyr` library provides two extra functions related to `switch`.
 
 ### The [`case_match`][ref-case-match] function
 
@@ -83,6 +89,23 @@ case_when(
 
 The [`between()`][ref-between] function is also part of `dplyr`.
 
+[String functions][concept-strings] were already discussed and [Regular Expressions][concept-regex] will be the subject of a later concept.
+These combine very well with `case_when`.
+
+```R
+library(stringr)
+
+tracks <- "R C Python C# Elixir C++ Odin" |> str_split_1(" ")
+tracks
+#> [1] "R"      "C"      "Python" "C#"     "Elixir" "C++"    "Odin"  
+
+case_when(
+  str_starts(tracks, "C") ~ "C-like",
+  str_starts(tracks, "[AEIOU]") ~ "vowel",
+  .default = "other"
+)
+#> [1] "other"  "C-like" "other"  "C-like" "vowel"  "C-like" "vowel"
+```
 
 [ref-switch]: https://stat.ethz.ch/R-manual/R-devel/library/base/html/switch.html
 [ref-stop]: https://stat.ethz.ch/R-manual/R-devel/library/base/html/stop.html
@@ -91,4 +114,6 @@ The [`between()`][ref-between] function is also part of `dplyr`.
 [ref-case-when]: https://dplyr.tidyverse.org/reference/case_when.html
 [ref-between]: https://dplyr.tidyverse.org/reference/between.html
 [concept-nothingness]: https://exercism.org/tracks/r/concepts/nothingness
+[concept-strings]: https://exercism.org/tracks/r/concepts/strings
+[concept-regex]: https://exercism.org/tracks/r/concepts/regular-expressions
 [web-tidyverse]: https://tidyverse.org/
