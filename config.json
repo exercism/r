@@ -117,6 +117,18 @@
         "status": "wip"
       },
       {
+        "slug": "blackjack",
+        "name": "Blackjack",
+        "uuid": "f76b5124-6627-47a2-b39b-acec27c0a67f",
+        "concepts": [
+          "switch"
+        ],
+        "prerequisites": [
+          "strings"
+        ],
+        "status": "wip"
+      },
+      {
         "slug": "mixed-juices",
         "name": "Mixed Juices",
         "uuid": "c123a64a-e43f-4ecd-85cd-949317606e8d",
