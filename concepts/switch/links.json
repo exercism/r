@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://adv-r.hadley.nz/control-flow.html#switch",
+    "description": "Advanced R, 2nd ed: switch"
+  },
+  {
+    "url": "https://dplyr.tidyverse.org/reference/case_match.html",
+    "description": "Reference for case_match."
+  },
+  {
+    "url": "https://dplyr.tidyverse.org/reference/case_when.html",
+    "description": "Reference for case_when."
+  }
+]
