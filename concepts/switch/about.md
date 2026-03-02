@@ -29,7 +29,7 @@ The `switch` in base R is quite limited: it will only do an exact match to a sin
 This seemed reasonable when R was first released in 1993, but needs improvement for modern usage.
 
 ~~~~exercism/note
-As mentioned in the [`Conditionals`][conditionals] Concept, the [`tidyverse`][web-tidyverse] collection of packages is designed to supplement (and sometimes replace) base R functionality without impacting backwards compatibility.
+As mentioned in the [`Conditionals`][concept-conditionals] Concept, the [`tidyverse`][web-tidyverse] collection of packages is designed to supplement (and sometimes replace) base R functionality without impacting backwards compatibility.
 
 The tidyverse packages also have excellent, modern documentation, so following the links below will give more detail.
 
