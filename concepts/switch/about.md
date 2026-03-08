@@ -58,7 +58,7 @@ Matching is still exact, but:
 ```R
 library(dplyr)
 
-x <- c("a", "b", "a", "d", "b", NA, "c", "e")
+x <- c("a", "b", "a", "d", "b", NA, "c", "e", "z")
 recode_values(
   x,
   "a" ~ 1,
