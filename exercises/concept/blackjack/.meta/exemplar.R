@@ -36,8 +36,10 @@ library(dplyr)
 #   "H"
 # }
 
+# Tidyverse version
+
 parse_card <- function(card) {
-  case_match(
+  recode_values(
     card,
     "ace" ~ 11,
     "two" ~ 2,
@@ -49,7 +51,7 @@ parse_card <- function(card) {
     "eight" ~ 8,
     "nine" ~ 9,
     c("ten", "jack", "queen", "king") ~ 10,
-    .default = 0
+    default = 0
   )
 }
 

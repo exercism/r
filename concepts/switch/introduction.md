@@ -38,31 +38,32 @@ The `dplyr` package can be brought into scope by adding either `library(dplyr)` 
 
 The `dplyr` library provides two extra functions related to `switch`.
 
-### The `case_match` function
+### The `recode_values` and `replace_values` functions
 
-`case_match` is essentially a vectorized version of `switch`, with some extra options.
+These two related functions allow a vectorized switch-like mapping of old values to new values.
+
+The main difference between them is that `recode_values()` creates an entirely new vector, while `replace_values()` allows partial updates of an existing vector.
 
 Matching is still exact, but:
 
 - The options on the left can be vectors, and the input matches if any element matches.
 - Options on the left and results on the right are linked with a tilde `~` instead of `=`.
-- Missing values `NA` can be matched explicitly (this will be discussed in the [Nothingness][concept-nothingness] Concept).
 - A default can be specified in all cases.
 
 ```R
 library(dplyr)
 
-x <- c("a", "b", "a", "d", "b", NA, "c", "e")
-case_match(
+x <- c("a", "b", "a", "d", "b", NA, "c", "e", "z")
+recode_values(
   x,
   "a" ~ 1,
   "b" ~ 2,
   "c" ~ 3,
   c("d", "e") ~ 4, # either "d' or "e" will match
   NA ~ 0,          # matches missing values
-  .default = 100   # note the different syntax for the default
+  default = 100   # note the different syntax for the default
 )
-#> [1] 1 2 1 4 2 0 3 4
+#> [1]   1   2   1   4   2   0   3   4 100
 ```
 
 ### The `case_when` function
