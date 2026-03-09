@@ -48,7 +48,6 @@ Matching is still exact, but:
 
 - The options on the left can be vectors, and the input matches if any element matches.
 - Options on the left and results on the right are linked with a tilde `~` instead of `=`.
-- Missing values `NA` can be matched explicitly (this will be discussed in the [Nothingness][concept-nothingness] Concept).
 - A default can be specified in all cases.
 
 ```R
