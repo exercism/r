@@ -317,10 +317,8 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1,
-        "topics": [
-          "control_flow_conditionals",
-          "text_formatting"
-        ]
+        "topics": [],
+        "status": "deprecated"
       },
       {
         "slug": "rna-transcription",
@@ -700,10 +698,8 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3,
-        "topics": [
-          "control_flow_conditionals",
-          "text_formatting"
-        ]
+        "topics": [],
+        "status": "deprecated"
       },
       {
         "slug": "prime-factors",
