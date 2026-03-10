@@ -1,7 +1,10 @@
 library(lintr)
 
+# Line length is increased to 150 to help generated test files.
+# The longer-term aim is to replace lintr and styler with Air.
+
 linters <- list(
-  a = line_length_linter(100),
+  a = line_length_linter(150),
   b = object_name_linter(styles = "snake_case"),
   c = assignment_linter(),
   d = commas_linter(),
