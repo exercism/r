@@ -9,7 +9,7 @@ test_that("{{ case["description"] }}", {
   expect_error(steps({{ case["input"]["number"] }}))
 {% else %}
   {%  if case["expected"] is sequence %}
-  expect_equal(steps({{ case["input"]["number"] | list_to_tuple }}), {{ case["expected"] | list_to_tuple }})
+  expect_equal(steps(c{{ case["input"]["number"] | list_to_tuple }}), c{{ case["expected"] | list_to_tuple }})
   {% else %}
   expect_equal(steps({{ case["input"]["number"] }}), {{ case["expected"] }})
   {% endif %}
