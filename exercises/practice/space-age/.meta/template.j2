@@ -6,7 +6,7 @@
 {% for case in cases -%}
 test_that("{{ case["description"] }}", {
   seconds <- {{ case["input"]["seconds"] }}
-  expect_equal(space_age(seconds, "{{ case["input"]["planet"] | to_snake }}"), {{ case["expected"] }})
+  expect_equal(space_age(seconds, "{{ case["input"]["planet"] | lower }}"), {{ case["expected"] }})
 })
 
 {% endfor %}
