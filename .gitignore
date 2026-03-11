@@ -4,3 +4,9 @@ bin/configlet.exe
 .RData
 .Rhistory
 *.Rproj
+
+bin/__pycache__/
+.idea/
+.venv/
+
+.problem-specifications
