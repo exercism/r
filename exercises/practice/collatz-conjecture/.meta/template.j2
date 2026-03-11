@@ -3,7 +3,7 @@
 
 {{ macros.header() }}
 
-{% for case in cases -%}
+{%  macro add_test() %}
 test_that("{{ case["description"] }}", {
 {%  if case is error_case %}
   expect_error(collatz_step_counter({{ case["input"]["number"] }}))
@@ -15,5 +15,14 @@ test_that("{{ case["description"] }}", {
   {% endif %}
 {% endif %}
 })
+{%  endmacro %}
 
+{% for case in cases -%}
+{{ add_test() }}
+{% endfor %}
+
+# Additional tests for this track
+
+{% for case in additional_cases -%}
+{{ add_test() }}
 {% endfor %}
