@@ -104,7 +104,7 @@ test_that("detects anagrams using case-insensitive possible matches", {
 
 test_that("does not detect an anagram if the original word is repeated", {
   subject <- "go"
-  candidates <- c('go Go GO')
+  candidates <- c('goGoGO')
   expect_equal(
     anagram(subject, candidates),
     c()
@@ -153,5 +153,23 @@ test_that("words other than themselves can be anagrams", {
   expect_equal(
     anagram(subject, candidates),
     c('Silent')
+  )
+})
+
+test_that("handles case of greek letters", {
+  subject <- "ΑΒΓ"
+  candidates <- c('ΒΓΑ', 'ΒΓΔ', 'γβα', 'αβγ')
+  expect_equal(
+    anagram(subject, candidates),
+    c('ΒΓΑ', 'γβα')
+  )
+})
+
+test_that("different characters may have the same bytes", {
+  subject <- "a⬂"
+  candidates <- c('€a')
+  expect_equal(
+    anagram(subject, candidates),
+    c()
   )
 })
