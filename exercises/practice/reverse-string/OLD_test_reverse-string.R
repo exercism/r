@@ -1,7 +1,3 @@
-# These tests are auto-generated with test data from:
-# https://github.com/exercism/problem-specifications/tree/main/exercises/reverse-string/canonical-data.json
-# File last updated on 2026-03-12
-
 source("./reverse-string.R")
 library(testthat)
 
@@ -29,6 +25,3 @@ test_that("an even-sized word", {
   expect_equal(reverse("drawer"), "reward")
 })
 
-test_that("wide characters", {
-  expect_equal(reverse("子猫"), "猫子")
-})
