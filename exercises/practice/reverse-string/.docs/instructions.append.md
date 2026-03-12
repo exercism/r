@@ -5,3 +5,5 @@ Enable tests with grapheme clusters by uncommenting (or defining) `enable_graphe
 For example:
 
 - Turn `"Würstchenstand"` into `"dnatsnehctsrüW"`.
+
+You may find the `stringr` library helpful.
