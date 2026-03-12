@@ -1,7 +1,3 @@
-# These tests are auto-generated with test data from:
-# https://github.com/exercism/problem-specifications/tree/main/exercises/roman-numerals/canonical-data.json
-# File last updated on 2026-03-12
-
 source("./roman-numerals.R")
 library(testthat)
 
@@ -105,10 +101,7 @@ test_that("3001 is MMMI", {
   expect_equal(roman(3001), "MMMI")
 })
 
-test_that("3888 is MMMDCCCLXXXVIII", {
-  expect_equal(roman(3888), "MMMDCCCLXXXVIII")
-})
-
 test_that("3999 is MMMCMXCIX", {
   expect_equal(roman(3999), "MMMCMXCIX")
 })
+
