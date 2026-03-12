@@ -4,8 +4,15 @@
 {{ macros.header() }}
 
 {% for case in cases -%}
+{% if "grapheme cluster" not in case["description"] -%}
 test_that("{{ case["description"] }}", {
   expect_equal(reverse("{{ case["input"]["value"] }}"), "{{ case["expected"] }}")
 })
-
+{% else -%}
+if (exists("enable_grapheme_clusters") && enable_grapheme_clusters) {
+  test_that("{{ case["description"] }}", {
+    expect_equal(reverse("{{ case["input"]["value"] }}"), "{{ case["expected"] }}")
+  })
+}
+{% endif %}
 {% endfor %}

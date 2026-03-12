@@ -32,3 +32,15 @@ test_that("an even-sized word", {
 test_that("wide characters", {
   expect_equal(reverse("子猫"), "猫子")
 })
+
+if (exists("enable_grapheme_clusters") && enable_grapheme_clusters) {
+  test_that("grapheme cluster with pre-combined form", {
+    expect_equal(reverse("Würstchenstand"), "dnatsnehctsrüW")
+  })
+}
+
+if (exists("enable_grapheme_clusters") && enable_grapheme_clusters) {
+  test_that("grapheme clusters", {
+    expect_equal(reverse("ผู้เขียนโปรแกรม"), "มรกแรปโนยขีเผู้")
+  })
+}
