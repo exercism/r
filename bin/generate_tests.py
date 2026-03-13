@@ -189,6 +189,9 @@ def list_to_tuple(case_array: List[str]) -> tuple[str] | str:
     """
 
     if len(case_array) == 1:
+        if isinstance(case_array[0], int) or isinstance(case_array[0], float):
+            return f'({case_array[0]})'
+
         return f"('{case_array[0]}')"
 
     return tuple(case_array)
@@ -420,7 +423,7 @@ def generate(
     """
     # air must be installed or all test files will error
     if not shutil.which("air"):
-        logger.error("the air utility must be installed")
+        logger.error("the air-formatter utility must be installed")
         sys.exit(1)
     loader = FileSystemLoader(["config", "exercises"])
     env = Environment(loader=loader, keep_trailing_newline=True)
