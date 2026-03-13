@@ -4,7 +4,7 @@
 {{ macros.header() }}
 
 {% for case in cases -%}
-test_that("{{ case["description"] }}", {
+test_that("{{ case["description"] | replace("array", "list") }}", {
   inputs <- {{ case["input"]["array"] | replace("[", "list(") | 
                   replace("]", ")") | replace("None", "NULL") }}
   expected <- c{{ case["expected"] | list_to_tuple | replace("'", "") }}
