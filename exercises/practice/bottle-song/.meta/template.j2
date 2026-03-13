@@ -1,0 +1,24 @@
+{%- import "generator_macros.j2" as macros with context -%}
+{{ macros.canonical_ref() }}
+
+{{ macros.header() }}
+
+{% for case in cases -%}
+  {% for subcase in case["cases"] %}
+# {{ subcase["description"] }}
+    {% for subsubcase in subcase["cases"]%}
+test_that("{{ subsubcase["description"] }}", {
+  start_bottles <- {{ subsubcase["input"]["startBottles"] }}
+  take_down <- {{ subsubcase["input"]["takeDown"] }}
+  expect_equal(
+    recite(start_bottles, take_down),
+    paste(
+      sep = "\n",
+      {%-  for line in subsubcase["expected"] -%}
+      "{{- line -}}"{% if not loop.last %}, {% endif %}
+      {%- endfor -%}
+      ))
+    })
+    {% endfor %}
+  {% endfor %}
+{% endfor %}
