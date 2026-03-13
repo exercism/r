@@ -317,7 +317,6 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1,
-        "topics": [],
         "status": "deprecated"
       },
       {
@@ -698,7 +697,6 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3,
-        "topics": [],
         "status": "deprecated"
       },
       {
@@ -868,6 +866,14 @@
         "slug": "binary-search",
         "name": "Binary Search",
         "uuid": "7b4e53cc-44c0-4be3-b036-1e08fb1ae507",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "bottle-song",
+        "name": "Bottle Song",
+        "uuid": "3cee39fb-6384-4ff1-9d14-c297ae24e5d1",
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
