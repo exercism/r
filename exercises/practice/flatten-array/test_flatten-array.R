@@ -1,3 +1,7 @@
+# These tests are auto-generated with test data from:
+# https://github.com/exercism/problem-specifications/tree/main/exercises/flatten-array/canonical-data.json
+# File last updated on 2026-03-13
+
 source("./flatten-array.R")
 library(testthat)
 
@@ -43,26 +47,38 @@ test_that("null values are omitted from the final result", {
   expect_equal(flatten(inputs), expected)
 })
 
-test_that("consecutive null values at the front of the list are omitted from the final result", { # nolint
+test_that("consecutive null values at the front of the array are omitted from the final result", {
   inputs <- list(NULL, NULL, 3)
   expected <- c(3)
   expect_equal(flatten(inputs), expected)
 })
 
-test_that("consecutive null values in the middle of the list are omitted from the final result", { # nolint
+test_that("consecutive null values in the middle of the array are omitted from the final result", {
   inputs <- list(1, NULL, NULL, 4)
   expected <- c(1, 4)
   expect_equal(flatten(inputs), expected)
 })
 
-test_that("6 level nest list with null values", {
-  inputs <- list(0, 2, list(list(2, 3), 8, list(list(100)), NULL, list(list(NULL))), -2) # nolint
+test_that("6 level nested array with null values", {
+  inputs <- list(
+    0,
+    2,
+    list(list(2, 3), 8, list(list(100)), NULL, list(list(NULL))),
+    -2
+  )
   expected <- c(0, 2, 2, 3, 8, 100, -2)
   expect_equal(flatten(inputs), expected)
 })
 
-test_that("all values in nested list are null", {
-  inputs <- list(NULL, list(list(list(NULL))), NULL, NULL, list(list(NULL, NULL), NULL), NULL) # nolint
+test_that("all values in nested array are null", {
+  inputs <- list(
+    NULL,
+    list(list(list(NULL))),
+    NULL,
+    NULL,
+    list(list(NULL, NULL), NULL),
+    NULL
+  )
   expected <- c()
   expect_equal(flatten(inputs), expected)
 })

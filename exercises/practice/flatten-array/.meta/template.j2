@@ -5,8 +5,10 @@
 
 {% for case in cases -%}
 test_that("{{ case["description"] }}", {
-  input <- "{{ case["input"]["heyBob"] }}"
-  expect_equal(bob(input), "{{ case["expected"] }}")
+  inputs <- {{ case["input"]["array"] | replace("[", "list(") | 
+                  replace("]", ")") | replace("None", "NULL") }}
+  expected <- c{{ case["expected"] | list_to_tuple | replace("'", "") }}
+  expect_equal(flatten(inputs), expected)
 })
 
 {% endfor %}
