@@ -1,6 +1,6 @@
 # These tests are auto-generated with test data from:
 # https://github.com/exercism/problem-specifications/tree/main/exercises/bob/canonical-data.json
-# File last updated on 2026-03-11
+# File last updated on 2026-03-13
 
 source("./bob.R")
 library(testthat)
@@ -105,13 +105,6 @@ test_that("alternate silence", {
   expect_equal(bob(input), "Fine. Be that way!")
 })
 
-test_that("multiple line question", {
-  input <- "
-Does this cryogenic chamber make me look fat?
-No."
-  expect_equal(bob(input), "Whatever.")
-})
-
 test_that("starting with whitespace", {
   input <- "         hmmmmmmm..."
   expect_equal(bob(input), "Whatever.")
@@ -132,4 +125,11 @@ test_that("other whitespace", {
 test_that("non-question ending with whitespace", {
   input <- "This is a statement ending with whitespace      "
   expect_equal(bob(input), "Whatever.")
+})
+
+test_that("multiple line question", {
+  input <- "
+Does this cryogenic chamber make
+ me look fat?"
+  expect_equal(bob(input), "Sure.")
 })
