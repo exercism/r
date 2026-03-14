@@ -63,12 +63,15 @@ test_that("9 character plaintext results in 3 chunks of 3 characters", {
   expect_equal(ciphertext("This is fun!"), "tsf hiu isn")
 })
 
-test_that("54 character plaintext results in 7 chunks, the last two padded with
-          spaces", {
+test_that("54 character plaintext results in 8 chunks, the last two with trailing spaces", {
   expect_equal(
     ciphertext(
       "If man was meant to stay on the ground, god would have given us roots."
     ),
     "imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau "
   )
+})
+
+test_that("normalization results in empty plaintext", {
+  expect_equal(ciphertext("... --- ..."), "")
 })

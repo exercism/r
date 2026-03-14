@@ -85,3 +85,11 @@ test_that("ignore non allergen score parts", {
     )
   ))
 })
+
+test_that("ignore non allergen score parts", {
+  x <- allergy(257)
+  expect_true(setequal(
+    list_allergies(x),
+    c("eggs")
+  ))
+})
