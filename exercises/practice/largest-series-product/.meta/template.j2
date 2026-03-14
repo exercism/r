@@ -1,0 +1,17 @@
+{%- import "generator_macros.j2" as macros with context -%}
+{{ macros.canonical_ref() }}
+
+{{ macros.header() }}
+
+{% for case in cases -%}
+test_that("{{ case["description"] }}", {
+  digits <- "{{ case["input"]["digits"] }}"
+  span <- {{ case["input"]["span"] }}
+{%- if case is error_case %}
+  expect_error(largest_series_product(digits, span))
+{%- else %}
+  expect_equal(largest_series_product(digits, span), {{ case["expected"] }})
+{% endif %}
+})
+
+{% endfor %}

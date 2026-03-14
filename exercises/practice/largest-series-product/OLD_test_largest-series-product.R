@@ -1,7 +1,3 @@
-# These tests are auto-generated with test data from:
-# https://github.com/exercism/problem-specifications/tree/main/exercises/largest-series-product/canonical-data.json
-# File last updated on 2026-03-14
-
 source("./largest-series-product.R")
 library(testthat)
 
