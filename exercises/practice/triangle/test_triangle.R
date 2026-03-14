@@ -1,78 +1,120 @@
+# These tests are auto-generated with test data from:
+# https://github.com/exercism/problem-specifications/tree/main/exercises/triangle/canonical-data.json
+# File last updated on 2026-03-14
+
 source("./triangle.R")
 library(testthat)
 
-test_that("true if all sides are equal", {
-  expect_is(triangle(2, 2, 2), "equilateral")
+
+# equilateral triangle
+
+test_that("all sides are equal", {
+  side <- c(2, 2, 2)
+  expect_true("equilateral" %in% class(triangle(side[1], side[2], side[3])))
 })
 
-test_that("false if any side is unequal", {
-  expect_false(any("equilateral" %in% class(triangle(2, 3, 2))))
+test_that("any side is unequal", {
+  side <- c(2, 3, 2)
+  expect_false("equilateral" %in% class(triangle(side[1], side[2], side[3])))
 })
 
-test_that("false if no sides are equal", {
-  expect_false(any("equilateral" %in% class(triangle(5, 4, 6))))
+test_that("no sides are equal", {
+  side <- c(5, 4, 6)
+  expect_false("equilateral" %in% class(triangle(side[1], side[2], side[3])))
 })
 
-test_that("not equilateral if sides are zero", {
-  expect_error(triangle(0, 0, 0))
+test_that("all zero sides is not a triangle", {
+  side <- c(0, 0, 0)
+  expect_error(triangle(side[1], side[2], side[3]))
 })
 
 test_that("sides may be floats", {
-  expect_is(triangle(0.5, 0.5, 0.5), "equilateral")
+  side <- c(0.5, 0.5, 0.5)
+  expect_true("equilateral" %in% class(triangle(side[1], side[2], side[3])))
 })
 
-test_that("isosceles if last two sides are equal", {
-  expect_is(triangle(3, 4, 4), "isosceles")
+
+# isosceles triangle
+
+test_that("last two sides are equal", {
+  side <- c(3, 4, 4)
+  expect_true("isosceles" %in% class(triangle(side[1], side[2], side[3])))
 })
 
-test_that("isosceles if first two sides are equal", {
-  expect_is(triangle(4, 4, 3), "isosceles")
+test_that("first two sides are equal", {
+  side <- c(4, 4, 3)
+  expect_true("isosceles" %in% class(triangle(side[1], side[2], side[3])))
 })
 
-test_that("isosceles if first and last sides are equal", {
-  expect_is(triangle(4, 3, 4), "isosceles")
+test_that("first and last sides are equal", {
+  side <- c(4, 3, 4)
+  expect_true("isosceles" %in% class(triangle(side[1], side[2], side[3])))
 })
 
 test_that("equilateral triangles are also isosceles", {
-  expect_is(triangle(4, 4, 4), "isosceles")
+  side <- c(4, 4, 4)
+  expect_true("isosceles" %in% class(triangle(side[1], side[2], side[3])))
 })
 
-test_that("not isosceles if no sides are equal", {
-  expect_false(any("isosceles" %in% class(triangle(2, 3, 4))))
+test_that("no sides are equal", {
+  side <- c(2, 3, 4)
+  expect_false("isosceles" %in% class(triangle(side[1], side[2], side[3])))
 })
 
-test_that("not isosceles if triangle inequality is violated", {
-  expect_error(triangle(1, 1, 3))
+test_that("first triangle inequality violation", {
+  side <- c(1, 1, 3)
+  expect_error(triangle(side[1], side[2], side[3]))
 })
 
-test_that("sides may be floats", {
-  expect_is(triangle(0.5, 0.4, 0.5), "isosceles")
+test_that("second triangle inequality violation", {
+  side <- c(1, 3, 1)
+  expect_error(triangle(side[1], side[2], side[3]))
 })
 
-test_that("scalene if no sides are equal", {
-  expect_is(triangle(5, 4, 6), "scalene")
-})
-
-test_that("not scalene if all sides are equal", {
-  expect_false(any("scalene" %in% class(triangle(4, 4, 4))))
-})
-
-test_that("not scalene if two sides are equal", {
-  expect_false(any("scalene" %in% class(triangle(4, 4, 3))))
-})
-
-test_that("not scalene if first and third sides are equal", {
-  expect_false(any("scalene" %in% class(triangle(3, 4, 3))))
-})
-
-test_that("not scalene if second and third sides are equal", {
-  expect_false(any("scalene" %in% class(triangle(4, 3, 3))))
-})
-
-test_that("not scalene if triangle inequality is violated", {
-  expect_error(triangle(7, 3, 2))
+test_that("third triangle inequality violation", {
+  side <- c(3, 1, 1)
+  expect_error(triangle(side[1], side[2], side[3]))
 })
 
 test_that("sides may be floats", {
-  expect_is(triangle(0.5, 0.4, 0.6), "scalene")
+  side <- c(0.5, 0.4, 0.5)
+  expect_true("isosceles" %in% class(triangle(side[1], side[2], side[3])))
+})
+
+
+# scalene triangle
+
+test_that("no sides are equal", {
+  side <- c(5, 4, 6)
+  expect_true("scalene" %in% class(triangle(side[1], side[2], side[3])))
+})
+
+test_that("all sides are equal", {
+  side <- c(4, 4, 4)
+  expect_false("scalene" %in% class(triangle(side[1], side[2], side[3])))
+})
+
+test_that("first and second sides are equal", {
+  side <- c(4, 4, 3)
+  expect_false("scalene" %in% class(triangle(side[1], side[2], side[3])))
+})
+
+test_that("first and third sides are equal", {
+  side <- c(3, 4, 3)
+  expect_false("scalene" %in% class(triangle(side[1], side[2], side[3])))
+})
+
+test_that("second and third sides are equal", {
+  side <- c(4, 3, 3)
+  expect_false("scalene" %in% class(triangle(side[1], side[2], side[3])))
+})
+
+test_that("may not violate triangle inequality", {
+  side <- c(7, 3, 2)
+  expect_error(triangle(side[1], side[2], side[3]))
+})
+
+test_that("sides may be floats", {
+  side <- c(0.5, 0.4, 0.6)
+  expect_true("scalene" %in% class(triangle(side[1], side[2], side[3])))
 })
