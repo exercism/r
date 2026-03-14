@@ -1,12 +1,5 @@
-# These tests are auto-generated with test data from:
-# https://github.com/exercism/problem-specifications/tree/main/exercises/perfect-numbers/canonical-data.json
-# File last updated on 2026-03-14
-
 source("./perfect-numbers.R")
 library(testthat)
-
-
-# Perfect numbers
 
 test_that("Smallest perfect number is classified correctly", {
   n <- 6
@@ -24,7 +17,6 @@ test_that("Large perfect number is classified correctly", {
 })
 
 
-# Abundant numbers
 
 test_that("Smallest abundant number is classified correctly", {
   n <- 12
@@ -41,13 +33,7 @@ test_that("Large abundant number is classified correctly", {
   expect_equal(number_type(n), "abundant")
 })
 
-test_that("Perfect square abundant number is classified correctly", {
-  n <- 196
-  expect_equal(number_type(n), "abundant")
-})
 
-
-# Deficient numbers
 
 test_that("Smallest prime deficient number is classified correctly", {
   n <- 2
@@ -75,14 +61,13 @@ test_that("Edge case (no factors other than itself) is classified correctly", {
 })
 
 
-# Invalid inputs
 
-test_that("Zero is rejected (as it is not a positive integer)", {
+test_that("Zero is rejected (not a natural number)", {
   n <- 0
   expect_error(number_type(n))
 })
 
-test_that("Negative integer is rejected (as it is not a positive integer)", {
+test_that("Negative integer is rejected (not a natural number)", {
   n <- -1
   expect_error(number_type(n))
 })

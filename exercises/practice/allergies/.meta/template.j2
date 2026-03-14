@@ -1,0 +1,21 @@
+{%- import "generator_macros.j2" as macros with context -%}
+{{ macros.canonical_ref() }}
+
+{{ macros.header() }}
+
+{% for case in cases %}
+# {{ case["description"] }}
+  {% for subcase in case["cases"] %}
+test_that("{{ subcase["description"] }}", {
+  allergies <- allergy({{ subcase["input"]["score"] }})
+{% if subcase["property"] == "list" -%}
+  expect_true(setequal(
+    list_allergies(allergies), 
+    c{{ subcase["expected"] | list_to_tuple }}
+  ))
+{% else -%}
+  expect_{{ subcase["expected"] | lower }}(allergic_to(allergies, "{{ subcase["input"]["item"] }}"))
+{% endif %}
+})
+  {% endfor %}
+{% endfor %}
