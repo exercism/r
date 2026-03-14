@@ -185,3 +185,27 @@ test_that("invalid match result", {
     )
   )
 })
+
+test_that("ensure points sorted numerically", {
+  input <- c(
+    "Devastating Donkeys;Blithering Badgers;win",
+    "Devastating Donkeys;Blithering Badgers;win",
+    "Devastating Donkeys;Blithering Badgers;win",
+    "Devastating Donkeys;Blithering Badgers;win",
+    "Blithering Badgers;Devastating Donkeys;win"
+  )
+  expect_equal(
+    tournament(input),
+    data.frame(
+      Team = c(
+        "Devastating Donkeys",
+        "Blithering Badgers"
+      ),
+      MP = c(5, 5),
+      W = c(4, 1),
+      D = c(0, 0),
+      L = c(1, 4),
+      P = c(12, 3)
+    )
+  )
+})

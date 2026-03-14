@@ -61,6 +61,14 @@ test_that("not scalene if two sides are equal", {
   expect_false(any("scalene" %in% class(triangle(4, 4, 3))))
 })
 
+test_that("not scalene if first and third sides are equal", {
+  expect_false(any("scalene" %in% class(triangle(3, 4, 3))))
+})
+
+test_that("not scalene if second and third sides are equal", {
+  expect_false(any("scalene" %in% class(triangle(4, 3, 3))))
+})
+
 test_that("not scalene if triangle inequality is violated", {
   expect_error(triangle(7, 3, 2))
 })
