@@ -1,0 +1,18 @@
+{%- import "generator_macros.j2" as macros with context -%}
+{{ macros.canonical_ref() }}
+
+{{ macros.header() }}
+
+{% for case in cases -%}
+  {% for subcase in case["cases"] %}
+# {{ case["description"] }}
+test_that("{{ subcase["description"] }}", {
+  n <- {{ subcase["input"]["number"] }}
+{% if subcase is error_case -%}
+  expect_error(number_type(n))
+{% else -%}
+  expect_equal(number_type(n), "{{ subcase["expected"] }}")
+{% endif %}
+})
+  {% endfor %}
+{% endfor %}
