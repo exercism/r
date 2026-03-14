@@ -3,9 +3,9 @@
 
 {{ macros.header() }}
 
-{% for case in cases -%}
-  {% for subcase in case["cases"] %}
+{% for case in cases %}
 # {{ case["description"] }}
+  {% for subcase in case["cases"] %}
 test_that("{{ subcase["description"] }}", {
   n <- {{ subcase["input"]["number"] }}
 {% if subcase is error_case -%}
