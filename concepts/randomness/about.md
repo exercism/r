@@ -15,6 +15,12 @@ Generating truly random values with a computer is a [surprisingly difficult tech
 However, R was derived from a statistics package and is often used for simulations, so it offers a rich variety of ways to generate random values.
 The results are amply good enough for most applications in modelling, simulation and games.
 
+~~~~exercism/note
+Code examples in this concept produce random output, by definition.
+
+If you want reproducible output, see the section on seeds, near the end of this document.
+~~~~
+
 ## [Sampling with or without replacement][yt-sampling-with-replacement]
 
 Imagine that we have a bag containing 3 red balls and 4 green balls, and we randomly pull a ball from the bag.
@@ -134,15 +140,16 @@ This is extremely unlikely to mean that they all weigh exactly 4.731g.
 Perhaps you find that values range from 4.627 to 4.794g but cluster around 4.731g.
 
 This is the [`normal distribution`][wiki-normal-distribution] (or "Gaussian", after the mathematician Card Friedrich Gauss), for which probabilities peak at the mean and tail off symmetrically on both sides (hence "bell-shaped").
-To simulate this in software, we need some way to specify the width of the curve (*typically, expensive bolts will cluster more tightly around the mean than cheap bolts!*).
 
+To simulate this in software, we need some way to specify the width of the curve (*typically, expensive bolts will cluster more tightly around the mean than cheap bolts!*).
 By convention, this is done with the [`standard deviation`][wiki-standard-deviation]: small values for a sharp, narrow curve, large for a low, broad curve.
+
 Mathematicians love Greek letters, so you will often see `μ` ('mu') to represent the mean and `σ` ('sigma') to represent the standard deviation (or `sd`).
 Thus, if you read that "95% of values are within 2σ of μ" or "the Higgs boson has been detected with 5-sigma confidence", such comments relate to the standard deviation.
 
 <!-- There will be more to say about this in the [`Statistics`][statistics] Concept. -->
 
-To generate random values with this distribution, R has the [`rnorm()`][ref-rnorm] function (plus several more technical variants outside our scope).
+To generate random values with this distribution, R has the [`rnorm()`][ref-rnorm] function.
 
 Short for "random normal", this defaults to `mean` 0 and `sd` 1.
 
@@ -162,6 +169,19 @@ Students without RStudio (or similar) installed locally can use an online R runn
 The code `hist(rnorm(10000), breaks = 40)` will show the basic pattern, though not in the most elegant presentation.
 The random numbers are binned, and the vertical axis is a count of results in each bin.
 
+~~~~exercism/advanced
+The names of R's distribution functions have a prefix letter followed by an abbreviated distribution name.
+
+The prefix letters are:
+
+- `d` : Density
+- `p` : Distribution function
+- `q` : Quantile function
+- `r` : Random generation
+
+We will focus mainly on the `r*()` functions, and leave the others to students with a statistical background.
+~~~~
+
 ## Discrete distributions
 
 ### Binomial distribution
@@ -176,7 +196,7 @@ The ratio of probabilities for 0 or 1 heads for a single flip is `1:1`.
 For two flips, 0, 1 or 2 heads have ratios `1:2:1`, for 3 flips `1:3:3:1`.
 
 These ratios are called ["binomial coefficients"][wiki-binom-coeff].
-They build up [Pascal's Triangle][wiki-pascal-triangle], and many Exercism tracks have a [practice exercise][practice-pascal] based on it.
+They build up [Pascal's Triangle][wiki-pascal-triangle], and many Exercism tracks, including R, have a [practice exercise][practice-pascal] based on it.
 
 If instead we want the probability of a particular result, R provides the [`dbinom()`][ref-rbinom] function.
 There is almost 18% chance if getting 10 heads from 20 flips.
