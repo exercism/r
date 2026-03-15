@@ -173,7 +173,7 @@ It could be zero, it could be twenty, but even someone with no statistical train
 
 The ratio of probabilities for 0 or 1 heads for a single flip is `1:1`.
 
-For two flips, 0,1 or 2 heads have ratios `1:2:1`, for 3 flips `1:3:3:1`.
+For two flips, 0, 1 or 2 heads have ratios `1:2:1`, for 3 flips `1:3:3:1`.
 
 These ratios are called ["binomial coefficients"][wiki-binom-coeff].
 They build up [Pascal's Triangle][wiki-pascal-triangle], and many Exercism tracks have a [practice exercise][practice-pascal] based on it.
@@ -195,8 +195,8 @@ dbinom(10, size = 20, prob = 0.6)
 [1] 0.1171416
 ```
 
-It is now more likely that there will be more than 10 heads from 20 flips.
-Clearly, we need to be interested in all the possible outcomes: the [*binomial distribution*][wiki-binomial].https://quesmaorg.github.io/webr-ggplot-playground/
+It is now likely that there will be more than 10 heads from 20 flips.
+Clearly, we need to be interested in all the possible outcomes: the [binomial distribution][wiki-binomial].
 
 R provides the [`rbinom()`][ref-rbinom] function to generate random values with a binomial distribution.
 Tell it how many values to return `n`, how many trials `size` (such as coin flips), and the probability of a single event `prob` (such as getting a head from one flip).
@@ -233,7 +233,7 @@ Features of these examples include:
 
 The probabilities of getting 0, 1, 2... events in some interval form a [Poisson distribution][wiki-poisson].
 
-The key parameter to a Poisson distribution is the [mean][ref-mean] (average) number of events in the chosen interval, usually represented by the Greek letter λ (lambda).
+The key parameter to a Poisson distribution is the [mean][ref-mean] (average) number of events in the chosen interval, usually represented by the Greek letter λ ('lambda').
 
 The rate of earth-impacting meteorites at least 1 meter diameter is described in the literature as "every few months".
 
@@ -252,7 +252,7 @@ They are, after all, *random*!
 
 This behavior relies on generating a different [random seed][wiki-seed] each time.
 
-For debugging puhttps://quesmaorg.github.io/webr-ggplot-playground/rposes, it may be helpful to use the [`set.seed(n)`][ref-set-seed] function, where `n` is your chosen integer.
+For debugging purposes, it may be helpful to use the [`set.seed(n)`][ref-set-seed] function, where `n` is your chosen integer.
 By setting the same seed each time, our code will then return the same set of random values on each run.
 
 ```R
