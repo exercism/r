@@ -7,9 +7,15 @@
 # {{ case["description"] }}
   {% for subcase in case["cases"] %}
 test_that("{{ subcase["description"] }}", {
+{% if subcase["property"] == "encode" %}
+  plaintext <- "{{ subcase["input"]["phrase"] }}"
+  expected <- "{{ subcase["expected"] }}"
+  expect_equal(encode(plaintext), expected)
+{% else %}
   ciphertext <- "{{ subcase["input"]["phrase"] }}"
   expected <- "{{ subcase["expected"] }}"
-  expect_equal({{ subcase["property"] }}(ciphertext), expected)
+  expect_equal(decode(ciphertext), expected)
+{% endif %}
 })
   {% endfor %}
 {% endfor %}

@@ -9,51 +9,51 @@ library(testthat)
 # encode
 
 test_that("encode yes", {
-  ciphertext <- "yes"
+  plaintext <- "yes"
   expected <- "bvh"
-  expect_equal(encode(ciphertext), expected)
+  expect_equal(encode(plaintext), expected)
 })
 
 test_that("encode no", {
-  ciphertext <- "no"
+  plaintext <- "no"
   expected <- "ml"
-  expect_equal(encode(ciphertext), expected)
+  expect_equal(encode(plaintext), expected)
 })
 
 test_that("encode OMG", {
-  ciphertext <- "OMG"
+  plaintext <- "OMG"
   expected <- "lnt"
-  expect_equal(encode(ciphertext), expected)
+  expect_equal(encode(plaintext), expected)
 })
 
 test_that("encode spaces", {
-  ciphertext <- "O M G"
+  plaintext <- "O M G"
   expected <- "lnt"
-  expect_equal(encode(ciphertext), expected)
+  expect_equal(encode(plaintext), expected)
 })
 
 test_that("encode mindblowingly", {
-  ciphertext <- "mindblowingly"
+  plaintext <- "mindblowingly"
   expected <- "nrmwy oldrm tob"
-  expect_equal(encode(ciphertext), expected)
+  expect_equal(encode(plaintext), expected)
 })
 
 test_that("encode numbers", {
-  ciphertext <- "Testing,1 2 3, testing."
+  plaintext <- "Testing,1 2 3, testing."
   expected <- "gvhgr mt123 gvhgr mt"
-  expect_equal(encode(ciphertext), expected)
+  expect_equal(encode(plaintext), expected)
 })
 
 test_that("encode deep thought", {
-  ciphertext <- "Truth is fiction."
+  plaintext <- "Truth is fiction."
   expected <- "gifgs rhurx grlm"
-  expect_equal(encode(ciphertext), expected)
+  expect_equal(encode(plaintext), expected)
 })
 
 test_that("encode all the letters", {
-  ciphertext <- "The quick brown fox jumps over the lazy dog."
+  plaintext <- "The quick brown fox jumps over the lazy dog."
   expected <- "gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt"
-  expect_equal(encode(ciphertext), expected)
+  expect_equal(encode(plaintext), expected)
 })
 
 
