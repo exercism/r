@@ -1,0 +1,15 @@
+{%- import "generator_macros.j2" as macros with context -%}
+{{ macros.canonical_ref() }}
+
+{{ macros.header() }}
+
+{% for case in cases %}
+# {{ case["description"] }}
+  {% for subcase in case["cases"] %}
+test_that("{{ subcase["description"] }}", {
+  ciphertext <- "{{ subcase["input"]["phrase"] }}"
+  expected <- "{{ subcase["expected"] }}"
+  expect_equal({{ subcase["property"] }}(ciphertext), expected)
+})
+  {% endfor %}
+{% endfor %}
