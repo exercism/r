@@ -1,94 +1,133 @@
+# These tests are auto-generated with test data from:
+# https://github.com/exercism/problem-specifications/tree/main/exercises/all-your-base/canonical-data.json
+# File last updated on 2026-03-16
+
 source("./all-your-base.R")
 library(testthat)
 
-
 test_that("single bit one to decimal", {
-  digits <- 1
   input_base <- 2
+  digits <- c(1)
   output_base <- 10
-  expect_equal(rebase(input_base, digits, output_base), 1)
+  expect_equal(
+    rebase(input_base, digits, output_base),
+    c(1)
+  )
 })
 
 test_that("binary to single decimal", {
-  digits <- c(1, 0, 1)
   input_base <- 2
+  digits <- c(1, 0, 1)
   output_base <- 10
-  expect_equal(rebase(input_base, digits, output_base), 5)
+  expect_equal(
+    rebase(input_base, digits, output_base),
+    c(5)
+  )
 })
 
 test_that("single decimal to binary", {
-  digits <- c(5)
   input_base <- 10
+  digits <- c(5)
   output_base <- 2
-  expect_equal(rebase(input_base, digits, output_base), c(1, 0, 1))
+  expect_equal(
+    rebase(input_base, digits, output_base),
+    c(1, 0, 1)
+  )
 })
 
 test_that("binary to multiple decimal", {
-  digits <- c(1, 0, 1, 0, 1, 0)
   input_base <- 2
+  digits <- c(1, 0, 1, 0, 1, 0)
   output_base <- 10
-  expect_equal(rebase(input_base, digits, output_base), c(4, 2))
+  expect_equal(
+    rebase(input_base, digits, output_base),
+    c(4, 2)
+  )
 })
 
 test_that("decimal to binary", {
-  digits <- c(4, 2)
   input_base <- 10
+  digits <- c(4, 2)
   output_base <- 2
-  expect_equal(rebase(input_base, digits, output_base), c(1, 0, 1, 0, 1, 0))
+  expect_equal(
+    rebase(input_base, digits, output_base),
+    c(1, 0, 1, 0, 1, 0)
+  )
 })
 
 test_that("trinary to hexadecimal", {
-  digits <- c(1, 1, 2, 0)
   input_base <- 3
+  digits <- c(1, 1, 2, 0)
   output_base <- 16
-  expect_equal(rebase(input_base, digits, output_base), c(2, 10))
+  expect_equal(
+    rebase(input_base, digits, output_base),
+    c(2, 10)
+  )
 })
 
 test_that("hexadecimal to trinary", {
-  digits <- c(2, 10)
   input_base <- 16
+  digits <- c(2, 10)
   output_base <- 3
-  expect_equal(rebase(input_base, digits, output_base), c(1, 1, 2, 0))
+  expect_equal(
+    rebase(input_base, digits, output_base),
+    c(1, 1, 2, 0)
+  )
 })
 
 test_that("15-bit integer", {
-  digits <- c(3, 46, 60)
   input_base <- 97
+  digits <- c(3, 46, 60)
   output_base <- 73
-  expect_equal(rebase(input_base, digits, output_base), c(6, 10, 45))
+  expect_equal(
+    rebase(input_base, digits, output_base),
+    c(6, 10, 45)
+  )
 })
 
 test_that("empty list", {
-  digits <- c()
   input_base <- 2
+  digits <- c()
   output_base <- 10
-  expect_equal(rebase(input_base, digits, output_base), 0)
+  expect_equal(
+    rebase(input_base, digits, output_base),
+    c(0)
+  )
 })
 
 test_that("single zero", {
-  digits <- c(0)
   input_base <- 10
+  digits <- c(0)
   output_base <- 2
-  expect_equal(rebase(input_base, digits, output_base), 0)
+  expect_equal(
+    rebase(input_base, digits, output_base),
+    c(0)
+  )
 })
 
 test_that("multiple zeros", {
-  digits <- c(0, 0, 0)
   input_base <- 10
+  digits <- c(0, 0, 0)
   output_base <- 2
-  expect_equal(rebase(input_base, digits, output_base), 0)
+  expect_equal(
+    rebase(input_base, digits, output_base),
+    c(0)
+  )
 })
 
 test_that("leading zeros", {
-  digits <- c(0, 6, 0)
   input_base <- 7
+  digits <- c(0, 6, 0)
   output_base <- 10
-  expect_equal(rebase(input_base, digits, output_base), c(4, 2))
+  expect_equal(
+    rebase(input_base, digits, output_base),
+    c(4, 2)
+  )
 })
 
 test_that("input base is one", {
-  digits <- c(0)
   input_base <- 1
+  digits <- c(0)
   output_base <- 10
   expect_error(
     rebase(input_base, digits, output_base),
@@ -97,8 +136,8 @@ test_that("input base is one", {
 })
 
 test_that("input base is zero", {
-  digits <- c()
   input_base <- 0
+  digits <- c()
   output_base <- 10
   expect_error(
     rebase(input_base, digits, output_base),
@@ -107,8 +146,8 @@ test_that("input base is zero", {
 })
 
 test_that("input base is negative", {
-  digits <- c(1)
   input_base <- -2
+  digits <- c(1)
   output_base <- 10
   expect_error(
     rebase(input_base, digits, output_base),
@@ -117,8 +156,8 @@ test_that("input base is negative", {
 })
 
 test_that("negative digit", {
-  digits <- c(1, -1, 1, 0, 1, 0)
   input_base <- 2
+  digits <- c(1, -1, 1, 0, 1, 0)
   output_base <- 10
   expect_error(
     rebase(input_base, digits, output_base),
@@ -127,8 +166,8 @@ test_that("negative digit", {
 })
 
 test_that("invalid positive digit", {
-  digits <- c(1, 2, 1, 0, 1, 0)
   input_base <- 2
+  digits <- c(1, 2, 1, 0, 1, 0)
   output_base <- 10
   expect_error(
     rebase(input_base, digits, output_base),
@@ -137,8 +176,8 @@ test_that("invalid positive digit", {
 })
 
 test_that("output base is one", {
-  digits <- c(1, 0, 1, 0, 1, 0)
   input_base <- 2
+  digits <- c(1, 0, 1, 0, 1, 0)
   output_base <- 1
   expect_error(
     rebase(input_base, digits, output_base),
@@ -147,8 +186,8 @@ test_that("output base is one", {
 })
 
 test_that("output base is zero", {
-  digits <- c(7)
   input_base <- 10
+  digits <- c(7)
   output_base <- 0
   expect_error(
     rebase(input_base, digits, output_base),
@@ -157,8 +196,8 @@ test_that("output base is zero", {
 })
 
 test_that("output base is negative", {
-  digits <- c(1)
   input_base <- 2
+  digits <- c(1)
   output_base <- -7
   expect_error(
     rebase(input_base, digits, output_base),
@@ -167,13 +206,11 @@ test_that("output base is negative", {
 })
 
 test_that("both bases are negative", {
-  digits <- c(1)
   input_base <- -2
+  digits <- c(1)
   output_base <- -7
   expect_error(
     rebase(input_base, digits, output_base),
     "input base must be >= 2"
   )
 })
-
-message("All tests passed for exercise: all-your-base")

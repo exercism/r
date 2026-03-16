@@ -1,0 +1,16 @@
+{%- import "generator_macros.j2" as macros with context -%}
+{{ macros.canonical_ref() }}
+
+{{ macros.header() }}
+
+{% for case in cases %}
+test_that("{{ case["description"] }}", {
+  haystack <- c{{ case["input"]["array"] | list_to_tuple}}
+  needle <- {{ case["input"]["value"] }}
+{% if case is error_case -%}
+  expect_equal(find(haystack, needle), -1)
+{% else -%}
+  expect_equal(find(haystack, needle), {{ case["expected"] + 1 }})
+{% endif %}
+})
+{% endfor %}

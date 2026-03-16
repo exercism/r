@@ -1,4 +1,3 @@
-
 from_digits <- function(digits, base) {
   sum(digits * base^((length(digits) - 1):0))
 }
