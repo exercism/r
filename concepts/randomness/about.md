@@ -179,7 +179,9 @@ The prefix letters are:
 - `q` : Quantile function
 - `r` : Random generation
 
-We will focus mainly on the `r*()` functions, and leave the others to students with a statistical background.
+We will focus mainly on the `r*()` functions, and leave [the others][web-statology-norm] to students with a statistical background.
+
+[web-statology-norm]: https://www.statology.org/dnorm-pnorm-rnorm-qnorm-in-r/
 ~~~~
 
 ## Discrete distributions
@@ -198,7 +200,7 @@ For two flips, 0, 1 or 2 heads have ratios `1:2:1`, for 3 flips `1:3:3:1`.
 These ratios are called ["binomial coefficients"][wiki-binom-coeff].
 They build up [Pascal's Triangle][wiki-pascal-triangle], and many Exercism tracks, including R, have a [practice exercise][practice-pascal] based on it.
 
-If instead we want the probability of a particular result, R provides the [`dbinom()`][ref-rbinom] function.
+If instead we want the probability of a particular result, R provides the [`dbinom()`][ref-rbinom] function (which calculates [probability density][wiki-pdf]).
 There is almost 18% chance if getting 10 heads from 20 flips.
 
 ```R
@@ -318,6 +320,7 @@ Many statisticians and data scientists over the last few decades think that R fi
 [wiki-binom-coeff]: https://en.wikipedia.org/wiki/Binomial_coefficient
 [wiki-poisson]: https://en.wikipedia.org/wiki/Poisson_distribution
 [wiki-pascal-triangle]: https://en.wikipedia.org/wiki/Pascal%27s_triangle
+[wiki-pdf]: https://en.wikipedia.org/wiki/Probability_density_function
 [wiki-geiger]: https://en.wikipedia.org/wiki/Geiger_counter
 [web-rdrr]: https://rdrr.io/snippets/
 [web-ggplot]: https://quesmaorg.github.io/webr-ggplot-playground/
