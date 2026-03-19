@@ -174,14 +174,16 @@ The names of R's distribution functions have a prefix letter followed by an abbr
 
 The prefix letters are:
 
-- `d` : Density
-- `p` : Distribution function
-- `q` : Quantile function
-- `r` : Random generation
+- `d` : Density - the value of the probability density function at a point
+- `p` : Distribution function - the [cumulative distribution function][wiki-cdf] from a point
+- `q` : Quantile function - the inverse cumulative distribution function
+- `r` : Random generation - random samples from the distribution
 
 We will focus mainly on the `r*()` functions, and leave [the others][web-statology-norm] to students with a statistical background.
 
 [web-statology-norm]: https://www.statology.org/dnorm-pnorm-rnorm-qnorm-in-r/
+[wiki-pdf]: https://en.wikipedia.org/wiki/Probability_density_function
+[wiki-cdf]: https://en.wikipedia.org/wiki/Cumulative_distribution_function
 ~~~~
 
 ## Discrete distributions
