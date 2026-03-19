@@ -39,21 +39,21 @@ To pick from a limited number of discrete values, [`sample()`][ref-sample] can b
 This is useful for integers, strings, etc.
 
 ```R
-> sample(1:10, 5) # no repeats by default
-[1] 8 3 4 2 6
+sample(1:10, 5) # no repeats by default
+#> [1] 8 3 4 2 6
 
-> sample(1:10, 5, replace = TRUE) # repeats are OK
-[1] 10 10  7 10  9
+sample(1:10, 5, replace = TRUE) # repeats are OK
+#> [1] 10 10  7 10  9
 
-> languages <- c("Fortran", "R", "Python", "Julia")
-> sample(languages, 1)
-[1] "Python"
+languages <- c("Fortran", "R", "Python", "Julia")
+sample(languages, 1)
+#> [1] "Python"
 
-> sample(c("H", "T"), 5, replace = TRUE) # coin flips
-[1] "T" "T" "H" "H" "H"
+sample(c("H", "T"), 5, replace = TRUE) # coin flips
+#> [1] "T" "T" "H" "H" "H"
 
-> sample(c(TRUE, FALSE), 5, replace = TRUE) # alternative coin flips
-[1] FALSE  TRUE FALSE  TRUE  TRUE
+sample(c(TRUE, FALSE), 5, replace = TRUE) # alternative coin flips
+#> [1] FALSE  TRUE FALSE  TRUE  TRUE
 ```
 
 Sampling fits well into data pipelines.
@@ -62,8 +62,8 @@ For example, to generate random alphanumneric strings:
 ```R
 library(stringr)
 
-> c(letters, LETTERS, 0:9) |> sample(50) |> str_flatten()
-[1] "5tX71jhbM9zUmKrpENBQyGYaZdJPVAx06leSF2s8gcfw3OviIH"
+c(letters, LETTERS, 0:9) |> sample(50) |> str_flatten()
+#> [1] "5tX71jhbM9zUmKrpENBQyGYaZdJPVAx06leSF2s8gcfw3OviIH"
 ```
 
 Also, sampling is not limited to vectors and ranges.
@@ -87,11 +87,11 @@ For now, ignore `prob`, which allows you to give unequal weights to the various 
 What happens if we omit `size` and just provide `x`?
 
 ```R
-> x <- letters[1:6]
-> x
-[1] "a" "b" "c" "d" "e" "f"
-> sample(x)
-[1] "e" "a" "f" "b" "c" "d"
+x <- letters[1:6]
+x
+#> [1] "a" "b" "c" "d" "e" "f"
+sample(x)
+#> [1] "e" "a" "f" "b" "c" "d"
 ```
 
 In typical R style, the pattern is vector-in, vector-out, and `size` defaults to `length(x)`.
@@ -122,12 +122,12 @@ For an [equally-weighted distribution][wiki-uniform] of floating-point numbers u
 Both `min` and `max` can be specified but default to 0 and 1.
 
 ```R
-> runif(5)  # generate 5 values
-[1] 0.3038506 0.3527959 0.3319309 0.4846354 0.4386279
+runif(5)  # generate 5 values
+#> [1] 0.3038506 0.3527959 0.3319309 0.4846354 0.4386279
 
 # generate 5 non-negative values <= 100.0
-> runif(5, max = 100)
-[1] 79.70762 51.62232 52.85281 71.08571 63.94380
+runif(5, max = 100)
+#> [1] 79.70762 51.62232 52.85281 71.08571 63.94380
 ```
 
 ### Normal/Gaussian distribution
@@ -154,12 +154,12 @@ To generate random values with this distribution, R has the [`rnorm()`][ref-rnor
 Short for "random normal", this defaults to `mean` 0 and `sd` 1.
 
 ```R
-> rnorm(5)
-[1]  0.36965357  0.07489948 -0.83827224 -0.83126506 -0.59895825
+rnorm(5)
+#> [1]  0.36965357  0.07489948 -0.83827224 -0.83126506 -0.59895825
 
 # Simulating our bolts example
-> rnorm(5, mean = 4.731, sd = 0.2)
-[1] 4.564521 4.613237 4.419512 4.772196 4.839102
+rnorm(5, mean = 4.731, sd = 0.2)
+#> [1] 4.564521 4.613237 4.419512 4.772196 4.839102
 ```
 
 It is hard to tell from looking at the numbers that the raw output clusters closer to the mean than for a uniform distribution.
@@ -206,9 +206,9 @@ If instead we want the probability of a particular result, R provides the [`dbin
 There is almost 18% chance if getting 10 heads from 20 flips.
 
 ```R
-> # Probability of exactly 10 heads in 20 flips, fair coin
-> dbinom(10, size = 20, prob = 0.5)
-[1] 0.1761971
+# Probability of exactly 10 heads in 20 flips, fair coin
+dbinom(10, size = 20, prob = 0.5)
+#> [1] 0.1761971
 ```
 
 Cheating is possible, so increasing the chance of a head to `p = 0.6` *reduces* the probability of 10 heads:
@@ -216,7 +216,7 @@ Cheating is possible, so increasing the chance of a head to `p = 0.6` *reduces* 
 ```R
 # Probability of exactly 10 heads in 20 flips, biased coin
 dbinom(10, size = 20, prob = 0.6)
-[1] 0.1171416
+#> [1] 0.1171416
 ```
 
 It is now likely that there will be more than 10 heads from 20 flips.
