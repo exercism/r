@@ -132,9 +132,7 @@ Worded differently, `x = 5` is in the *environment* of the inner function.
 Technically, this is known as a [closure][wiki-closure].
 
 The environment is particularly important with dot args, as any values supplied this way can be passed through to function calls in the function body.
-The outer function need not know or care what the dot a  - recursion
-  - pipes (or else move that to functional-programming?)
-rgs mean.
+The outer function need not know or care what the dot args mean.
 
 ```R
 f_var <- function(x, ...) {
@@ -155,8 +153,6 @@ f_var(x, na.rm = TRUE)
 This technique is used extensively by Tidyverse libraries such as `stringr`.
 Many of the `stringr` functions are a user-friendly wrapper around low-level functions from `stringi` and base R.
 Extra arguments supplied to the `str_*()` functions are simply passed through to those low-level functions.
-  - recursion
-  - pipes (or else move that to functional-programming?)
 
 ## Anonymous Functions
 
