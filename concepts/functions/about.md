@@ -132,7 +132,9 @@ Worded differently, `x = 5` is in the *environment* of the inner function.
 Technically, this is known as a [closure][wiki-closure].
 
 The environment is particularly important with dot args, as any values supplied this way can be passed through to function calls in the function body.
-The outer function need not know or care what the dot args mean.
+The outer function need not know or care what the dot a  - recursion
+  - pipes (or else move that to functional-programming?)
+rgs mean.
 
 ```R
 f_var <- function(x, ...) {
@@ -153,6 +155,8 @@ f_var(x, na.rm = TRUE)
 This technique is used extensively by Tidyverse libraries such as `stringr`.
 Many of the `stringr` functions are a user-friendly wrapper around low-level functions from `stringi` and base R.
 Extra arguments supplied to the `str_*()` functions are simply passed through to those low-level functions.
+  - recursion
+  - pipes (or else move that to functional-programming?)
 
 ## Anonymous Functions
 
@@ -209,6 +213,16 @@ The general policy (with a few exceptions) is *copy on modify*.
 If an object (such as a vector) is changed in a way that could cause later problems, R returns a *modified copy* and leaves the original untouched.
 
 Copying large data structures can be computationally expensive, but this is generally the lesser evil when the alternative is data corruption.
+
+~~~~exercism/caution
+Beware of operations that lead to repeated copying of the same data.
+
+Paraphrasing (Tidyverse author) Hadley Wickham:
+
+> Loops are not inherently slow, but they make it dangerously easy to include slow operations within the loop.
+
+Vectorization or higher-order functions can help to protect you from this type of performance-killer.
+~~~~
 
 [concept-basics]: https://exercism.org/tracks/r/concepts/basics
 [concept-funcprog]: https://exercism.org/tracks/r/concepts/functional-programming
