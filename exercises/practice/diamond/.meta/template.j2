@@ -1,0 +1,16 @@
+{%- import "generator_macros.j2" as macros with context -%}
+{{ macros.canonical_ref() }}
+
+{{ macros.header() }}
+
+{% for case in cases -%}
+test_that("{{ case["description"] }}", {
+  input <- "{{ case["input"]["letter"] }}"
+  expected <- c{{ case["expected"] | list_to_tuple }}
+  expect_equal(
+    diamond(input),
+    paste(collapse= "\n", expected)
+  )
+})
+
+{% endfor %}
