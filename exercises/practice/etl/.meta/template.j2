@@ -1,0 +1,19 @@
+{%- import "generator_macros.j2" as macros with context -%}
+{{ macros.canonical_ref() }}
+
+{{ macros.header() }}
+
+{% for case in cases -%}
+test_that("{{ case["description"] }}", {
+        input <- list(
+        {%- for key in case["input"]["legacy"]  -%}
+        '{{ key }}' = c{{ case["input"]["legacy"][ key ] | list_to_tuple }}{{ "," if not loop.last }}
+        {% endfor %})
+      expected <- list(
+        {%-  for key in case["expected"]  -%}
+        {{ key | lower }} = {{ case["expected"][key] }}{{ "," if not loop.last }}
+        {% endfor %})
+  expect_equal(etl(input), expected)
+})
+
+{% endfor %}

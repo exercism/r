@@ -1,19 +1,42 @@
+# These tests are auto-generated with test data from:
+# https://github.com/exercism/problem-specifications/tree/main/exercises/resistor-color/canonical-data.json
+# File last updated on 2026-03-20
+
 source("./resistor-color.R")
 library(testthat)
 
-test_that("Colors", {
-  expected <- c("black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white") # nolint
-  expect_equal(colors, expected)
-})
-
 test_that("Black", {
-  expect_equal(color_code("black"), 0)
+  input <- "black"
+  expected <- 0
+  expect_equal(color_code(input), expected)
 })
 
 test_that("White", {
-  expect_equal(color_code("white"), 9)
+  input <- "white"
+  expected <- 9
+  expect_equal(color_code(input), expected)
 })
 
 test_that("Orange", {
-  expect_equal(color_code("orange"), 3)
+  input <- "orange"
+  expected <- 3
+  expect_equal(color_code(input), expected)
+})
+
+test_that("Colors", {
+  expect_equal(
+    colors,
+    c(
+      'black',
+      'brown',
+      'red',
+      'orange',
+      'yellow',
+      'green',
+      'blue',
+      'violet',
+      'grey',
+      'white'
+    )
+  )
 })
