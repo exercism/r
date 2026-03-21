@@ -73,6 +73,7 @@ p_light <- vals |>
   theme(rect = element_rect(fill = "transparent"),
         panel.background = element_rect(fill = "transparent", colour = NA), # Transparent panel background
         plot.background = element_rect(fill = "transparent", colour = NA),  # Transparent plot background
+        strip.background = element_rect(fill = "black"),
         strip.text = element_text(
         size = 28,      # Adjust the font size as needed
         face = "bold"   # Set the font face to bold
