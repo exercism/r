@@ -1,0 +1,50 @@
+{%- import "generator_macros.j2" as macros with context -%}
+{{ macros.canonical_ref() }}
+
+{{ macros.header() }}
+library(lubridate)
+
+{% for case in cases -%}
+# {{ case["description"] }}
+    {% if case["description"].startswith("shared") -%}
+      {%- for subcase in case["cases"] -%}
+test_that("{{ subcase["description"] }}", {
+  input <- c{{ subcase["input"]["birthdates"] | list_to_tuple }}
+  expect_{{ subcase["expected"] | lower }}( shared_birthday(input) )
+})
+      {% endfor %}
+        
+    {% elif case["description"].startswith("random") %}
+    {# non-deterministic results unsuitable for templating #}
+
+test_that("random birthdates generate requested number of birthdates", {
+  expect_all_true( sapply(1:20, \(groupsize) length(random_birthdates(groupsize)) == groupsize) )
+})
+
+test_that("random birthdates are not in leap years", {
+  expect_all_false( leap_year(random_birthdates(100)) )
+})
+
+test_that("random birthdates appear random", {
+  birthdates <- random_birthdates(500)
+  months <- month(birthdates) |> unique()
+  days <- day(birthdates) |> unique()
+  expect_gte( length(months), 10 )
+  expect_gte( length(days), 28 )
+})
+
+    {% elif case["description"].startswith("estimated") %}
+      {% for subcase in case["cases"] %}
+test_that("{{ subcase["description"] }}", {
+  expected <- {{ subcase["expected"] / 100 }}
+  rtol <- ifelse(expected > 0.1 && expected < 0.9, 0.1, 0.01)
+  expect_equal( 
+    estimate_probability_of_shared_birthday({{ subcase["input"]["groupSize"] }}),
+    expected,
+    tolerance = rtol)
+})
+      {% endfor %}
+
+    {% endif %}
+
+{% endfor %}
