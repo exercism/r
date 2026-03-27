@@ -1,0 +1,7 @@
+{
+  "authors": [
+    "colinleach"
+  ],
+  "contributors": [],
+  "blurb": "Functions in R are first-class objects, which can be passed as arguments and included in return values."
+}

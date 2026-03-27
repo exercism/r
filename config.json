@@ -1128,6 +1128,11 @@
       "name": "Lists"
     },
     {
+      "uuid": "b966f36b-9359-441e-9646-d8590c74d60d",
+      "slug": "functions",
+      "name": "Functions"
+    },
+    {
       "uuid": "85db3d8c-dfec-424c-9682-caa8611db8f8",
       "slug": "set-operations",
       "name": "Set Operations"
