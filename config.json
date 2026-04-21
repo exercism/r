@@ -1086,6 +1086,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 8
+      },
+      {
+        "slug": "swift-scheduling",
+        "name": "Swift Scheduling",
+        "uuid": "c264736e-eb63-431a-8a0b-bdbf26ec75d0",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
       }
     ]
   },
