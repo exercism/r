@@ -1,0 +1,16 @@
+{%- import "generator_macros.j2" as macros with context -%}
+{{ macros.canonical_ref() }}
+
+{{ macros.header() }}
+
+{% for case in cases -%}
+test_that("{{ case["description"] }}", {
+  year <- {{ case["input"]["year"] }}
+  month <- {{ case["input"]["month"] }}
+  week <- "{{ case["input"]["week"] }}"
+  day_of_week <- "{{ case["input"]["dayofweek"] }}"
+  expected <- "{{ case["expected"] }}"
+  expect_equal({{ case["property"] }}(year, month, week, day_of_week), expected)
+})
+
+{% endfor %}
