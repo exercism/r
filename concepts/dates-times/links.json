@@ -1,0 +1,10 @@
+[
+  {
+    "url": "https://lubridate.tidyverse.org/index.html",
+    "description": "Tidyverse web site."
+  },
+  {
+    "url": "https://r4ds.hadley.nz/datetimes.html",
+    "description": "Dates and times chapter in R for Data Science."
+  }
+]
