@@ -1,0 +1,5 @@
+{
+  "authors": ["colinleach"],
+  "contributors": [],
+  "blurb": "Handling dates and times in software is a surprisingly complex challenge. The lubridate package in R supplies a variety of functions to cover many use cases."
+}
