@@ -15,7 +15,7 @@ _Does this mean that R makes data and time handling simple?_
 
 Sadly, no!
 
-Date and time functionality in Base R has a poor reputation and is now rarely used.
+Date and time functionality in Base R has a poor reputation and most is now rarely used.
 
 The [`lubridate`][web-lubridate] package is a big improvement, but be prepared for a large and complicated library, designed to handle a large and complicated range of problems.
 
@@ -35,12 +35,12 @@ A `date` is just a day, with no time information.
 Internally, dates are stored as the (signed) number of days since `1970-01-01`.
 
 ```R
-> today()
-[1] "2026-04-22"
-> typeof(today())  # just a number
-[1] "double"
-> class(today())  # the class understands how to interpret the raw number
-[1] "Date"
+today()
+#> [1] "2026-04-22"
+typeof(today())  # just a number
+#> [1] "double"
+class(today())  # the class understands how to interpret the raw number
+#> [1] "Date"
 ```
 
 A `datetime` combines date, time and timezone information.
@@ -48,13 +48,13 @@ A `datetime` combines date, time and timezone information.
 Internally, it is stored as the number of seconds since the beginning of 1970 in the UTC timezone.
 
 ```R
-> now()
-[1] "2026-04-22 15:37:11 MST"  # mid-afternoon in Arizona
-> typeof(now())
-[1] "double"  # again, just a number
+now()
+#> [1] "2026-04-22 15:37:11 MST"  # mid-afternoon in Arizona
+typeof(now())
+#> [1] "double"  # again, just a number
 # POSIX datetimes are built into most operating systems as standard
-> class(now())
-[1] "POSIXct" "POSIXt"
+class(now())
+#> [1] "POSIXct" "POSIXt"
 ```
 
 Perhaps surprisingly, R has no internal representation for time-only values.
@@ -85,29 +85,29 @@ However, data science is about working with whatever data you can find, and it i
 Base R has conversion functions which take a format string (defaulting to ISO 8601).
 
 ```R
-> as.Date("2026-04-22")
-[1] "2026-04-22"
-> as.Date("4/22/26", format = "%m/%d/%y")
-[1] "2026-04-22"
-> as.POSIXct("2026-04-22 15:30:09 MST")
-[1] "2026-04-22 15:30:09 MST"
+as.Date("2026-04-22")
+#> [1] "2026-04-22"
+as.Date("4/22/26", format = "%m/%d/%y")
+#> [1] "2026-04-22"
+as.POSIXct("2026-04-22 15:30:09 MST")
+#> [1] "2026-04-22 15:30:09 MST"
 ```
 
 The format strings resemble the decades-old `strptime()` function, included in _many_ languages.
-Programmers familiar with this syntax can optionally use the [`fast_strptime()`][ref-parse_dt] in lubridate.
+Programmers familiar with this syntax can optionally use the [`fast_strptime()`][ref-parse_dt] function in lubridate.
 
 More helpfully, `lubridate` provides a wide range of [helper functions][ref-parsing], with names that represent the order of fields.
 Once the functions know which values to look for, and in which order, parsing is impressively flexible.
 
 ```R
-> mdy("4/22/26")
-[1] "2026-04-22"
-> mdy("April 22nd 26")
-[1] "2026-04-22"
-> mdy("Wednesday, April 22nd 2026")
-[1] "2026-04-22"
-> mdy_hm("Wednesday, April 22nd 2026, 4:14 pm")
-[1] "2026-04-22 16:14:00 UTC"  # defaults to your OS timezone
+mdy("4/22/26")
+#> [1] "2026-04-22"
+mdy("April 22nd 26")
+#> [1] "2026-04-22"
+mdy("Wednesday, April 22nd 2026")
+#> [1] "2026-04-22"
+mdy_hm("Wednesday, April 22nd 2026, 4:14 pm")
+#> [1] "2026-04-22 16:14:00 UTC"  # defaults to your OS timezone
 ```
 
 These helper functions are special cases of the [`parse_date_time()`][ref-parse_dt] function, which takes a format string such as `"mdy_hm"` as its second argument.
@@ -129,8 +129,8 @@ make_datetime(
   tz = "UTC"
 )
 
-> make_datetime(2026, 4, 22, 17)
-[1] "2026-04-22 17:00:00 UTC"
+make_datetime(2026, 4, 22, 17)
+#> [1] "2026-04-22 17:00:00 UTC"
 ```
 
 Naturally, `make_date()` takes only year, month and day arguments.
@@ -148,12 +148,12 @@ A simple approach is to use [`as.character()`][ref-ascharacter] from Base R, whi
 There is also a [`format_ISO8601()`][ref-iso8601] function for datetimes, which has options for rounding to a desired precision.
 
 ```R
-> today() |> as.character()  # a date
-[1] "2026-04-23"
-> now() |> as.character()  # a datetime
-[1] "2026-04-23 09:07:09.779319"
-> now() |> format_ISO8601() # defaults to nearest second
-[1] "2026-04-23T09:07:38"
+today() |> as.character()  # a date
+#> [1] "2026-04-23"
+now() |> as.character()  # a datetime
+#> [1] "2026-04-23 09:07:09.779319"
+now() |> format_ISO8601() # defaults to nearest second
+#> [1] "2026-04-23T09:07:38"
 ```
 
 Few non-progammers want to see ISO 8601 output, so handling culture-specific date/time formats is essential.
@@ -161,11 +161,11 @@ Few non-progammers want to see ISO 8601 output, so handling culture-specific dat
 Base R provides the [`format()`][ref-format] function, which uses format strings similar to the venerable `strftime()` functions included in many other languages.
 
 ```R
-> format(today(), "%A, %d %B %Y")
-[1] "Thursday, 23 April 2026"
+format(today(), "%A, %d %B %Y")
+#> [1] "Thursday, 23 April 2026"
 ```
 
-Lubridate provides a more human-friendly alternative with the [`stamp()`][ref-stamp] function, and the narrower `stamp_date()` and `stamp_time()`.
+Lubridate aims to provide a more human-friendly alternative with the [`stamp()`][ref-stamp] function, and the narrower `stamp_date()` and `stamp_time()`.
 
 These take a template string which is an example of the desired output, and create a custom function to generate that format.
 
@@ -179,18 +179,18 @@ Lubridate provides [many functions][ref-set-get] to get or set elements of a dat
 All such functions can be used to get a value, and most can also be used to set the value.
 
 ```R
-> dt <- now()
-> dt
-[1] "2026-04-23 15:47:11 MST"
+dt <- now()
+dt
+#> [1] "2026-04-23 15:47:11 MST"
 
 # get
-> month(dt)
-[1] 4
+month(dt)
+#> [1] 4
 
 # set
-> month(dt) <- 11
-> dt
-[1] "2026-11-23 15:47:11 MST"
+month(dt) <- 11
+dt
+#> [1] "2026-11-23 15:47:11 MST"
 ```
 
 For `wday()` (day of week) and `month()`, the default is integer output but:
@@ -199,16 +199,16 @@ For `wday()` (day of week) and `month()`, the default is integer output but:
 - Also setting `abbr = FALSE` returns the full name.
 
 ```R
-> d <- today()
-> d
-[1] "2026-04-23"
-> wday(d)
-[1] 5
-> wday(d, label = TRUE)
-[1] Thu
+d <- today()
+d
+#> [1] "2026-04-23"
+wday(d)
+#> [1] 5
+wday(d, label = TRUE)
+#> [1] Thu
 Levels: Sun < Mon < Tue < Wed < Thu < Fri < Sat
-> wday(d, label = TRUE, abbr = FALSE)
-[1] Thursday
+wday(d, label = TRUE, abbr = FALSE)
+#> [1] Thursday
 Levels: Sunday < Monday < Tuesday < Wednesday < Thursday < Friday < Saturday
 ```
 
@@ -254,19 +254,19 @@ Irregularities such as daylight saving time (DST) are largely ignored.
 All periods are the pluralized name of a unit: `years`, `weeks`, etc.
 
 ```R
-> d <- today()
-> d
-[1] "2026-04-25"
+d <- today()
+d
+#> [1] "2026-04-25"
 
-> d + weeks(2)
-[1] "2026-05-09"
+d + weeks(2)
+#> [1] "2026-05-09"
 
 # dates are coerced to datetimes at midnight if necessary
-> d - hours(20)
-[1] "2026-04-24 04:00:00 UTC"
+d - hours(20)
+#> [1] "2026-04-24 04:00:00 UTC"
 
 hours(3)
-[1] "3H 0M 0S"
+#> [1] "3H 0M 0S"
 ```
 
 ### Durations
@@ -277,7 +277,7 @@ All durations add a `d` prefix to the corresponding period: `dyears`, `dweeks`, 
 
 ```R
 dhours(3)
-[1] "10800s (~3 hours)"
+#> [1] "10800s (~3 hours)"
 ```
 
 ### Intervals
@@ -285,36 +285,37 @@ dhours(3)
 An `interval` is a combination of a start and end time, created either with the [`interval()`][ref-interval] function or the `%--%` infix operator.
 
 ```R
-> dt1 <- now()
-> dt2 <- now() + hours(1)
+# the next 2 lines were run about 33s apart, so now() is different
+dt1 <- now()
+dt2 <- now() + hours(1)
 
 # interval(0 function)
-> ivl <- interval(dt1, dt2)
-> ivl
-[1] 2026-04-24 16:24:54 MST--2026-04-24 17:25:27 MST
-> class(ivl)
-[1] "Interval"
+ivl <- interval(dt1, dt2)
+ivl
+#> [1] 2026-04-24 16:24:54 MST--2026-04-24 17:25:27 MST
+class(ivl)
+#> [1] "Interval"
 attr(,"package")
-[1] "lubridate"
+#> [1] "lubridate"
 
 # infix operator
 iv2 <- dt1 %--% dt2
-> iv2 == iv1
-[1] TRUE
+iv2 == iv1
+#> [1] TRUE
 
 # conversions
-> as.period(ivl)
-[1] "1H 0M 32.738214969635S"
-> as.duration(ivl)
-[1] "3632.73821496964s (~1.01 hours)"
+as.period(ivl)
+#> [1] "1H 0M 32.738214969635S"
+as.duration(ivl)
+#> [1] "3632.73821496964s (~1.01 hours)"
 
 # components
-> int_start(ivl)
-[1] "2026-04-24 16:24:54 MST"
+int_start(ivl)
+#> [1] "2026-04-24 16:24:54 MST"
 
 # is datetime within the interval?
-> (now() - minutes(20)) %within% ivl
-[1] TRUE
+(now() - minutes(20)) %within% ivl
+#> [1] TRUE
 ```
 
 ## Timezones
@@ -333,35 +334,41 @@ A few general points about timezones:
 
 ```R
 # timezone defaults to UTC
-> local <- ymd_hm("2026-04-25 10:32")
-> local
-[1] "2026-04-25 10:32:00 UTC"
+local <- ymd_hm("2026-04-25 10:32")
+local
+#> [1] "2026-04-25 10:32:00 UTC"
 
 # timezone can be specified
-> AZ <- ymd_hm("2026-04-25 10:32", tz = "America/Phoenix")
-> AZ
-[1] "2026-04-25 10:32:00 MST"
+AZ <- ymd_hm("2026-04-25 10:32", tz = "America/Phoenix")
+AZ
+#> [1] "2026-04-25 10:32:00 MST"
 
 # same clocktime, different tz
-> local - AZ
+local - AZ
 Time difference of -7 hours
 ```
 
-Arithmetic with durations is probably more reliable then with periods, though both will make some effort to handle timezones correctly.
+Timezone-related arithmetic with durations is more reliable then with periods.
 
 ```R
 dt <- make_datetime(2020, 10, 31, 12, tz = "Europe/Helsinki")
 
 # EET is 2h ahead of UTC
-> dt
-[1] "2020-10-31 12:00:00 EET"
+dt
+#> [1] "2020-10-31 12:00:00 EET"
 
 # A week earler, EEST (summer time) is 3h ahead of UTC
-> dt - days(7)
-[1] "2020-10-24 12:00:00 EEST"
-> dt - ddays(7)
-[1] "2020-10-24 13:00:00 EEST"
+
+# a 7-day period => midday
+dt - days(7)
+#> [1] "2020-10-24 12:00:00 EEST"
+
+# a 7-day duration => 1 pm
+dt - ddays(7)
+#> [1] "2020-10-24 13:00:00 EEST"
 ```
+
+With both the period calculation and the duration calculation, lubridate recognizes the switch from Eastern European Time to Eastern European Summer Time, but only the duration adjusts for the 1-hour time change.
 
 ## Conclusion
 
