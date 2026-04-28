@@ -96,10 +96,10 @@ var_f <- function(x, y, ...) {
 }
 
 var_f(2, 3, "opt1", "opt2")
-[[1]]
+#> [[1]]
 #> [1] "opt1"
 
-[[2]]
+#> [[2]]
 #> [1] "opt2"
 ```
 
@@ -150,9 +150,9 @@ f_var(x, na.rm = TRUE)
 #> [1] 9
 ```
 
-This technique is used extensively by Tidyverse libraries such as `stringr`.
-Many of the `stringr` functions are a user-friendly wrapper around low-level functions from `stringi` and base R.
-Extra arguments supplied to the `str_*()` functions are simply passed through to those low-level functions.
+This technique is used extensively by Tidyverse libraries such as [`stringr`][ref-stringr].
+Many of the `stringr` functions are a user-friendly wrapper around low-level functions from [`stringi`][ref-stringi] and base R.
+Extra arguments supplied to the `str_*()` functions are simply passed through to those lower-level functions.
 
 ## Anonymous Functions
 
@@ -224,3 +224,5 @@ Vectorization or higher-order functions can help to protect you from this type o
 [concept-funcprog]: https://exercism.org/tracks/r/concepts/functional-programming
 [wiki-closure]: https://en.wikipedia.org/wiki/Closure_(computer_programming)
 [ref-sapply]: https://www.rdocumentation.org/packages/base/versions/3.3.0/topics/lapply
+[ref-stringr]: https://stringr.tidyverse.org/index.html
+[ref-stringi]: https://stringi.gagolewski.com/
