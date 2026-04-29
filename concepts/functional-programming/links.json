@@ -1,0 +1,10 @@
+[
+  {
+    "url": "https://adv-r.hadley.nz/fp.html",
+    "description": "Functional Programming section in Advanced R."
+  },
+  {
+    "url": "https://purrr.tidyverse.org/index.html",
+    "description": "The purrr library documentation."
+  }
+]
