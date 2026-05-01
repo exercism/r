@@ -19,11 +19,11 @@ jobs:
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
 
-      - uses: r-lib/actions/setup-r@6f6e5bc62fba3a704f74e7ad7ef7676c5c6a2590
+      - uses: r-lib/actions/setup-r@a51a8012b0aab7c32ef9d19bf54da93f3254335e
         with:
           r-version: 4.3.1
 
-      - uses: r-lib/actions/setup-r-dependencies@6f6e5bc62fba3a704f74e7ad7ef7676c5c6a2590
+      - uses: r-lib/actions/setup-r-dependencies@a51a8012b0aab7c32ef9d19bf54da93f3254335e
         with:
           cache-version: 1
           packages: |
