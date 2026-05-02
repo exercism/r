@@ -1175,6 +1175,11 @@
       "uuid": "f9bc1f9b-aa22-48c3-bc1d-ad2ea75a4d36",
       "slug": "errors",
       "name": "Errors"
+    },
+    {
+      "uuid": "c74eb22b-89f8-4a09-9046-f5c441b2588e",
+      "slug": "functional-programming",
+      "name": "Functional Programming"
     }
   ],
   "key_features": [
