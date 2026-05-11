@@ -26,6 +26,8 @@ In brief:
 - Any remaining arguments can be included in the function call.
 - In R, we must pipe to a function _call_, not just a _name_, so parentheses are always required (_this differs from some other languages_).
 
+Some programmers find it helpful to pronounce the pipe as "then" when reviewing code: do step 1 THEN do step 2...
+
 The example below illustrates the syntax.
 
 ```R
@@ -165,6 +167,12 @@ Resources to help navigate the library include:
 - A [reference page][ref-purrr-funcs] for all functions.
 - A PDF-format [cheat sheet][cheat-purrr].
 - A guide to converting from [Base R][web-from-R].
+
+~~~~exercism/note
+The `purrr` library operates almost entirely on 1-dimensional data: vectors and lists.
+
+We will see in a later concept that the `dplyr` library provides equivalent functionality for 2-D dataframes.
+~~~~
 
 ### The many map functions
 
