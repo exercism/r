@@ -220,11 +220,16 @@ It is not clear how much these now feature in end-user code, but such techniques
 LinAlg in R is still taught in some college courses, such as this [econometrics class][web-econ407].
 A good guide to the mathematics (not programming) is on [3Blue1Brown][3blue1brown].
 
+~~~~exercism/advanced
 The most complete discussion of linear algebra within Exercism is in the Julia syllabus (same authors as the R syllabus).
 We believe that Julia (or Python in contexts where the `numpy.linalg` module is available) would now be a more appropriate language for serious linear algebra work than R.
 
 - [Linear Algebra Basics][concept-linalg-basics] in Julia
 - [Linear Equation Solving][concept-lin-eq-solving] in Julia
+
+[concept-linalg-basics]: https://exercism.org/tracks/julia/concepts/linear-algebra-basics
+[concept-lin-eq-solving]: https://exercism.org/tracks/julia/concepts/linear-equation-solving
+~~~~
 
 ### Diagonals
 
@@ -254,7 +259,8 @@ diag(A)
 #> [1] 10  3  4
 ```
 
-With a single integer `k`, `diag(k)` creates a `k × k` identity matrix.
+With a single integer `k`, `diag(k)` creates a `k × k` identity matrix: _perhaps not what you would have guessed_.
+
 Even serious R textbooks tend to add comments like _"Go figure"_ at this point.
 
 ```R
@@ -336,6 +342,7 @@ m ^ 2
 ```
 
 Explaining the various other types of vector and matrix multiplication is beyond our scope.
+
 In very brief summary:
 
 - `%*%` is the infix operator form of [`matmult()`][ref-matmult], which gives the [matrix product][wiki-matrix-product].
@@ -363,8 +370,6 @@ In very brief summary:
 [concept-vector-filtering]: https://exercism.org/tracks/r/concepts/vector-filtering
 [concept-dataframes]: https://exercism.org/tracks/r/concepts/dataframes
 [3blue1brown]: https://www.3blue1brown.com/topics/linear-algebra
-[concept-linalg-basics]: https://exercism.org/tracks/julia/concepts/linear-algebra-basics
-[concept-lin-eq-solving]: https://exercism.org/tracks/julia/concepts/linear-equation-solving
 [wiki-matrix-product]: https://en.wikipedia.org/wiki/Matrix_multiplication
 [wiki-outer-product]: https://en.wikipedia.org/wiki/Outer_product
 [wiki-cross-product]: https://en.wikipedia.org/wiki/Cross_product
