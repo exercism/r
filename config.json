@@ -1243,6 +1243,11 @@
       "uuid": "5362cbb2-b9a7-48b4-a09b-1d68b6a1a6a4",
       "slug": "matrices-arrays",
       "name": "Matrices and Arrays"
+    },
+    {
+      "uuid": "1412e5dc-87fd-4c39-8147-379eb99dfda4",
+      "slug": "dataframes",
+      "name": "Dataframes"
     }
   ],
   "key_features": [

@@ -1,0 +1,14 @@
+[
+    {
+      "url": "https://bioinformatics.ccr.cancer.gov/docs/rintro/Lesson_3/",
+      "description": "Introduction to dataframes in bioinformatics."
+    },
+    {
+      "url": "https://tibble.tidyverse.org/",
+      "description": "The tibble library, a modern version of dataframes."
+    },
+    {
+      "url": "https://bioinformatics.ccr.cancer.gov/docs/rintro/Lesson_3/",
+      "description": "The dplyr library, which makes dataframe manipulation much easier."
+    }
+  ]
