@@ -32,10 +32,11 @@ matrix(nrow=2, ncol=3)
 #> [2,]   NA   NA   NA
 ```
 
-Note that the data is stored in column-major order (i.e. down then across).
+Note that the data is stored in [column-major order][wiki-column-major] (i.e. down then across).
+This is the same as Fortran, Matlab and Julia, but differs from C/C++ and NumPy.
 
 Find the dimensions of a matrix with [`dim()`][ref-dim] for both rows and columns, [`nrow()`][ref-nrow] or [`ncol()`][ref-nrow] to get a single dimension.
-Using [`length()`][ref-length] will just return the length of the underlying vector (6 in the example above).
+Using [`length()`][ref-length] will just return the length of the underlying vector: the total number of elements (6 in the example above).
 
 Some other functions create matrix output, for example [`str_split_fixed()`][ref-str_split_fixed].
 
@@ -131,6 +132,20 @@ rbind(m, m2)
 #> [1,]    1    3    5
 #> [2,]    2    4    6
 #> [3,]    7    8    9
+```
+
+Deleting a row or column uses negative indexing, as for vectors.
+
+```R
+m
+#>      [,1] [,2] [,3]
+#> [1,]    1    3    5
+#> [2,]    2    4    6
+
+m[, -2]
+     #> [,1] [,2]
+#> [1,]    1    5
+#> [2,]    2    6
 ```
 
 ## Filtering and functions
@@ -233,7 +248,7 @@ We believe that Julia (or Python in contexts where the `numpy.linalg` module is 
 
 ### Diagonals
 
-The main diagonal of a _square_ matrix runs from top left (`A[1,1]`) to bottom right.
+The main diagonal of a _square_ (`N x N)`) matrix `A` runs from top left (`A[1,1]`) to bottom right (`A[N,N]`).
 
 The [`diag()`][ref-diag] function behaves differently, depending on the argument passed to it.
 
@@ -247,7 +262,7 @@ diag(1:3)
 #> [3,]    0    0    3
 ```
 
-With a matrix `A`, `diag(A)` returns the elements on the main diagonal as a vector.
+With a square matrix `A`, `diag(A)` returns the elements on the main diagonal as a vector.
 
 ```R
 A
@@ -341,9 +356,7 @@ m ^ 2
 #> [2,]    4   16   36
 ```
 
-Explaining the various other types of vector and matrix multiplication is beyond our scope.
-
-In very brief summary:
+Explaining the various other types of vector and matrix multiplication is beyond our scope, however in very brief summary:
 
 - `%*%` is the infix operator form of [`matmult()`][ref-matmult], which gives the [matrix product][wiki-matrix-product].
 - `%o%` is the infix operator form of [`outer()`][ref-outer], which gives the [outer product][wiki-outer-product].
@@ -373,3 +386,4 @@ In very brief summary:
 [wiki-matrix-product]: https://en.wikipedia.org/wiki/Matrix_multiplication
 [wiki-outer-product]: https://en.wikipedia.org/wiki/Outer_product
 [wiki-cross-product]: https://en.wikipedia.org/wiki/Cross_product
+[wiki-column-major]: https://en.wikipedia.org/wiki/Row-_and_column-major_order
