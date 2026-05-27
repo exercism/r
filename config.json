@@ -1175,6 +1175,11 @@
       "uuid": "f9bc1f9b-aa22-48c3-bc1d-ad2ea75a4d36",
       "slug": "errors",
       "name": "Errors"
+    },
+    {
+      "uuid": "5362cbb2-b9a7-48b4-a09b-1d68b6a1a6a4",
+      "slug": "matrices-arrays",
+      "name": "Matrices and Arrays"
     }
   ],
   "key_features": [

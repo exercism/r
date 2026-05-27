@@ -10,3 +10,5 @@ bin/__pycache__/
 .venv/
 
 .problem-specifications
+
+.vscode/
