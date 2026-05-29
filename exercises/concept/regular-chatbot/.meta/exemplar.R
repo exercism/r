@@ -27,5 +27,5 @@ nice_to_meet_you <- function(str) {
 
 get_URL <- function(msg) {
   m <- str_match_all(msg, url)[[1]]
-  m[,2]
+  m[, 2]
 }
