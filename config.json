@@ -1132,6 +1132,11 @@
       "name": "Strings"
     },
     {
+      "uuid": "9cdafde9-01ab-4414-90e7-dd09baa41b85",
+      "slug": "regular-expressions",
+      "name": "Regular Expressions"
+    },
+    {
       "uuid": "18919f40-a3fe-45f3-b181-84ec82bfa785",
       "slug": "vector-filtering",
       "name": "Vector Filtering"

@@ -1,0 +1,7 @@
+{
+  "authors": [
+    "colinleach"
+  ],
+  "contributors": [],
+  "blurb": "Regular expressions are available in Base R, but much easier to work with using the string library."
+}
