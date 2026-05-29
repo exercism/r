@@ -199,6 +199,8 @@ Matrices do not fit well with the Tidyverse ecosystem, despite being part of Bas
 In quick summary: treat matrices like vectors with 2 indices, in the order `[rows, cols]`.
 Leave either index blank to get the whole row/column.
 
+When getting a single row `r` with `m[r,]` or a single column `c` with `m[,c]`, the value returned is flattened to a vector by default.
+
 ```R
 > amounts <- recipe |> str_match("(?<wt>\\d+g) .* (?<vol>\\d+ml)")
 
@@ -232,7 +234,7 @@ With the footnote:
 
 > Mostly because we never discuss matrices in this book!
 
-One of the authors of the book also wrote the `stringr` library and is implicitly criticizing his own work.
+One of the authors of the book also wrote the `stringr` library, and is implicitly criticizing his own work.
 
 It will be interesting to see how the implementation of this function evolves in future releases.
 
