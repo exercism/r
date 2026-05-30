@@ -165,12 +165,44 @@ format(today(), "%A, %d %B %Y")
 #> [1] "Thursday, 23 April 2026"
 ```
 
+That Base R approach is ugly but reliable.
+These are some of the more common codes:
+
+Code | Result
+-- | --
+%d | Day number of month (5, 17, 28, etc.)
+%a | Abbreviated weekday (Mon, Tue, Wed, etc.)
+%A | Full weekday (Monday, Tuesday, etc.)
+%w | Weekday number (0-6, Sunday is 0)
+%u | Weekday number (1-7, Monday is 1)
+%b | Abbreviated month (Jan, Feb, etc.)
+%B | Full month (January, February, etc.)
+%y | 2-digit year (e.g. 89)
+%Y | 4-digit year (e.g. 1989)
+%h | hours (24-hr clock)
+%m | minutes
+%s | seconds
+%z | offset from UTC
+%Z | Time zone (character)
+
 Lubridate aims to provide a more human-friendly alternative with the [`stamp()`][ref-stamp] function, and the narrower `stamp_date()` and `stamp_time()`.
 
 These take a template string which is an example of the desired output, and create a custom function to generate that format.
 
 Lubridate attempts to guess the format, but often runs into ambiguities and produces the wrong result.
 Be prepared to provide format strings (such as `"dmy"`) to disambiguate.
+
+For Exercism, it can also be useful to specify `locale = "C"`, to bypass your system locale and work in English (as expected by the tests).
+Locales are complicated!
+
+```R
+sf <- stamp("Saturday, June 27, 2026 at 14:45", locale = "C")
+#> Multiple formats matched: "%A, %B %d, %Y at %H:%M"(1), "Saturday, %Om %d, %Y at %H:%M"(1), "Saturday, %B %d, %Y at %H:%M"(1), "%A, %Om %d, %Y at %H:%M"(0)
+#> Using: "%A, %B %d, %Y at %H:%M"
+
+sf(make_datetime(2023, 3, 29, 15, 0, 0))
+#> [1] "Wednesday, March 29, 2023 at 15:00"
+```
 
 ### Setting or extracting components
 
@@ -372,7 +404,7 @@ With both the period calculation and the duration calculation, lubridate recogni
 
 ## Conclusion
 
-Working with dates and datetimes is much easier with lubridate than with Base R.
+Working with dates and datetimes is usually much easier with lubridate than with Base R.
 
 This Concept has tried to give an overview, but inevitably misses out very many details.
 
