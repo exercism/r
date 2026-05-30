@@ -174,7 +174,7 @@ fruit |>
 [1] "bananana"      "cococonut"     "cucucumber"    "jujujube"      "papapaya"      "salalal berry"
 ```
 
-Gather matches for later processing using the [`str_match()`][ref-str_match] function (or `str_match_all()` if you are prepared to deal with the rather confusing results).
+Gather matches for later processing using the [`str_match()`][ref-str_match] function for just the first match, or `str_match_all()` for all matches.
 
 Capture groups tend to produce complicated output in any language.
 The R approach (_which is also vectorized as an added challenge_) is to generate a matrix from `str_match()`, with one row per input string, column 1 containing the full matched string, remaining columns containing the various capture groups.
@@ -199,7 +199,7 @@ Matrices do not fit well with the Tidyverse ecosystem, despite being part of Bas
 In quick summary: treat matrices like vectors with 2 indices, in the order `[rows, cols]`.
 Leave either index blank to get the whole row/column.
 
-When getting a single row `r` with `m[r,]` or a single column `c` with `m[,c]`, the value returned is flattened to a vector by default.
+When getting a single row `r` with `m[r,]` or a single column `c` with `m[, c]`, the value returned is flattened to a vector by default.
 
 ```R
 > amounts <- recipe |> str_match("(?<wt>\\d+g) .* (?<vol>\\d+ml)")
@@ -215,8 +215,39 @@ amt1["wt"] |> unname()
 [1] "25g"
 ```
 
+Inevitably, [`str_match_all()`][ref-str_match] produces output with even more structure:
+
+- The result is a list, with one element per input string.
+- If there is only one input string, unlist the output with `[[1]]` indexing as described in the [Lists Concept][concept-lists].
+- Each element is a matrix, with columns as for `match()`.
+- Each row in the matrix is a successful capture.
+
+```R
+mix <- "Mix 200g of sugar, 180g of flour and 150g of butter"
+
+# raw output
+> str_match_all(mix, "(\\d+)g")
+[[1]]
+     [,1]   [,2] 
+[1,] "200g" "200"
+[2,] "180g" "180"
+[3,] "150g" "150"
+
+# we just want the first list element
+> str_match_all(mix, "(\\d+)g")[[1]]
+     [,1]   [,2] 
+[1,] "200g" "200"
+[2,] "180g" "180"
+[3,] "150g" "150"
+
+# captures are in column 2, so get that as a vector
+> str_match_all(mix, "(\\d+)g")[[1]][,2]
+[1] "200" "180" "150"
+```
+
 Of course, matches can fail.
-The result will then be the special value `NA`, so be ready to test for this.
+The result will then be the special value `NA`.
+Be ready to test for this, as described in the [Nothingness Concept][concept-nothingness].
 
 ```R
 # failed match
@@ -243,6 +274,8 @@ It will be interesting to see how the implementation of this function evolves in
 
 [concept-strings]: https://exercism.org/tracks/R/concepts/strings
 [concept-matrices-arrays]: https://exercism.org/tracks/r/concepts/matrices-arrays
+[concept-lists]: https://exercism.org/tracks/R/concepts/lists
+[concept-nothingness]: https://exercism.org/tracks/R/concepts/nothingness
 [web-stringr]: https://stringr.tidyverse.org/index.html
 [ref-regex]: https://stringr.tidyverse.org/reference/modifiers.html
 [ref-str_detect]: https://stringr.tidyverse.org/reference/str_detect.html
