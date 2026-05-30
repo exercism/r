@@ -188,6 +188,18 @@
           "vector-filtering"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "booking-up-for-beauty",
+        "name": "Booking Up For Beauty",
+        "uuid": "68181b6e-a734-42d6-940a-06b6cf68c78b",
+        "concepts": [
+          "dates-times"
+        ],
+        "prerequisites": [
+          "functional-programming"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
