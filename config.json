@@ -188,6 +188,18 @@
           "vector-filtering"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "factory-sensors",
+        "name": "Factory Sensors",
+        "uuid": "61d4e69f-b279-4abf-b2a4-23e8093cbd4a",
+        "concepts": [
+          "errors"
+        ],
+        "prerequisites": [
+          "nothingness"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [

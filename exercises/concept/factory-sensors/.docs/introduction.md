@@ -1,0 +1,55 @@
+# Introduction
+
+As explored in the [`Nothingness`][concept-nothingness] concept, R has various ways to represent data which is absent (`NULL`), unknown (`NA`) or mathematically invalid (`NaN`, `Inf`).
+In general, R will try to use these to flag problems in-place, and continue without raising an exception.
+
+## `stop()`
+
+Some problems are too fundamental to let the program continue. 
+In this case, use `stop(msg)` to immediately halt the program with an `Error` and print `msg`.
+
+```R
+f <- function() {
+    stop("I have a problem")
+}
+f()
+#> Error in f() : I have a problem
+```
+
+## `stopifnot()`
+
+Similar to an `assert` in other languages, this is a convenient wrapper for `stop()`. 
+The parameters are an arbitrary number of comma-separated boolean conditions, and the program will only continue if they are all `TRUE`.
+
+```R
+stopifnot(1 < 2) # continues OK
+stopifnot(1 < 2, 1 == 2)
+#> Error: 1 == 2 is not TRUE
+```
+
+## `warning()` and `message()`
+
+These are reponses to non-fatal conditions, for example:
+
+- To warn of a problem that the program could at least partly recover from.
+- To inform the user of progress in a long-running program.
+
+```R
+w <- function() {
+  warning("something strange happened")
+  -1
+}
+
+w()
+#> [1] -1
+#> Warning message:
+#> In w() : something strange happened
+
+# if warnings are not wanted
+suppressWarnings(w())
+#> [1] -1
+```
+
+The `suppressWarnings()` function can occasionally be useful within Exercism, to avoid confusing the test runner with unwanted output.
+
+[concept-nothingness]: https://exercism.org/tracks/r/concepts/nothingness
