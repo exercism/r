@@ -116,6 +116,8 @@ make_datetime(
   sec = 0,
   tz = "UTC"
 )
+#> [1] "1970-01-01 UTC"
+
 
 make_datetime(2026, 4, 22, 17)
 #> [1] "2026-04-22 17:00:00 UTC"
