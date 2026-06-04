@@ -3,6 +3,7 @@
 ## 1. Generate a random planet
 
 - This looks like [sampling][ref-sample] from an input vector.
+- Duplicates are possible, so sample with replacement.
 
 ## 2. Randomize a fleet of starships
 
