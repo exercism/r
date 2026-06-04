@@ -4,19 +4,19 @@
 
 - This looks like [sampling][ref-sample] from an input vector.
 
-## 2. Generate a random starship registry number
+## 2. Randomize a fleet of starships
+
+- The Introduction discusses shuffling.
+
+## 3. Generate a random starship registry number
 
 - The numeric part is sampling from a range.
 - There are several ways to construct the string, including [`sprintf()`][ref-sprintf] and [`str_glue()`][ref-str_glue].
 
-## 3. Generate a random stardate
+## 4. Generate a random stardate
 
 - We want a floating-point value with [uniform distribution][ref-runif] within lower and upper limits.
-
-## 4. Pick some random starships from a list
-
-- More sampling from an input vector.
-- Another approach is to shuffle the starships, then return the number needed from the start of the resulting vector.
+- Nuances about inclusive or exclusive limits can be ignored for this task.
 
 [ref-sample]: https://www.rdocumentation.org/packages/base/versions/3.3.0/topics/sample
 [ref-sprintf]: https://www.rdocumentation.org/packages/base/versions/3.3.0/topics/sprintf
