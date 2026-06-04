@@ -65,7 +65,7 @@ Perhaps the most frequent date/time needs are:
 There are many ways to write dates and times, which tend to be culturally-specific.
 All-number dates such as "7/6/23" are ambiguous, confusing, and have led to many expensive mistakes in multinational organizations (_the author says this from bitter personal experience_).
 
-The international standard is defined in [`ISO 8601`][wiki-ISO8601], with two main advantages:
+The international standard (y-m-d) is defined in [`ISO 8601`][wiki-ISO8601], with two main advantages:
 
 - Parsing is quick and unambiguous.
 - Sorting is easy, as the datetime can be treated as normal text and sorted alphabetically.
@@ -226,10 +226,10 @@ wday(d)
 #> [1] 5
 wday(d, label = TRUE)
 #> [1] Thu
-Levels: Sun < Mon < Tue < Wed < Thu < Fri < Sat
+#> Levels: Sun < Mon < Tue < Wed < Thu < Fri < Sat
 wday(d, label = TRUE, abbr = FALSE)
 #> [1] Thursday
-Levels: Sunday < Monday < Tuesday < Wednesday < Thursday < Friday < Saturday
+#> Levels: Sunday < Monday < Tuesday < Wednesday < Thursday < Friday < Saturday
 ```
 
 The labels are `categorical variables`, which will be the subject of another Concept.
@@ -258,7 +258,7 @@ Span types can be interrogated with `is.period()`, etc.
 
 ### Periods
 
-A `period`, such as `hours(3)`, just changes the clock time by adding 3 hours.
+A `period`, such as `hours(3)`, can be used to increment a clock time by 3 hours.
 
 Irregularities such as daylight saving time (DST) are largely ignored.
 
@@ -282,7 +282,7 @@ hours(3)
 
 ### Durations
 
-A `duration`, such as `dhours(3)`, advances physical time by 3 hours, respecting irregularities such as DST that cause clock time to deviate from physical time.
+A `duration`, such as `dhours(3)`, increments physical time by 3 hours, respecting irregularities such as DST that cause clock time to deviate from physical time.
 
 All durations add a `d` prefix to the corresponding period: `dyears`, `dweeks`, etc.
 
@@ -338,7 +338,7 @@ AZ
 
 # same clocktime, different tz
 local - AZ
-Time difference of -7 hours
+#> Time difference of -7 hours
 ```
 
 Timezone-related arithmetic with durations is more reliable then with periods.
