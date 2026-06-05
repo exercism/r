@@ -21,7 +21,7 @@
 - The input is in the same format as Task 1.
 - What day is the original appointment for?
   Task 4 can help with this.
-- How many days do you need to add to get to a Friday (not today, if the input is a Friday appointment).?
+- How many days do you need to add to get to a Friday (not today, if the input is a Friday appointment)?
 - **Warning**: the old `ifelse()` function from Base R does not play nicely with datetimes.
   If you need this sort of logic, the [`if_else()`][ref-if_else] from the dplyr library is a more reliable alternative (as described in the [`Switch`][concept-switch] Concept).
 

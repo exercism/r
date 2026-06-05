@@ -239,6 +239,20 @@ Values are restricted to the listed `Levels`, which also show sort order.
 
 The week starts on Sunday by default, but this can be changed with the `week_start` argument (use `1` for Monday).
 
+```R
+dt <- make_datetime(2026, 4, 23)
+
+# default behavior
+wday(dt)
+#> [1] 5
+wday(dt, label = T)
+#> [1] Thu
+
+# set week_start to Monday
+wday(dt, week_start = 1)
+#> [1] 4
+```
+
 A few utility functions return `TRUE`/`FALSE` values, such as `leap_year()` and `dst()` (is Daylight Saving Time active?).
 
 Months vary in length, so `days_in_month()` gives the integer value.
