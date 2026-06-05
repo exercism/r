@@ -19,7 +19,7 @@ test_that("1. all generated planets are valid, with duplicates needed", {
   expect_all_true(random_planet_class(repeats) %in% planetary_classes)
 })
 
-test_that("1. most valid planets classes are generated", {
+test_that("1. planet classes are generated uniformly", {
   expect_all_true(planetary_classes %in% random_planet_class(repeats))
 })
 
