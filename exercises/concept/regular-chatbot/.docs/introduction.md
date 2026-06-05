@@ -184,6 +184,7 @@ recipe |> str_match("(?<wt>\\d+g) .* (?<vol>\\d+ml)")
 [1,] "25g sugar in 200ml" "25g" "200ml"
 ```
 
+~~~~exercism/note
 We have not said much about matrices in this syllabus, though there is a [concept document][concept-matrices-arrays] you can access.
 Matrices do not fit well with the Tidyverse ecosystem, despite being part of Base R for a long time.
 
@@ -205,6 +206,7 @@ When getting a single row `r` with `m[r,]` or a single column `c` with `m[,c]`, 
 amt1["wt"] |> unname()
 [1] "25g"
 ```
+~~~~
 
 Inevitably, `str_match_all()` produces output with even more structure:
 
