@@ -190,6 +190,18 @@
         "status": "wip"
       },
       {
+        "slug": "booking-up-for-beauty",
+        "name": "Booking Up For Beauty",
+        "uuid": "68181b6e-a734-42d6-940a-06b6cf68c78b",
+        "concepts": [
+          "dates-times"
+        ],
+        "prerequisites": [
+          "functional-programming"
+        ],
+        "status": "wip"
+      },
+      {
         "slug": "captains-log",
         "name": "Captains Log",
         "uuid": "bf0295ab-d4da-4cfa-8597-7689c780b5c9",
