@@ -200,6 +200,18 @@
           "strings"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "regular-chatbot",
+        "name": "Regular Chatbot",
+        "uuid": "2d4f0ac8-847e-4279-af37-82ab326bb73a",
+        "concepts": [
+          "regular-expressions"
+        ],
+        "prerequisites": [
+          "functional-programming"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
