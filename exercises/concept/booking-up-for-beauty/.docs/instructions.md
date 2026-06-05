@@ -48,7 +48,7 @@ day_of_week(make_datetime(2026, 06, 05, 12, 30, 00))
 
 ## 5. Reschedule an appointment
 
-The customer is no longer able to make the original appointment, and has asked to reschedule to the next Friday at the same time of day.
+When a customer needs to reschedule an appointment, this is automatically made for the next Friday at the same time of day (as this is the slowest day of the week).
 
 Implement the `reschedule()` function that takes the original appointment (as a text string in month/day/year order) and returns a rescheduled appointment.
 
@@ -60,21 +60,3 @@ reschedule("06/13/2026 12:30:00")
 
 If the original appointment was for Monday to Thursday, reschedule to Friday of _this_ week.
 For Friday or Saturday appointments, reschedule to Friday of _next_ week.
-
-<!-- ## 4. Describe the time and date of the appointment
-
-Implement the `description()` function that takes an appointment date and returns a description of that date and time:
-
-```julia-repl
-julia> describe(DateTime(2023, 3, 29, 15, 0, 0))
-"You have an appointment on Wednesday, March 29, 2023 at 15:00"
-```
-
-## 5. Return the anniversary date
-
-Implement the `anniversary_date()` function that returns this year's anniversary date, which is September 15th:
-
-```julia-repl
-julia> anniversary_date()  # run during 2025
-2025-09-15
-``` -->

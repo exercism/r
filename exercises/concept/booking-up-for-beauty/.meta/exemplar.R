@@ -18,22 +18,6 @@ day_of_week <- function(appointment) {
 
 reschedule <- function(appointment) {
   appt <- schedule_appointment(appointment)
-  dow <- day_of_week(appt)
-  if_else(dow >= 5, appt + days(12 - dow), appt + days(5 - dow))
+  weekday <- wday(appt, week_start=5)
+  appt + days(8 - weekday)
 }
-
-# Older version
-# describe <- function(appointment) {
-#   # Base R approach
-# #   fmt <- "You have an appointment on %A, %B %d, %Y at %H:%M"
-# #   format(appointment, fmt)
-#   
-#   # lubridate approach
-#   template <- "You have an appointment on Saturday, January 30, 2026 at 13:25"
-#   sf <- stamp(template, locale = "C")
-#   sf(appointment)
-# }
-# 
-# anniversary_date <- function() {
-#   make_date(year(today()), 9, 15)
-# }
