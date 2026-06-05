@@ -14,6 +14,6 @@ nice_to_meet_you <- function(str) {
   
 }
 
-get_URL <- function(msg) {
+get_URL <- function(msg) {  # nolint
  
 }

@@ -41,9 +41,9 @@ test_that("4. Greet the user", {
 })
 
 test_that("5. Get website link", {
-  expect_equal(get_URL("You can check more info on youtube.com"),
+  expect_equal(get_URL("You can check more info on youtube.com"),  #nolint
                c("youtube.com"))
-  expect_equal(get_URL("That was from reddit.com and notion.so"),
+  expect_equal(get_URL("That was from reddit.com and notion.so"),  #nolint
                c("reddit.com", "notion.so"))
 
 })

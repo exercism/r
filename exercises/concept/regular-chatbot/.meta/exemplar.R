@@ -25,7 +25,7 @@ nice_to_meet_you <- function(str) {
   str_glue("Nice to meet you, {name}")
 }
 
-get_URL <- function(msg) {
+get_URL <- function(msg) {  #nolint
   m <- str_match_all(msg, url)[[1]]
-  m[,2]
+  m[, 2]
 }
