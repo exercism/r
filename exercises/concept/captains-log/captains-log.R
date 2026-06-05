@@ -1,4 +1,4 @@
-random_planet <- function(number_needed) {
+random_planet_class <- function(number_needed) {
 
 }
 
