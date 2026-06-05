@@ -200,6 +200,30 @@
           "functional-programming"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "captains-log",
+        "name": "Captains Log",
+        "uuid": "bf0295ab-d4da-4cfa-8597-7689c780b5c9",
+        "concepts": [
+          "randomness"
+        ],
+        "prerequisites": [
+          "strings"
+        ],
+        "status": "wip"
+      },
+      {
+        "slug": "regular-chatbot",
+        "name": "Regular Chatbot",
+        "uuid": "2d4f0ac8-847e-4279-af37-82ab326bb73a",
+        "concepts": [
+          "regular-expressions"
+        ],
+        "prerequisites": [
+          "functional-programming"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
@@ -1182,6 +1206,11 @@
       "uuid": "f6374c07-9244-44b2-b372-3e271b0d01be",
       "slug": "nothingness",
       "name": "Nothingness"
+    },
+    {
+      "uuid": "9de56486-6c39-4c08-9d5a-db78a524b0b1",
+      "slug": "randomness",
+      "name": "Randomness"
     },
     {
       "uuid": "be04c596-32c4-497f-9f56-7d939fe7890f",
