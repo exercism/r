@@ -116,5 +116,40 @@ runif(5, max = 100)
 #> [1] 79.70762 51.62232 52.85281 71.08571 63.94380
 ```
 
+### Normal/Gaussian distribution
+
+Also called the "bell-shaped" curve, this is a very common way to describe imprecision in measured values.
+
+For example, suppose the factory where you work has just bought 10,000 bolts which should be identical.
+You want to set up the factory robot to handle them, so you weigh a sample of 100 and find that they have an average (or [`mean`][ref-mean]) weight of 4.731g.
+This is extremely unlikely to mean that they all weigh exactly 4.731g.
+Perhaps you find that values range from 4.627 to 4.794g but cluster around 4.731g.
+
+This is the [`normal distribution`][wiki-normal-distribution] (or "Gaussian", after the mathematician Card Friedrich Gauss), for which probabilities peak at the mean and tail off symmetrically on both sides (hence "bell-shaped").
+
+To simulate this in software, we need some way to specify the width of the curve (*typically, expensive bolts will cluster more tightly around the mean than cheap bolts!*).
+By convention, this is done with the [`standard deviation`][wiki-standard-deviation]: small values for a sharp, narrow curve, large for a low, broad curve.
+
+Mathematicians love Greek letters, so you will often see `μ` ('mu') to represent the mean and `σ` ('sigma') to represent the standard deviation (or `sd`).
+Thus, if you read that "95% of values are within 2σ of μ" or "the Higgs boson has been detected with 5-sigma confidence", such comments relate to the standard deviation.
+
+To generate random values with this distribution, R has the `rnorm()` function.
+
+Short for "random normal", this defaults to `mean` 0 and `sd` 1.
+
+```R
+rnorm(5)
+#> [1]  0.36965357  0.07489948 -0.83827224 -0.83126506 -0.59895825
+
+# Simulating our bolts example
+rnorm(5, mean = 4.731, sd = 0.2)
+#> [1] 4.564521 4.613237 4.419512 4.772196 4.839102
+```
+
+
+[wiki-normal-distribution]: https://simple.wikipedia.org/wiki/Normal_distribution
 [yt-sampling-with-replacement]: https://www.youtube.com/watch?v=LnGFL_A6A6A
+[wiki-standard-deviation]: https://simple.wikipedia.org/wiki/Standard_deviation
 [web-truly-random]: https://www.malwarebytes.com/blog/news/2013/09/in-computers-are-random-numbers-really-random
+[ref-mean]: https://www.rdocumentation.org/packages/base/versions/3.3.0/topics/mean
+[concept-lists]: https://exercism.org/tracks/r/concepts/lists
