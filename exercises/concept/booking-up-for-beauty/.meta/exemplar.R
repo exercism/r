@@ -18,6 +18,6 @@ day_of_week <- function(appointment) {
 
 reschedule <- function(appointment) {
   appt <- schedule_appointment(appointment)
-  weekday <- wday(appt, week_start=5)
+  weekday <- wday(appt, week_start = 5)
   appt + days(8 - weekday)
 }
