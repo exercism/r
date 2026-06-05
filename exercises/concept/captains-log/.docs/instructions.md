@@ -37,7 +37,7 @@ random_ship_registry_number()
 #> "NCC-1947"
 ```
 
-# 3. Randomize a fleet of starships
+## 3. Randomize a fleet of starships
 
 One version of the game involves interacting with other starships, and Mary needs a selection.
 
@@ -50,7 +50,7 @@ Result values should be taken from `starships`, with no duplicates.
 
 ```R
 shuffle_starships(c("NCC-5011", "NCC-1228", "NCC-7039", "NCC-3978", "NCC-1476"))
-#> [1] "NCC-5011" "NCC-7039"
+#> [1] "NCC-1476" "NCC-7039" "NCC-3978" "NCC-5011" "NCC-1228"
 ```
 
 ## 4. Generate a random stardate

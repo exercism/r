@@ -5,14 +5,14 @@
 - This looks like [sampling][ref-sample] from an input vector.
 - Duplicates are possible, so sample with replacement.
 
-## 2. Randomize a fleet of starships
-
-- The Introduction discusses shuffling.
-
-## 3. Generate a random starship registry number
+## 2. Generate a random starship registry number
 
 - The numeric part is sampling from a range.
 - There are several ways to construct the string, including [`sprintf()`][ref-sprintf] and [`str_glue()`][ref-str_glue].
+
+## 3. Randomize a fleet of starships
+
+- The Introduction discusses shuffling.
 
 ## 4. Generate a random stardate
 
