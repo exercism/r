@@ -28,17 +28,33 @@ test_that("3. Check if appointment is in the afternoon", {
   expect_false(is_afternoon_appointment(make_datetime(2019, 9, 1, 23, 59, 59)))
 })
 
-test_that("4. Output an appointment date with textual weekday and month", {
-  expect_equal(describe(make_datetime(2019, 12, 5, 9, 0, 0)),
-               "You have an appointment on Thursday, December 05, 2019 at 09:00")
-  expect_equal(describe(make_datetime(2019, 03, 29, 15, 0, 0)),
-               "You have an appointment on Friday, March 29, 2019 at 15:00")
-  expect_equal(describe(make_datetime(2019, 07, 25, 13, 45, 0)),
-               "You have an appointment on Thursday, July 25, 2019 at 13:45")
-  expect_equal(describe(make_datetime(2020, 9, 9, 9, 9, 9)),
-               "You have an appointment on Wednesday, September 09, 2020 at 09:09")
+test_that("4. Check the day of the week for an appointment", {
+  expect_equal(day_of_week(make_datetime(2019, 07, 25, 13, 45, 0)), 4)
+  expect_equal(day_of_week(make_datetime(2021, 07, 10, 8, 00, 0)), 6)
+  expect_equal(day_of_week(make_datetime(2026, 06, 01, 10, 30, 0)), 1)
+  expect_equal(day_of_week(make_datetime(2026, 08, 28, 14, 45, 0)), 5)
 })
 
-test_that("5. Return the anniversary date", {
-  expect_equal(anniversary_date(), make_date(year(today()), 9, 15))
+test_that("5. Reschedule an appointment", {
+  expect_equal(reschedule("7/25/2019 13:45:00"), make_datetime(2019, 07, 26, 13, 45, 0))
+  expect_equal(reschedule("7/10/2021 8:00:00"), make_datetime(2021, 07, 16, 8, 00, 0))
+  expect_equal(reschedule("6/1/2026 10:30:00"), make_datetime(2026, 06, 05, 10, 30, 0))
+  expect_equal(reschedule("8/28/2026 14:45:00"), make_datetime(2026, 09, 04, 14, 45, 0))
 })
+
+# Older version - delete before merging!
+
+# test_that("4. Output an appointment date with textual weekday and month", {
+#   expect_equal(describe(make_datetime(2019, 12, 5, 9, 0, 0)),
+#                "You have an appointment on Thursday, December 05, 2019 at 09:00")
+#   expect_equal(describe(make_datetime(2019, 03, 29, 15, 0, 0)),
+#                "You have an appointment on Friday, March 29, 2019 at 15:00")
+#   expect_equal(describe(make_datetime(2019, 07, 25, 13, 45, 0)),
+#                "You have an appointment on Thursday, July 25, 2019 at 13:45")
+#   expect_equal(describe(make_datetime(2020, 9, 9, 9, 9, 9)),
+#                "You have an appointment on Wednesday, September 09, 2020 at 09:09")
+# })
+# 
+# test_that("5. Return the anniversary date", {
+#   expect_equal(anniversary_date(), make_date(year(today()), 9, 15))
+# })

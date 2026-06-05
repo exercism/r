@@ -10,10 +10,10 @@ is_afternoon_appointment <- function(appointment) {
   
 }
 
-describe <- function(appointment) {
-
+day_of_week <- function(appointment) {
+  
 }
 
-anniversary_date <- function() {
+reschedule <- function(appointment) {
   
 }

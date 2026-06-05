@@ -35,7 +35,33 @@ julia> is_afternoon_appointment(DateTime(2023, 3, 29, 15, 0, 0))
 true
 ```
 
-## 4. Describe the time and date of the appointment
+## 4. Check the day of the week for an appointment
+
+Implement the `day_of_week()` function that returns the _numerical_ day of the week.
+The salon is closed on Sundays, so Monday is day 1 and Saturday is day 6.
+
+```R
+# a Friday
+day_of_week(make_datetime(2026, 06, 05, 12, 30, 00))
+#> [1] 5
+```
+
+## 5. Reschedule an appointment
+
+The customer is no longer able to make the original appointment, and has asked to reschedule to the next Friday at the same time of day.
+
+Implement the `reschedule()` function that takes the original appointment (as a text string in month/day/year order) and returns a rescheduled appointment.
+
+```R
+# a Saturday
+reschedule("06/13/2026 12:30:00")
+#> [1] "2026-06-19 12:30:00 UTC"
+```
+
+If the original appointment was for Monday to Thursday, reschedule to Friday of _this_ week.
+For Friday or Saturday appointments, reschedule to Friday of _next_ week.
+
+<!-- ## 4. Describe the time and date of the appointment
 
 Implement the `description()` function that takes an appointment date and returns a description of that date and time:
 
@@ -51,4 +77,4 @@ Implement the `anniversary_date()` function that returns this year's anniversary
 ```julia-repl
 julia> anniversary_date()  # run during 2025
 2025-09-15
-```
+``` -->
