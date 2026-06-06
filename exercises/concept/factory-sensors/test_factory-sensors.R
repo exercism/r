@@ -9,7 +9,7 @@ test_that("1. Should throw if the humidity percentage is 100", {
 
 test_that("1. Should not throw if the humidity percentage is 53", {
   expect_no_error(check_humidity_level(53))
-  expect_message(check_humidity_level(53), "passed")
+  expect_message(check_humidity_level(53), "humidity test passed")
 })
 
 test_that("1. Should return TRUE if the humidity percentage is 53", {
@@ -41,4 +41,5 @@ test_that("2. Should throw an error if the temperature is 601°C", {
 test_that("3. Should report tests passing", {
   expect_message(monitor_the_machine(53, 200), "200")
   expect_message(monitor_the_machine(53, 200), "humidity test passed")
+  expect_message(monitor_the_machine(53, 200), "All OK")
 })
