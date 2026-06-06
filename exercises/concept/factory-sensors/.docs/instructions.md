@@ -16,7 +16,7 @@ You need to implement a function in the software that will throw an error if the
 The function should be called `check_humidity_level` and take the humidity percentage as a parameter.
 
 You should halt with an error (the message is not important) if the percentage exceeds 70%. 
-Otherwise, return `TRUE` to confirm the measurement is good.
+Otherwise, issue a message that includes "humidity test passed", and return `TRUE` to confirm the measurement is good.
 
 ```R
 check_humidity_level(60)
