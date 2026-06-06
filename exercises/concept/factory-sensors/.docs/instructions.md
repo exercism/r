@@ -24,7 +24,7 @@ check_humidity_level(60)
 #> [1] TRUE
 
 check_humidity_level(100)
-Error in check_humidity_level(100) : pct_humidity <= 70 is not TRUE
+#> Error in check_humidity_level(100) : pct_humidity <= 70 is not TRUE
 ```
 
 ## 2. Detect overheating
