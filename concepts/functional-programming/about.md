@@ -67,7 +67,7 @@ However, more complex functions may not accept vector input, for example if they
 We need a more general way to apply functions to vectors (similar to `map()` in some other languages).
 
 Because R has a rich variety of data structures in the base language, it also has a whole family of `*apply()` functions to operate on them.
-More technically, these are often called "higher-order functions" by programmers and "functionals" by mathematicians, because they takes functions as arguments.
+More technically, these are often called "higher-order functions" by programmers and "functionals" by mathematicians, because they take functions as arguments.
 
 For now, consider `lapply()` and `sapply()`.
 
@@ -191,7 +191,7 @@ Some questions to think about in picking a function:
   - Replace with `pmap` for a list of parallel inputs, as in [`pmap_chr()`][ref-pmap_chr]. And yes, hardware-level parallelism is possible.
 - Do you want to process all elements of the input? If not, think about [`map_if()`][ref-map_if] to apply a predicate (boolean) filter, [`map_at()`][ref-map_at] to specify positional index criteria, [`head_while()`][ref-head_while] to process the input until an element fails a predicate.
 - Is the input data deeply nested? There are [functions][ref-plucks] for that situation.
-- Do you want the return value to always be of the type type as the input? Use [`modify()`][ref-modify] functions instead of `map`, or [`modify_tree()`][ref-modify_tree] for recursive application.
+- Do you want the return value to always be of the same type as the input? Use [`modify()`][ref-modify] functions instead of `map`, or [`modify_tree()`][ref-modify_tree] for recursive application.
 
 These functions have the input data as first argument whenever possible, to ensure they work well with pipes.
 
@@ -268,7 +268,7 @@ accumulate(1:10, `+`)
 
 ### Filter functions
 
-Commonly, we want to include (or exclude) elements in the input that match some predicate.
+Commonly, we want to include (or exclude) elements of the input that match some predicate.
 
 In the [Vector Filtering][concept-vector-filtering] Concept we saw one idiomatic way to do this.
 
