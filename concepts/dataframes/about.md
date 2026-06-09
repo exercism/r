@@ -65,6 +65,8 @@ In short, a `tibble` aims to "_do less and complain more_", also described as "_
 
 The types are usually interchangeable: any function which accepts a `data.frame` will also accept a `tibble`, and _vice versa_.
 
+Conversions between the types are easy, with [`as_tibble(df)`][ref-as_tibble] and [`as.data.frame(tbl)`][ref-asdataframe].
+
 For new work, using tibbles will probably help you create more robust code.
 However, legacy code and legacy data is very plentiful in the R world, so the `data.frame` is likely to remain common for a long time.
 
@@ -443,6 +445,8 @@ Later concepts will discuss several other aspects of dataframes (_within the tec
 [ref-tribble]: https://tibble.tidyverse.org/reference/tribble.html
 [web-purrr]: https://purrr.tidyverse.org/index.html
 [web-dplyr]: https://dplyr.tidyverse.org/index.html
+[ref-as_tibble]: https://tibble.tidyverse.org/reference/as_tibble.html
+[ref-asdataframe]: https://www.rdocumentation.org/packages/base/versions/3.1.1/topics/as.data.frame
 [ref-pull]: https://dplyr.tidyverse.org/reference/pull.html
 [ref-select]: https://dplyr.tidyverse.org/reference/select.html
 [ref-relocate]: https://dplyr.tidyverse.org/reference/relocate.html
