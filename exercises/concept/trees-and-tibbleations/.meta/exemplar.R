@@ -3,7 +3,7 @@ library(tidyverse)
 
 tree_data <- trees |> as_tibble() |> rename(Diameter = Girth)
 
-girth_n_weight <- function(data, dgts=1) {
+girth_n_weight <- function(data, dgts) {
   data |>
     mutate(Girth = pi * Diameter, Weight = 35 * Volume) |>
     round(dgts)

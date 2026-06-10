@@ -2,7 +2,7 @@ library(datasets)
 
 tree_data <- NULL # your code here
 
-girth_n_weight <- function(data, dgts=1) {
+girth_n_weight <- function(data, dgts) {
   
 }
 
