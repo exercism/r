@@ -17,15 +17,14 @@ This syllabus will focus mainly on tibbles, but it is useful to know about some 
 
 ### The `data.table`
 
-The [`data.table`][ref-data-table] is an attempt to improve on the `data.frame`, in a third-party package.
-
-Tibbles and data.tables are both well-respected, and there is inevitably much argument about which is "better".
+Tibbles (described below) and data.tables are both well-respected attempts to improve on the traditional `data.frame` in Base R.
+There is inevitably much argument about which is "better".
 Maybe there is some degree of consensus around the following points (_even if they will be criticized as simplistic_).
 
 - `tibble` is optimized mainly for ease of use, and integration with the Tidyverse ecosystem.
 - `data.table` is optimized mainly for raw power and scalability, especially when working with very large datasets.
 
-In any case, `data.table` is not available within Exercism, so it is mentioned here just for completeness.
+In any case, [`data.table`][ref-data-table] is not available within Exercism, so it is mentioned here just for completeness.
 
 ### The `data.frame`
 
@@ -162,7 +161,7 @@ tbl
 # A tibble: 4 × 3
 #>   languages created has.syllabus
 #>   <chr>       <dbl> <lgl>       
-#> 1 Fortran      1957 FALSE       T ar
+#> 1 Fortran      1957 FALSE
 #> 2 R            1993 TRUE        
 #> 3 Python       1991 TRUE        
 #> 4 Julia        2012 TRUE    
@@ -394,7 +393,26 @@ starwars |>
 #> 4 Darth Vader    Human      202   136  33.3
 ```
 
-Row-wise operations are less common for modifying single tibbles (merging multiple tibbles will be discussed in a later concept).
+When you want to operate on a subset of the columns with functions such as `mutate()`, the `select() |> mutate()` sequence in the above example is one option.
+Only the selected columns will be in the result.
+
+Alternatively, it can be convenient to use [`pick()`][ref-pick] _within_ the `mutate()` call:
+
+```R
+starwars |> mutate(pick(c(name, species, height, mass)), BMI = mass / (height / 100)^2) |> head(4)
+# A tibble: 4 × 15
+  name         height  mass hair_color skin_color eye_color birth_year sex   gender homeworld species films vehicles
+  <chr>         <int> <dbl> <chr>      <chr>      <chr>          <dbl> <chr> <chr>  <chr>     <chr>   <lis> <list>  
+1 Luke Skywal…    172    77 blond      fair       blue            19   male  mascu… Tatooine  Human   <chr> <chr>   
+2 C-3PO           167    75 NA         gold       yellow         112   none  mascu… Tatooine  Droid   <chr> <chr>   
+3 R2-D2            96    32 NA         white, bl… red             33   none  mascu… Naboo     Droid   <chr> <chr>   
+4 Darth Vader     202   136 none       white      yellow          41.9 male  mascu… Tatooine  Human   <chr> <chr>   
+# ℹ 2 more variables: starships <list>, BMI <dbl>
+```
+
+Only the `pick`ed columns are used in the mutation, but all columns are returned.
+
+**Row-wise operations** are less common for modifying single tibbles (merging multiple tibbles will be discussed in a later concept).
 
 One exception: [`arrange()`][ref-arrange] sorts rows by the values in one or more columns.
 
@@ -447,6 +465,7 @@ Later concepts will discuss several other aspects of dataframes (_within the tec
 [ref-filter]: https://dplyr.tidyverse.org/reference/filter.html
 [ref-slice]: https://dplyr.tidyverse.org/reference/slice.html
 [ref-mutate]: https://dplyr.tidyverse.org/reference/mutate.html
+[ref-pick]: https://dplyr.tidyverse.org/reference/pick.html
 [ref-distinct]: https://dplyr.tidyverse.org/reference/distinct.html
 [ref-rename]: https://dplyr.tidyverse.org/reference/rename.html
 [ref-arrange]: https://dplyr.tidyverse.org/reference/arrange.html
