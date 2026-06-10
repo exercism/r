@@ -16,8 +16,7 @@
 
 - You need to move columns around and sort rows (see the Introduction).
 - The [`all_of()`][ref-allof] function may be useful for moving columns.
-- `arrange()` will silently fail if not given a proper column name (i.e. it doesn't like character strings)
-- `.data[[]]` or [`pick()`][ref-pick] might be useful for the sorting operation.
+- See caution in the introduction about [data-masking][ref-datamask] which mentions [`pick()`][ref-pick].
 
 ## 4. Customer copy of dataset
 
@@ -27,3 +26,4 @@
 
 [ref-allof]: https://tidyselect.r-lib.org/reference/all_of.html
 [ref-pick]: https://dplyr.tidyverse.org/reference/pick.html
+[ref-datamask]: https://rlang.r-lib.org/reference/args_data_masking.html
