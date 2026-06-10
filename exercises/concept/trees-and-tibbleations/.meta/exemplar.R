@@ -3,10 +3,10 @@ library(tidyverse)
 
 tree_data <- trees |> as_tibble() |> rename(Diameter = Girth)
 
-girth_n_weight <- function(data, dgts) {
+girth_n_weight <- function(data, rnd_digits) {
   data |>
     mutate(Girth = pi * Diameter, Weight = 35 * Volume) |>
-    round(dgts)
+    round(rnd_digits)
 }
 
 orchard_copy <- function(data, important_cols) {

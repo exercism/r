@@ -278,8 +278,26 @@ starwars |>
 #> 3 R2-D2          Droid       96    32  34.7
 #> 4 Darth Vader    Human      202   136  33.3
 ```
+When you want to operate on a subset of the columns with functions such as `mutate()`, the `select() |> mutate()` sequence in the above example is one option.
+Only the selected columns will be in the result.
 
-Row-wise operations are less common for modifying single tibbles (merging multiple tibbles will be discussed in a later concept).
+Alternatively, it can be convenient to use [`pick()`][ref-pick] _within_ the `mutate()` call:
+
+```R
+starwars |> mutate(pick(c(name, species, height, mass)), BMI = mass / (height / 100)^2) |> head(4)
+# A tibble: 4 × 15
+  name         height  mass hair_color skin_color eye_color birth_year sex   gender homeworld species films vehicles
+  <chr>         <int> <dbl> <chr>      <chr>      <chr>          <dbl> <chr> <chr>  <chr>     <chr>   <lis> <list>  
+1 Luke Skywal…    172    77 blond      fair       blue            19   male  mascu… Tatooine  Human   <chr> <chr>   
+2 C-3PO           167    75 NA         gold       yellow         112   none  mascu… Tatooine  Droid   <chr> <chr>   
+3 R2-D2            96    32 NA         white, bl… red             33   none  mascu… Naboo     Droid   <chr> <chr>   
+4 Darth Vader     202   136 none       white      yellow          41.9 male  mascu… Tatooine  Human   <chr> <chr>   
+# ℹ 2 more variables: starships <list>, BMI <dbl>
+```
+
+Only the `pick`ed columns are used in the mutation, but all columns are returned.
+
+**Row-wise operations** are less common for modifying single tibbles (merging multiple tibbles will be discussed in a later concept).
 
 One exception: `arrange()` sorts rows by the values in one or more columns.
 

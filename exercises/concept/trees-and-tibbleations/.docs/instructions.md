@@ -8,6 +8,8 @@ They have asked you to help code up some functionality to help in the tree selec
 The built-in [`datasets`][ref-datasets] library has many toy datasets, and this exercise uses the `trees` dataset.
 To call the dataset after the library is loaded, simply use the name `trees`.
 ```R
+library(datasets)
+
 trees |> head(3)
 #>    A data.frame: 3 × 3 	
 #>   Girth	Height	Volume
@@ -45,8 +47,8 @@ The girth (aka circumference) is still a useful measurement, and so is the weigh
 The girth is easily calculated by `πD`, where `D` is the diameter.
 The weight of all the timber can be calculate by `ρV`, where `ρ = 35` is the density of cherry wood and `V` is the volume of timber.
 
-Define the function `girth_n_weight(data, dgts)` which takes dataframe and numeric arguments.
-The function should return a new dataframe with the two additional columns: `Girth` and `Weight` rounded to the appropriate number of digits.
+Define the function `girth_n_weight(data, rnd_digits)` which takes dataframe and numeric arguments.
+The function should return a new dataframe with the two additional columns: `Girth` and `Weight` rounded to the appropriate number of digits given by `rnd_digits`.
 
 ```R
 girth_n_weight(tree_data, 1) |> head(3)
