@@ -246,7 +246,8 @@
         ],
         "prerequisites": [
           "functional-programming"
-        ]
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
