@@ -306,8 +306,8 @@ tbl |> arrange(languages)
 ~~~~exercism/caution
 Many functions, such as `arrange()` and `mutate()` are data-masking and require data-masking variables.
 For this reason, non-data-masking arguments (e.g. character vectors) need to be converted to be used in data-masking functions.
+
 A full treatment of how data-masking works in R is beyond the scope of this concept, but it's useful to know there are ways of making this conversion which include options such as: `pick()`, `.data[[]]` and `!!sym()`.
-~~~~
 
 ```R
 tbl |> arrange("languages") # arrange with string input fails silently
@@ -328,3 +328,4 @@ tbl |> arrange(pick("languages"))
 #> 3 Python       1991 TRUE        
 #> 4 R            1993 TRUE     
 ```
+~~~~
