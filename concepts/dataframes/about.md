@@ -15,6 +15,18 @@ Over the decades, R has added multiple data types to handle tabular data.
 
 This syllabus will focus mainly on tibbles, but it is useful to know about some alternatives.
 
+### The `data.table`
+
+The [`data.table`][ref-data-table] is an attempt to improve on the `data.frame`, in a third-party package.
+
+Tibbles and data.tables are both well-respected, and there is inevitably much argument about which is "better".
+Maybe there is some degree of consensus around the following points (_even if they will be criticized as simplistic_).
+
+- `tibble` is optimized mainly for ease of use, and integration with the Tidyverse ecosystem.
+- `data.table` is optimized mainly for raw power and scalability, especially when working with very large datasets.
+
+In any case, `data.table` is not available within Exercism, so it is mentioned here just for completeness.
+
 ### The `data.frame`
 
 In Base R, a [`data.frame`][web-dataframe] is a `list` of equal-length `vectors`.
@@ -92,20 +104,6 @@ str(tbl)
 
 Note the default print format: the comment line with dimensions is printed automatically, and column types are also displayed.
 
-### The `data.table`
-
-Tibbles are one relatively recent evolution of the original `data.frame`, fully integrated into the Tidyverse packages and available in the Exercism test runner.
-
-Separately, [`data.table`][ref-data-table] is an alternative attempt to improve on the `data.frame`, in a third-party package.
-
-Both are well-respected, and there is inevitably much argument about which is "better".
-Maybe there is some degree of consensus around the following points (_even if they will be criticized as simplistic_).
-
-- `tibble` is optimized mainly for ease of use, and integration with the Tidyverse ecosystem.
-- `data.table` is optimized mainly for raw power and scalability, especially when working with very large datasets.
-
-In any case, `data.table` is not available within Exercism, so it is mentioned here just for completeness.
-
 ## Working with tibbles
 
 Tibbles are a core part of the Tidyverse, so add them with either `library(tibble)` or `library(tidyverse)`.
@@ -164,7 +162,7 @@ tbl
 # A tibble: 4 × 3
 #>   languages created has.syllabus
 #>   <chr>       <dbl> <lgl>       
-#> 1 Fortran      1957 FALSE       
+#> 1 Fortran      1957 FALSE       T ar
 #> 2 R            1993 TRUE        
 #> 3 Python       1991 TRUE        
 #> 4 Julia        2012 TRUE    
@@ -185,12 +183,6 @@ tbl[c(2, 4), 1:2]
 ```
 
 In modern R with the Tidyverse ecosystem, [`dplyr`][web-dplyr] functions are generally more flexible and convenient, and will be the focus for the rest of this Concept.
-
-~~~~exercism/note
-Because many (_not all!_) students interested in dataframes have previous experience of Python-Pandas and/or SQL, we will provide examples in those other languages for operations we descibe in R (where appropriate).
-
-Such examples are just a convenience for some students, so _please feel free to ignore them_.
-~~~~
 
 ### Column-wise operations
 
