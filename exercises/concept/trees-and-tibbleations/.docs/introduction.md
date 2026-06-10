@@ -36,13 +36,6 @@ df
 #> 2         R    1993         TRUE
 #> 3    Python    1991         TRUE
 #> 4     Julia    2012         TRUE
-
-# look at the structure
-str(df)
-#> 'data.frame':	4 obs. of  3 variables:
- #> $ languages   : chr  "Fortran" "R" "Python" "Julia"
- #> $ created     : num  1957 1993 1991 2012
- #> $ has.syllabus: logi  FALSE TRUE TRUE TRUE
  ```
 
  We have a column of character strings, a column of numbers and a column of booleans.
@@ -82,12 +75,6 @@ tbl
 #> 2 R            1993 TRUE        
 #> 3 Python       1991 TRUE        
 #> 4 Julia        2012 TRUE      
-  
-str(tbl)
-#> tibble [4 × 3] (S3: tbl_df/tbl/data.frame)
-#>  $ languages   : chr [1:4] "Fortran" "R" "Python" "Julia"
-#>  $ created     : num [1:4] 1957 1993 1991 2012
-#>  $ has.syllabus: logi [1:4] FALSE TRUE TRUE TRUE
 ```
 
 Note the default print format: the comment line with dimensions is printed automatically, and column types are also displayed.
@@ -103,28 +90,7 @@ An example of this was shown in a previous section.
 
 If it is more convenient to enter values row-wise, the corresponding function is `tribble()`.
 
-```R
-tbl_r <- tribble(
-  # column names marked with tilde prefix
-  ~languages, ~created, ~has.syllabus,
-  "Fortran", 1957, FALSE,
-  "R", 1993, TRUE,
-  "Python", 1991, TRUE,
-  "Julia", 2012, TRUE
-)
-
-tbl_r
-# A tibble: 4 × 3
-#>   languages created has.syllabus
-#>   <chr>       <dbl> <lgl>       
-#> 1 Fortran      1957 FALSE       
-#> 2 R            1993 TRUE        
-#> 3 Python       1991 TRUE        
-#> 4 Julia        2012 TRUE    
-```
-
 In practice, there are dozens of ways to create tibbles, as they are the default output format from a diverse range of Tidyverse functions.
-We will return to this in a future Concept.
 
 ## Manipulating a tibble
 
@@ -141,7 +107,7 @@ tbl
 # A tibble: 4 × 3
 #>   languages created has.syllabus
 #>   <chr>       <dbl> <lgl>       
-#> 1 Fortran      1957 FALSE       T ar
+#> 1 Fortran      1957 FALSE       
 #> 2 R            1993 TRUE        
 #> 3 Python       1991 TRUE        
 #> 4 Julia        2012 TRUE    
@@ -186,17 +152,7 @@ tbl |> select(1:created)
 #> 1 Fortran      1957
 #> 2 R            1993
 #> 3 Python       1991
-#> 4 Julia        2012
-
-# Exclude a column
-tbl |> select(!created)
-  # A tibble: 4 × 2
-#>   languages has.syllabus
-#>   <chr>     <lgl>       
-#> 1 Fortran   FALSE       
-#> 2 R         TRUE        
-#> 3 Python    TRUE        
-#> 4 Julia     TRUE        
+#> 4 Julia        2012      
 
 # Use type of column
 tbl |> select(where(is.numeric))
@@ -211,28 +167,10 @@ tbl |> select(where(is.numeric))
 
 Multiple criteria are allowed, using Boolean operators `&`, `|` and `!` (and, or not).
 
-Column names that are _valid R identifiers_ do not need quotes within a `select()`.
-Invalid names (e.g. those including spaces) can be enclosed in backticks, though renaming them might be better.
-
-The `select()` function can work with a range of helper functions to pick column names: `starts_with`, `contains`, `num_range` and various others.
-`matches` allows full RegEx matching.
-See the documentation for details.
-
 Such power seems quite silly with our toy dataframe of languages.
 Fortunately, the `starwars` tibble is included in `dplyr`, giving us something bigger to practice with.
 
 ```R
-# limit display to top 3 rows of non-list columns
-starwars |> 
-  select(!where(is.list)) |> 
-  head(3)
-  # A tibble: 3 × 11
-#>   name           height  mass hair_color skin_color  eye_color birth_year sex   gender    homeworld species
-#>   <chr>           <int> <dbl> <chr>      <chr>       <chr>          <dbl> <chr> <chr>     <chr>     <chr>  
-#> 1 Luke Skywalker    172    77 blond      fair        blue              19 male  masculine Tatooine  Human  
-#> 2 C-3PO             167    75 NA         gold        yellow           112 none  masculine Tatooine  Droid  
-#> 3 R2-D2              96    32 NA         white, blue red               33 none  masculine Naboo     Droid  
-
 # pick a subset of columns
 starwars |> 
   select(name | ends_with("color")) |> 
@@ -281,21 +219,7 @@ starwars |>
 #> 4 Bossk            Trandosha
 #> 5 Lando Calrissian Socorro  
 #> 6 Lobot            Bespin   
-
-# random sample of rows
-starwars |> 
-  select(name | homeworld) |> 
-  slice_sample(n = 4)
-  # A tibble: 4 × 2
-#>   name            homeworld
-#>   <chr>           <chr>    
-#> 1 Shaak Ti        Shili    
-#> 2 Luminara Unduli Mirial   
-#> 3 Grievous        Kalee    
-#> 4 Palpatine       Naboo    
 ```
-
-To remove duplicate rows, use `distinct()`.
 
 ## Modifying a tibble
 
@@ -304,8 +228,6 @@ First caveat: the _copy-on-modify_ default means that the original tibble usuall
 Most modifications are applied column-wise.
 
 Column names can be changed with `rename(newname = oldname)`, or `rename_with()` to apply a function.
-A typical use would be cleaning up imported names to make them easier to work with in R, by removing whitespace and forcing a consistent format for related names.
-
 Note the syntax within `rename()`.
 The _contents_ of column `oldname` are _bound_ to name `newname`, hence the order.
 

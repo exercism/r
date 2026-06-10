@@ -5,7 +5,7 @@ This helps keep the orchard healthy while providing extra revenue at the same ti
 They have asked you to help code up some functionality to help in the tree selection process when a potential customer calls.
 
 ~~~~exercism/note
-The built-in `datasets` library has many toy datasets, and this exercise uses the `trees` dataset.
+The built-in [`datasets`][ref-datasets] library has many toy datasets, and this exercise uses the `trees` dataset.
 To call the dataset after the library is loaded, simply use the name `trees`.
 ```R
 trees |> head(3)
@@ -19,6 +19,8 @@ trees |> head(3)
 Please note the three columns: `Girth`, `Height` and `Volume`
 
 The dataset is initially in the form of a `data.frame`, but you may want to choose to work with it as a `tibble`.
+
+[ref-datasets]: https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html
 ~~~~
 
 ## 1. Rename a column
@@ -29,7 +31,6 @@ Define a data.frame/tibble called `tree_data` that corrects the name of the `Gir
 
 ```R
 head(tree_data, 3)
-
 #>     A tibble: 3 × 3 
 #> Diameter	 Height	Volume
 #>    <dbl>	  <dbl>	 <dbl>
@@ -45,7 +46,7 @@ The girth is easily calculated by `πD`, where `D` is the diameter.
 The weight of all the timber can be calculate by `ρV`, where `ρ = 35` is the density of cherry wood and `V` is the volume of timber.
 
 Define the function `girth_n_weight(data, dgts)` which takes dataframe and numeric arguments.
-The function should return a new dataframe with the two additional columns: `Girth` and `Weight` rounded to the appropriate digits.
+The function should return a new dataframe with the two additional columns: `Girth` and `Weight` rounded to the appropriate number of digits.
 
 ```R
 girth_n_weight(tree_data, 1) |> head(3)
@@ -57,13 +58,15 @@ girth_n_weight(tree_data, 1) |> head(3)
 #>      8.8	     63	   10.2	  27.6	 357.0
 ```
 
+Note: For testing, the input dataset for `girth_n_weight` can be assumed to have `Diameter` and `Volume` columns.
+
 ## 3. Orchard copy of dataset
 
-The orchard keeps copy of the dataset which helps facilitate sales.
-This dataset has important columns moved to the front and sorted by that leading column.
+For each potential customer, the orchard keeps a special copy of the dataset to help with the sale.
+This dataset has important columns moved to the front and is sorted by that leading column.
 
 Define the function `orchard_copy(data, important_cols)` which takes a dataframe and a vector of column names.
-This should return a new dataframe with the columns in the order of the rearrangement and the rows sorted by the first column of that rearrangement.
+This should return a new dataframe with the important columns moved to the front and the rows sorted by the first column of that rearrangement.
 
 ```R
 orchard_copy(tree_data, c('Height', 'Volume')) |> head(3)
@@ -81,7 +84,7 @@ Each potential customer will get a personal version of the dataset based on thei
 To this end, the customer may specify two extra things:
 
 1. The minimum height, the maximum height and the maximum weight of any single tree.
-2. The full list of attributes that are of interest.
+2. A list of attributes that are of interest.
 
 Define the `customer_copy(data, attrbutes, min_height, max_height, max_weight)` function.
 Return a customer copy of the dataframe with the requested attributes and within the constraints.
@@ -99,3 +102,5 @@ tree_data |>
 #>     66	 546.0	  34.6
 #>     69	 745.5	  36.8
 ```
+
+Note: For testing, the input dataset for `customer_copy` can be assumed to have `Height` and `Weight` columns.
