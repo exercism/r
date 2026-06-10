@@ -236,6 +236,17 @@
           "functional-programming"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "trees-and-tibbleations",
+        "name": "Trees & Tibble-ations",
+        "uuid": "7a4e7305-dfaf-473a-8b41-2b8586541a28",
+        "concepts": [
+          "dataframes"
+        ],
+        "prerequisites": [
+          "functional-programming"
+        ]
       }
     ],
     "practice": [
