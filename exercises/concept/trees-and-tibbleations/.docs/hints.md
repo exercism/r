@@ -16,7 +16,8 @@
 
 - You need to move columns around and sort rows (see the Introduction).
 - The [`all_of()`][ref-allof] function may be useful for moving columns.
-- The [`pick()`][ref-pick] function might be useful for the sorting operation.
+- `arrange()` will silently fail if not given a proper column name (i.e. it doesn't like character strings)
+- `.data[[]]` or [`pick()`][ref-pick] might be useful for the sorting operation.
 
 ## 4. Customer copy of dataset
 

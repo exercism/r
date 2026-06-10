@@ -281,18 +281,18 @@ starwars |>
 When you want to operate on a subset of the columns with functions such as `mutate()`, the `select() |> mutate()` sequence in the above example is one option.
 Only the selected columns will be in the result.
 
-Alternatively, it can be convenient to use [`pick()`][ref-pick] _within_ the `mutate()` call:
+Alternatively, it can be convenient to use `pick()` _within_ the `mutate()` call:
 
 ```R
-starwars |> mutate(pick(c(name, species, height, mass)), BMI = mass / (height / 100)^2) |> head(4)
-# A tibble: 4 × 15
-  name         height  mass hair_color skin_color eye_color birth_year sex   gender homeworld species films vehicles
-  <chr>         <int> <dbl> <chr>      <chr>      <chr>          <dbl> <chr> <chr>  <chr>     <chr>   <lis> <list>  
-1 Luke Skywal…    172    77 blond      fair       blue            19   male  mascu… Tatooine  Human   <chr> <chr>   
-2 C-3PO           167    75 NA         gold       yellow         112   none  mascu… Tatooine  Droid   <chr> <chr>   
-3 R2-D2            96    32 NA         white, bl… red             33   none  mascu… Naboo     Droid   <chr> <chr>   
-4 Darth Vader     202   136 none       white      yellow          41.9 male  mascu… Tatooine  Human   <chr> <chr>   
-# ℹ 2 more variables: starships <list>, BMI <dbl>
+starwars |> mutate(pick(c(height, mass)), BMI = mass / (height / 100)^2) |> head(4)
+#>                                                A tibble: 4 × 15
+#>         name  height  mass hair_color skin_color eye_color birth_year   sex  gender homeworld species films vehicles
+#>        <chr>   <int> <dbl>      <chr>      <chr>     <chr>      <dbl> <chr>   <chr>     <chr>   <chr> <lis>   <list>  
+#> Luke Skywal…     172    77      blond       fair      blue         19  male  mascu…  Tatooine   Human <chr>    <chr>   
+#>        C-3PO     167    75         NA       gold    yellow        112  none  mascu…  Tatooine   Droid <chr>    <chr>   
+#>        R2-D2      96    32         NA white, bl…       red         33  none  mascu…     Naboo   Droid <chr>    <chr>   
+#>  Darth Vader     202   136       none      white    yellow       41.9  male  mascu…  Tatooine   Human <chr>    <chr>   
+#> # ℹ 2 more variables: starships <list>, BMI <dbl>
 ```
 
 Only the `pick`ed columns are used in the mutation, but all columns are returned.
