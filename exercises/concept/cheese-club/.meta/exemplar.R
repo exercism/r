@@ -15,3 +15,7 @@ emphatics <- function(names, ratings) {
 to_binary <- function(ratings) {
   if_else(ratings == 5, 1, 0)
 }
+
+satisfactions <- function(ratings) {
+  cummean(ratings) |> round(digits = 2)
+}

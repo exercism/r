@@ -83,3 +83,18 @@ Returns binary ratings, where `1` has been changed to `0` and `5` has been chang
 to_binary(c(1, 1, 5, 5, 1))
 #> [1] 0 0 1 1 0
 ```
+
+## 5. Calculate average ratings over time
+
+You want to keep improving recommendations for all individual customers (not just emphatics) over time, as you understand their tastes better.
+
+Implement `satisfactions()` which takes a vector of ratings.
+Returns a vector of cumulative average ratings to this point.
+Round the results to 2 decimal places.
+
+Hope that the numbers keep growing, for happy customers!
+
+```R
+satisfactions(c(1, 2, 2, 3))
+#> [1] 1.00 1.50 1.67 2.00
+```

@@ -69,3 +69,11 @@ test_that("4. change ratings to binary", {
   expect_equal(to_binary(c(5, 1, 5, 1, 5, 5, 1, 1, 1, 5, 5, 5, 1, 5)), 
                          c(1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1))
 })
+
+# satisfactions
+
+test_that("5. cumulative average ratings", {
+  expect_equal(satisfactions(c(3, 3, 3, 3, 3)), c(3, 3, 3, 3, 3))
+  expect_equal(satisfactions(c(1, 2, 3, 4, 5)), c(1.0, 1.5, 2.0, 2.5, 3.0))
+  expect_equal(satisfactions(c(2, 2, 5, 4, 2)), c(2.00, 2.00, 3.00, 3.25, 3.00))
+})
