@@ -246,6 +246,9 @@ accumulate(1:10, `+`)
 #> [1]  1  3  6 10 15 21 28 36 45 55
  ```
 
+Some common types of accumulate have their own functions.
+The [Vector Functions][concept-vector-functions] Concept discussed [`cumsum()`][ref-cumsum] and `cumprod()` in Base R, and the `dplyr` library has [`cummean()`][ref-dplyr-cum] for numerical averages, `cumall()` and `cumany()` for logical vectors.
+
 ### Filter functions
 
 Commonly, we want to include (or exclude) elements of the input that match some predicate.
@@ -292,8 +295,11 @@ Also, we have [`every()`][ref-every], [`some()`][ref-every] and [`none()`][ref-e
 [ref-modify_tree]: https://purrr.tidyverse.org/reference/modify_tree.html
 [ref-reduce]: https://purrr.tidyverse.org/reference/reduce.html
 [ref-accumulate]: https://purrr.tidyverse.org/reference/accumulate.html
+[ref-cumsum]: https://www.rdocumentation.org/packages/base/versions/3.3.0/topics/cumsum
+[ref-dplyr-cum]: https://dplyr.tidyverse.org/reference/cumall.html
 [wiki-associative]: https://en.wikipedia.org/wiki/Associative_property
 [concept-vector-filtering]: https://exercism.org/tracks/r/concepts/vector-filtering
+[concept-vector-functions]: https://exercism.org/tracks/r/concepts/vector-functions
 [ref-predicates]: https://purrr.tidyverse.org/reference/index.html#predicate-functionals
 [ref-keep]: https://purrr.tidyverse.org/reference/keep.html
 [ref-every]: https://purrr.tidyverse.org/reference/every.html
