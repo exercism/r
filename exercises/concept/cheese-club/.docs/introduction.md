@@ -84,17 +84,17 @@ h <- function(size) {
 v <- c("small", "large", "medium")
 
 h(v) # bad use of an unvectorized function
-Error in switch(size, small = 6, medium = 8, large = 10) : 
-  EXPR must be a length 1 vector
+#> Error in switch(size, small = 6, medium = 8, large = 10) : 
+#>   EXPR must be a length 1 vector
 
 lapply(v, h)  # output is a list
-[[1]]
+#> [[1]]
 #> [1] 6
 
-[[2]]
+#> [[2]]
 #> [1] 10
 
-[[3]]
+#> [[3]]
 #> [1] 8
 
 lapply(v, h) |> unlist() # output is a vector
