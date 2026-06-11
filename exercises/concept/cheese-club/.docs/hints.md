@@ -18,6 +18,10 @@
 - There are several ways to solve this, but [`if_else()`][ref-if_else] from the `dplyr` library may be simplest. This was discussed in the [Switch Concept][concept-switch].
 - Within `purrr`, another possibility is [`map_int()`][ref-map_int].
 
+## 5. Average ratings over time
+
+- It's a cumulative mean, giving you a clue to the name of a useful function.
+
 [ref-every]: https://purrr.tidyverse.org/reference/every.html
 [ref-map2]: https://purrr.tidyverse.org/reference/map2.html
 [ref-keep]: https://purrr.tidyverse.org/reference/keep.html
