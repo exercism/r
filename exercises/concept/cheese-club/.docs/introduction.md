@@ -1,8 +1,6 @@
-# About
+# Introduction
 
 What is functional programming?
-
-That is a big question deserving a long answer ([Wikipedia][wiki-funcprog] provides one, [Advanced R][book-funcprog] provides another).
 
 For our purposes, these are some key features:
 
@@ -43,9 +41,6 @@ library(stringr)
 ```
 
 This type of pipe was added to Base R in v4.1.0, and you may see it referred to as the "native pipe".
-
-Previously, piping was done with `%>%` from the `magrittr` package (the name is a [pun][wiki-pipe] for the art lovers).
-The "magrittr pipe" is still available, but native pipes avoid the need for an external package, and the implementation is simpler in some details.
 
 The RStudio editor (among others) uses `Ctrl-Shift-M` as a keyboard shortcut to add a pipe with suitable spaces.
 
@@ -144,16 +139,7 @@ sapply(v, h) |> unname()
 
 `lapply` and `sapply` are simple, familiar to most R users, and still quite popular for vectors and simple lists.
 
-Base R also has several other apply functions:
-
-- `vapply()`is similar to `sapply()` but also has a required parameter to specify the output format.
-- `apply()` for matrices and higher-dimensional arrays.
-- `mapply()` for multiple list or vector arguments in parallel.
-- `tapply()` is harder to explain, but works with grouping operations and ragged arrays.
-- `vectorize()` is a rather mysterious function, which appears to be a wrapper for `mapply()`.
-
-_Enough, already!_
-
+Base R also has _many_ other apply functions.
 Providing a simpler and more consistent replacement for this sort of confusion is a key goal of the Tidyverse.
 
 There is now the `purrr` package, which provides several additional options such as `map()`, while improving consistency in design, and clarity in error messages.
@@ -167,12 +153,6 @@ Resources to help navigate the library include:
 - A [reference page][ref-purrr-funcs] for all functions.
 - A PDF-format [cheat sheet][cheat-purrr].
 - A guide to converting from [Base R][web-from-R].
-
-~~~~exercism/note
-The `purrr` library operates almost entirely on 1-dimensional data: vectors and lists.
-
-We will see in a later concept that the `dplyr` library provides equivalent functionality for 2-D dataframes.
-~~~~
 
 ### The many map functions
 
@@ -215,7 +195,7 @@ We will see in a future Concept on matrices and arrays that the concept of dimen
 The `sum()` function is built in (as are many other statistical functions).
 However, we need a way to apply arbitrary dimension-reducing functions across a data structure, using some higher-order function equivalent to `map()`.
 
-In several other languages, function names such as `fold`, `foldl` and `foldr` are used. In R, the relevant function is [`reduce()`][ref-reduce], corresponding to the well-known (to algorithm enthusiasts) [MapReduce][wiki-mapreduce] framework.
+In several other languages, function names such as `fold`, `foldl` and `foldr` are used. In R, the relevant function is [`reduce()`][ref-reduce], corresponding to the well-known (to algorithm enthusiasts) MapReduce framework.
 
 The first argument is, as usual, the input data. The second argument is a 2-argument function: often an anonymous function, but possibly as simple as an arithmetic operator such as `+`.
 
@@ -264,7 +244,7 @@ The syntax is similar to `reduce()`, with some extra optional arguments to speci
 ```R
 accumulate(1:10, `+`)
 #> [1]  1  3  6 10 15 21 28 36 45 55
- ```
+```
 
 Some common types of accumulate have their own functions.
 The [Vector Functions][concept-vector-functions] Concept discussed [`cumsum()`][ref-cumsum] and `cumprod()` in Base R, and the `dplyr` library has [`cummean()`][ref-dplyr-cum] for numerical averages, `cumall()` and `cumany()` for logical vectors.
@@ -291,35 +271,6 @@ The corresponding `purrr` functions include [`keep()`][ref-keep] and [`discard()
 
 Also, we have [`every()`][ref-every], [`some()`][ref-every] and [`none()`][ref-every], to replace `all()` and `any()` in returning a single logical value.
 
-## Recursion
-
-Most functional languages use [recursion][wiki-recursion] as their preferred alternative to loops.
-
-R has other and often better options: vectorized functions and higher-order functions.
-
-However, recursion is supported in R, and can be useful in contexts such as traversing tree structures.
-
-The maximum recursion depth defaults to 5000, which is relatively generous (_Python defaults to 1000_).
-It is possible to override the default.
-
-Tail-call optimization is not standard in R, though some workarounds have been developed.
-
-Tradition demands that we show a factorial example at this point, as the classic example of a recursive definition.
-
-```R
-fact <- function(n) ifelse(n == 0, 1, n * fact(n - 1))
-fact(5)
-#> [1] 120
-
-# some more idiomatic R:
-factorial(5)
-#> [1] 120
-prod(1:5)
-#> [1] 120
-```
-
-You can use recursion in R, and sometimes it is valuable, but there are often simpler approaches.
-
 [ref-lapply]: https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/lapply
 [web-purrr]: https://purrr.tidyverse.org/
 [web-starting]: https://purrr.tidyverse.org/articles/purrr.html
@@ -340,7 +291,6 @@ You can use recursion in R, and sometimes it is valuable, but there are often si
 [concept-switch]: https://exercism.org/tracks/r/concepts/switch
 [ref-recode_values]: https://dplyr.tidyverse.org/reference/recode-and-replace-values.html
 [ref-dplyr]: https://dplyr.tidyverse.org/
-[wiki-mapreduce]: https://en.wikipedia.org/wiki/MapReduce
 [ref-modify]: https://purrr.tidyverse.org/reference/modify.html
 [ref-modify_tree]: https://purrr.tidyverse.org/reference/modify_tree.html
 [ref-reduce]: https://purrr.tidyverse.org/reference/reduce.html
@@ -354,7 +304,3 @@ You can use recursion in R, and sometimes it is valuable, but there are often si
 [ref-keep]: https://purrr.tidyverse.org/reference/keep.html
 [ref-every]: https://purrr.tidyverse.org/reference/every.html
 [ref-unname]: https://www.rdocumentation.org/packages/base/versions/3.3.0/topics/unname
-[wiki-pipe]: https://en.wikipedia.org/wiki/The_Treachery_of_Images
-[wiki-funcprog]: https://en.wikipedia.org/wiki/Functional_programming
-[wiki-recursion]: https://en.wikipedia.org/wiki/Recursion_(computer_science)
-[book-funcprog]: https://adv-r.hadley.nz/fp.html
