@@ -6,9 +6,9 @@ They have asked you to help code up some functionality to help in the tree selec
 
 ~~~~exercism/note
 The built-in [`datasets`][ref-datasets] library has many toy datasets, and this exercise uses the `trees` dataset.
-To call the dataset after the library is loaded, simply use the name `trees`.
+To call the dataset, simply use the name `trees`.
 ```R
-library(datasets)
+library(datasets) # loading is optional
 
 trees |> head(3)
 #>    A data.frame: 3 × 3 	
@@ -60,7 +60,7 @@ girth_n_weight(tree_data, 1) |> head(3)
 #>      8.8	     63	   10.2	  27.6	 357.0
 ```
 
-Note: For testing, the input dataset for `girth_n_weight` can be assumed to have `Diameter` and `Volume` columns.
+**Note:** For testing, the input dataset for `girth_n_weight` can be assumed to have `Diameter` and `Volume` columns.
 
 ## 3. Orchard copy of dataset
 
@@ -105,4 +105,4 @@ tree_data |>
 #>     69	 745.5	  36.8
 ```
 
-Note: For testing, the input dataset for `customer_copy` can be assumed to have `Height` and `Weight` columns.
+**Note:** For testing, the input dataset for `customer_copy` can be assumed to have `Height` and `Weight` columns.

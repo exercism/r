@@ -25,7 +25,7 @@ test_that("3. Orchard copy of dataset", {
   expect_equal(test_data$Weight[5:9], c(745.5, 360.5, 899.5, 574.0, 1340.5))
 })
 
-test_that("3. Customer copy of dataset", {
+test_that("4. Customer copy of dataset", {
   test_data <- tree_data |> girth_n_weight(1) |> customer_copy(c('Weight', 'Height', 'Girth'), 70, 75, 1000)
 
   expect_equal(names(test_data), c('Weight', 'Height', 'Girth'))
