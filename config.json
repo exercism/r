@@ -1252,6 +1252,11 @@
       "name": "Errors"
     },
     {
+      "uuid": "c74eb22b-89f8-4a09-9046-f5c441b2588e",
+      "slug": "functional-programming",
+      "name": "Functional Programming"
+    },
+    {
       "uuid": "5362cbb2-b9a7-48b4-a09b-1d68b6a1a6a4",
       "slug": "matrices-arrays",
       "name": "Matrices and Arrays"
