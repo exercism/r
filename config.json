@@ -218,7 +218,7 @@
         "name": "Cheese Club",
         "uuid": "c9b29ac8-cb91-4808-89ce-81b2358bd586",
         "concepts": [
-          "dataframes"
+          "functional-programming"
         ],
         "prerequisites": [
           "lists",
