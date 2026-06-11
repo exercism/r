@@ -310,7 +310,8 @@ For this reason, non-data-masking arguments (e.g. character vectors) need to be 
 A full treatment of how data-masking works in R is beyond the scope of this concept, but it's useful to know there are ways of making this conversion which include options such as: `pick()`, `.data[[]]` and `!!sym()`.
 
 ```R
-tbl |> arrange("languages") # arrange with string input fails silently
+ # arrange() with string input fails silently
+tbl |> arrange("languages")
 #>      A tibble: 4 × 3
 #>   languages created has.syllabus
 #>   <chr>       <dbl> <lgl>       
