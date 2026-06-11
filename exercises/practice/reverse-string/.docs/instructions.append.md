@@ -1,4 +1,6 @@
-### Bonus tests
+# Instructions append
+
+## Bonus tests
 
 Enable tests with grapheme clusters by uncommenting (or defining) `enable_grapheme_clusters <- TRUE`.
 

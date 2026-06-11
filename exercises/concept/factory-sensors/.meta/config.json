@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "colinleach"
+  ],
+  "files": {
+    "solution": [
+      "factory-sensors.R"
+    ],
+    "test": [
+      "test_factory-sensors.R"
+    ],
+    "exemplar": [
+      ".meta/exemplar.R"
+    ]
+  },
+  "forked_from": [
+    "javascript/factory-sensors"
+  ],
+  "blurb": "Learn how to respond to errors by creating a piece of software for a newspaper factory."
+}
