@@ -21,6 +21,9 @@
 ## 5. Average ratings over time
 
 - It's a cumulative mean, giving you a clue to the name of a useful function.
+- An average is a sum divided by a length, so we could implement this using `purrr` functions.
+  - We saw in the Introduction how to accumulate a sum.
+  - We could use [`map2()`][ref-map2] to divide sums by lengths.
 
 [ref-every]: https://purrr.tidyverse.org/reference/every.html
 [ref-map2]: https://purrr.tidyverse.org/reference/map2.html
