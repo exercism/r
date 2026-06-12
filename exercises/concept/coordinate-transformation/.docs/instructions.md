@@ -9,10 +9,15 @@ Some of your teammates are less experienced with R, so you decide to use a funct
 
 Implement the `move(x, y, dx, dy)` function that returns a new point `c(x1, y1)`, with `x, y` moved by `dx, dy`.
 
+Arguments `x` and `y` are rquired.
+`dx` and `dy` are optional, with both defaulting to `0.1`
+
 ```R
-f <- move(.5, .6)
-> f(2, 3)
-[1] 2.5 3.6
+move(2, 3, .5, .6)
+#> [1] 2.5 3.6
+
+move(2, 3)
+#> [1] 2.1 3.1
 ```
 
 ## 2. Translate the coordinates
@@ -24,10 +29,10 @@ The returned function should take `x` and `y` coordinates of a point, and transl
 ```R
 f <- translate2d(.5, .6)
 class(f)
-[1] "function"
+#> [1] "function"
 
-> f(2, 3)
-[1] 2.5 3.6
+f(2, 3)
+#> [1] 2.5 3.6
 ```
 
 ## 3. Translate a point
@@ -41,8 +46,8 @@ The returned function should take a 2D point, and translate it by the pre-define
 
 ```R
 g <- translate_point(c(.5, .6))
-> g(c(2, 3))
-[1] 2.5 3.6
+g(c(2, 3))
+#> [1] 2.5 3.6
 ```
 
 Please aim to work directly with the vectors: there is no need to unpack them into separate `x` and `y` coordinates.
@@ -55,8 +60,8 @@ The returned function should take a 2D point, and scale it by the pre-defined `s
 
 ```R
 scaling <- c(0.5, 0.8)
-> h <- scale2d(scaling)
+h <- scale2d(scaling)
 
-> h(c(10, 5))
-[1] 5 4
+h(c(10, 5))
+#> [1] 5 4
 ```
