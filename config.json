@@ -193,8 +193,12 @@
         "slug": "coordinate-transformation",
         "name": "Coordinate Transformation",
         "uuid": "ac7ace62-9ea0-4495-a77e-2268f1652cff",
-        "concepts": [],
-        "prerequisites": [],
+        "concepts": [
+          "functions"
+        ],
+        "prerequisites": [
+          "vector-functions"
+        ],
         "status": "wip"
       },
       {
