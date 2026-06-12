@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "colinleach"
+  ],
+  "files": {
+    "solution": [
+      "coordinate-transformation.R"
+    ],
+    "test": [
+      "test_coordinate-transformation.R"
+    ],
+    "exemplar": [
+      ".meta/exemplar.R"
+    ]
+  },
+  "forked_from": [
+    "clojure/coordinate-transformation"
+  ],
+  "blurb": "Practice with functions by defining operations to translate and scale 2D points."
+}
