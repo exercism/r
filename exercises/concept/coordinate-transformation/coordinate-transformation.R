@@ -1,19 +1,15 @@
-move <- function(x, y, dx = 0.1, dy = 0.1) {
-  c(x + dx, y + dy)
+scale <- function(point, s) {
+  point * s
 }
 
-translate2d <- function(dx, dy) {
-  \(x, y) c(x + dx, y + dy)
+translate <- function(point, ...) {
+  point + c(...)
 }
 
-translate_point <- function(delta) {
-  \(point) point + delta
+transform2d <- function(dx = 0.1, dy = 0.1, s = 1) {
+  \(point) scale(translate(point, dx, dy), s)
 }
 
-scale2d <- function(scaling) {
-  \(point) c(point * scaling)
+transform3d <- function(dx = 0.1, dy = 0.1, dz = 0.1, s = 1) {
+  \(point) scale(translate(point, dx, dy, dz), s)
 }
-
-
-g <- translate_point(c(.5, .6))
-class(g)

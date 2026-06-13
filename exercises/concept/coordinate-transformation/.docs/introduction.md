@@ -98,6 +98,21 @@ var_f <- function(x, y, ...) {
 var_f(2, 3, "opt1", "opt2")
 #> [[1]]
 #> [1] "opt1"
+# move <- function(x, y, dx = 0.1, dy = 0.1) {
+#   c(x + dx, y + dy)
+# }
+# 
+# translate2d <- function(dx, dy) {
+#   \(x, y) c(x + dx, y + dy)
+# }
+# 
+# translate_point <- function(delta) {
+#   \(point) point + delta
+# }
+# 
+# scale2d <- function(scaling) {
+#   \(point) c(point * scaling)
+# }
 
 #> [[2]]
 #> [1] "opt2"
@@ -154,6 +169,25 @@ This technique is used extensively by Tidyverse libraries such as [`stringr`][re
 Many of the `stringr` functions are a user-friendly wrapper around low-level functions from [`stringi`][ref-stringi] and base R.
 Extra arguments supplied to the `str_*()` functions are simply passed through to those lower-level functions.
 
+## Functions as return values
+
+An outer function can define an inner function (either named, or anonymous as described below) and use it as the return value.
+
+The returned function will include the environment in which it was defined.
+
+```R
+times_y <- function(x) {
+   \(y) x * y
+ }
+
+f <- times_y(3)
+class(f)
+#> [1] "function"
+
+f(4)
+#> [1] 12
+```
+
 ## Anonymous Functions
 
 When we define a function, we usually bind the resulting function object to a variable:
@@ -177,25 +211,6 @@ sapply(1:5, \(x) x ^ 2)
 ```
 
 That is not a very useful example, because `(1:5) ^ 2` returns the same result more simply, but it illustrates how we define a function without bothering to think of a name for it.
-
-## Functions as return values
-
-An outer function can define an inner function (named or anonymous) and use it as the return value.
-
-The returned function will include the environment in which it was defined.
-
-```R
-times_y <- function(x) {
-   \(y) x * y
- }
-
-f <- times_y(3)
-class(f)
-#> [1] "function"
-
-f(4)
-#> [1] 12
-```
 
 ## Copy on Modify
 
