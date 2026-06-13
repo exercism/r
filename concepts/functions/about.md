@@ -158,8 +158,9 @@ The returned function will include the environment in which it was defined.
 
 ```R
 times_y <- function(x) {
-   \(y) x * y
- }
+  # anonymous function - see next section
+  \(y) x * y
+}
 
 f <- times_y(3)
 class(f)
@@ -183,15 +184,7 @@ Without name-binding, it it called an *anonymous function*.
 
 Use of anonymous functions is so common that (*since R v4.1.0*) there is a shorthand syntax to define them: replace the word `function` with a backslash `\`.
 
-This section will make more sense once we reach the [Functional Programming][concept-funcprog] Concept.
-Below is a preview, using [`sapply()`][ref-sapply] to square each number in a range:
-
-```R
-sapply(1:5, \(x) x ^ 2)
-#> [1]  1  4  9 16 25
-```
-
-That is not a very useful example, because `(1:5) ^ 2` returns the same result more simply, but it illustrates how we define a function without bothering to think of a name for it.
+An example of this was used in the previous section, on return values.
 
 ## Copy on Modify
 
