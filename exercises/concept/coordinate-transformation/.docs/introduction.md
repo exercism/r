@@ -23,31 +23,6 @@ Looking more closely at the definition of `squareit`, we can identify various pa
 A function is a first class object in R, much like numbers and strings.
 Thus, `squareit <- function...` is an assignment which is syntactically just like `x <- 42`.
 
-~~~~exercism/advanced
-Accessing the components of a function is rare in normal use, but quite easy.
-
-```R
-class(squareit)
-#> [1] "function"
-formals(squareit)
-#> $x
-
-body(squareit)
-#> {
-#>     x * x
-#> }
-```
-
-The arguments obtained with [`formals()`][ref-formals] look like a [list][concept-lists], with the `$x` syntax.
-In fact, the type is [`pairlist`][ref-pairlist], a particular type of list containing key-value pairs.
-
-The `body` is executable code, with the type `language` (*not something you probably need to care about*).
-
-[ref-formals]: https://www.rdocumentation.org/packages/base/versions/3.3.0/topics/formals
-[ref-pairlist]: https://www.rdocumentation.org/packages/base/versions/3.3.0/topics/list
-[concept-lists]: https://exercism.org/tracks/r/concepts/lists
-~~~~
-
 ## Arguments
 
 R makes no clear distinction between positional arguments and keyword arguments, in contrast to other scripting languages such as Python and Julia.
@@ -147,7 +122,8 @@ f_var(x, na.rm = TRUE)
 ```
 
 This technique is used extensively by Tidyverse libraries such as [`stringr`][ref-stringr].
-Many of the `stringr` functions are a user-friendly wrapper around low-level functions from [`stringi`][ref-stringi] and base R.
+Many of the `stringr` functions are a user-friendly wrapper around low-level functions from `stringi` and base R.
+
 Extra arguments supplied to the `str_*()` functions are simply passed through to those lower-level functions.
 
 ## Functions as return values
@@ -158,8 +134,9 @@ The returned function will include the environment in which it was defined.
 
 ```R
 times_y <- function(x) {
-   \(y) x * y
- }
+  # anonymous function - see next section
+  \(y) x * y
+}
 
 f <- times_y(3)
 class(f)
@@ -183,15 +160,7 @@ Without name-binding, it it called an *anonymous function*.
 
 Use of anonymous functions is so common that (*since R v4.1.0*) there is a shorthand syntax to define them: replace the word `function` with a backslash `\`.
 
-This section will make more sense once we reach the [Functional Programming][concept-funcprog] Concept.
-Below is a preview, using [`sapply()`][ref-sapply] to square each number in a range:
-
-```R
-sapply(1:5, \(x) x ^ 2)
-#> [1]  1  4  9 16 25
-```
-
-That is not a very useful example, because `(1:5) ^ 2` returns the same result more simply, but it illustrates how we define a function without bothering to think of a name for it.
+An example of this was used in the previous section, on return values.
 
 ## Copy on Modify
 
@@ -236,8 +205,5 @@ Vectorization or higher-order functions can help to protect you from this type o
 ~~~~
 
 [concept-basics]: https://exercism.org/tracks/r/concepts/basics
-[concept-funcprog]: https://exercism.org/tracks/r/concepts/functional-programming
 [wiki-closure]: https://en.wikipedia.org/wiki/Closure_(computer_programming)
-[ref-sapply]: https://www.rdocumentation.org/packages/base/versions/3.3.0/topics/lapply
 [ref-stringr]: https://stringr.tidyverse.org/index.html
-[ref-stringi]: https://stringi.gagolewski.com/

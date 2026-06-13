@@ -205,6 +205,5 @@ Vectorization or higher-order functions can help to protect you from this type o
 ~~~~
 
 [concept-basics]: https://exercism.org/tracks/r/concepts/basics
-[concept-funcprog]: https://exercism.org/tracks/r/concepts/functional-programming
 [wiki-closure]: https://en.wikipedia.org/wiki/Closure_(computer_programming)
 [ref-stringr]: https://stringr.tidyverse.org/index.html
