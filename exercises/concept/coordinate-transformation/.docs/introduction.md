@@ -88,34 +88,15 @@ g(6, 3)
 ### Extra arguments
 
 To accept an arbitrary number of additional arguments, use a `...` (ellipsis) in the definition.
-It is possible to convert any extra values in the function call to a list, but please read on for an alternative way to use these "dot args" (*called "varargs" in several other languages*).
+It is possible to convert any extra values in the function call to a vector, but please read on for an alternative way to use these "dot args" (*called "varargs" in several other languages*).
 
 ```R
 var_f <- function(x, y, ...) {
-  print(list(...))
+  print(c(...))
 }
 
 var_f(2, 3, "opt1", "opt2")
-#> [[1]]
-#> [1] "opt1"
-# move <- function(x, y, dx = 0.1, dy = 0.1) {
-#   c(x + dx, y + dy)
-# }
-# 
-# translate2d <- function(dx, dy) {
-#   \(x, y) c(x + dx, y + dy)
-# }
-# 
-# translate_point <- function(delta) {
-#   \(point) point + delta
-# }
-# 
-# scale2d <- function(scaling) {
-#   \(point) c(point * scaling)
-# }
-
-#> [[2]]
-#> [1] "opt2"
+#> [1] "opt1" "opt2"
 ```
 
 ## Function Environment
