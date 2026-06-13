@@ -88,19 +88,15 @@ g(6, 3)
 ### Extra arguments
 
 To accept an arbitrary number of additional arguments, use a `...` (ellipsis) in the definition.
-It is possible to convert any extra values in the function call to a list, but please read on for an alternative way to use these "dot args" (*called "varargs" in several other languages*).
+It is possible to convert any extra values in the function call to a vector, but please read on for an alternative way to use these "dot args" (*called "varargs" in several other languages*).
 
 ```R
 var_f <- function(x, y, ...) {
-  print(list(...))
+  print(c(...))
 }
 
 var_f(2, 3, "opt1", "opt2")
-#> [[1]]
-#> [1] "opt1"
-
-#> [[2]]
-#> [1] "opt2"
+#> [1] "opt1" "opt2"
 ```
 
 ## Function Environment
@@ -153,6 +149,25 @@ f_var(x, na.rm = TRUE)
 This technique is used extensively by Tidyverse libraries such as [`stringr`][ref-stringr].
 Many of the `stringr` functions are a user-friendly wrapper around low-level functions from [`stringi`][ref-stringi] and base R.
 Extra arguments supplied to the `str_*()` functions are simply passed through to those lower-level functions.
+
+## Functions as return values
+
+An outer function can define an inner function (either named, or anonymous as described below) and use it as the return value.
+
+The returned function will include the environment in which it was defined.
+
+```R
+times_y <- function(x) {
+   \(y) x * y
+ }
+
+f <- times_y(3)
+class(f)
+#> [1] "function"
+
+f(4)
+#> [1] 12
+```
 
 ## Anonymous Functions
 
