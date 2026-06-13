@@ -31,10 +31,17 @@ test_that("3. transform2d with optional args", {
 
 # transform3d
 
+test_that("4. transform3d with default args", {
+  f <- transform3d()
+  point <- c(4, 3, 1)
+  expected <- c(6.75, 6, 4.5)
+  expect_equal(f(point), expected)
+})
+
 test_that("4. transform3d with optional args", {
   f <- transform3d(dx = 0.5, dy = 1, dz = 2, s = 1.5)
   point <- c(4, 3, 1)
-  expected <- c(6.75, 6, 4.5)
+  expected <- c(4.1, 3.1, 1.1)
   expect_equal(f(point), expected)
 })
 
