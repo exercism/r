@@ -7,13 +7,13 @@ Please aim to work directly with the vector points: there is no need to unpack t
 
 ## 1. Scale the coordinates
 
-Implement the `scale(point, scaling)` function that takes a point with arbitrary number of dimensions, and scales it by the pre-defined `scaling`.
+Implement the `scale(point, s)` function that takes a point with arbitrary number of dimensions, and scales it by the pre-defined `s`.
 
 ```R
 # A 2D example
-scaling <- c(0.5, 0.8)
+s <- c(0.5, 0.8)
 point <- c(10, 5)
-scale(point, scaling)
+scale(point, s)
 #> [1] 5 4
 ```
 
