@@ -171,7 +171,9 @@ Resources to help navigate the library include:
 ~~~~exercism/note
 The `purrr` library operates almost entirely on 1-dimensional data: vectors and lists.
 
-We will see in a later concept that the `dplyr` library provides equivalent functionality for 2-D dataframes.
+We will see in a [later concept][concept-dataframes] that the `dplyr` library provides equivalent functionality for 2-D dataframes.
+
+[concept-dataframes]: https://exercism.org/tracks/r/concepts/dataframes
 ~~~~
 
 ### The many map functions
@@ -210,7 +212,7 @@ sum(1:100)
 ```
 
 In the above case, we convert a length-100 vector to a length-1 integer.
-We will see in a future Concept on matrices and arrays that the concept of dimension-reduction is more general.
+We will see in a future Concept on [matrices and arrays][concept-matrices-arrays] that the concept of dimension-reduction is more general.
 
 The `sum()` function is built in (as are many other statistical functions).
 However, we need a way to apply arbitrary dimension-reducing functions across a data structure, using some higher-order function equivalent to `map()`.
@@ -350,6 +352,7 @@ You can use recursion in R, and sometimes it is valuable, but there are often si
 [wiki-associative]: https://en.wikipedia.org/wiki/Associative_property
 [concept-vector-filtering]: https://exercism.org/tracks/r/concepts/vector-filtering
 [concept-vector-functions]: https://exercism.org/tracks/r/concepts/vector-functions
+[concept-matrices-arrays]: https://exercism.org/tracks/r/concepts/matrices-arrays
 [ref-predicates]: https://purrr.tidyverse.org/reference/index.html#predicate-functionals
 [ref-keep]: https://purrr.tidyverse.org/reference/keep.html
 [ref-every]: https://purrr.tidyverse.org/reference/every.html
