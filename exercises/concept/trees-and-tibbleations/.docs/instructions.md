@@ -63,10 +63,10 @@ girth_n_weight(tree_data, 1) |> head(3)
 ## 3. Orchard copy of dataset
 
 For each potential customer, the orchard keeps a special copy of the dataset to help with the sale.
-This dataset has the most relevant columns, `Height` and `Weight`, moved to the front and is sorted by `Height`.
+This dataset has the most relevant columns, `Weight` and `Height`, moved to the front and is sorted by `Weight`.
 
 Define the function `orchard_copy(data, important_cols)` which takes a dataframe as input.
-This should return a new dataframe with `Height` and `Weight` moved to the front and the rows sorted by `Height`.
+This should return a new dataframe with `Weight` and `Height` moved to the front and the rows sorted by `Weight`.
 
 ```R
 tree_data |> girth_n_weight() |> orchard_copy() |> head(3)
