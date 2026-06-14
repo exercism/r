@@ -148,7 +148,7 @@ f(4)
 
 ## Anonymous Functions
 
-When we define a function, we usually bind the resulting function object to a variable:
+When we define a function, we usually bind the resulting function object to a variable.
 
 ```R
 x <- 2
