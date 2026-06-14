@@ -60,49 +60,42 @@ girth_n_weight(tree_data, 1) |> head(3)
 #>      8.8	     63	   10.2	  27.6	 357.0
 ```
 
-**Note:** For testing, the input dataset for `girth_n_weight` can be assumed to have `Diameter` and `Volume` columns.
-
 ## 3. Orchard copy of dataset
 
 For each potential customer, the orchard keeps a special copy of the dataset to help with the sale.
-This dataset has important columns moved to the front and is sorted by that leading column.
+This dataset has the most relevant columns, `Weight` and `Height`, moved to the front and is sorted by `Weight`.
 
-Define the function `orchard_copy(data, important_cols)` which takes a dataframe and a vector of column names.
-This should return a new dataframe with the important columns moved to the front and the rows sorted by the first column of that rearrangement.
+Define the function `orchard_copy(data, important_cols)` which takes a dataframe as input.
+This should return a new dataframe with `Weight` and `Height` moved to the front and the rows sorted by `Weight`.
 
 ```R
-orchard_copy(tree_data, c('Height', 'Volume')) |> head(3)
-#>      A tibble: 3 × 3 
-#> Height	Volume	 Diameter
-#>  <dbl>	 <dbl>	    <dbl>
-#>     63	  10.2	      8.8
-#>     64	  24.9	     13.8
-#>     65	  10.3	      8.6
+tree_data |> girth_n_weight() |> orchard_copy() |> head(3)
+#>            A tibble: 3 × 5 
+#> Weight	Height	Diameter	Volume	Girth
+#>  <dbl>	 <dbl>	   <dbl>	 <dbl>	<dbl>
+#>    357	    63	       9	    10	   28
+#>    360	    70	       8	    10	   26
+#>    360	    65	       9	    10	   27
 ```
 
 ## 4. Customer copy of dataset
 
 Each potential customer will get a personal version of the dataset based on their preferences.
-To this end, the customer may specify two extra things:
+To this end, the customer may specify: the minimum height, the maximum height and the maximum weight of any single tree.
 
-1. The minimum height, the maximum height and the maximum weight of any single tree.
-2. A list of attributes that are of interest.
-
-Define the `customer_copy(data, attrbutes, min_height, max_height, max_weight)` function.
-Return a customer copy of the dataframe with the requested attributes and within the constraints.
+Define the `customer_copy(data, min_height, max_height, max_weight)` function.
+Return a customer copy of the dataframe with `Height`, `Weight`, `Diameter` and `Girth` columns with rows that are within the constraints.
 
 ```R
 tree_data |> 
     girth_n_weight(1) |> 
-    orchard_copy(c('Height', 'Weight', 'Volume')) |>
-    customer_copy(c('Height', 'Weight', 'Girth'), 65, 75, 1500) |> 
+    orchard_copy() |>
+    customer_copy(65, 75, 1500) |> 
     head(3)
-#>     A tibble: 3 × 3 
-#> Height	Weight   Girth
-#>  <dbl>	 <dbl>	 <dbl>
-#>     65	 360.5	  27.0
-#>     66	 546.0	  34.6
-#>     69	 745.5	  36.8
+#>        A tibble: 3 × 4 
+#> Height	Weight	Diameter	Girth
+#>  <dbl>	 <dbl>	   <dbl>	<dbl>
+#>     70	 360.5	     8.3	 26.1
+#>     65	 360.5	     8.6	 27.0
+#>     66	 546.0	    11.0	 34.6
 ```
-
-**Note:** For testing, the input dataset for `customer_copy` can be assumed to have `Height` and `Weight` columns.

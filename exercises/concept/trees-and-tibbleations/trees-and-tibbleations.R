@@ -6,10 +6,10 @@ girth_n_weight <- function(data, rnd_digits) {
   
 }
 
-orchard_copy <- function(data, rearrangement) {
+orchard_copy <- function(data) {
   
 }
 
-customer_copy <- function(data, attributes, min_height, max_height, max_weight) {
+customer_copy <- function(data, min_height, max_height, max_weight) {
   
 }

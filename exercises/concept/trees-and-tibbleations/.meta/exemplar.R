@@ -9,14 +9,14 @@ girth_n_weight <- function(data, rnd_digits) {
     round(rnd_digits)
 }
 
-orchard_copy <- function(data, important_cols) {
+orchard_copy <- function(data) {
   data |>
-    relocate(all_of(important_cols)) |>
-    arrange(pick(important_cols[1]))
+    relocate(c(Weight, Height)) |>
+    arrange(Weight)
 }
 
-customer_copy <- function(data, attributes, min_height, max_height, max_weight) {
+customer_copy <- function(data, min_height, max_height, max_weight) {
   data |> 
-    select(all_of(attributes)) |>
+    select(c(Height, Weight, Diameter, Girth)) |>
     filter(between(Height, min_height, max_height) & Weight < max_weight)
 }

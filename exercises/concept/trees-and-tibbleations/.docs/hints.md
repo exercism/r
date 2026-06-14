@@ -15,13 +15,10 @@
 ## 3. Orchard copy of dataset
 
 - You need to move columns around and sort rows (see the Introduction).
-- The [`all_of()`][ref-allof] function may be useful for moving columns.
-- See caution in the introduction about [data-masking][ref-datamask] which mentions [`pick()`][ref-pick].
 
 ## 4. Customer copy of dataset
 
 - You will need to take a subset of columns.
-- The [`all_of()`][ref-allof] function may be useful for subsetting.
 - Only the trees between the minimum and maximum height *and* below the maximum weight should be in the copy.
 
 [ref-allof]: https://tidyselect.r-lib.org/reference/all_of.html
