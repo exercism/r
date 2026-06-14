@@ -443,37 +443,6 @@ tbl |> arrange(languages)
 #> 4 R            1993 TRUE     
 ```
 
-~~~~exercism/caution
-Many functions, such as `arrange()`, `filter()` and `mutate()` are [data-masking][ref-data-masking] and require data-masking variables.
-For this reason, non-data-masking arguments (e.g. character vectors) need to be converted to be used in data-masking functions.
-
-A full treatment of how data-masking works in R is beyond the scope of this concept, but it's useful to know there are ways of making this conversion which include options such as: [`pick()`][ref-pick], `.data[[]]` and `!!sym()`.
-
-```R
- # arrange() with string input fails silently
-tbl |> arrange("languages")
-#>      A tibble: 4 × 3
-#>   languages created has.syllabus
-#>   <chr>       <dbl> <lgl>       
-#> 1 Fortran      1957 FALSE       
-#> 2 R            1993 TRUE        
-#> 3 Python       1991 TRUE        
-#> 4 Julia        2012 TRUE 
-
-tbl |> arrange(pick("languages"))
-#>       A tibble: 4 × 3
-#>   languages created has.syllabus
-#>   <chr>       <dbl> <lgl>       
-#> 1 Fortran      1957 FALSE       
-#> 2 Julia        2012 TRUE        
-#> 3 Python       1991 TRUE        
-#> 4 R            1993 TRUE     
-```
-
-[ref-pick]: https://dplyr.tidyverse.org/reference/pick.html
-[ref-data-masking]: https://rlang.r-lib.org/reference/topic-data-mask.html
-~~~~
-
 ## Summary
 
 Dataframes, whether traditional or tibbles, are central to the way modern R is typically used.
