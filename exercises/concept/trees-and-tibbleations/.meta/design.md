@@ -12,6 +12,7 @@ The goal of this exercise is to teach the student how to use dataframes with the
 
 ## Out of scope
 
+- Tidy evaluation
 - Merging dataframes
 - Dimension collapsing operations
 - Data operations / data analysis
