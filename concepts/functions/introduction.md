@@ -151,7 +151,10 @@ f(4)
 When we define a function, we usually bind the resulting function object to a variable:
 
 ```R
-squareit_short <- function(x) x ^ 2
+x <- 2
+
+# function definition captures x from the environment
+doubleit_short <- function(y) x * y
 ```
 
 This makes it easy to use the function later in the script, but such binding is not necessary.
