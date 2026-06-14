@@ -67,7 +67,7 @@ c(letters, LETTERS, 0:9) |> sample(50) |> str_flatten()
 ```
 
 Also, sampling is not limited to vectors and ranges.
-We will see in other concepts that [lists][concept-lists], matrices and dataframes are all valid inputs.
+We will see in other concepts that [lists][concept-lists], [matrices][concept-matrices-arrays] and [dataframes][concept-dataframes] are all valid inputs.
 *Exactly as you should expect for R*.
 
 ## Shuffling
@@ -335,4 +335,6 @@ Many statisticians and data scientists over the last few decades think that R fi
 [ref-rpois]: https://www.rdocumentation.org/packages/stats/versions/3.5.2/topics/Poisson
 [ref-set-seed]: https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/Random
 [concept-lists]: https://exercism.org/tracks/r/concepts/lists
+[concept-matrices-arrays]: https://exercism.org/tracks/r/concepts/matrices-arrays
+[concept-dataframes]: https://exercism.org/tracks/r/concepts/dataframes
 [practice-pascal]: https://exercism.org/tracks/r/exercises/pascals-triangle
