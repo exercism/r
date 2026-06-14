@@ -273,7 +273,7 @@
         "prerequisites": [
           "functional-programming"
         ],
-        "status": "wip"
+        "status": "beta"
       }
     ],
     "practice": [
