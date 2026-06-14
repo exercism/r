@@ -13,7 +13,7 @@
 ## 3. Transform a 2D point
 
 - Remember: translate, _then_ scale.
-- Arguments to `transform2d()` are optional, so remember to define defaults.
+- The `s` argument to `transform2d()` is optional, so remember to define a default.
 - `transform2d()` needs to return a function which takes a `point` as its sole argument.
 - If still confused, read the Introduction on environments and functions as return values, and look at the examples in the instructions.
 - This is the sort of topic that can confusing at first, but becomes very natural with a bit of practice.

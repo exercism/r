@@ -7,7 +7,7 @@ Please aim to work directly with the vector points: there is no need to unpack t
 
 ## 1. Scale the coordinates
 
-Implement the `scale(scaling)` function that takes a point with arbitrary number of dimensions, and scales it by the pre-defined `scaling`.
+Implement the `scale(point, scaling)` function that takes a point with arbitrary number of dimensions, and scales it by the pre-defined `scaling`.
 
 ```R
 # A 2D example
@@ -21,12 +21,20 @@ scale(point, scaling)
 
 Implement the `translate(point, ...)` function that returns a new point, with each coordinate moved by the values in the ellipses.
 
+This function must be able to handle points of any dimension, with the number of dot args matching that dimension.
+
 ```R
-point <- c(2, 3)
+point2d <- c(2, 3)
 
 # supply dx, dy translations
-translate(point, 0.5, 0.6)
+translate(point2d, 0.5, 0.6)
 #> [1] 2.5 3.6
+
+point3d <- c(2, 3, 4)
+
+# supply dx, dy, dz translations
+translate(point3d, 0.5, 0.6, 0.7)
+#> [1] 2.5 3.6 4.7
 ```
 
 ## 3. Transform a 2D point
@@ -35,7 +43,7 @@ Some of your teammates are less experienced with R, so you decide to use a funct
 
 Implement the `transform2d(dx, dy, s)` function that returns a function making use of a closure to perform a repeatable 2d translation and scaling of a point.
 
-All arguments should be optional, with default values of `0.1` for `dx` and `dy`, and `1` for `s`.
+The scaling argument `s` should be optional, with a default value of `1`.
 
 The returned function should take a 2D point, then:
 
@@ -46,12 +54,18 @@ The returned function should take a 2D point, then:
 # scale all coordinates by the same amount (2) in this example
 # your code needs to be able to handle a vector `s`
 
-f <- transform2d(0.5, 0.6, 2)
-class(f)
+tf2d <- transform2d(0.5, 0.6, 2)
+class(tf2d)
 #> [1] "function"
 
-f(c(2, 3))
+tf2d(c(2, 3))
 #> [1] 5.0 7.2
+
+# Accept default for `s`
+tf2d <- transform2d(0.5, 0.6)
+
+tf2d(c(2, 3))
+#> 2.5 3.6
 ```
 
 The order of operations is important: translate-then-scale gives the correct result, scale-then-translate does not.
@@ -63,13 +77,19 @@ Mapping data can also contain heights, used to add shading and contours on scree
 
 Implement the `transform3d(dx, dy, dz, s)` function that returns a function.
 
-All arguments should be optional, with default values of `0.1` for `dx`, `dy` and `dz`, and `1` for `s`.
+The scaling argument `s` should be optional, with a default value of `1`.
 
 The returned function should take a 3D point, translate it by the pre-defined values, then scale it by `s`.
 
 ```R
-g <- transform3d(0.5, 0.6, 0.7, 2)
+# using default `s`
+tf3d <- transform3d(0.5, 0.6, 0.7)
 point <- c(2, 3, 4)
-g(point)
-#> [1] 5.0 7.2 9.4
+tf3d(point)
+#> [1] 2.5 3.6 4.7
+
+# using vector `s`
+tf3d <- transform3d(0.5, 0.6, 0.7, c(0.5, 0.6, 0.7))
+tf3d(point)
+#> [1] 1.25 2.16 3.29
 ```
