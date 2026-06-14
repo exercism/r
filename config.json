@@ -3,7 +3,7 @@
   "slug": "r",
   "active": true,
   "status": {
-    "concept_exercises": false,
+    "concept_exercises": true,
     "test_runner": true,
     "representer": false,
     "analyzer": false
@@ -44,7 +44,7 @@
         "prerequisites": [
           "basics"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "lasagna",
@@ -54,7 +54,7 @@
           "basics"
         ],
         "prerequisites": [],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "elyses-enchantments",
@@ -66,7 +66,7 @@
         "prerequisites": [
           "conditionals"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "cars-assemble",
@@ -78,7 +78,7 @@
         "prerequisites": [
           "booleans"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "elyses-analytic-enchantments",
@@ -90,7 +90,7 @@
         "prerequisites": [
           "vectors"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "ozans-playlist",
@@ -102,7 +102,7 @@
         "prerequisites": [
           "vectors"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "log-levels",
@@ -114,7 +114,7 @@
         "prerequisites": [
           "vectors"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "blackjack",
@@ -126,7 +126,7 @@
         "prerequisites": [
           "strings"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "mixed-juices",
@@ -138,7 +138,7 @@
         "prerequisites": [
           "switch"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "named-resistor-color",
@@ -150,7 +150,7 @@
         "prerequisites": [
           "vector-filtering"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "name-badges",
@@ -163,7 +163,7 @@
           "vector-filtering",
           "strings"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "need-for-speed",
@@ -175,7 +175,7 @@
         "prerequisites": [
           "names-attribute"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "bird-watcher",
@@ -187,7 +187,7 @@
         "prerequisites": [
           "vector-filtering"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "coordinate-transformation",
@@ -199,7 +199,7 @@
         "prerequisites": [
           "vector-functions"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "factory-sensors",
@@ -211,7 +211,7 @@
         "prerequisites": [
           "nothingness"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "booking-up-for-beauty",
@@ -223,7 +223,7 @@
         "prerequisites": [
           "functional-programming"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "cheese-club",
@@ -237,7 +237,7 @@
           "loops",
           "functions"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "captains-log",
@@ -249,7 +249,7 @@
         "prerequisites": [
           "strings"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "regular-chatbot",
@@ -261,7 +261,7 @@
         "prerequisites": [
           "functional-programming"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "trees-and-tibbleations",
