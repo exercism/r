@@ -10,5 +10,17 @@
   {
     "url": "https://bioinformatics.ccr.cancer.gov/docs/rintro/Lesson_3/",
     "description": "The dplyr library, which makes dataframe manipulation much easier."
+  },
+  {
+    "url": "https://discdown.org/rprogramming/dataframes.html",
+    "description": "dataframes in DISCdown."
+  },
+  {
+    "url": "https://r02pro.github.io/dataframe.html",
+    "description": "dataframes and tibbles in R Programming Zero to Pro."
+  },
+  {
+    "url": "https://intro2r.com/data-structures.html#df",
+    "description": "data.frames in intro2r."
   }
 ]
