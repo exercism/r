@@ -36,7 +36,7 @@
     "concept": [
       {
         "slug": "annalyns-infiltration",
-        "name": "Annalyns Infiltration",
+        "name": "Annalyn's Infiltration",
         "uuid": "9b2d4bd3-c302-490d-9dac-3ac79c04cac3",
         "concepts": [
           "booleans"
@@ -58,7 +58,7 @@
       },
       {
         "slug": "elyses-enchantments",
-        "name": "Elyses Enchantments",
+        "name": "Elyse's Enchantments",
         "uuid": "9c499085-2d1a-48d4-ab73-6fa1f848fc30",
         "concepts": [
           "vectors"
@@ -82,7 +82,7 @@
       },
       {
         "slug": "elyses-analytic-enchantments",
-        "name": "Elyses Analytic Enchantments",
+        "name": "Elyse's Analytic Enchantments",
         "uuid": "2d6c9880-efce-4e57-8abf-d702087b6082",
         "concepts": [
           "vector-filtering"
@@ -94,7 +94,7 @@
       },
       {
         "slug": "ozans-playlist",
-        "name": "Ozans Playlist",
+        "name": "Ozan's Playlist",
         "uuid": "323ff052-9238-4299-944c-c231c939ff9f",
         "concepts": [
           "set-operations"

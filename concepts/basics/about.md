@@ -19,7 +19,7 @@ class(50L)
 #> [1] "integer"
 ```
 
-~~~exercism/advanced
+~~~~exercism/advanced
 You may also see references to `mode()`, which is similar to `typeof()`.
 
 Please ignore `mode()` and `storage.mode()`.
