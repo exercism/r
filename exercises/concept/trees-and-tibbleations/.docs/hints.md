@@ -20,7 +20,3 @@
 
 - You will need to take a subset of columns.
 - Only the trees between the minimum and maximum height *and* below the maximum weight should be in the copy.
-
-[ref-allof]: https://tidyselect.r-lib.org/reference/all_of.html
-[ref-pick]: https://dplyr.tidyverse.org/reference/pick.html
-[ref-datamask]: https://rlang.r-lib.org/reference/args_data_masking.html
