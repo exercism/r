@@ -10,7 +10,7 @@ avogadro <- 6.02e23
 mystr <- "Hello, World!"
 ```
 
-The preferred assignment operator is `<-` (not `=`).
+Using `=` instead of `<-` will often but not always work, and is discouraged as poor style.
 If working in RStudio, it can be entered with the keyboard shortcut `Alt-minus`.
 
 Operators are mostly conventional, but note `%/%` and `%%`:
@@ -38,10 +38,30 @@ squareit <- function(x) {
 }
 ```
 
-R will automatically return the final value of a function. More generally, `return(x * x)` will work from anywhere in the function body.
+Functions can have zero or more arguments, separated by commas.
+Parentheses `()` are needed with `function()`, even if there are no parameters.
 
-Calling a function is simple:
+Default values can be specified for function arguments, though these must come after any arguments without defaults, and use `=` not `<-` to assign the default value.
+As a rather pointless example:
 
 ```R
-y <- squareit(3) # y is now 9
+squareit <- function(x = 42) {
+    x * x
+}
+
+squareit()
+#> [1] 1764
+```
+
+The braces `{ }` are not strictly required for single-line function bodies, but including them is considered good style.
+
+R will automatically return the final value of a function, as in the examples above.
+
+`return()` can be used anywhere within the function body to make a return value explicit.
+
+Calling a function is the same as in many other languages:
+
+```R
+squareit(3)
+#> [1] 9
 ```
