@@ -14,7 +14,7 @@ on:
 
 jobs:
   lint:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
 
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
@@ -26,8 +26,7 @@ jobs:
       - uses: r-lib/actions/setup-r-dependencies@f9a764fea8d5c63df6ef9a5c7795bf7deb5d7e05
         with:
           cache-version: 1
-          packages: |
-            lintr
+          packages: lintr
 
       - name: Run exercism/r ci pre-check (checks config, lint code) for all exercises
         run: |
