@@ -25,11 +25,11 @@ jobs:
 
       - uses: r-lib/actions/setup-r-dependencies@d3c5be51b12e724e68f33216ca3c148b66d5f0b6
         with:
-          cache-version: 1
-          packages: |
-            lintr
+          extra-packages: any::lintr, local::.
+          needs: lint
 
       - name: Run exercism/r ci pre-check (checks config, lint code) for all exercises
-        run: |
-          source("bin/run_lints.R")
+        run: lintr::lint_package()
         shell: Rscript {0}
+        env:
+          LINTR_ERROR_ON_LINT: true
