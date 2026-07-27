@@ -529,6 +529,18 @@
         "difficulty": 1
       },
       {
+        "slug": "line-up",
+        "name": "Line Up",
+        "uuid": "e254151d-b212-4c53-9c9e-032d87e557d1",
+        "practices": [
+          "strings"
+        ],
+        "prerequisites": [
+          "strings"
+        ],
+        "difficulty": 1
+      },
+      {
         "slug": "proverb",
         "name": "Proverb",
         "uuid": "88b06132-be17-4105-8184-90c2d571fcb2",
