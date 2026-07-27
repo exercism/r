@@ -5,7 +5,6 @@
 
 {% for case in cases -%}
 test_that("{{ case["description"] }}", {
-  input_base <- {{ case["input"]["inputBase"] }}
   expect_equal(line_up("{{ case["input"]["name"] }}", {{ case["input"]["number"] }}), 
                        "{{ case["expected"] }}")
 })
