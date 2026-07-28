@@ -1,6 +1,6 @@
 # These tests are auto-generated with test data from:
 # https://github.com/exercism/problem-specifications/tree/main/exercises/swift-scheduling/canonical-data.json
-# File last updated on 2026-04-20
+# File last updated on 2026-07-28
 
 source("./swift-scheduling.R")
 library(testthat)
@@ -114,5 +114,12 @@ test_that("Q3 in the fourth quarter translates to the last workday of the third 
   start <- "2022-10-06T11:00:00"
   description <- "Q3"
   expected <- "2023-09-29T08:00:00"
+  expect_equal(delivery_date(start, description), expected)
+})
+
+test_that("Q2 starting in the last month of the second quarter translates to the last workday of the second quarter of this year", {
+  start <- "2019-06-15T09:50:00"
+  description <- "Q2"
+  expected <- "2019-06-28T08:00:00"
   expect_equal(delivery_date(start, description), expected)
 })
