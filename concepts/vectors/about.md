@@ -216,7 +216,7 @@ We have already seen hints of this in the [Basics][concept-basics] and [Booleans
 
 ## A word on notation
 
-The vectors described above are more formally known as [`atomic vectors`][book-atomic]. This is because they can only contain simple, indivisible (hence "atomic") values such as `numeric`, `characacter`, `boolean`. More complex structures can form `recursive vectors`, which will be introduced when [`lists`][concept-lists] are discussed.
+The vectors described above are more formally known as [`atomic vectors`][book-atomic]. This is because they can only contain simple, indivisible (hence "atomic") values such as `numeric`, `character`, `boolean`. More complex structures can form `recursive vectors`, which will be introduced when [`lists`][concept-lists] are discussed.
 
 [ref-type]: https://stat.ethz.ch/R-manual/R-devel/library/base/html/typeof.html
 [ref-integer]: https://stat.ethz.ch/R-manual/R-devel/library/base/html/integer.html
