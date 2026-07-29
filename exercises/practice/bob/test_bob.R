@@ -1,13 +1,13 @@
 # These tests are auto-generated with test data from:
 # https://github.com/exercism/problem-specifications/tree/main/exercises/bob/canonical-data.json
-# File last updated on 2026-03-13
+# File last updated on 2026-07-28
 
 source("./bob.R")
 library(testthat)
 
-test_that("stating something", {
-  input <- "Tom-ay-to, tom-aaaah-to."
-  expect_equal(bob(input), "Whatever.")
+test_that("asking a question", {
+  input <- "Does this cryogenic chamber make me look fat?"
+  expect_equal(bob(input), "Sure.")
 })
 
 test_that("shouting", {
@@ -15,14 +15,19 @@ test_that("shouting", {
   expect_equal(bob(input), "Whoa, chill out!")
 })
 
-test_that("shouting gibberish", {
-  input <- "FCECDFCAAB"
-  expect_equal(bob(input), "Whoa, chill out!")
+test_that("forceful question", {
+  input <- "WHAT'S GOING ON?"
+  expect_equal(bob(input), "Calm down, I know what I'm doing!")
 })
 
-test_that("asking a question", {
-  input <- "Does this cryogenic chamber make me look fat?"
-  expect_equal(bob(input), "Sure.")
+test_that("silence", {
+  input <- ""
+  expect_equal(bob(input), "Fine. Be that way!")
+})
+
+test_that("stating something", {
+  input <- "Tom-ay-to, tom-aaaah-to."
+  expect_equal(bob(input), "Whatever.")
 })
 
 test_that("asking a numeric question", {
@@ -35,49 +40,9 @@ test_that("asking gibberish", {
   expect_equal(bob(input), "Sure.")
 })
 
-test_that("talking forcefully", {
-  input <- "Hi there!"
-  expect_equal(bob(input), "Whatever.")
-})
-
-test_that("using acronyms in regular speech", {
-  input <- "It's OK if you don't want to go work for NASA."
-  expect_equal(bob(input), "Whatever.")
-})
-
-test_that("forceful question", {
-  input <- "WHAT'S GOING ON?"
-  expect_equal(bob(input), "Calm down, I know what I'm doing!")
-})
-
-test_that("shouting numbers", {
-  input <- "1, 2, 3 GO!"
-  expect_equal(bob(input), "Whoa, chill out!")
-})
-
-test_that("no letters", {
-  input <- "1, 2, 3"
-  expect_equal(bob(input), "Whatever.")
-})
-
 test_that("question with no letters", {
   input <- "4?"
   expect_equal(bob(input), "Sure.")
-})
-
-test_that("shouting with special characters", {
-  input <- "ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!"
-  expect_equal(bob(input), "Whoa, chill out!")
-})
-
-test_that("shouting with no exclamation mark", {
-  input <- "I HATE THE DENTIST"
-  expect_equal(bob(input), "Whoa, chill out!")
-})
-
-test_that("statement containing question mark", {
-  input <- "Ending with ? means a question."
-  expect_equal(bob(input), "Whatever.")
 })
 
 test_that("non-letters with question", {
@@ -90,9 +55,41 @@ test_that("prattling on", {
   expect_equal(bob(input), "Sure.")
 })
 
-test_that("silence", {
-  input <- ""
-  expect_equal(bob(input), "Fine. Be that way!")
+test_that("ending with whitespace", {
+  input <- "Okay if like my  spacebar  quite a bit?   "
+  expect_equal(bob(input), "Sure.")
+})
+
+test_that("multiple line question", {
+  input <- "
+Does this cryogenic chamber make
+ me look fat?"
+  expect_equal(bob(input), "Sure.")
+})
+
+test_that("shouting gibberish", {
+  input <- "FCECDFCAAB"
+  expect_equal(bob(input), "Whoa, chill out!")
+})
+
+test_that("shouting a statement containing a question mark", {
+  input <- "DO LIONS EAT PEOPLE? AHHHHH."
+  expect_equal(bob(input), "Whoa, chill out!")
+})
+
+test_that("shouting numbers", {
+  input <- "1, 2, 3 GO!"
+  expect_equal(bob(input), "Whoa, chill out!")
+})
+
+test_that("shouting with special characters", {
+  input <- "ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!"
+  expect_equal(bob(input), "Whoa, chill out!")
+})
+
+test_that("shouting with no exclamation mark", {
+  input <- "I HATE THE DENTIST"
+  expect_equal(bob(input), "Whoa, chill out!")
 })
 
 test_that("prolonged silence", {
@@ -105,16 +102,6 @@ test_that("alternate silence", {
   expect_equal(bob(input), "Fine. Be that way!")
 })
 
-test_that("starting with whitespace", {
-  input <- "         hmmmmmmm..."
-  expect_equal(bob(input), "Whatever.")
-})
-
-test_that("ending with whitespace", {
-  input <- "Okay if like my  spacebar  quite a bit?   "
-  expect_equal(bob(input), "Sure.")
-})
-
 test_that("other whitespace", {
   input <- "
 
@@ -122,14 +109,32 @@ test_that("other whitespace", {
   expect_equal(bob(input), "Fine. Be that way!")
 })
 
-test_that("non-question ending with whitespace", {
-  input <- "This is a statement ending with whitespace      "
+test_that("talking forcefully", {
+  input <- "Hi there!"
   expect_equal(bob(input), "Whatever.")
 })
 
-test_that("multiple line question", {
-  input <- "
-Does this cryogenic chamber make
- me look fat?"
-  expect_equal(bob(input), "Sure.")
+test_that("using acronyms in regular speech", {
+  input <- "It's OK if you don't want to go work for NASA."
+  expect_equal(bob(input), "Whatever.")
+})
+
+test_that("no letters", {
+  input <- "1, 2, 3"
+  expect_equal(bob(input), "Whatever.")
+})
+
+test_that("statement containing question mark", {
+  input <- "Ending with ? means a question."
+  expect_equal(bob(input), "Whatever.")
+})
+
+test_that("starting with whitespace", {
+  input <- "         hmmmmmmm..."
+  expect_equal(bob(input), "Whatever.")
+})
+
+test_that("non-question ending with whitespace", {
+  input <- "This is a statement ending with whitespace      "
+  expect_equal(bob(input), "Whatever.")
 })
