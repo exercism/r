@@ -11,7 +11,7 @@ ciphertext <- function(input) {
   normalized |> 
     str_pad(c * r, "right") |>
     str_split_1("") |>
-    matrix(nrow=r, ncol=c) |>
+    matrix(nrow = r, ncol = c) |>
     t() |>
     apply(2, str_flatten) |>
     str_flatten(collapse = " ")
