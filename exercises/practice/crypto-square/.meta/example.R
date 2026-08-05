@@ -1,37 +1,18 @@
-normalized_plaintext <- function(input) {
-  gsub("[^[:alnum:]]", "", input) |>
-    tolower()
-}
-
-map_plaintext_to_matrix <- function(input) {
-  txt <- normalized_plaintext(input)
-  width <- max(1, nchar(txt) |> sqrt() |> ceiling())
-  ext_len <- ceiling(nchar(txt) / width) * width
-  txt <- sprintf(paste0("%-", ext_len, "s"), txt)
-
-  strsplit(txt, "") |>
-    unlist() |>
-    matrix(ncol = width, byrow = TRUE)
-}
-
-plaintext_segments <- function(input) {
-  if (!nzchar(input)) {
-    return("")
-  }
-  map_plaintext_to_matrix(input) |>
-    apply(MARGIN = 1, paste, collapse = "") |>
-    trimws()
-}
-
-encoded <- function(input) {
-  map_plaintext_to_matrix(input) |>
-    apply(MARGIN = 2, paste, collapse = "") |>
-    trimws() |>
-    paste(collapse = "")
-}
+library(tidyverse)
 
 ciphertext <- function(input) {
-  map_plaintext_to_matrix(input) |>
-    apply(MARGIN = 2, paste, collapse = "") |>
-    paste(collapse = " ")
+  normalized <- input |> str_to_lower() |> str_remove_all("[^a-z0-9]")
+  if (normalized == "") return("")
+
+  # R matrices are column-major
+  # we will need a transpose to match the problem specification
+  r <- normalized |> nchar() |> sqrt() |> ceiling()
+  c <- (nchar(normalized) / r) |> ceiling()
+  normalized |> 
+    str_pad(c * r, "right") |>
+    str_split_1("") |>
+    matrix(nrow=r, ncol=c) |>
+    t() |>
+    apply(2, str_flatten) |>
+    str_flatten(collapse = " ")
 }
