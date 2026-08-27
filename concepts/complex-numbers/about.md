@@ -26,7 +26,7 @@ typeof(2+3i)
 To create a complex number from real variables, the above syntax will not work.
 Writing `r + imi` confuses the parser into thinking `imi` is a (non-existent) variable name.
 
-Either multiply the imaginary part by `1i` or use the `complex()` function:
+Either multiply the imaginary part by `1i` or use the [`complex()`][ref-complex] function:
 
 ```r
 r <- 2
@@ -35,6 +35,7 @@ im <- 3
 r + im * 1i
 #> [1] 2+3i
 
+# must include the `real` and `imaginary` keywords
 complex(real = r, imaginary = im)
 #> [1] 2+3i
 ```
@@ -147,8 +148,7 @@ Please skip over these if they make no sense to you!
 
 - `Conj()` simply flips the sign of the imaginary part of a complex number (_from + to - or vice-versa_).
   - Because of the way complex multiplication works, this is more useful than you might think.
-- `abs(<complex number>)` is guaranteed to return a real number with no imaginary part and `Mod(<complex number>)` 
-  is a synonym.
+- `abs(<complex number>)` is guaranteed to return a real number with no imaginary part (its "magnitude"), and `Mod(<complex number>)` is a synonym.
 - `Arg(<complex number>)` returns the phase angle in radians.
 
 ```r
@@ -194,7 +194,7 @@ It dates back to around 1740.
 This part can be skipped, unless you are interested.
 
 ### Isn't this some strange new piece of pure mathematics?
-
+ its "magn
 It was strange and new in the 16th century.
 
 500 years later, it is central to most of engineering and the physical sciences.
@@ -219,22 +219,25 @@ Only true if you are living in a cave and foraging for your food.
 
 If you are reading this on any sort of screen, you are utterly dependent on some useful 20th-Century advances made through the use of complex numbers.
 
-1. __Semiconductor chips__.
-    - These make no sense in classical physics and can only be explained (and designed) by quantum mechanics (QM).
-    - In QM, everything is complex-valued by definition. (_it's waveforms all the way down_)
+__Semiconductor chips__.
 
-2. __The Fast Fourier Transform algorithm__.
-    - FFT is an application of complex numbers, and it is in _everything_ connected to sound transmission, audio processing, photos, and video.
+- These make no sense in classical physics and can only be explained (and designed) by quantum mechanics (QM).
+- In QM, everything is complex-valued by definition. (_it's waveforms all the way down_)
 
-    - MP3 and other audio formats use FFT for compression, ensuring more audio can fit within a smaller storage space.
-    - JPEG compression and MP4 video, among many other image and video formats, also use FFT for compression.
+__The Fast Fourier Transform algorithm__.
 
-    - FFT is also deployed in the digital filters that allow cellphone towers to separate your personal cell signal from everyone else's.
+- FFT is an application of complex numbers, and it is in _everything_ connected to sound transmission, audio processing, photos, and video.
+
+- MP3 and other audio formats use FFT for compression, ensuring more audio can fit within a smaller storage space.
+- JPEG compression and MP4 video, among many other image and video formats, also use FFT for compression.
+
+- FFT is also deployed in the digital filters that allow cellphone towers to separate your personal cell signal from everyone else's.
 
 So, you are probably using technology that relies on complex number calculations thousands of times per second.
 
 [web-complex]: https://www.cfm.brown.edu/people/dobrush/am33/R/intro/complex0.html
 [ref-atomic]: https://cran.r-project.org/doc/manuals/r-release/R-lang.html#Vectors
+[ref-complex]: https://www.rdocumentation.org/packages/base/versions/3.3.0/topics/complex
 [web-math-complex]: https://www.nagwa.com/en/videos/143121736364/
 [web-engineering-complex]: https://www.khanacademy.org/science/electrical-engineering/ee-circuit-analysis-topic/ee-ac-analysis/v/ee-complex-numbers
 [ref-operators]: https://stat.ethz.ch/R-manual/R-devel/library/base/html/Syntax.html
