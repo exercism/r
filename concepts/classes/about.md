@@ -62,7 +62,7 @@ attributes(pt2d)
 #> [1] "point2d"
 ```
 
-So [`class()`][ref-class] just adds one attribute, in this case identifying `pt2d` as an instance of the `point2d` class.
+So making an assignment to [`class(obj)`][ref-class] just adds one attribute to `obj`, in this case identifying pt2d as an instance of the point2d class.
 
 The creation steps can be combined with [`structure()`][ref-structure]:
 
@@ -179,7 +179,7 @@ We should regard this as an unfortunate historical accident (for functions even 
 
 OOP enthusiasts can write multiple long textbook chapters on inheritance, subclassing, mixins, and all the rest.
 
-R just lets you supply multiple names to the `class` attribute.
+R just lets you supply multiple names to the `class` attribute: a longer vector of strings, rather than a single string.
 
 At the risk of stretching the example to breaking point, suppose we had made a generic `point` class, and wanted to subclass it to `point2d`, `point3d`, etc.
 

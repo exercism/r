@@ -3,5 +3,5 @@
     "colinleach"
   ],
   "contributors": [],
-  "blurb": "R has several types of OOP class, but S3 is the simplest and most widely used."
+  "blurb": "R has multiple OOP class designs, but S3 is the simplest and most widely used."
 }
