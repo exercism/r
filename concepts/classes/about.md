@@ -136,7 +136,7 @@ pt2d
 #> Cartesian coords (2.5, 4.2)
 ```
 
-Now suppose we want to create a new generic method, for example `flipvert()` to invert the signe on the `y` coordinate.
+Now suppose we want to create a new generic method, for example `flipvert()` to invert the sign on the `y` coordinate.
 
 Again, easy:
 
