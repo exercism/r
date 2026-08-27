@@ -1,6 +1,5 @@
 # About
 
-
 `Complex numbers` are not complicated.
 They just need a less alarming name.
 
