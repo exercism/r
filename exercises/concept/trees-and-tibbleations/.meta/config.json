@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "depial"
+  ],
+  "files": {
+    "solution": [
+      "trees-and-tibbleations.R"
+    ],
+    "test": [
+      "test_trees-and-tibbleations.R"
+    ],
+    "exemplar": [
+      ".meta/exemplar.R"
+    ]
+  },
+  "blurb": "Learn about dataframes by helping a cherry orchard wrangle some data"
+}

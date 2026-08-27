@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "colinleach"
+  ],
+  "files": {
+    "solution": [
+      "cheese-club.R"
+    ],
+    "test": [
+      "test_cheese-club.R"
+    ],
+    "exemplar": [
+      ".meta/exemplar.R"
+    ]
+  },
+  "forked_from": [
+    "julia/cheese-club"
+  ],
+  "blurb": "Use higher order functions to wrangle some data for a cheese club."
+}

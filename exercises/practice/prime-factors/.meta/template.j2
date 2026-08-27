@@ -1,0 +1,14 @@
+{%- import "generator_macros.j2" as macros with context -%}
+{{ macros.canonical_ref() }}
+
+{{ macros.header() }}
+
+{% for case in cases -%}
+test_that("{{ case["description"] }}", {
+  expect_equal(
+    prime_factors({{ case["input"]["value"] }}), 
+    c{{ case["expected"] | list_to_tuple }}
+  )
+})
+
+{% endfor %}

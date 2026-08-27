@@ -1,0 +1,13 @@
+{
+  "cases": [
+    {
+      "uuid": "75c9768c-0c9e-4c59-9637-fae21a713b77",
+      "description": "answer can accept vector parameter",
+      "property": "steps",
+      "input": {
+        "number": [1, 16, 12, 1000000]
+      },
+      "expected": [0, 4, 9, 152]
+    }
+  ]
+}

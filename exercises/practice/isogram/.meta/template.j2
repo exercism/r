@@ -1,0 +1,11 @@
+{%- import "generator_macros.j2" as macros with context -%}
+{{ macros.canonical_ref() }}
+
+{{ macros.header() }}
+
+{% for case in cases -%}
+test_that("{{ case["description"] }}", {
+  expect_{{ case["expected"] | lower }}(is_isogram("{{ case["input"]["phrase"] }}"))
+})
+
+{% endfor %}

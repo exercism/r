@@ -1,0 +1,7 @@
+{
+  "authors": [
+    "colinleach"
+  ],
+  "contributors": [],
+  "blurb": "Dataframes are rectangular collections of potentially heterogeneous data. They are central to most use of modern R, and to the Tidyverse ecosystem."
+}

@@ -1,0 +1,16 @@
+{%- import "generator_macros.j2" as macros with context -%}
+{{ macros.canonical_ref() }}
+
+{{ macros.header() }}
+
+{% for case in cases -%}
+test_that("{{ case["description"] }}", {
+  subject <- "{{ case["input"]["subject"] }}"
+  candidates <- c{{ case["input"]["candidates"] | list_to_tuple }}
+  expect_equal(
+    anagram(subject, candidates),
+    c{{ case["expected"] | list_to_tuple }}
+  )
+})
+
+{% endfor %}

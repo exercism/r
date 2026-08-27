@@ -1,0 +1,24 @@
+{%- import "generator_macros.j2" as macros with context -%}
+{{ macros.canonical_ref() }}
+
+{{ macros.header() }}
+
+{% for case in cases -%}
+{% for subcase in case["cases"] %}
+    {%- set description = subcase["description"] -%}
+    {%- set property = subcase["property"] -%}
+    {%- set input = subcase["input"]["color"] | lower -%}
+    {%- set expected = subcase["expected"] -%}
+    test_that("{{ description }}", {
+    input <- "{{ input }}"
+    expected <- {{ expected }}
+    expect_equal(color_code(input), expected)
+    })
+
+{% endfor -%}
+    {%- if case["property"] == "colors" -%}
+    test_that("{{ case["description"] }}", {
+    expect_equal(colors, c{{ case["expected"] | list_to_tuple}})
+    })
+    {%- endif -%}
+{%- endfor %}

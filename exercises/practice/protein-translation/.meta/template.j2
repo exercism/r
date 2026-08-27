@@ -1,0 +1,15 @@
+{%- import "generator_macros.j2" as macros with context -%}
+{{ macros.canonical_ref() }}
+
+{{ macros.header() }}
+
+{% for case in cases -%}
+test_that("{{ case["description"] }}", {
+{%- if case is error_case %}
+  expect_error(translate("{{ case["input"]["strand"] }}"))
+{%- else %}
+  expect_equal(translate("{{ case["input"]["strand"] }}"), c{{ case["expected"] | list_to_tuple }})
+{% endif %}
+})
+
+{% endfor %}

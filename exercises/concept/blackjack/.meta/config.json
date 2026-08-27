@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "colinleach"
+  ],
+  "files": {
+    "solution": [
+      "blackjack.R"
+    ],
+    "test": [
+      "test_blackjack.R"
+    ],
+    "exemplar": [
+      ".meta/exemplar.R"
+    ]
+  },
+  "forked_from": [
+    "go/blackjack"
+  ],
+  "blurb": "Learn about switch and conditionals by playing blackjack"
+}

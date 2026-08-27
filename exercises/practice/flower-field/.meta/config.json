@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "colinleach"
+  ],
+  "files": {
+    "solution": [
+      "flower-field.R"
+    ],
+    "test": [
+      "test_flower-field.R"
+    ],
+    "example": [
+      ".meta/example.R"
+    ]
+  },
+  "blurb": "Mark all the flowers in a garden."
+}

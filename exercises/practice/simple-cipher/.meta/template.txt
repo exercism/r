@@ -1,0 +1,5 @@
+Opting not to template this one.
+
+It is possible (see the Python track), but really messy and complicated. 
+
+I (@colinleach) just did a partial template for Julia, and it's more trouble than it's worth.

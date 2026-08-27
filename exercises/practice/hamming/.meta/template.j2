@@ -1,0 +1,17 @@
+{%- import "generator_macros.j2" as macros with context -%}
+{{ macros.canonical_ref() }}
+
+{{ macros.header() }}
+
+{% for case in cases -%}
+test_that("{{ case["description"] }}", {
+  strand1 <- "{{ case["input"]["strand1"] }}"
+  strand2 <- "{{ case["input"]["strand2"] }}"
+{%- if case is error_case %}
+  expect_error(hamming(strand1, strand2))
+{%- else %}
+  expect_equal(hamming(strand1, strand2), {{ case["expected"] }})
+{% endif %}
+})
+
+{% endfor %}

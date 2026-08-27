@@ -1,46 +1,56 @@
+# These tests are auto-generated with test data from:
+# https://github.com/exercism/problem-specifications/tree/main/exercises/pangram/canonical-data.json
+# File last updated on 2026-03-19
+
 source("./pangram.R")
 library(testthat)
 
 test_that("empty sentence", {
-  expect_false(is_pangram(""))
+  sentence <- ''
+  expect_false(is_pangram(sentence))
 })
 
 test_that("perfect lower case", {
-  expect_true(is_pangram("abcdefghijklmnopqrstuvwxyz"))
+  sentence <- 'abcdefghijklmnopqrstuvwxyz'
+  expect_true(is_pangram(sentence))
 })
 
 test_that("only lower case", {
-  expect_true(is_pangram("the quick brown fox jumps over the lazy dog"))
+  sentence <- 'the quick brown fox jumps over the lazy dog'
+  expect_true(is_pangram(sentence))
 })
 
 test_that("missing the letter 'x'", {
-  expect_false(
-    is_pangram("a quick movement of the enemy will jeopardize five gunboats")
-  )
+  sentence <- 'a quick movement of the enemy will jeopardize five gunboats'
+  expect_false(is_pangram(sentence))
 })
 
 test_that("missing the letter 'h'", {
-  expect_false(
-    is_pangram("five boxing wizards jump quickly at it")
-  )
+  sentence <- 'five boxing wizards jump quickly at it'
+  expect_false(is_pangram(sentence))
 })
 
 test_that("with underscores", {
-  expect_true(is_pangram("the_quick_brown_fox_jumps_over_the_lazy_dog"))
+  sentence <- 'the_quick_brown_fox_jumps_over_the_lazy_dog'
+  expect_true(is_pangram(sentence))
 })
 
 test_that("with numbers", {
-  expect_true(is_pangram("the 1 quick brown fox jumps over the 2 lazy dogs"))
+  sentence <- 'the 1 quick brown fox jumps over the 2 lazy dogs'
+  expect_true(is_pangram(sentence))
 })
 
 test_that("missing letters replaced by numbers", {
-  expect_false(is_pangram("7h3 qu1ck brown fox jumps ov3r 7h3 lazy dog"))
+  sentence <- '7h3 qu1ck brown fox jumps ov3r 7h3 lazy dog'
+  expect_false(is_pangram(sentence))
 })
 
 test_that("mixed case and punctuation", {
-  expect_true(is_pangram("\"Five quacking Zephyrs jolt my wax bed.\""))
+  sentence <- '"Five quacking Zephyrs jolt my wax bed."'
+  expect_true(is_pangram(sentence))
 })
 
 test_that("a-m and A-M are 26 different characters but not a pangram", {
-  expect_false(is_pangram("abcdefghijklm ABCDEFGHIJKLM"))
+  sentence <- 'abcdefghijklm ABCDEFGHIJKLM'
+  expect_false(is_pangram(sentence))
 })

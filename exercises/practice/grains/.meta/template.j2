@@ -1,0 +1,33 @@
+{%- import "generator_macros.j2" as macros with context -%}
+{{ macros.canonical_ref() }}
+
+{{ macros.header() }}
+
+{% for case in cases -%}
+{% for subcase in case["cases"] %}
+    {%- set description = subcase["description"] -%}
+    {%- set property = subcase["property"] -%}
+    {%- set input = subcase["input"]["square"] -%}
+    {%- if subcase["expected"]["error"] -%}
+        {% set expected = "error" -%}
+    {%- else -%}
+        {% set expected = subcase["expected"] -%}
+    {%- endif -%}
+    test_that("{{ description }}", {
+    {%- if expected == "error"  -%}
+    input <- {{ subcase["input"]["square"] }}
+    expect_error(square(input))
+    {%- else -%}
+    input <- {{ input }}
+    expected <- {{ expected }}
+    expect_equal(square(input), expected)
+    {%- endif -%}
+    })
+
+{% endfor -%}
+    {%- if case["property"] == "total" -%}
+    test_that("{{ case["description"] }}", {
+    expect_equal(total(), {{ case["expected"] }})
+    })
+    {%- endif -%}
+{%- endfor %}

@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://r4ds.hadley.nz/strings.html",
+    "description": "Strings chapter in R for Data Science."
+  },
+  {
+    "url": "https://uc-r.github.io/string_manipulation_baseR/",
+    "description": "String Manipulation with Base R."
+  },
+  {
+    "url": "https://www.tutorialspoint.com/r/r_strings.htm",
+    "description": "R strings in tutorialspoint."
+  }
+]

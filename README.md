@@ -27,7 +27,7 @@ Exercism problems in R
 If stuck or in doubt just ask in the [Exercism forum][forum]! We try our best to be friendly and helpful, so don't be shy!
 
 ### How to contribute
-As a first step we recommend you read the [contributing guide](https://github.com/exercism/docs/blob/master/contributing-to-language-tracks/README.md).
+As a first step we recommend you read the [contributing guide](https://exercism.org/docs/building).
 
 #### Reporting or fixing bugs
 Typical examples for a bug: A typo, a missing test case, an unclear or ambiguous problem description.

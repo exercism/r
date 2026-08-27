@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "colinleach"
+  ],
+  "files": {
+    "solution": [
+      "regular-chatbot.R"
+    ],
+    "test": [
+      "test_regular-chatbot.R"
+    ],
+    "exemplar": [
+      ".meta/exemplar.R"
+    ]
+  },
+  "forked_from": [
+    "julia/regular-chatbot"
+  ],
+  "blurb": "Learn the basics of regular expressions with R and stringr by helping a chatbot understand humans."
+}

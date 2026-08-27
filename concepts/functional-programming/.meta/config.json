@@ -1,0 +1,7 @@
+{
+  "authors": [
+    "colinleach"
+  ],
+  "contributors": [],
+  "blurb": "R increasingly relies on pipelines of functions to effect complex transformations. The purrr library greatly extends Base R in this respect."
+}

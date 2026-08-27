@@ -1,0 +1,23 @@
+{%- import "generator_macros.j2" as macros with context -%}
+{{ macros.canonical_ref() }}
+
+{{ macros.header() }}
+
+{% for case in cases -%}
+test_that("{{ case["description"] }}", {
+  input_base <- {{ case["input"]["inputBase"] }}
+  digits <- c{{ case["input"]["digits"] | list_to_tuple }}
+  output_base <- {{ case["input"]["outputBase"] }}
+{% if case is error_case -%}
+  expect_error(
+    rebase(input_base, digits, output_base),
+    "{{ case["expected"]["error"] }}"
+  )
+{% else -%}
+  expect_equal(
+    rebase(input_base, digits, output_base),
+    c{{ case["expected"] | list_to_tuple }}
+  )
+{% endif -%}
+})
+{% endfor %}

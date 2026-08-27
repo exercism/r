@@ -1,0 +1,12 @@
+{%- import "generator_macros.j2" as macros with context -%}
+{{ macros.canonical_ref() }}
+
+{{ macros.header() }}
+
+{% for case in cases -%}
+test_that("{{ case["description"] }}",{
+  year <- {{ case["input"]["year"] }}
+  expect_{{ case['expected'] | lower }}(leap(year))
+})
+
+{% endfor %}
