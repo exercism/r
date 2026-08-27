@@ -1308,6 +1308,11 @@
       "uuid": "1412e5dc-87fd-4c39-8147-379eb99dfda4",
       "slug": "dataframes",
       "name": "Dataframes"
+    },
+    {
+      "uuid": "48e88e41-70d9-441e-8436-d61e1e4c2b0b",
+      "slug": "classes",
+      "name": "Classes"
     }
   ],
   "key_features": [
