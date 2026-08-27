@@ -8,7 +8,7 @@ test_that("1. Today for disappointing day", {
   expect_equal(today(birds_per_day), 0)
 })
 
-test_that("Today for busy day", {
+test_that("1. Today for busy day", {
   birds_per_day <- c(8, 8, 9, 5, 4, 7, 10)
   expect_equal(today(birds_per_day), 10)
 })
@@ -38,7 +38,7 @@ test_that("3. Has day without birds with day without birds", {
   expect_equal(has_day_without_birds(birds_per_day), TRUE)
 })
 
-test_that("Has day without birds with no day without birds", {
+test_that("3. Has day without birds with no day without birds", {
   birds_per_day <- c(4, 5, 9, 10, 9, 4, 3)
   expect_equal(has_day_without_birds(birds_per_day), FALSE)
 })
@@ -83,5 +83,3 @@ test_that("6. Days in descending order of busyness, today is Wednesday", {
   result <- c("Wed", "Fri", "Tue", "Sun", "Thu", "Sat", "Mon")
   expect_equal(busy_days_of_week(birds_per_day, day_names), result)
 })
-
-
