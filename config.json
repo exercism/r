@@ -1313,6 +1313,11 @@
       "uuid": "48e88e41-70d9-441e-8436-d61e1e4c2b0b",
       "slug": "classes",
       "name": "Classes"
+    },
+    {
+      "uuid": "ddba86e7-f23a-4cab-9f60-ea856a002565",
+      "slug": "complex-numbers",
+      "name": "Complex Numbers"
     }
   ],
   "key_features": [
