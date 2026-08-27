@@ -1225,11 +1225,6 @@
       "name": "Vectors"
     },
     {
-      "uuid": "2751b6f2-7d71-4397-b063-9bf927a57756",
-      "slug": "booleans",
-      "name": "Booleans"
-    },
-    {
       "uuid": "bf76b4a9-9d0d-48f8-81f6-2d54f04af003",
       "slug": "strings",
       "name": "Strings"
