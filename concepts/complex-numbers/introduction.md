@@ -144,7 +144,6 @@ sin(z1)
 ```
 
 There are several functions, in addition to `Re()` and `Im()`, with particular relevance for complex numbers.
-Please skip over these if they make no sense to you!
 
 - `Conj()` simply flips the sign of the imaginary part of a complex number (_from + to - or vice-versa_).
   - Because of the way complex multiplication works, this is more useful than you might think.
@@ -167,73 +166,6 @@ Conj(z1)  # flip sign
 Arg(z1)
 #> [1] 0.9272952
 ```
-
-A partial explanation, for the mathematically-minded _(again, feel free to skip)_:
-
-- The `(real, imag)` representation of `z1` in effect uses Cartesian coordinates on the complex plane.
-- The same complex number can be represented in `(r, θ)` notation, using polar coordinates.
-- Here, `r` and `θ` are given by `abs(z1)` and `Arg(z1)` respectively.
-
-Here is an example using some constants:
-
-```r
- euler <- exp(1i * pi)
-
-euler
-#> [1] -1+0i
-```
-
-So a simple expression with three of the most important constants in nature `e`, `i` (or `j`) and `pi` gives the result `-1`.
-Some people believe this is the most beautiful result in all of mathematics.
-It dates back to around 1740.
-
------
-
-## Optional section: a Complex Numbers FAQ
-
-This part can be skipped, unless you are interested.
-
-### Isn't this some strange new piece of pure mathematics?
- its "magn
-It was strange and new in the 16th century.
-
-500 years later, it is central to most of engineering and the physical sciences.
-
-### Why would anyone use these?
-
-It turns out that complex numbers are the simplest way to describe anything that rotates or anything with a wave-like property.
-So they are used widely in electrical engineering, audio processing, physics, computer gaming, and navigation - to name only a few applications.
-
-You can see things rotate.
-Complex numbers may not make the world go round, but they are great for explaining _what happens_ as a result of the world going round: look at any satellite image of a major storm.
-
-Less obviously, sound is wave-like, light is wave-like, radio signals are wave-like, and even the economy of your home country is at least partly wave-like.
-
-A lot of this wave processing can be done with trig functions (`sin()` and `cos()`) but that gets messy quite quickly.
-
-Complex exponentials are ___much___ easier to work with.
-
-### But I don't need complex numbers!
-
-Only true if you are living in a cave and foraging for your food.
-
-If you are reading this on any sort of screen, you are utterly dependent on some useful 20th-Century advances made through the use of complex numbers.
-
-__Semiconductor chips__.
-
-- These make no sense in classical physics and can only be explained (and designed) by quantum mechanics (QM).
-- In QM, everything is complex-valued by definition. (_it's waveforms all the way down_)
-
-__The Fast Fourier Transform algorithm__.
-
-- FFT is an application of complex numbers, and it is in _everything_ connected to sound transmission, audio processing, photos, and video.
-
-- MP3 and other audio formats use FFT for compression, ensuring more audio can fit within a smaller storage space.
-- JPEG compression and MP4 video, among many other image and video formats, also use FFT for compression.
-
-- FFT is also deployed in the digital filters that allow cellphone towers to separate your personal cell signal from everyone else's.
-
-So, you are probably using technology that relies on complex number calculations thousands of times per second.
 
 [web-complex]: https://www.cfm.brown.edu/people/dobrush/am33/R/intro/complex0.html
 [ref-atomic]: https://cran.r-project.org/doc/manuals/r-release/R-lang.html#Vectors
