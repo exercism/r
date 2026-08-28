@@ -80,10 +80,10 @@ as_crow_flies(0+0i, 3+4i)
 ## 5. Get Crow Directions
 
 Your CEO has trained the crows to follow similar kinds of directions to the drivers.
-However, the CEO has a love of the Southern Hemisphere and used a different compass to train the crow from that used by your project manager for the rest of the system.
+However, the CEO has a love of the Southern Hemisphere and trained the crows using a different compass from that used by your project manager for the rest of the system.
+Your CEO is turning out to be quite an eccentric person.
 The CEO's compass has north being in the negative imaginary direction, and south being the positive imaginary direction.
-This is opposite to the drivers north/south directions, while east/west remain the same.
-Your CEO is quite an eccentric person.
+This is the opposite to the drivers' north/south directions, while east/west remain the same.
 
 Implement the `crows_directions(start, end)` function, which takes the `start` and `end` intersections.
 Return the complex number analogous to the driver's directions, but with north/south flipped.
