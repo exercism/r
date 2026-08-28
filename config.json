@@ -274,6 +274,18 @@
           "functional-programming"
         ],
         "status": "beta"
+      },
+      {
+        "slug": "crow-cab",
+        "name": "Crow Cab",
+        "uuid": "aa1d2883-fc5a-44ad-a2f0-94ede8def5e1",
+        "concepts": [
+          "complex-numbers"
+        ],
+        "prerequisites": [
+          "functions"
+        ],
+        "status": "beta"
       }
     ],
     "practice": [
