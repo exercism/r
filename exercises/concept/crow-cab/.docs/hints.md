@@ -1,5 +1,8 @@
 # Hints
 
+To help conceptualize: the exercise is using complex numbers to encode intersections on a grid.
+Since complex numbers can be thought of as a pair of two numbers, this can also be reimagined as the 2D x-y plane, with x-axis = real-axis and y-axis = imaginary-axis.
+
 ## 1. Simple Complex Number
 
 - This is a simple wrapper function.
@@ -13,16 +16,17 @@
 
 ## 3. Get Manhattan Distance
 
-- This is the total number of blocks traveled by the cab following the grid lines.
+- Remeber, this is the total number of intersections (not including the starting intersection) passed through by the cab while following the grid lines.
 - Your function `driver_directions` can be helpful.
-- Other functions that may be helpful are [`Re()` and `Im()][complex-ref].
+- Other functions that may be helpful are [`Re()` and `Im()`][complex-ref].
 
 ## 4. Get "As the Crow Flies" Distance
 
 - This is the straight-line distance between the two intersections.
-- You can think of this as the hypotenuse to the Manhattan distance.
+- You can think of this as the hypotenuse of the path traced by a Manhattan distance with one turn.
+- This is also known as the [Euclidean distance][euclid-ref] (aka L2 norm).
 - Yor function `driver_directions` can be helpful.
-- See the Introduction for another function that can optionally be used.
+- See the Introduction for another complex number function that can optionally be used to find the magnitude.
 
 ## 5. Get Crow Directions
 
@@ -32,3 +36,4 @@
 - See the Introduction for another function that can optionally be used.
 
 [complex-ref]: https://www.rdocumentation.org/packages/base/versions/3.5.3/topics/complex
+[euclid-ref]: https://en.wikipedia.org/wiki/Euclidean_distance
