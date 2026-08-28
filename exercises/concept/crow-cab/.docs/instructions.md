@@ -70,7 +70,7 @@ Implement the `as_crow_flies(start, end)` function, which takes the `start` and 
 Return the Euclidean distance between the two.
 
 ```r
-as_crow_flies(0 + 0i, 3 + 4i)
+as_crow_flies(0+0i, 3+4i)
 #> 5
 ```
 
