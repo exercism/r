@@ -4,6 +4,7 @@
 
 - This is a simple wrapper function.
 - See the Introduction for how to create a complex number using variables.
+- Beware that, if you do not use the keyword arguments, the positional arguments for `complex()` might not be what you expect.
 
 ## 2. Get Driver Directions
 

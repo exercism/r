@@ -77,7 +77,9 @@ as_crow_flies(0+0i, 3+4i)
 ## 5. Get Crow Directions
 
 Your CEO has trained the crows to follow similar kinds of directions to the drivers.
-However, the CEO is from South America, and has always felt that south is "up", so the crows have been trained with their north being in the negative imaginary direction, and south being the positive imaginary direction, opposite to the drivers north/south directions.
+However, the CEO has a love of the Southern Hemisphere, so has always felt that south is "up".
+For this reason, the crows have been trained with their north being in the negative imaginary direction, and south being the positive imaginary direction, opposite to the drivers north/south directions.
+However, east and west remain the same.
 Your CEO is quite an eccentric person.
 
 Implement the `crows_directions(start, end)` function, which takes the `start` and `end` intersections.
