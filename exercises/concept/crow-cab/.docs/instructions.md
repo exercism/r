@@ -46,7 +46,7 @@ The customer is charged a fee for the distance that the cab has to cover.
 Since Manhattan has a grid-like street layout, the taxis can only travel along these routes.
 This structure leads to a distance measure constrained to follow the grid lines.
 The distance can be found by adding up either the number of lines traversed or the number of intersections reached (i.e. not including the starting intersection).
-This measure is commonly called the Manhattan distance (aka L1 norm).
+This measure is commonly called the Manhattan distance or L1 norm.
 
 Implement the `manhattan(start, end)` function, which takes the `start` and `end` intersections.
 Return the Manhattan distance between the `start` and `end` intersections.

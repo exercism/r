@@ -16,7 +16,7 @@ Since complex numbers can be thought of as a pair of two numbers, this can also 
 
 ## 3. Get Manhattan Distance
 
-- Remeber, this is the total number of intersections (not including the starting intersection) passed through by the cab while following the grid lines.
+- Remember, this is the total number of intersections (not including the starting intersection) passed through by the cab while following the grid lines.
 - Your function `driver_directions` can be helpful.
 - Other functions that may be helpful are [`Re()` and `Im()`][complex-ref].
 
@@ -24,7 +24,7 @@ Since complex numbers can be thought of as a pair of two numbers, this can also 
 
 - This is the straight-line distance between the two intersections.
 - You can think of this as the hypotenuse of the path traced by a Manhattan distance with one turn.
-- This is also known as the [Euclidean distance][euclid-ref] (aka L2 norm).
+- This is also known as the [Euclidean distance][euclid-ref] or L2 norm.
 - Yor function `driver_directions` can be helpful.
 - See the Introduction for another complex number function that can optionally be used to find the magnitude.
 
