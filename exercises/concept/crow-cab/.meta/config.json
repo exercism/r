@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "depial"
+  ],
+  "files": {
+    "solution": [
+      "crow-cab.R"
+    ],
+    "test": [
+      "test_crow-cab.R"
+    ],
+    "exemplar": [
+      ".meta/exemplar.R"
+    ]
+  },
+  "blurb": "Use complex numbers to encode intersection locations for a cab service"
+}
