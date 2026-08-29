@@ -1212,6 +1212,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 8
+      },
+      {
+        "slug": "affine-cipher",
+        "name": "Affine Cipher",
+        "uuid": "478b838b-dc33-4532-984c-281c0c2424b8",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
       }
     ]
   },
