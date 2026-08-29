@@ -1107,6 +1107,14 @@
         "difficulty": 4
       },
       {
+        "slug": "affine-cipher",
+        "name": "Affine Cipher",
+        "uuid": "478b838b-dc33-4532-984c-281c0c2424b8",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "say",
         "name": "Say",
         "uuid": "c87b10f2-0920-4fdc-9143-a879708b24f2",
