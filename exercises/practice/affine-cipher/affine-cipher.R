@@ -1,13 +1,5 @@
 library(stringr)
-
-normalise <- function(text) {
-  tolower(gsub(" ", "", text))
-}
-
-lookupindex <- function(normalisedtext) {
-  letterslist <- strsplit(normalisedtext, "")[[1]]
-  match(letterslist, letters) - 1
-}
+library(purrr)
 
 gcd <- function(x, y) {
   r <- x %% y
@@ -17,38 +9,41 @@ gcd <- function(x, y) {
 mmi <- function(a, m) {
   a <- a %% m
   for (x in 1:m) {
-    if ((a * x) %% m == 1) {
-      return(x)
-    }
+    if ((a * x) %% m == 1) return(x)
   }
   1
 }
 
 translate <- function(phrase, a, b, mode) {
-  
+  m <- 26
+  stopifnot(gcd(a, m) == 1)
+  stopifnot(mode %in% c(0, 1))
+
+  process_char <- function(c) {
+    if (c %in% "0":"9") return(c)
+
+    inx_c <- utf8ToInt(c) - utf8ToInt("a")
+    new_c <- ifelse(mode == 0, a * inx_c + b, mmi(a, m) * (inx_c - b))
+    intToUtf8(new_c %% m + utf8ToInt("a"))
+  }
+
+  phrase |>
+    str_to_lower() |>
+    str_replace_all("[^a-z0-9]", "") |>
+    str_split_1("") |>
+    map_chr(process_char) |>
+    str_flatten()
 }
 
 encode <- function(plaintext, a, b) {
-  m <- 26
-
-  if (gcd(a, m) != 1) {
-    stop("a and m must be co-prime")
-  }
-
-  x <- plaintext |> normalise() |> lookupindex()
-
-  text <- paste(letters[ ((a * x + b) %% m) + 1], collapse = "")
-  str_match_all(text, ".{1,5}")[[1]] |> str_c(collapse = " ")
+  plaintext |>
+    translate(a, b, mode = 0) |>
+    str_match_all(".{1,5}") |>
+    unlist() |>
+    str_c(collapse = " ")
 }
 
 decode <- function(ciphertext, a, b) {
-  m <- 26
-
-  if (gcd(a, m) != 1) {
-    stop("a and m must be co-prime")
-  }
-
-  y <- ciphertext |> normalise() |> lookupindex()
-
-  paste(letters[((mmi(a, m) * (y - b)) %% m) + 1], collapse = "")
+  ciphertext |>
+    translate(a, b, mode = 1)
 }

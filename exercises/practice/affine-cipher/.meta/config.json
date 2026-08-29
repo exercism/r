@@ -2,6 +2,10 @@
   "authors": [
     "colinleach"
   ],
+  "contributors": [
+    "katrinleinweber",
+    "tintinthong"
+  ],
   "files": {
     "solution": [
       "affine-cipher.R"
