@@ -1,6 +1,6 @@
 # These tests are auto-generated with test data from:
 # https://github.com/exercism/problem-specifications/tree/main/exercises/line-up/canonical-data.json
-# File last updated on 2026-07-27
+# File last updated on 2026-09-02
 
 source("./line-up.R")
 library(testthat)
@@ -89,10 +89,40 @@ test_that("format exceptional ordinal numeral 21", {
     "Washi, you are the 21st customer we serve today. Thank you!"
   )
 })
+test_that("format exceptional ordinal numeral 22 ending in nd even though it is a multiple of 11", {
+  expect_equal(
+    line_up("Ingrid", 22),
+    "Ingrid, you are the 22nd customer we serve today. Thank you!"
+  )
+})
+test_that("format exceptional ordinal numeral 33 ending in rd even though it is a multiple of 11", {
+  expect_equal(
+    line_up("Mario", 33),
+    "Mario, you are the 33rd customer we serve today. Thank you!"
+  )
+})
+test_that("format exceptional ordinal numeral 52 ending in nd even though it is a multiple of 13", {
+  expect_equal(
+    line_up("Quentin", 52),
+    "Quentin, you are the 52nd customer we serve today. Thank you!"
+  )
+})
 test_that("format exceptional ordinal numeral 62", {
   expect_equal(
     line_up("Nayra", 62),
     "Nayra, you are the 62nd customer we serve today. Thank you!"
+  )
+})
+test_that("format non-exceptional ordinal numeral 72 ending in nd even though it is a multiple of 12", {
+  expect_equal(
+    line_up("Ugo", 72),
+    "Ugo, you are the 72nd customer we serve today. Thank you!"
+  )
+})
+test_that("format exceptional ordinal numeral 91 ending in st even though it is a multiple of 13", {
+  expect_equal(
+    line_up("Boris", 91),
+    "Boris, you are the 91st customer we serve today. Thank you!"
   )
 })
 test_that("format exceptional ordinal numeral 100", {
@@ -117,5 +147,11 @@ test_that("format exceptional ordinal numeral 123", {
   expect_equal(
     line_up("Yma", 123),
     "Yma, you are the 123rd customer we serve today. Thank you!"
+  )
+})
+test_that("format large number 972 ending in nd even though it is a multiple of 12", {
+  expect_equal(
+    line_up("Elias", 972),
+    "Elias, you are the 972nd customer we serve today. Thank you!"
   )
 })
