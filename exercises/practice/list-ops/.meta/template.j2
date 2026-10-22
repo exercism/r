@@ -1,0 +1,36 @@
+{%- import "generator_macros.j2" as macros with context -%}
+
+{%- macro to_r(value) -%}
+{{ value | string | replace("[", "list(") | replace("]", ")") }}
+{%- endmacro -%}
+
+{%- macro to_r_function(function) -%}
+\{{ function | replace(" -> ", " ") | replace("modulo", "%%") }}
+{%- endmacro -%}
+
+{{ macros.canonical_ref() }}
+
+{{ macros.header() }}
+
+{% for group in cases -%}
+{% for case in group["cases"] -%}
+{%- set input = case["input"] -%}
+test_that("{{ case["property"] }} {{ case["description"] }}", {
+  expect_equal(
+    my_{{ case["property"] }}(
+      {%- if case["property"] == "append" -%}
+      {{ to_r(input["list1"]) }}, {{ to_r(input["list2"]) }}
+      {%- elif case["property"] == "concat" -%}
+      {{ to_r(input["lists"]) }}
+      {%- else -%}
+      {{ to_r(input["list"]) }}
+      {%- if "function" in input %}, {{ to_r_function(input["function"]) }}{% endif %}
+      {%- if "initial" in input %}, {{ input["initial"] }}{% endif %}
+      {%- endif -%}
+    ),
+    {{ to_r(case["expected"]) }}
+  )
+})
+
+{% endfor %}
+{%- endfor %}
