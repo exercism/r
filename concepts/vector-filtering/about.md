@@ -23,7 +23,7 @@ Selected elements of a vector can be pulled out with an index number or a vector
 v <- 5:10
 v
 #> [1]  5  6  7  8  9 10
-v[3] 
+v[3]
 #> [1] 7
 v[c(2, 4)]
 #> [1] 6 8
@@ -79,7 +79,7 @@ Within the R community, the term "*Subsetting*" is probably more common.
 For simplicity, the examples above all compared vectors of the same length.
 What happens if the lengths are mismatched?
 
-The answer is something powerful if used deliberately, but confusing if unexexpected.
+The answer is something powerful if used deliberately, but confusing if unexpected.
 
 An example:
 
@@ -127,7 +127,7 @@ v
 #> [1] 2 7 9
 
 v[v > 5]  # returns values
-#> [1]  7  9
+#> [1] 7 9
 
 which(v > 5) # returns indices
 #> [1] 2 3
@@ -149,6 +149,7 @@ If you merely need to know if the vector contains a specific element, the [`%in%
 This is functionally equivalent to the following code, but much more convenient:
 
 ```R
+v <- 1:5
 length(v[v == 3]) > 0
 #> [1] TRUE
 ```

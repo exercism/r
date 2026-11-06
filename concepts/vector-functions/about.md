@@ -106,8 +106,8 @@ pmax(v, 5)
 
 ## Vector-in, matrix-out
 
-This is less common, but it is fairly easy to write functions that are apparently scalar-in, vector out.
-When applied to vector input, the output is a 2-D `matrix` (covered in a [later concept][concept-arrays-matrices]).
+This is less common, but it is fairly easy to write functions that are apparently scalar-in, vector-out.
+When applied to vector input, the output is a 2-D `matrix` (covered in a [later concept][concept-matrices-arrays]).
 
 [ref-all]: https://stat.ethz.ch/R-manual/R-devel/library/base/html/all.html
 [ref-any]: https://stat.ethz.ch/R-manual/R-devel/library/base/html/any.html
@@ -120,5 +120,5 @@ When applied to vector input, the output is a 2-D `matrix` (covered in a [later 
 [ref-pmax]: https://search.r-project.org/CRAN/refmans/Rmpfr/html/pmax.html
 [wiki-recursion]: https://en.wikipedia.org/wiki/Recursion_(computer_science)
 [wiki-foldl]: https://en.wikipedia.org/wiki/Fold_(higher-order_function)
-[concept-arrays-matrices]: https://exercism.org/tracks/r/concepts/arrays-matrices
+[concept-matrices-arrays]: https://exercism.org/tracks/r/concepts/matrices-arrays
 [concept-vector-filtering]: https://exercism.org/tracks/r/concepts/vector-filtering
