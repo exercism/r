@@ -15,7 +15,7 @@ R has a set of operators that is the same as many other languages:
 
 ## Branching
 
-The basic form of an if-else is 
+The basic form of an if-else is:
 
 ```R
 if (x > 10) {
@@ -27,7 +27,7 @@ if (x > 10) {
 }
 ```
 
-In this case, parentheses `()` around the boolean and braces `{}` around the statement are both required. 
+In this case, parentheses `()` around the boolean and braces `{}` around the statement are both required.
 A simple `if` statement can be shortened:
 
 ```R

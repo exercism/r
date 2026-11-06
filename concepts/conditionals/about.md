@@ -39,7 +39,7 @@ if (x == 0) return("success")
 
 Looking ahead to the [`vector-filtering`][concept-vector-filtering] concept: the conditional clause in parentheses `()` must evaluate to a single `TRUE`/`FALSE`.
 
-Including vectors in the comparison usually gives a vector of booleans, so these will need to be wrapped in an aggregating function such as [`all()`][ref-all] (are all values TRUE?) or [`any()`][ref-any] (is at least one value TRUE).
+Including vectors in the comparison usually gives a vector of booleans, so these will need to be wrapped in an aggregating function such as [`all()`][ref-all] (are all values TRUE?) or [`any()`][ref-any] (is at least one value TRUE?).
 
 ```R
 numbers <- c(4,5,7,9,10,11)
@@ -68,7 +68,7 @@ z <- ifelse(x > 100, 100, "small") # numeric or string result? Expect problems!
 2. value if `TRUE`
 3. value if `FALSE`.
 
-Vector inputs are acceptable, and then a vector output is produced. 
+Vector inputs are acceptable, and then a vector output is produced.
 In this case, ensure both branches result in the same type of data: numeric, character, logical, etc.
 This will be covered in the [`vector-functions`][concept-vector-functions] concept.
 
@@ -114,7 +114,7 @@ xs <- c(3, NA, 10, NA, 4)  # a 5-element vector
 xs
 #> [1]  3 NA 10 NA  4
 if_else(xs > 8, "big", "small", "missing")
-#> [1] "small"   "missing" "big"     "missing" "small" 
+#> [1] "small"   "missing" "big"     "missing" "small"
 
 # contrast:
 ifelse(xs > 8, "big", "small")
