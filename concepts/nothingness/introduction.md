@@ -7,7 +7,7 @@ The overall aim is to flag missing or suspect values as they are encountered, th
 
 ## NULL
 
-If a value really doesn't exist, it is repesented by `NULL`. This is probably closest to what C or Python might do.
+If a value really doesn't exist, it is represented by `NULL`. This is probably closest to what C or Python might do.
 
 ```R
 v <- c() # zero-length vector
@@ -31,7 +31,7 @@ For situations where a value exists but we don't know what it is, `NA` is used. 
 ```R
 v <- c(1, 2, NA, 4, 5)
 v
-#> [1]  1  2 NA 4  5
+#> [1]  1  2 NA  4  5
 is.na(v) # test for data gaps
 #> [1] FALSE FALSE  TRUE FALSE FALSE
 ```

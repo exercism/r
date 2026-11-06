@@ -59,7 +59,7 @@ recode_values(
   "a" ~ 1,
   "b" ~ 2,
   "c" ~ 3,
-  c("d", "e") ~ 4, # either "d' or "e" will match
+  c("d", "e") ~ 4, # either "d" or "e" will match
   NA ~ 0,          # matches missing values
   default = 100   # note the different syntax for the default
 )
@@ -68,7 +68,7 @@ recode_values(
 
 ### The `case_when` function
 
-`case_when` takes `case_match` syntax a stage further, by allowing any logical expression on the left of the `~`.
+`case_when` takes `recode_values` syntax a stage further, by allowing any logical expression on the left of the `~`.
 
 The input vector (`x` in the example below) is not supplied as an argument, it just needs to be already defined.
 

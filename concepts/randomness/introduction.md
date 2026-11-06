@@ -13,7 +13,7 @@ Generating truly random values with a computer is a [surprisingly difficult tech
 ***Important***: This Concept does *not* cover cryptographically secure random numbers, which are a much more difficult challenge.
 
 However, R was derived from a statistics package and is often used for simulations, so it offers a rich variety of ways to generate random values.
-The results are amply good enough for most applications in modelling, simulation and games.
+The results are amply good enough for most applications in modeling, simulation and games.
 
 ## [Sampling with or without replacement][yt-sampling-with-replacement]
 
@@ -51,7 +51,7 @@ sample(c(TRUE, FALSE), 5, replace = TRUE) # alternative coin flips
 ```
 
 Sampling fits well into data pipelines.
-For example, to generate random alphanumneric strings:
+For example, to generate random alphanumeric strings:
 
 ```R
 library(stringr)
