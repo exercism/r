@@ -35,7 +35,7 @@ As in many languages, we can use the index in brackets:
 [1] 5 6 7
 ```
 
-But beware: ***R uses 1-based indexing by default***. 
+But beware: ***R uses 1-based indexing by default***.
 
 This is common for scientific languages (Fortran, Matlab, Julia) but differs from the zero-based indexing of C and its many successors.
 
@@ -61,7 +61,7 @@ w <- c(2, v[2:3], 11) # c(2, 7, 10, 11)
 Programmers familiar with other languages might guess that `v[-1]` is a way to access the last element in a vector.
 Wrong!
 
-Negative indices are actually a way to ***remove*** en element, returning a shorter vector:
+Negative indices are actually a way to ***remove*** an element, returning a shorter vector:
 
 ```R
 > v <- c(2, 4, 6)

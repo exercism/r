@@ -2,7 +2,7 @@
 
 ## Variables and assignment
 
-R is a dynamically typed language, so in general it is not necessary to specify the type of a variable. The preferred assignment operator is `<-` 
+R is a dynamically typed language, so in general it is not necessary to specify the type of a variable. The preferred assignment operator is `<-`.
 
 ```R
 x <- 42
