@@ -2,16 +2,16 @@
 
 ## Variables and assignment
 
-R is a [dynamically typed][wiki-dynamic] language, so in general it is not necessary to specify the type of a variable. The default type is [`numeric`][ref-numeric], usually implemented as a double-precision float. To force use of 32-bit integers use a `L` suffix (abbreviation for `Long`).
+R is a [dynamically typed][wiki-dynamic] language, so in general it is not necessary to specify the type of a variable. The default type is [`numeric`][ref-numeric], usually implemented as a double-precision float. To force use of 32-bit integers use an `L` suffix (abbreviation for `Long`).
 
-Getting the "type" of an obect is (for historical reasons) potentially confusing.
+Getting the "type" of an object is (for historical reasons) potentially confusing.
 The functions [`typeof()`][ref-typeof] and [`class()`][ref-class] are similar, but may return slightly different results:
 
 ```R
 typeof(50)
 #> [1] "double"  # more specific: an implementation detail
 typeof(50L)
-##> [1] "integer"
+#> [1] "integer"
 
 class(50)
 #> [1] "numeric"  # less specific: ignores implementation details
