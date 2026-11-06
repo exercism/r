@@ -1,6 +1,6 @@
 # Introduction
 
-We saw in the `Vectors` concept that a vector can be used in a conditional expression, giving a logical vector. 
+We saw in the `Vectors` concept that a vector can be used in a conditional expression, giving a logical vector.
 This in turn can be used in functions such as `all()` and `any()`.
 
 ```R
@@ -23,7 +23,7 @@ Selected elements of a vector can be pulled out with an index number or a vector
 v <- 5:10
 v
 #> [1]  5  6  7  8  9 10
-v[3] 
+v[3]
 #> [1] 7
 v[c(2, 4)]
 #> [1] 6 8
@@ -62,7 +62,7 @@ v
 #> [1] 2 7 9
 
 v[v > 5]  # returns values
-#> [1]  7  9
+#> [1] 7 9
 
 which(v > 5) # returns indices
 #> [1] 2 3
