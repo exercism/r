@@ -1,7 +1,7 @@
 # Instructions
 
-In this exercise you'll be writing code to print name badges for factory employees. 
-Employees have an ID, name, and department name. 
+In this exercise you'll be writing code to print name badges for factory employees.
+Employees have an ID, name, and department name.
 Employee badge labels are formatted as follows: `"[id] - name - DEPARTMENT"`.
 
 ## 1. Print a badge for an employee
@@ -16,10 +16,10 @@ print_name_badge(67, "Katherine Williams", "Strategic Communication")
 
 ## 2. Print a badge for a new employee
 
-Due to a quirk in the computer system, new employees occasionally don't yet have an ID when they start working at the factory. 
+Due to a quirk in the computer system, new employees occasionally don't yet have an ID when they start working at the factory.
 As badges are required, they will receive a temporary badge without the ID prefix.
 
-Extend the `print_name_badge` function. When the id is missing, it should print a badge without it.
+Extend the `print_name_badge` function. When the ID is missing, it should print a badge without it.
 
 ```R
 print_name_badge(NA, "Robert Johnson", "Procurement")
@@ -28,8 +28,8 @@ print_name_badge(NA, "Robert Johnson", "Procurement")
 
 ## 3. Print a badge for the owner
 
-Even the factory's owner has to wear a badge at all times. 
-However, an owner does not have a department and never will: they are above all the departments. 
+Even the factory's owner has to wear a badge at all times.
+However, an owner does not have a department and never will: they are above all the departments.
 In this case, the label should print `"OWNER"` instead of the department name.
 
 Extend the `print_name_badge` function. When the department is `NULL`, assume the badge belongs to the company owner.
@@ -48,10 +48,10 @@ print_name_badge(NA, "Rachel Miller", NULL)
 
 ## 4. Calculate the total salary of employees with no ID
 
-As a rough metric of how well the IDs are being issued, you want to see the combined salary of employees with no ID. 
+As a rough metric of how well the IDs are being issued, you want to see the combined salary of employees with no ID.
 A high value means lots are waiting, or the problem is affecting senior people: both are bad.
 
-Implement the `salaries_no_id` function that takes a vector of IDs and a corresponding vector of salaries, and returns the sum of salaries for people with no ID yet. 
+Implement the `salaries_no_id` function that takes a vector of IDs and a corresponding vector of salaries, and returns the sum of salaries for people with no ID yet.
 Both vectors are the same length.
 
 ```R
