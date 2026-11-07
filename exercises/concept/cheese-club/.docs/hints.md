@@ -15,7 +15,7 @@
 
 ## 4. Change ratings to binary
 
-- There are several ways to solve this, but [`if_else()`][ref-if_else] from the `dplyr` library may be simplest. This was discussed in the [Switch Concept][concept-switch].
+- There are several ways to solve this, but [`if_else()`][ref-if_else] from the `dplyr` library may be simplest. This was discussed in the [Conditionals Concept][concept-conditionals].
 - Within `purrr`, another possibility is [`map_int()`][ref-map_int].
 
 ## 5. Average ratings over time
@@ -30,4 +30,4 @@
 [ref-keep]: https://purrr.tidyverse.org/reference/keep.html
 [ref-if_else]: https://dplyr.tidyverse.org/reference/if_else.html
 [ref-map_int]: https://purrr.tidyverse.org/reference/map.html
-[concept-switch]: https://exercism.org/tracks/r/concepts/switch
+[concept-conditionals]: https://exercism.org/tracks/r/concepts/conditionals

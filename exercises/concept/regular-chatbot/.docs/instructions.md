@@ -79,7 +79,7 @@ nice_to_meet_you("Smith, John")
 
 ## 5. Get Website Link
 
-The Chatbot is a really curious software. Even though he can search on the internet about a particular topic, he likes to ask users about cool websites or URL’s to go find relevant information.
+The Chatbot is a really curious software. Even though he can search on the internet about a particular topic, he likes to ask users about cool websites or URLs to go find relevant information.
 
 Example of Conversation:
 

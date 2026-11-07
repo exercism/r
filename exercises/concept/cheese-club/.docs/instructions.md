@@ -8,15 +8,15 @@ As this can end up irrevocably biasing a more nuanced algorithm, there is a sepa
 You are asked to provide some helper functions to wrangle their data.
 
 ~~~~exercism/note
-While there may be different ways to solve the following tasks, each can be solved with no more than two higher order functions.
+While there may be different ways to solve the following tasks, each can be solved with no more than two higher-order functions.
 ~~~~
 
 ## 1. Classify customers
 
-The rating system has a five star basis, which simply consists of integers `1:5`.
+The rating system has a five-star basis, which simply consists of integers `1:5`.
 The emphatic customers will only give ratings of `1` or `5`, and we want to know if a customer exhibits this behavior.
 
-Implement `all_15()` which takes a vector of ratings and returns `true` if all ratings are either `1` or `5`, and false otherwise.
+Implement `all_15()` which takes a vector of ratings and returns `TRUE` if all ratings are either `1` or `5`, and `FALSE` otherwise.
 
 ```R
 all_15(c(2, 3, 4, 4, 1))
@@ -58,7 +58,7 @@ name_customers(names, ratings)
 We need to separate the more emphatic customers from the others.
 
 Implement `emphatics()` which takes customers and ratings.
-Returns a list restricted to those who only use only `1` or `5` star ratings.`
+Returns a list restricted to those who use only `1` or `5` star ratings.
 
 ```R
 # names and ratings as in the task 2 example
@@ -74,9 +74,9 @@ emphatics(names, ratings)
 
 ## 4. Change ratings to binary
 
-Since the emphatic customers only use `1` and `5` ratings, it will more computationally convenient if these are changed these to `0` and `1`.
+Since the emphatic customers only use `1` and `5` ratings, it will be more computationally convenient if these are changed to `0` and `1`.
 
-Implement `to_binary()` which takes vector of emphatic ratings.
+Implement `to_binary()` which takes a vector of emphatic ratings.
 Returns binary ratings, where `1` has been changed to `0` and `5` has been changed to `1`.
 
 ```R

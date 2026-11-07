@@ -25,7 +25,7 @@ simplex(-3, 4)
 ## 2. Get Driver Directions
 
 When a customer gives the destination intersection, your drivers will get directions for how to get there.
-These directions come in the form of a complex number with the real part representing how many blocks north/south to go and the imaginary part representing the east/west distance.
+These directions come in the form of a complex number with the real part representing how many blocks east/west to go and the imaginary part representing the north/south distance.
 To align with a canonical compass, your project manager has decided north will be in the positive imaginary direction, and south is in the negative imaginary direction.
 Likewise, east is in the positive real direction, and west is in the negative real direction.
 
@@ -85,13 +85,13 @@ Your CEO is turning out to be quite an eccentric person.
 The CEO's compass has north being in the negative imaginary direction, and south being the positive imaginary direction.
 This is the opposite to the drivers' north/south directions, while east/west remain the same.
 
-Implement the `crows_directions(start, end)` function, which takes the `start` and `end` intersections.
+Implement the `crow_directions(start, end)` function, which takes the `start` and `end` intersections.
 Return the complex number analogous to the driver's directions, but with north/south flipped.
 
 ```r
-driver_directions(0+0i, 7+5i)
+crow_directions(0+0i, 7+5i)
 #> 7-5i
 
-driver_directions(-2+3i, 4-5i)
+crow_directions(-2+3i, 4-5i)
 #> 6+8i
 ```
