@@ -3,10 +3,10 @@
 A [`list`][ref-list] in R is an ordered collection of items, differing from `vectors` in a few ways:
 
 - The items can be of different types (e.g. mixing `numeric` with `character`).
-- The items can be complex structures (e.g. vectors, other lists, etc).
+- The items can be complex structures (e.g. vectors, other lists, etc.).
 - There is some different syntax for accessing elements.
 
-Analogies to other languages are imprecise. 
+Analogies to other languages are imprecise.
 An R `list` is somewhat similar to a Python dictionary, but the `list` is ordered and can be accessed by numerical index.
 It is somewhat similar to a C `struct`, except that the `list` can easily be extended at runtime.
 
@@ -50,9 +50,9 @@ Very common if the tag names are known in advance.
 
 ```R
 point <- list(x = 5.3, y = 4.2, color = "blue")
-#> point$x
+point$x
 #> [1] 5.3
-#> point$color
+point$color
 #> [1] "blue"
 ```
 
@@ -86,7 +86,7 @@ point$color <- "red"
 point$trust <- TRUE
 
 # str() gives more compact output than the default display
-str(point) 
+str(point)
 #> List of 4
 #>  $ x    : num 5.3
 #>  $ y    : num 4.2
@@ -98,7 +98,7 @@ To delete, assign `NULL` to the unwanted element.
 
 ```R
 point$trust <- NULL
-str(point)  
+str(point)
 #> List of 3
 #>  $ x    : num 5.3
 #>  $ y    : num 4.2
@@ -107,7 +107,7 @@ str(point)
 
 ## Lists are "recursive vectors"
 
-The `vector` class is technically known as [`atomic vector`][book-atomic], because it can only hold atomic values: `numeric`, `character`, `boolean`, etc. 
+The `vector` class is technically known as [`atomic vector`][book-atomic], because it can only hold atomic values: `numeric`, `character`, `boolean`, etc.
 Because a `list` can contain other lists, it is also known as a `recursive vector`.
 
 As well as being a technical point of nomenclature, this is a reminder that lists can have arbitrarily complex structure.
@@ -115,7 +115,7 @@ It is the programmer's responsibility to understand what will be provided when a
 
 ## More on list indexing
 
-Some examples above used double brackets `[[ ]]` to access list emements. 
+Some examples above used double brackets `[[ ]]` to access list elements.
 This will try to flatten the element to its underlying type, which is useful if you just want a number or a string.
 
 Using single brackets `[ ]` will not do this flattening, and the returned value will be a sublist.
@@ -138,13 +138,13 @@ To convert to a vector there are two possibilities.
 2. Use the [`unlist()`][ref-unlist] function.
 
 ```R
-pt <-point["color"]
+pt <- point["color"]
 
 pt[[1]]
 #> [1] "red" # simple 1-element vector
 
 unlist(pt)
-#> color 
+#> color
 #> "red"  # 1-element vector with name
 ```
 

@@ -52,15 +52,15 @@ str(track)
 ## 3. Check for a drained battery
 
 Implement the `battery_drained()` function that indicates if the battery is drained.
-A battery is considered drained is there is not enough to move one more time.
+A battery is considered drained if there is not enough to move one more time.
 
 ```R
-speed <- 5;
-battery_drain <- 2;
-car <- new_car(speed, battery_drain);
-car <- drive(car);
+speed <- 5
+battery_drain <- 2
+car <- new_car(speed, battery_drain)
+car <- drive(car)
 
-battery_drained(car);
+battery_drained(car)
 #> [1] FALSE
 ```
 
@@ -84,9 +84,9 @@ str(car)
 
 ## 5. Check if a remote controlled car can finish a race
 
-To finish a race, a car has to be able to drive the race's length. This means not draining its battery before having crossed the finish line. 
+To finish a race, a car has to be able to drive the race's length. This means not draining its battery before having crossed the finish line.
 
-Implement the `can_finish` function that takes a `car` and a `track` as its parameter and returns `TRUE` if the car can finish the race; otherwise, return `FALSE`.
+Implement the `can_finish` function that takes a `car` and a `track` as its parameters and returns `TRUE` if the car can finish the race; otherwise, return `FALSE`.
 
 Assume that you are currently at the starting line of the race and start the engine of the car for the race. Take into account that the car's battery might not necessarily be fully charged when starting the race.
 
@@ -115,7 +115,7 @@ You have created several tracks of different lengths, and need to store whether 
 Implement the `store_track` function which takes a car, a track and a track name, and returns an updated car with an extra element.
 This element should have the `name` of the track, and the value should be a sub-list with the `track_length` and whether the car can `complete` it.
 
-The car supplied in the argument may not be fully charged, so be sure to reset the battery and the distance travelled before using it.
+The car supplied in the argument may not be fully charged, so be sure to reset the battery and the distance traveled before using it.
 
 ```R
 speed <- 5

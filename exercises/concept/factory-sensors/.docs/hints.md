@@ -7,7 +7,7 @@
 
 ## 2. Detect overheating
 
-- Tere are several conditions to test for.
+- There are several conditions to test for.
 - If you need to [stop][ref-stop], the error message is important.
 - A worrying but not-yet-fatal condition needs a [warning][ref-warning].
 - A good result needs a reassuring [message][ref-message].
@@ -15,7 +15,7 @@
 
 ## 3. Monitor the machine
 
-- Tasks 1 and 2 both bave boolean return values that you can test for.
+- Tasks 1 and 2 both have boolean return values that you can test for.
 
 [ref-message]: https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/message
 [ref-stop]: https://www.rdocumentation.org/packages/base/versions/3.3.0/topics/stop

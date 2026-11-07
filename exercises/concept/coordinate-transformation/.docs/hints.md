@@ -2,7 +2,8 @@
 
 ## 1. Scale the coordinates
 
-- The `point` is a vector, scaling is by a vector `s` (either explicitly a vector, or by recycling). - You already know about element-wise multiplication of vectors.
+- The `point` is a vector, scaling is by a vector `s` (either explicitly a vector, or by recycling).
+- You already know about element-wise multiplication of vectors.
 
 ## 2. Translate the coordinates
 
@@ -16,7 +17,7 @@
 - The `s` argument to `transform2d()` is optional, so remember to define a default.
 - `transform2d()` needs to return a function which takes a `point` as its sole argument.
 - If still confused, read the Introduction on environments and functions as return values, and look at the examples in the instructions.
-- This is the sort of topic that can confusing at first, but becomes very natural with a bit of practice.
+- This is the sort of topic that can be confusing at first, but becomes very natural with a bit of practice.
 
 ## 4. Transform a 3D point
 
