@@ -5,7 +5,7 @@ In general, R will try to use these to flag problems in-place, and continue with
 
 ## `stop()`
 
-Some problems are too fundamental to let the program continue. 
+Some problems are too fundamental to let the program continue.
 In this case, use `stop(msg)` to immediately halt the program with an `Error` and print `msg`.
 
 ```R
@@ -18,7 +18,7 @@ f()
 
 ## `stopifnot()`
 
-Similar to an `assert` in other languages, this is a convenient wrapper for `stop()`. 
+Similar to an `assert` in other languages, this is a convenient wrapper for `stop()`.
 The parameters are an arbitrary number of comma-separated boolean conditions, and the program will only continue if they are all `TRUE`.
 
 ```R
@@ -29,7 +29,7 @@ stopifnot(1 < 2, 1 == 2)
 
 ## `warning()` and `message()`
 
-These are reponses to non-fatal conditions, for example:
+These are responses to non-fatal conditions, for example:
 
 - To warn of a problem that the program could at least partly recover from.
 - To inform the user of progress in a long-running program.

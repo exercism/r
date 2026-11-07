@@ -7,7 +7,7 @@ Please aim to work directly with the vector points: there is no need to unpack t
 
 ## 1. Scale the coordinates
 
-Implement the `scale(point, s)` function that takes a point with arbitrary number of dimensions, and scales it by the pre-defined `s`.
+Implement the `scale(point, s)` function that takes a point with an arbitrary number of dimensions, and scales it by the pre-defined `s`.
 
 ```R
 # A 2D example
@@ -41,7 +41,7 @@ translate(point3d, 0.5, 0.6, 0.7)
 
 Some of your teammates are less experienced with R, so you decide to use a function closure to create reusable transformations for `{x, y}` coordinate pairs.
 
-Implement the `transform2d(dx, dy, s)` function that returns a function making use of a closure to perform a repeatable 2d translation and scaling of a point.
+Implement the `transform2d(dx, dy, s)` function that returns a function making use of a closure to perform a repeatable 2D translation and scaling of a point.
 
 The scaling argument `s` should be optional, with a default value of `1`.
 
@@ -65,7 +65,7 @@ tf2d(c(2, 3))
 tf2d <- transform2d(0.5, 0.6)
 
 tf2d(c(2, 3))
-#> 2.5 3.6
+#> [1] 2.5 3.6
 ```
 
 The order of operations is important: translate-then-scale gives the correct result, scale-then-translate does not.

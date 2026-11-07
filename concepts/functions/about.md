@@ -17,10 +17,10 @@ squareit_short <- function(x) x ^ 2
 Looking more closely at the definition of `squareit`, we can identify various parts:
 
 - The function takes a formal argument `x`.
-- There is a function body, usually in braces`{ }`.
+- There is a function body, usually in braces `{ }`.
 - Once the function object is created, it is assigned to a variable `squareit`.
 
-A function is a first class object in R, much like numbers and strings.
+A function is a first-class object in R, much like numbers and strings.
 Thus, `squareit <- function...` is an assignment which is syntactically just like `x <- 42`.
 
 ~~~~exercism/advanced
@@ -112,7 +112,7 @@ outer_func <- function(x) {
   inner_func <- function(y) {
     x * y
   }
-  
+
   inner_func(3)
 }
 
@@ -183,7 +183,7 @@ doubleit_short <- function(y) x * y
 
 This makes it easy to use the function later in the script, but such binding is not necessary.
 A short, use-once function can be useful in the immediate context.
-Without name-binding, it it called an *anonymous function*.
+Without name-binding, it is called an *anonymous function*.
 
 Use of anonymous functions is so common that (*since R v4.1.0*) there is a shorthand syntax to define them: replace the word `function` with a backslash `\`.
 
@@ -206,7 +206,7 @@ vals <- c(1, 3, 4)
 
 # f() returns a modified vector
 f(vals)
-#> [1] 42  3  4  
+#> [1] 42  3  4
 
 # the original vector is unchanged.
 vals

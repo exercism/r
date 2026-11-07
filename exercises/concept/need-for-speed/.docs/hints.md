@@ -19,7 +19,7 @@
 
 - Is the battery drained? If so, should the car be updated?
 - `battery_drain` is the charge percentage lost on each turn.
-- `speed` is the distance travelled each turn.
+- `speed` is the distance traveled each turn.
 - Return an updated car, as appropriate.
 
 ## 5. Check if a remote controlled car can finish a race

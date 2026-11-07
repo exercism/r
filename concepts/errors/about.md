@@ -1,11 +1,11 @@
 # About
 
 As explored in the [`Nothingness`][concept-nothingness] concept, R has various ways to represent data which is absent ([`NULL`][ref-null]), unknown ([`NA`][ref-na]) or mathematically invalid ([`NaN`][ref-finite], [`Inf`][ref-finite]).
-In general, R will try to use values these to flag problems in-place, and continue without raising an exception.
+In general, R will try to use these values to flag problems in-place, and continue without raising an exception.
 
 ## `stop()`
 
-Some problems are too fundamental to let the program continue. 
+Some problems are too fundamental to let the program continue.
 In this case, use [`stop(msg)`][ref-stop] to immediately halt the program with an `Error` and print `msg`.
 
 ```R
@@ -62,12 +62,12 @@ Error in log10(val) : non-numeric argument to mathematical function
 
 ## [`warning()`][ref-warning] and [`message()`][ref-message]
 
-These are reponses to non-fatal conditions, for example:
+These are responses to non-fatal conditions, for example:
 
 - To warn of a problem that the program could at least partly recover from.
 - To inform the user of progress in a long-running program.
 
-One difference between them is that warnings are cached and (by default) output when the function returned, but messages are output immediately.
+One difference between them is that warnings are cached and (by default) output when the function returns, but messages are output immediately.
 There are many ways to change the default behavior, beyond our scope here.
 
 ```R
