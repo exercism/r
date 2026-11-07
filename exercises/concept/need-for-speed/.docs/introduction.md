@@ -3,10 +3,10 @@
 A `list` in R is an ordered collection of items, differing from `vectors` in a few ways:
 
 - The items can be of different types (e.g. mixing `numeric` with `character`).
-- The items can be complex structures (e.g. vectors, other lists, etc).
+- The items can be complex structures (e.g. vectors, other lists, etc.).
 - There is some different syntax for accessing elements.
 
-Analogies to other languages are imprecise. 
+Analogies to other languages are imprecise.
 An R `list` is somewhat similar to a Python dictionary, but the `list` is ordered and can be accessed by numerical index.
 It is somewhat similar to a C `struct`, except that the `list` can easily be extended at runtime.
 
@@ -83,7 +83,7 @@ Simple: assigning to an element will modify if it exists or insert if it is new.
 
 ```R
 point$color <- "red"
-point[[trust]] <- TRUE
+point$trust <- TRUE
 str(point)
 #> List of 4
 #>  $ x    : num 5.3
