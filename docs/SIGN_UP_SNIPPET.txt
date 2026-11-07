@@ -1,0 +1,11 @@
+most_common_word <- function(text) {
+  counts <- list()
+  best <- ""
+  for (word in strsplit(tolower(text), " ")[[1]]) {
+    counts[[word]] <- if (is.null(counts[[word]])) 1 else counts[[word]] + 1
+    if (best == "" || counts[[word]] > counts[[best]]) {
+      best <- word
+    }
+  }
+  sprintf('"%s" appears %d times', best, counts[[best]])
+}
