@@ -316,7 +316,7 @@ An `interval` is a combination of a start and end time, created either with the 
 dt1 <- now()
 dt2 <- now() + hours(1)
 
-# interval() function)
+# interval() function
 ivl <- interval(dt1, dt2)
 ivl
 #> [1] 2026-04-24 16:24:54 MST--2026-04-24 17:25:27 MST
