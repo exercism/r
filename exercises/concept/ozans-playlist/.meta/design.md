@@ -11,7 +11,7 @@ The goal of this exercise is to introduce basic set operations in R.
 
 ## Out of scope
 
-- Use of the `hashtable` package (or similar), though this is mentioned in `set-operations/about.md` which unlocks on completing this exercise.
+- Use of the `r2r` package (or similar), though this is mentioned in `set-operations/about.md` which unlocks on completing this exercise.
 
 ## Concepts
 

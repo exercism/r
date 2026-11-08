@@ -8,31 +8,31 @@ To keep timezone issues as simple as possible, assume that everything uses UTC.
 
 ## 1. Parse all-number appointment date
 
-Implement the `schedule_appointment()` function to parse a textual representation of an appointment date into the corresponding `DateTime` format.
+Implement the `schedule_appointment()` function to parse a textual representation of an appointment date into the corresponding datetime value.
 
 Note that the input is in U.S.-style month/day/year order.
 
-```julia-repl
-julia> schedule_appointment("07/25/2023 13:45:00")
-2023-07-25T13:45:00
+```R
+schedule_appointment("07/25/2023 13:45:00")
+#> [1] "2023-07-25 13:45:00 UTC"
 ```
 
 ## 2. Check if an appointment has already passed
 
 Implement the `has_passed()` function that takes an appointment date and checks if the appointment was somewhere in the past:
 
-```julia-repl
-julia> has_passed(DateTime(1999, 12, 31, 9, 0, 0))
-true
+```R
+has_passed(make_datetime(1999, 12, 31, 9, 0, 0))
+#> [1] TRUE
 ```
 
 ## 3. Check if appointment is in the afternoon
 
 Implement the `is_afternoon_appointment()` function that takes an appointment date and checks if the appointment is in the afternoon (>= 12:00 and < 18:00):
 
-```julia-repl
-julia> is_afternoon_appointment(DateTime(2023, 3, 29, 15, 0, 0))
-true
+```R
+is_afternoon_appointment(make_datetime(2023, 3, 29, 15, 0, 0))
+#> [1] TRUE
 ```
 
 ## 4. Check the day of the week for an appointment

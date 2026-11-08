@@ -2,16 +2,16 @@
 
 _"Dates and times are something we teach to young children. How hard can it be?"_
 
-Many programmers have made that mistake, and the subsequent experience tends to have a bad effect on their health and happiness. 
+Many programmers have made that mistake, and the subsequent experience tends to have a bad effect on their health and happiness.
 
 Anyone doing non-trivial programming with dates and times should at least be prepared to understand and mitigate potential problems.
 
 This document will attempt to give an overview of how R handles dates and times, but consulting the full documentation will be necessary for further details.
 
 As a data science language, dates and times have a particular importance in R.
-Much of the data arrives in the form of time series: daily patient numbers during a disease outbreak, monthly employment figures reported by goverments, bird populations in a nesting colony, annual GDP for major economies, and endless more examples.
+Much of the data arrives in the form of time series: daily patient numbers during a disease outbreak, monthly employment figures reported by governments, bird populations in a nesting colony, annual GDP for major economies, and endless more examples.
 
-_Does this mean that R makes data and time handling simple?_
+_Does this mean that R makes date and time handling simple?_
 
 Sadly, no!
 
@@ -26,7 +26,7 @@ Resources to help you work with `lubridate` include:
 
 - A [reference page][ref-lubridate].
 - A [cheatsheet][cheat-lubridate] in PDF format.
-- a [chapter][book-dates-times] in R for Data Science.
+- A [chapter][book-dates-times] in R for Data Science.
 
 ## Dates and Datetimes
 
@@ -97,7 +97,7 @@ mdy("April 22nd 26")
 mdy("Wednesday, April 22nd 2026")
 #> [1] "2026-04-22"
 mdy_hm("Wednesday, April 22nd 2026, 4:14 pm")
-#> [1] "2026-04-22 16:14:00 UTC"  # defaults to your OS timezone
+#> [1] "2026-04-22 16:14:00 UTC"  # defaults to UTC
 ```
 
 ### Constructing from numerical values
@@ -146,7 +146,7 @@ now() |> format_ISO8601() # defaults to nearest second
 #> [1] "2026-04-23T09:07:38"
 ```
 
-Few non-progammers want to see ISO 8601 output, so handling culture-specific date/time formats is essential.
+Few non-programmers want to see ISO 8601 output, so handling culture-specific date/time formats is essential.
 
 Base R provides the [`format()`][ref-format] function, which uses format strings similar to the venerable `strftime()` functions included in many other languages.
 
@@ -169,9 +169,9 @@ Code | Result
 %B | Full month (January, February, etc.)
 %y | 2-digit year (e.g. 89)
 %Y | 4-digit year (e.g. 1989)
-%h | hours (24-hr clock)
-%m | minutes
-%s | seconds
+%H | hours (24-hr clock)
+%M | minutes
+%S | seconds
 %z | offset from UTC
 %Z | Time zone (character)
 
@@ -217,7 +217,7 @@ dt
 
 For `wday()` (day of week) and `month()`, the default is integer output but:
 
-- Setting `labels = TRUE` returns an abbreviated character string corresponding to the current locale.
+- Setting `label = TRUE` returns an abbreviated character string corresponding to the current locale.
 - Also setting `abbr = FALSE` returns the full name.
 
 ```R
@@ -268,7 +268,7 @@ Students familiar with other science-oriented languages may be aware of `datetim
 In contrast, R has no less than three ways to represent time spans, with different strengths and limitations.
 As always, choose the one best suited to your context.
 
-The various spans can easily be interconverted, with `as.period()`, `as_duration()` and `as.interval()`.
+The various spans can easily be interconverted, with `as.period()`, `as.duration()` and `as.interval()`.
 
 Span types can be interrogated with `is.period()`, etc.
 
@@ -316,20 +316,20 @@ An `interval` is a combination of a start and end time, created either with the 
 dt1 <- now()
 dt2 <- now() + hours(1)
 
-# interval(0 function)
+# interval() function)
 ivl <- interval(dt1, dt2)
 ivl
 #> [1] 2026-04-24 16:24:54 MST--2026-04-24 17:25:27 MST
 
 # infix operator
 iv2 <- dt1 %--% dt2
-iv2 == iv1
+iv2 == ivl
 #> [1] TRUE
 ```
 
 ## Timezones
 
-Dealing with timezones can be challanging.
+Dealing with timezones can be challenging.
 The quote below is from the Python documentation, but equally relevant to R:
 
 > "The rules for time adjustment across the world are more political than rational, change frequently, and there is no standard suitable for every application aside from UTC."
@@ -339,7 +339,7 @@ A few general points about timezones:
 - A `datetime` always includes a timezone (`tz`); a `date` is not timezone-aware.
 - Datetime constructors generally default to [UTC][wiki-UTC].
 - The [`now()`][ref-now] function is an exception: it gets your local time from the system clock, including `tz`.
-  Local `tz` is used  by default, but others can be specified such as `now("UTC")`.
+  Local `tz` is used by default, but others can be specified such as `now("UTC")`.
 
 ```R
 # timezone defaults to UTC
@@ -352,12 +352,12 @@ AZ <- ymd_hm("2026-04-25 10:32", tz = "America/Phoenix")
 AZ
 #> [1] "2026-04-25 10:32:00 MST"
 
-# same clocktime, different tz
+# same clock time, different tz
 local - AZ
 #> Time difference of -7 hours
 ```
 
-Timezone-related arithmetic with durations is more reliable then with periods.
+Timezone-related arithmetic with durations is more reliable than with periods.
 
 ## Conclusion
 
@@ -377,10 +377,9 @@ At the risk of repetition: _the documentation is your friend, so please use it_.
 [ref-set-get]: https://lubridate.tidyverse.org/reference/index.html#setting-getting-and-rounding
 [ref-interval]: https://lubridate.tidyverse.org/reference/interval.html
 [ref-now]: https://www.rdocumentation.org/packages/lubridate/versions/1.7.4/topics/now
-[ref-parse_dt]:  https://lubridate.tidyverse.org/reference/parse_date_time.html
+[ref-parse_dt]: https://lubridate.tidyverse.org/reference/parse_date_time.html
 [ref-ascharacter]: https://www.rdocumentation.org/packages/base/versions/3.3.0/topics/character
 [ref-iso8601]: https://lubridate.tidyverse.org/reference/format_ISO8601.html
 [ref-stamp]: https://lubridate.tidyverse.org/reference/stamp.html
 [wiki-UTC]: https://en.wikipedia.org/wiki/Coordinated_Universal_Time
 [ref-format]: https://www.rdocumentation.org/packages/base/versions/3.3.0/topics/format
-
