@@ -65,7 +65,7 @@ Note that the [`regex()`][ref-regex] function can still be important if you need
 
 ```R
 # default is case sensitive
-"A Mixed Assortment" |> 
+"A Mixed Assortment" |>
     str_replace_all(regex("[aeiou]", ignore_case = TRUE), "*")
 #> [1] "* M*x*d *ss*rtm*nt"
 ```
@@ -76,7 +76,7 @@ In normal R strings, `\` needs to be escaped by doubling, hence `"\\s"`.
 Backslashes can proliferate and become confusing, so it may help to use [raw strings][book-raw] in complex cases.
 
 By default, the syntax to define a raw string is `r"( )"`, but other delimiters are allowed.
-As parentheses `( )` and brackets `[ ]` are both commmon in regex syntax (for capture groups and option groups), braces `{ }` might be a good choice.
+As parentheses `( )` and brackets `[ ]` are both common in regex syntax (for capture groups and option groups), braces `{ }` might be a good choice.
 
 ```R
 input |> str_replace_all(r"{\s\w}", "__")
@@ -93,7 +93,7 @@ _Does a string contain a match?_
 [`str_detect()`][ref-str_detect], or [`str_starts()`][ref-str_starts], `str_ends()` to avoid using the `^` or `$` anchors.
 
 ```R
-# berries begining with b
+# berries beginning with b
 fruit |> str_detect("^b.*berry") |> head(15)
 #> [1] FALSE FALSE FALSE FALSE FALSE  TRUE  TRUE FALSE FALSE  TRUE  TRUE FALSE FALSE FALSE FALSE
 
@@ -153,7 +153,7 @@ fruit |> str_locate("a...e") |> head(10)
 
 ## Captures
 
-Commonly, we want to know _what_ matches. 
+Commonly, we want to know _what_ matches.
 This is achieved by including capture groups in parentheses within the regex.
 
 It is possible to refer back to captures within the same regex, using `\1`, `\2`, etc.
@@ -168,8 +168,8 @@ With similar syntax, captures can be used in replacement strings:
 
 ```R
 # double to triple
-fruit |> 
-  str_subset("(..)\\1") |> 
+fruit |>
+  str_subset("(..)\\1") |>
   str_replace("(..)\\1", "\\1\\1\\1")
 [1] "bananana"      "cococonut"     "cucucumber"    "jujujube"      "papapaya"      "salalal berry"
 ```
@@ -184,12 +184,12 @@ Using named groups can be an advantage, as they become column names in the resul
 ```R
 recipe <- "dissolve 25g sugar in 200ml water"
 recipe |> str_match("(\\d+g) .* (\\d+ml)")
-     [,1]                 [,2]  [,3]   
+     [,1]                 [,2]  [,3]
 [1,] "25g sugar in 200ml" "25g" "200ml"
 
 # use named capture groups
 recipe |> str_match("(?<wt>\\d+g) .* (?<vol>\\d+ml)")
-                          wt    vol    
+                          wt    vol
 [1,] "25g sugar in 200ml" "25g" "200ml"
 ```
 
@@ -207,8 +207,8 @@ When getting a single row `r` with `m[r,]` or a single column `c` with `m[, c]`,
 # get all of row 1, as a named vector
 > amt1 <- amounts[1,]
 > amt1
-                                       wt                  vol 
-"25g sugar in 200ml"                "25g"              "200ml" 
+                                       wt                  vol
+"25g sugar in 200ml"                "25g"              "200ml"
 
 # get a vector element
 amt1["wt"] |> unname()
@@ -219,7 +219,7 @@ Inevitably, [`str_match_all()`][ref-str_match] produces output with even more st
 
 - The result is a list, with one element per input string.
 - If there is only one input string, unlist the output with `[[1]]` indexing as described in the [Lists Concept][concept-lists].
-- Each element is a matrix, with columns as for `match()`.
+- Each element is a matrix, with columns as for `str_match()`.
 - Each row in the matrix is a successful capture.
 
 ```R
@@ -228,14 +228,14 @@ mix <- "Mix 200g of sugar, 180g of flour and 150g of butter"
 # raw output
 > str_match_all(mix, "(\\d+)g")
 [[1]]
-     [,1]   [,2] 
+     [,1]   [,2]
 [1,] "200g" "200"
 [2,] "180g" "180"
 [3,] "150g" "150"
 
 # we just want the first list element
 > str_match_all(mix, "(\\d+)g")[[1]]
-     [,1]   [,2] 
+     [,1]   [,2]
 [1,] "200g" "200"
 [2,] "180g" "180"
 [3,] "150g" "150"
@@ -253,11 +253,11 @@ Be ready to test for this, as described in the [Nothingness Concept][concept-not
 # failed match
 recipe |> str_match("(not here)")
      [,1] [,2]
-[1,] NA   NA  
+[1,] NA   NA
 ```
 
 ~~~~exercism/note
-[R for Data science][book-str_match] notes:
+[R for Data Science][book-str_match] notes:
 
 > `str_match()` returns a matrix, so it’s not particularly easy to work with.
 

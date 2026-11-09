@@ -11,14 +11,14 @@ To call the dataset, simply use the name `trees`.
 library(datasets) # loading is optional
 
 trees |> head(3)
-#>    A data.frame: 3 × 3 	
+#>    A data.frame: 3 × 3
 #>   Girth	Height	Volume
 #>	 <dbl>	 <dbl>	 <dbl>
-#> 1   8.3	    70	  10.3  
+#> 1   8.3	    70	  10.3
 #> 2   8.6	    65	  10.3
 #> 3   8.8	    63	  10.2
 ```
-Please note the three columns: `Girth`, `Height` and `Volume`
+Please note the three columns: `Girth`, `Height` and `Volume`.
 
 The dataset is initially in the form of a `data.frame`, but you may want to choose to work with it as a `tibble`.
 
@@ -33,7 +33,7 @@ Define a data.frame/tibble called `tree_data` that corrects the name of the `Gir
 
 ```R
 head(tree_data, 3)
-#>     A tibble: 3 × 3 
+#>     A tibble: 3 × 3
 #> Diameter	 Height	Volume
 #>    <dbl>	  <dbl>	 <dbl>
 #>      8.3	     70	  10.3
@@ -45,14 +45,14 @@ head(tree_data, 3)
 
 The girth (aka circumference) is still a useful measurement, and so is the weight of the timber.
 The girth is easily calculated by `πD`, where `D` is the diameter.
-The weight of all the timber can be calculate by `ρV`, where `ρ = 35` is the density of cherry wood and `V` is the volume of timber.
+The weight of all the timber can be calculated by `ρV`, where `ρ = 35` is the density of cherry wood and `V` is the volume of timber.
 
 Define the function `girth_n_weight(data, rnd_digits)` which takes dataframe and numeric arguments.
 The function should return a new dataframe with the two additional columns: `Girth` and `Weight` rounded to the appropriate number of digits given by `rnd_digits`.
 
 ```R
 girth_n_weight(tree_data, 1) |> head(3)
-#>           A tibble: 3 × 5 
+#>           A tibble: 3 × 5
 #> Diameter  Height	 Volume	 Girth	Weight
 #>    <dbl>	  <dbl>	  <dbl>	 <dbl>	 <dbl>
 #>      8.3	     70	   10.3	  26.1	 360.5
@@ -65,12 +65,12 @@ girth_n_weight(tree_data, 1) |> head(3)
 For each potential customer, the orchard keeps a special copy of the dataset to help with the sale.
 This dataset has the most relevant columns, `Weight` and `Height`, moved to the front and is sorted by `Weight`.
 
-Define the function `orchard_copy(data, important_cols)` which takes a dataframe as input.
+Define the function `orchard_copy(data)` which takes a dataframe as input.
 This should return a new dataframe with `Weight` and `Height` moved to the front and the rows sorted by `Weight`.
 
 ```R
-tree_data |> girth_n_weight() |> orchard_copy() |> head(3)
-#>            A tibble: 3 × 5 
+tree_data |> girth_n_weight(0) |> orchard_copy() |> head(3)
+#>            A tibble: 3 × 5
 #> Weight	Height	Diameter	Volume	Girth
 #>  <dbl>	 <dbl>	   <dbl>	 <dbl>	<dbl>
 #>    357	    63	       9	    10	   28
@@ -87,12 +87,12 @@ Define the `customer_copy(data, min_height, max_height, max_weight)` function.
 Return a customer copy of the dataframe with `Height`, `Weight`, `Diameter` and `Girth` columns with rows that are within the constraints.
 
 ```R
-tree_data |> 
-    girth_n_weight(1) |> 
+tree_data |>
+    girth_n_weight(1) |>
     orchard_copy() |>
-    customer_copy(65, 75, 1500) |> 
+    customer_copy(65, 75, 1500) |>
     head(3)
-#>        A tibble: 3 × 4 
+#>        A tibble: 3 × 4
 #> Height	Weight	Diameter	Girth
 #>  <dbl>	 <dbl>	   <dbl>	<dbl>
 #>     70	 360.5	     8.3	 26.1

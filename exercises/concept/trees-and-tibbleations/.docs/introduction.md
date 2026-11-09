@@ -2,11 +2,11 @@
 
 In other parts of the syllabus, we have seen various data types with different characteristics.
 
-- Atomic vectors are 1-dimensional and homogenous in type.
-- Lists are 1-dimensional and elements can be of heterogenous types.
+- Atomic vectors are 1-dimensional and homogeneous in type.
+- Lists are 1-dimensional and elements can be of heterogeneous types.
 - Matrices and arrays are multi-dimensional and homogeneous.
 
-This Concept will look at ways to store multi-dimensional, heterogenous data.
+This Concept will look at ways to store multi-dimensional, heterogeneous data.
 In practice, _most_ real-world data is like this, so we are now getting to the heart of how R is (mostly) used in practice.
 
 ## Dataframe variants
@@ -36,10 +36,10 @@ df
 #> 2         R    1993         TRUE
 #> 3    Python    1991         TRUE
 #> 4     Julia    2012         TRUE
- ```
+```
 
- We have a column of character strings, a column of numbers and a column of booleans.
- When scaled up, this is an intuitive way to represent many collections of real world data.
+We have a column of character strings, a column of numbers and a column of booleans.
+When scaled up, this is an intuitive way to represent many collections of real-world data.
 
 ### The `tibble`
 
@@ -61,7 +61,7 @@ The types are usually interchangeable: any function which accepts a `data.frame`
 Conversions between the types are easy, with `as_tibble(df)` and `as.data.frame(tbl)`.
 
 For new work, using tibbles will probably help you create more robust code.
-However, legacy code and legacy data is very plentiful in the R world, so the `data.frame` is likely to remain common for a long time.
+However, legacy code and legacy data are very plentiful in the R world, so the `data.frame` is likely to remain common for a long time.
 
 ```R
 # column vectors are same as for data.frame
@@ -70,11 +70,11 @@ tbl <- tibble(languages, created, has.syllabus)
 tbl
   # A tibble: 4 × 3
 #>   languages created has.syllabus
-#>   <chr>       <dbl> <lgl>       
-#> 1 Fortran      1957 FALSE       
-#> 2 R            1993 TRUE        
-#> 3 Python       1991 TRUE        
-#> 4 Julia        2012 TRUE      
+#>   <chr>       <dbl> <lgl>
+#> 1 Fortran      1957 FALSE
+#> 2 R            1993 TRUE
+#> 3 Python       1991 TRUE
+#> 4 Julia        2012 TRUE
 ```
 
 Note the default print format: the comment line with dimensions is printed automatically, and column types are also displayed.
@@ -106,11 +106,11 @@ Dataframes, including tibbles, can be treated as lists of column vectors, so lis
 tbl
 # A tibble: 4 × 3
 #>   languages created has.syllabus
-#>   <chr>       <dbl> <lgl>       
-#> 1 Fortran      1957 FALSE       
-#> 2 R            1993 TRUE        
-#> 3 Python       1991 TRUE        
-#> 4 Julia        2012 TRUE    
+#>   <chr>       <dbl> <lgl>
+#> 1 Fortran      1957 FALSE
+#> 2 R            1993 TRUE
+#> 3 Python       1991 TRUE
+#> 4 Julia        2012 TRUE
 
 tbl$created
 #> [1] 1957 1993 1991 2012
@@ -152,7 +152,7 @@ tbl |> select(1:created)
 #> 1 Fortran      1957
 #> 2 R            1993
 #> 3 Python       1991
-#> 4 Julia        2012      
+#> 4 Julia        2012
 
 # Use type of column
 tbl |> select(where(is.numeric))
@@ -165,24 +165,24 @@ tbl |> select(where(is.numeric))
 #> 4    2012
 ```
 
-Multiple criteria are allowed, using Boolean operators `&`, `|` and `!` (and, or not).
+Multiple criteria are allowed, using Boolean operators `&`, `|` and `!` (and, or, not).
 
 Such power seems quite silly with our toy dataframe of languages.
 Fortunately, the `starwars` tibble is included in `dplyr`, giving us something bigger to practice with.
 
 ```R
 # pick a subset of columns
-starwars |> 
-  select(name | ends_with("color")) |> 
+starwars |>
+  select(name | ends_with("color")) |>
   head(5)
   # A tibble: 5 × 4
 #>   name           hair_color skin_color  eye_color
-#>   <chr>          <chr>      <chr>       <chr>    
-#> 1 Luke Skywalker blond      fair        blue     
-#> 2 C-3PO          NA         gold        yellow   
-#> 3 R2-D2          NA         white, blue red      
-#> 4 Darth Vader    none       white       yellow   
-#> 5 Leia Organa    brown      light       brown    
+#>   <chr>          <chr>      <chr>       <chr>
+#> 1 Luke Skywalker blond      fair        blue
+#> 2 C-3PO          NA         gold        yellow
+#> 3 R2-D2          NA         white, blue red
+#> 4 Darth Vader    none       white       yellow
+#> 5 Leia Organa    brown      light       brown
 ```
 
 ### Row-wise operations
@@ -190,8 +190,8 @@ starwars |>
 Get rows matching some criteria with `filter()`, or exclude them with `filter_out()`.
 
 ```R
-starwars |> 
-  select(name:mass) |> 
+starwars |>
+  select(name:mass) |>
   filter(between(height, 150, 165) & !is.na(mass))
   # A tibble: 4 × 3
 #>   name               height  mass
@@ -207,18 +207,18 @@ Filter criteria can be arbitrarily complex, but always based on row _contents_.
 If row _numbers_ are known, we can use a variety of `slice()` functions.
 
 ```R
-starwars |> 
-  select(name | homeworld) |> 
+starwars |>
+  select(name | homeworld) |>
   slice(20:25)
   # A tibble: 6 × 2
 #>   name             homeworld
-#>   <chr>            <chr>    
-#> 1 Palpatine        Naboo    
-#> 2 Boba Fett        Kamino   
-#> 3 IG-88            NA       
+#>   <chr>            <chr>
+#> 1 Palpatine        Naboo
+#> 2 Boba Fett        Kamino
+#> 3 IG-88            NA
 #> 4 Bossk            Trandosha
-#> 5 Lando Calrissian Socorro  
-#> 6 Lobot            Bespin   
+#> 5 Lando Calrissian Socorro
+#> 6 Lobot            Bespin
 ```
 
 ## Modifying a tibble
@@ -239,16 +239,16 @@ sw <- starwars |> select(name:species) |> slice(1:4)
 sw
   # A tibble: 4 × 11
 #>   name           height  mass hair_color skin_color  eye_color birth_year sex   gender    homeworld species
-#>   <chr>           <int> <dbl> <chr>      <chr>       <chr>          <dbl> <chr> <chr>     <chr>     <chr>  
-#> 1 Luke Skywalker    172    77 blond      fair        blue            19   male  masculine Tatooine  Human  
-#> 2 C-3PO             167    75 NA         gold        yellow         112   none  masculine Tatooine  Droid  
-#> 3 R2-D2              96    32 NA         white, blue red             33   none  masculine Naboo     Droid  
-#> 4 Darth Vader       202   136 none       white       yellow          41.9 male  masculine Tatooine  Human  
+#>   <chr>           <int> <dbl> <chr>      <chr>       <chr>          <dbl> <chr> <chr>     <chr>     <chr>
+#> 1 Luke Skywalker    172    77 blond      fair        blue            19   male  masculine Tatooine  Human
+#> 2 C-3PO             167    75 NA         gold        yellow         112   none  masculine Tatooine  Droid
+#> 3 R2-D2              96    32 NA         white, blue red             33   none  masculine Naboo     Droid
+#> 4 Darth Vader       202   136 none       white       yellow          41.9 male  masculine Tatooine  Human
 
 sw |> relocate(c(species, homeworld), .after = name)
   # A tibble: 4 × 11
-#>   name           species homeworld height  mass hair_color skin_color  eye_color birth_year sex   gender   
-#>   <chr>          <chr>   <chr>      <int> <dbl> <chr>      <chr>       <chr>          <dbl> <chr> <chr>    
+#>   name           species homeworld height  mass hair_color skin_color  eye_color birth_year sex   gender
+#>   <chr>          <chr>   <chr>      <int> <dbl> <chr>      <chr>       <chr>          <dbl> <chr> <chr>
 #> 1 Luke Skywalker Human   Tatooine     172    77 blond      fair        blue            19   male  masculine
 #> 2 C-3PO          Droid   Tatooine     167    75 NA         gold        yellow         112   none  masculine
 #> 3 R2-D2          Droid   Naboo         96    32 NA         white, blue red             33   none  masculine
@@ -266,9 +266,9 @@ Clearly, `mutate()` is powerful, potentially confusing, and a reason to be very 
 There is no obvious reason to care about the Body Mass Index of Star Wars characters, but just in case:
 
 ```R
-starwars |> 
-  select(c(name, species, height, mass)) |> 
-  mutate(BMI = mass / (height / 100)^2) |> 
+starwars |>
+  select(c(name, species, height, mass)) |>
+  mutate(BMI = mass / (height / 100)^2) |>
   head(4)
   # A tibble: 4 × 5
 #>   name           species height  mass   BMI
@@ -287,18 +287,18 @@ One exception: `arrange()` sorts rows by the values in one or more columns.
 tbl
 #>       A tibble: 4 × 3
 #>   languages created has.syllabus
-#>   <chr>       <dbl> <lgl>       
-#> 1 Fortran      1957 FALSE       
-#> 2 R            1993 TRUE        
-#> 3 Python       1991 TRUE        
-#> 4 Julia        2012 TRUE  
+#>   <chr>       <dbl> <lgl>
+#> 1 Fortran      1957 FALSE
+#> 2 R            1993 TRUE
+#> 3 Python       1991 TRUE
+#> 4 Julia        2012 TRUE
 
 tbl |> arrange(languages)
 #>       A tibble: 4 × 3
 #>   languages created has.syllabus
-#>   <chr>       <dbl> <lgl>       
-#> 1 Fortran      1957 FALSE       
-#> 2 Julia        2012 TRUE        
-#> 3 Python       1991 TRUE        
-#> 4 R            1993 TRUE     
+#>   <chr>       <dbl> <lgl>
+#> 1 Fortran      1957 FALSE
+#> 2 Julia        2012 TRUE
+#> 3 Python       1991 TRUE
+#> 4 R            1993 TRUE
 ```

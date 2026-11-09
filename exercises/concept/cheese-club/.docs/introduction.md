@@ -31,8 +31,8 @@ The example below illustrates the syntax.
 ```R
 library(stringr)
 
-"Monday-25-February" |> 
-  str_split("-") |>     
+"Monday-25-February" |>
+  str_split("-") |>
   unlist() |>               # [1] "Monday"   "25"       "February"
   str_sub(1, 3) |>          # [1] "Mon" "25"  "Feb"
   str_to_upper() |>         # [1] "MON" "25"  "FEB"
@@ -55,7 +55,7 @@ In a trivial example:
 triple <- function(x) return(3 * x)
 triple(1:10)
  [1]  3  6  9 12 15 18 21 24 27 30
- ```
+```
 
 However, more complex functions may not accept vector input, for example if they contain loops or if-else blocks.
 
@@ -84,7 +84,7 @@ h <- function(size) {
 v <- c("small", "large", "medium")
 
 h(v) # bad use of an unvectorized function
-#> Error in switch(size, small = 6, medium = 8, large = 10) : 
+#> Error in switch(size, small = 6, medium = 8, large = 10) :
 #>   EXPR must be a length 1 vector
 
 lapply(v, h)  # output is a list
@@ -123,13 +123,13 @@ h(v)
 ### [`sapply()`][ref-lapply]
 
 "Simplified-apply" will do something similar to `lapply`, but also tries to simplify the return value: for example,
- a named vector instead of a list.
+a named vector instead of a list.
 Depending on context, use of [`unname()`][ref-unname] may be necessary:
 
 ```R
 sapply(v, h)
- small  large medium 
-     6     10      8 
+ small  large medium
+     6     10      8
 
 sapply(v, h) |> unname()
 #> [1]  6 10  8
@@ -166,8 +166,8 @@ Some questions to think about in picking a function:
 
 - What do you want to return? [`map()`][ref-map] always returns a list, but if you want a particular type of atomic vector use [`map_chr()`][ref-map_chr] for strings, [`map_int()`][ref-map_int] for integers, etc.
 - Do you need each positional index from the input? Preface the function names with `i`, such as [`imap()`][ref-imap].
-- Do you want to process multiple inputs in parallel? 
-  - Replace `map` with `map2` in the name, as in [`map2_dbl()`][ref-map2_dbl] for two inputs (e.g. values and weights, to calculate a weighted mean)
+- Do you want to process multiple inputs in parallel?
+  - Replace `map` with `map2` in the name, as in [`map2_dbl()`][ref-map2_dbl] for two inputs (e.g. values and weights, to calculate a weighted mean).
   - Replace with `pmap` for a list of parallel inputs, as in [`pmap_chr()`][ref-pmap_chr]. And yes, hardware-level parallelism is possible.
 - Do you want to process all elements of the input? If not, think about [`map_if()`][ref-map_if] to apply a predicate (boolean) filter, [`map_at()`][ref-map_at] to specify positional index criteria, [`head_while()`][ref-head_while] to process the input until an element fails a predicate.
 - Is the input data deeply nested? There are [functions][ref-plucks] for that situation.

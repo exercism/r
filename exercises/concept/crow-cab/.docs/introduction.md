@@ -3,7 +3,7 @@
 `Complex numbers` are not complicated.
 They just need a less alarming name.
 
-They are so useful, especially in engineering and science, that R includes complex numbers as standard 
+They are so useful, especially in engineering and science, that R includes complex numbers as standard
 atomic types alongside integer, double, logical, character and raw.
 
 ## Basics
@@ -119,7 +119,7 @@ Most mathematical functions will work with complex inputs.
 
 There are several functions, in addition to `Re()` and `Im()`, with particular relevance for complex numbers.
 
-- `Conj()` simply flips the sign of the imaginary part of a complex number (_from + to - or vice-versa_).
+- `Conj()` simply flips the sign of the imaginary part of a complex number (_from + to - or vice versa_).
   - Because of the way complex multiplication works, this is more useful than you might think.
 - `abs(<complex number>)` is guaranteed to return a real number with no imaginary part (its "magnitude"), and `Mod(<complex number>)` is a synonym.
 - `Arg(<complex number>)` returns the phase angle in radians.

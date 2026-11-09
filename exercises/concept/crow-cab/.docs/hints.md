@@ -12,7 +12,7 @@ Since complex numbers can be thought of as a pair of two numbers, this can also 
 ## 2. Get Driver Directions
 
 - This function requires a single mathematical operation.
-- The order of the operation matters (i.e. it is not symmetric)
+- The order of the operation matters (i.e. it is not symmetric).
 
 ## 3. Get Manhattan Distance
 
@@ -25,7 +25,7 @@ Since complex numbers can be thought of as a pair of two numbers, this can also 
 - This is the straight-line distance between the two intersections.
 - You can think of this as the hypotenuse of the path traced by a Manhattan distance with one turn.
 - This is also known as the [Euclidean distance][euclid-ref] or L2 norm.
-- Yor function `driver_directions` can be helpful.
+- Your function `driver_directions` can be helpful.
 - See the Introduction for another complex number function that can optionally be used to find the magnitude.
 
 ## 5. Get Crow Directions
