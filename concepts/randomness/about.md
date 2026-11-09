@@ -13,7 +13,7 @@ Generating truly random values with a computer is a [surprisingly difficult tech
 ***Important***: This Concept does *not* cover cryptographically secure random numbers, which are a much more difficult challenge.
 
 However, R was derived from a statistics package and is often used for simulations, so it offers a rich variety of ways to generate random values.
-The results are amply good enough for most applications in modelling, simulation and games.
+The results are amply good enough for most applications in modeling, simulation and games.
 
 ~~~~exercism/note
 Code examples in this concept produce random output, by definition.
@@ -57,7 +57,7 @@ sample(c(TRUE, FALSE), 5, replace = TRUE) # alternative coin flips
 ```
 
 Sampling fits well into data pipelines.
-For example, to generate random alphanumneric strings:
+For example, to generate random alphanumeric strings:
 
 ```R
 library(stringr)
@@ -139,7 +139,7 @@ You want to set up the factory robot to handle them, so you weigh a sample of 10
 This is extremely unlikely to mean that they all weigh exactly 4.731g.
 Perhaps you find that values range from 4.627 to 4.794g but cluster around 4.731g.
 
-This is the [`normal distribution`][wiki-normal-distribution] (or "Gaussian", after the mathematician Card Friedrich Gauss), for which probabilities peak at the mean and tail off symmetrically on both sides (hence "bell-shaped").
+This is the [`normal distribution`][wiki-normal-distribution] (or "Gaussian", after the mathematician Carl Friedrich Gauss), for which probabilities peak at the mean and tail off symmetrically on both sides (hence "bell-shaped").
 
 To simulate this in software, we need some way to specify the width of the curve (*typically, expensive bolts will cluster more tightly around the mean than cheap bolts!*).
 By convention, this is done with the [`standard deviation`][wiki-standard-deviation]: small values for a sharp, narrow curve, large for a low, broad curve.
@@ -203,7 +203,7 @@ These ratios are called ["binomial coefficients"][wiki-binom-coeff].
 They build up [Pascal's Triangle][wiki-pascal-triangle], and many Exercism tracks, including R, have a [practice exercise][practice-pascal] based on it.
 
 If instead we want the probability of a particular result, R provides the [`dbinom()`][ref-rbinom] function (which calculates [probability density][wiki-pdf]).
-There is almost 18% chance if getting 10 heads from 20 flips.
+There is an almost 18% chance of getting 10 heads from 20 flips.
 
 ```R
 # Probability of exactly 10 heads in 20 flips, fair coin
@@ -243,7 +243,7 @@ If we simulated millions of flips, using a fair coin for symmetry in the results
 
 ### Poisson distribution
 
-How many meteorites larger than 1m diameter strike the earth each year?
+How many meteorites larger than 1m diameter strike the Earth each year?
 
 Everywhere on Earth has some (low) level of natural background radioactivity.
 If you turn on a [Geiger counter][wiki-geiger], how many clicks per second will you hear from detecting particles of radiation?
@@ -259,7 +259,7 @@ The probabilities of getting 0, 1, 2... events in some interval form a [Poisson 
 
 The key parameter to a Poisson distribution is the [mean][ref-mean] (average) number of events in the chosen interval, usually represented by the Greek letter λ ('lambda').
 
-The rate of earth-impacting meteorites at least 1 meter diameter is described in the literature as "every few months".
+The rate of Earth-impacting meteorites at least 1 meter diameter is described in the literature as "every few months".
 
 As an example, take `lambda = 4` and see what the distribution looks like with [`rpois()`][ref-rpois]:
 
@@ -267,7 +267,7 @@ As an example, take `lambda = 4` and see what the distribution looks like with [
 hist(rpois(n = 10000, lambda = 4))
 ```
 
-Now the histogram is highly asymmetric, with a peak at 2 impacts and a long tail showing a non-zero count of 10 or more.
+Now the histogram is highly asymmetric, with a peak at 3 to 4 impacts and a long tail showing a non-zero count of 10 or more.
 
 ## Seeds
 

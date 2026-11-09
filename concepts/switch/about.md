@@ -42,7 +42,7 @@ The [`dplyr`][ref-dplyr] package can be brought into scope by adding either `lib
 
 The `dplyr` library provides two extra functions related to `switch`.
 
-#### The [`recode_values`][ref-recode_values] and [`replace_values`][ref-recode_values] functions
+### The [`recode_values`][ref-recode_values] and [`replace_values`][ref-recode_values] functions
 
 These two related functions allow a vectorized switch-like mapping of old values to new values.
 
@@ -64,7 +64,7 @@ recode_values(
   "a" ~ 1,
   "b" ~ 2,
   "c" ~ 3,
-  c("d", "e") ~ 4, # either "d' or "e" will match
+  c("d", "e") ~ 4, # either "d" or "e" will match
   NA ~ 0,          # matches missing values
   default = 100   # note the different syntax for the default
 )
@@ -80,7 +80,7 @@ Attempts to use it will now produce a warning message, advising use of `recode_v
 
 ### The [`case_when`][ref-case_when] function
 
-[`case_when`][ref-case_when] takes `case_match` syntax a stage further, by allowing any logical expression on the left of the `~`.
+[`case_when`][ref-case_when] takes `recode_values` syntax a stage further, by allowing any logical expression on the left of the `~`.
 
 The input vector (`x` in the example below) is not supplied as an argument, it just needs to be already defined.
 
@@ -105,7 +105,7 @@ library(stringr)
 
 tracks <- "R C Python C# Elixir C++ Odin" |> str_split_1(" ")
 tracks
-#> [1] "R"      "C"      "Python" "C#"     "Elixir" "C++"    "Odin"  
+#> [1] "R"      "C"      "Python" "C#"     "Elixir" "C++"    "Odin"
 
 case_when(
   str_starts(tracks, "C") ~ "C-like",
