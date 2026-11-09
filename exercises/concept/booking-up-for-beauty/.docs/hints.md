@@ -22,9 +22,9 @@
 - What day is the original appointment for?
 - How many days do you need to add to get to a Friday (not today, if the input is a Friday appointment)?
 - **Warning**: the old `ifelse()` function from Base R does not play nicely with datetimes.
-  If you need this sort of logic, the [`if_else()`][ref-if_else] from the dplyr library is a more reliable alternative (as described in the [`Switch`][concept-switch] Concept).
+  If you need this sort of logic, the [`if_else()`][ref-if_else] function from the dplyr library is a more reliable alternative (as described in the [`Conditionals`][concept-conditionals] Concept).
 
 [ref-parse]: https://lubridate.tidyverse.org/reference/ymd_hms.html
 [ref-now]: https://www.rdocumentation.org/packages/lubridate/versions/1.7.4/topics/now
 [ref-if_else]: https://dplyr.tidyverse.org/reference/if_else.html
-[concept-switch]: https://exercism.org/tracks/r/concepts/switch
+[concept-conditionals]: https://exercism.org/tracks/r/concepts/conditionals

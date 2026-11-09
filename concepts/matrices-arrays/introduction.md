@@ -7,7 +7,7 @@ When handling collections of homogeneous atomic data (e.g. all numeric or all ch
 - `array` for the general N-dimensional case. A `matrix` is just an `array` with N=2.
 
 ~~~~exercism/note
-**For Python programmers**: This section may look familiar. 
+**For Python programmers**: This section may look familiar.
 
 Any resemblance to NumPy is not coincidental (but R is slightly older, and has all this in the base language).
 ~~~~
@@ -19,7 +19,7 @@ A matrix is essentially just a vector, plus row and column counts to define the 
 There is a [`matrix()`][ref-matrix] function to create them:
 
 ```R
-# data already available 
+# data already available
 matrix(1:6, nrow=2, ncol=3)
 #>      [,1] [,2] [,3]
 #> [1,]    1    3    5
@@ -44,9 +44,9 @@ Some other functions create matrix output, for example [`str_split_fixed()`][ref
 library(stringr)
 
 str_split_fixed(c("split some words", "and some more"), " ", 3)
-#>      [,1]    [,2]   [,3]   
+#>      [,1]    [,2]   [,3]
 #> [1,] "split" "some" "words"
-#> [2,] "and"   "some" "more" 
+#> [2,] "and"   "some" "more"
 ```
 
 ## Matrix indexing
@@ -69,7 +69,7 @@ m[2, 3]    # row 2, col 3
 m[1:2, 3]  # rows 1:2, col 3
 #> [1] 5 6
 
- m[2, ]    # all of row 2
+m[2, ]     # all of row 2
 #> [1] 2 4 6
 ```
 
@@ -77,7 +77,7 @@ Note that a subset with a single row and/or column will be returned as a vector,
 
 ```R
 class(m)
-#> [1] "matrix" "array" 
+#> [1] "matrix" "array"
 class(m[2,])
 #> [1] "integer"
 ```
@@ -115,7 +115,7 @@ m
 
 ## Adding and deleting rows/columns
 
-With vectors, the [`c()`][ref-c] function was sufficient to insert and append data. 
+With vectors, the [`c()`][ref-c] function was sufficient to insert and append data.
 Matrices have more structure so need more care in specifying what is required.
 
 The [`rbind()`][ref-cbind] and [`cbind()`][ref-cbind] functions bind new row(s) or column(s) to the matrix.
@@ -143,7 +143,7 @@ m
 #> [2,]    2    4    6
 
 m[, -2]
-     #> [,1] [,2]
+#>      [,1] [,2]
 #> [1,]    1    5
 #> [2,]    2    6
 ```
@@ -182,7 +182,7 @@ Similarly, there are `rowMeans()` and `colMeans()` functions for calculating ave
 
 ## General functions operating on matrices
 
-In other concepts, we have seen that Tidyverse libraries can simplify operations on vectors and lists ([`purrr`][concept-functional-progamming]) or dataframes ([`dplyr`][concept-dataframes]).
+In other concepts, we have seen that Tidyverse libraries can simplify operations on vectors and lists ([`purrr`][concept-functional-programming]) or dataframes ([`dplyr`][concept-dataframes]).
 
 However, matrices and arrays are mostly out of scope for Tidyverse inputs (at least for now).
 
@@ -248,7 +248,7 @@ We believe that Julia (or Python in contexts where the `numpy.linalg` module is 
 
 ### Diagonals
 
-The main diagonal of a _square_ (`N x N)`) matrix `A` runs from top left (`A[1,1]`) to bottom right (`A[N,N]`).
+The main diagonal of a _square_ (`N x N`) matrix `A` runs from top left (`A[1,1]`) to bottom right (`A[N,N]`).
 
 The [`diag()`][ref-diag] function behaves differently, depending on the argument passed to it.
 
@@ -305,7 +305,7 @@ t(m)
 For a complex-valued matrix, the result is _not_ the complex conjugate.
 Use `Conj(t(A))` to get the conjugate transpose (adjoint) of matrix `A`.
 
-For higher-dimensional arrays, [`aperm()`][ref-aperm] will permutate dimensions.
+For higher-dimensional arrays, [`aperm()`][ref-aperm] will permute dimensions.
 
 For the inverse of a square matrix `A` we can use [`solve(A)`][ref-solve].
 Some of us find this syntax ... _unexpected_.
@@ -336,7 +336,7 @@ A %*% solve(A) |> round(digits = 10)
 ### Multiplication
 
 The usual arithmetic operators such as `+`, `-`, `*`, `^` operate on matrices element-wise.
-If there is a dimension mismatch, the usual rules of [reycling][concept-vector-filtering] apply.
+If there is a dimension mismatch, the usual rules of [recycling][concept-vector-filtering] apply.
 
 ```R
 m
@@ -356,11 +356,11 @@ m ^ 2
 #> [2,]    4   16   36
 ```
 
-Explaining the various other types of vector and matrix multiplication is beyond our scope, however in very brief summary:
+Explaining the various other types of vector and matrix multiplication is beyond our scope; however, in very brief summary:
 
-- `%*%` is the infix operator form of [`matmult()`][ref-matmult], which gives the [matrix product][wiki-matrix-product].
+- [`%*%`][ref-matmult] is the infix operator which gives the [matrix product][wiki-matrix-product].
 - `%o%` is the infix operator form of [`outer()`][ref-outer], which gives the [outer product][wiki-outer-product].
-- [`crossprod()`][ref-crossprod] gives the [cross product][wiki-cross-product].
+- [`crossprod()`][ref-crossprod] calculates `t(x) %*% y`, which is _not_ the vector [cross product][wiki-cross-product].
 
 [ref-matrix]: https://www.rdocumentation.org/packages/base/versions/3.3.0/topics/matrix
 [ref-str_split_fixed]: https://stringr.tidyverse.org/reference/str_split.html
@@ -379,7 +379,7 @@ Explaining the various other types of vector and matrix multiplication is beyond
 [ref-crossprod]: https://www.rdocumentation.org/packages/base/versions/3.3.0/topics/crossprod
 [ref-solve]: https://www.rdocumentation.org/packages/base/versions/3.3.0/topics/solve
 [web-econ407]: https://econ.pages.code.wm.edu/407/notes/docs/R_linalg.html
-[concept-functional-progamming]: https://exercism.org/tracks/r/concepts/functional-programming
+[concept-functional-programming]: https://exercism.org/tracks/r/concepts/functional-programming
 [concept-vector-filtering]: https://exercism.org/tracks/r/concepts/vector-filtering
 [concept-dataframes]: https://exercism.org/tracks/r/concepts/dataframes
 [3blue1brown]: https://www.3blue1brown.com/topics/linear-algebra
