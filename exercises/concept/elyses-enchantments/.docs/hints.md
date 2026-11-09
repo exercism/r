@@ -9,7 +9,7 @@
 
 - `vector`s are mutable, you can change their contents at any time by assigning a new value.
 
-## 3. Insert a card at the of top of the stack
+## 3. Insert a card at the top of the stack
 
 - You can `c`oncatenate to add a new value to the end of a `vector`.
 
@@ -19,7 +19,7 @@
 
 ## 5. Check the size of the stack
 
-- There is a function `length` in Base to retrieve the length of a collection.
+- There is a function `length` in Base R to retrieve the length of a collection.
 
 ## 6. Remove the top card from the stack
 

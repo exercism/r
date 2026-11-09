@@ -12,7 +12,7 @@ Having found the kidnappers, Annalyn considers which of the following actions sh
 
 - _Fast attack_: a fast attack can be made if the knight is sleeping, as it takes time for him to get his armor on, so he will be vulnerable.
 - _Spy_: the group can be spied upon if at least one of them is awake. Otherwise, spying is a waste of time.
-- _Signal prisoner_: the prisoner can be signalled using bird sounds if the prisoner is awake and the archer is sleeping, as archers are trained in bird signaling so they could intercept the message.
+- _Signal prisoner_: the prisoner can be signaled using bird sounds if the prisoner is awake and the archer is sleeping, as archers are trained in bird signaling so they could intercept the message.
 - _Free prisoner_: Annalyn can try sneaking into the camp to free the prisoner.
   This is a risky thing to do and can only succeed in one of two ways:
   - If Annalyn has her pet dog with her she can rescue the prisoner if the archer is asleep.
@@ -44,9 +44,9 @@ can_spy(knight_is_awake, archer_is_awake, prisoner_is_awake)
 # => TRUE
 ```
 
-## 3. Check if the prisoner can be signalled
+## 3. Check if the prisoner can be signaled
 
-Implement the `can_signal_prisoner()` method that takes two boolean values, indicating if the archer and the prisoner, respectively, are awake. The method returns `TRUE` if the prisoner can be signalled, based on the state of the two characters. Otherwise, returns `FALSE`:
+Implement the `can_signal_prisoner()` method that takes two boolean values, indicating if the archer and the prisoner, respectively, are awake. The method returns `TRUE` if the prisoner can be signaled, based on the state of the two characters. Otherwise, returns `FALSE`:
 
 ```R
 archer_is_awake <- FALSE

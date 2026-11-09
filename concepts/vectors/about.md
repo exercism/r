@@ -28,7 +28,7 @@ The `c()` function is very flexible, and inputs can include other vectors and ra
 If the vector starts small and grows a lot during runtime (for example, adding values in a loop), it can be significantly faster to pre-allocate a long vector which can be filled with real data later:
 
 ```R
-v <- vector(length = 100) 
+v <- vector(length = 100)
 ```
 
 This minimizes the need for copying of the object: a slow and memory-hungry operation for long vectors.
@@ -51,7 +51,7 @@ The [`seq()`][ref-seq] function offers finer control:
 seq(2, 11, by = 3) # c(2, 5, 8, 11)
 
 # specify number of values, evenly-spaced
-seq(2.5, 4, length.out = 5) # c(2.500, 2.875, 3.250, 3.625, 4.000) 
+seq(2.5, 4, length.out = 5) # c(2.500, 2.875, 3.250, 3.625, 4.000)
 ```
 
 The [`rep()`][ref-rep] function makes it easy to create repeating patterns:
@@ -75,8 +75,8 @@ letters  # LETTERS is the UPPERCASE equivalent
 #> [1] "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "n" "o" "p" "q" "r" "s" "t" "u" "v" "w" "x" "y" "z"
 
 month.name
-#> [1] "January"   "February"  "March"     "April"     "May"       "June"      "July"      "August"   
-#> [9] "September" "October"   "November"  "December" 
+#> [1] "January"   "February"  "March"     "April"     "May"       "June"      "July"      "August"
+#> [9] "September" "October"   "November"  "December"
 
 month.abb
 #> [1] "Jan" "Feb" "Mar" "Apr" "May" "Jun" "Jul" "Aug" "Sep" "Oct" "Nov" "Dec"
@@ -124,7 +124,7 @@ v[2:4]
 #> [1] 5 6 7
 ```
 
-But beware: ***R uses 1-based indexing by default***. 
+But beware: ***R uses 1-based indexing by default***.
 This is common for scientific languages (Fortran, Matlab, Julia) but differs from the zero-based indexing of C and its many successors.
 
 Ranges can be used, as in the example above but also in the highly flexible `c()` function:
@@ -151,8 +151,8 @@ Programmers familiar with other languages might guess that `v[-1]` is a way to a
 Use [`tail()`][ref-tail] for that.
 
 ```R
-v <- c(2, 4, 6) # defaults to last 6 entries
-tail(v)
+v <- c(2, 4, 6)
+tail(v) # defaults to last 6 entries
 #> [1] 2 4 6
 tail(v, n=1) # just the last entry
 #> [1] 6
@@ -184,7 +184,7 @@ any(v > 6)
 ```
 
 For more complicated logical expressions, it is important to use the `&` and `|` operators, which work on vectors.
-The double-character `&&` and `||` are only intended for comparing single values, as discussed in the [Booleans Concept][concept-boolean].
+The double-character `&&` and `||` are only intended for comparing single values, as discussed in the [Booleans Concept][concept-booleans].
 
 ```R
 v <- c(4, 7, 10)
@@ -207,7 +207,7 @@ The lines start with numbers in `[ ]` to indicate the index of the first element
 But why are single values preceded by `[1]`?
 
 ~~~~exercism/note
-*There are no truly scalar values in R!* 
+*There are no truly scalar values in R!*
 
 What appears to be a single number or letter is actually a vector of length 1.
 ~~~~

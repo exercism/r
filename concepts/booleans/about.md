@@ -44,8 +44,8 @@ Using `&` and `|` on single values works in the above example, because these are
 The behavior is subtly different to double-character operators, as only the latter are "short-circuiting": the value on the right is not evaluated if the left value is sufficient to determine the result.
 Thus `TRUE || anything` is always `TRUE` no matter what logical expression `anything` represents, so the `anything` is ignored.
 
-Using `&&` or `||` on vectors (length 2 or more) means that only the first element is used in the comparison, yielding a single `TRUE`/`FALSE` and probably a warning message.
-_This is probably not what you intended._
+Using `&&` or `||` on vectors (length 2 or more) is an error in R 4.3.0 and later.
+_If you want an element-wise comparison, use `&` or `|` instead._
 
 `!` is Boolean "not".
 It exchanges `TRUE` and `FALSE` values.
