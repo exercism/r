@@ -1,6 +1,6 @@
 # Instructions
 
-In this exercise you'll be processing log-lines.
+In this exercise you'll be processing log lines.
 
 Each log line is a string formatted as follows: `"[<LEVEL>]: <MESSAGE>"`.
 
@@ -23,7 +23,7 @@ message("[ERROR]: Invalid operation")
 #> "Invalid operation"
 ```
 
-Any leading or trailing white space should be removed:
+Any leading or trailing whitespace should be removed:
 
 ```R
 message("[WARNING]:  Disk almost full\r\n")

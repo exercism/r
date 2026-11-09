@@ -134,7 +134,7 @@ The separator is required (with no default), but can be an empty string.
 ```R
 strsplit("R, Python, Julia", ", ")
 [[1]]
-#> [1] "R"      "Python" "Julia" 
+#> [1] "R"      "Python" "Julia"
 
 strsplit("Exercism", "")
 [[1]]
@@ -142,7 +142,7 @@ strsplit("Exercism", "")
 ```
 
 Lists will be covered in a separate [Concept][concept-lists].
-If you have not already reached that part of the syllabus, just know for now that `unlist()` function will (in this case) convert a list to a vector.
+If you have not already reached that part of the syllabus, just know for now that the `unlist()` function will (in this case) convert a list to a vector.
 
 ```R
 unlist(strsplit("Exercism", ""))
@@ -185,8 +185,8 @@ Individual functions will be discussed later.
 ```R
 library(stringr)
 
-"Monday-25-February" |> 
-  str_split("-") |>     
+"Monday-25-February" |>
+  str_split("-") |>
   unlist() |>               # [1] "Monday"   "25"       "February"
   str_sub(1, 3) |>          # [1] "Mon" "25"  "Feb"
   str_to_upper() |>         # [1] "MON" "25"  "FEB"
@@ -196,21 +196,21 @@ library(stringr)
 
 #### Manage lengths
 
-`str_length` counts code points (similar to `nchars`).
+`str_length` counts code points (similar to `nchar`).
 
 Various other functions manipulate whitespace, including `str_trim()` and `str_squish()`.
 This is often a vital cleaning task at the start of any data science project.
 
 ```R
 # The first 3 kernels in JuPyteR notebooks:
-str_length(c("Julia", "Python", "R"))           #> [1] 1 6 5
+str_length(c("Julia", "Python", "R"))
 #> [1] 5 6 1
 str_pad(c("Julia", "Python", "R"), 8, "right")  # add spaces if necessary
 #> [1] "Julia   " "Python  " "R       "
 
 str_trim("Julia    Python    R    ")   # remove leading & trailing whitespace
 #> [1] "Julia    Python    R"
-str_squish("Julia   Python  R    ")  # trim, collapse multiple spaces 
+str_squish("Julia   Python  R    ")  # trim, collapse multiple spaces
 #> [1] "Julia Python R"
 ```
 
@@ -220,7 +220,7 @@ The function `str_sub(string, start, end)` will return the substring from `start
 
 There is a lot of flexibility.
 `start` and `end` default to the first and last character, respectively.
-They  can be vectors of indices.
+They can be vectors of indices.
 In welcome contrast to vector indexing, negative values count back from the string end, Python-style.
 
 ```R
@@ -252,7 +252,7 @@ c("R", "Julia", "Python") |> str_flatten(collapse = " - ")
 #> [1] "R - Julia - Python"
 ```
 
-`str_c` converts multiple character vectors to a single character vector, with recyling as necessary.
+`str_c` converts multiple character vectors to a single character vector, with recycling as necessary.
 
 ```R
 str_c(LETTERS[1:8], 1:8, sep = ":")
@@ -260,7 +260,7 @@ str_c(LETTERS[1:8], 1:8, sep = ":")
 ```
 
 `str_glue` brings simple string interpolation to R.
-Expressions inside braces `{ }` are interpreted and the text repesentation substituted.
+Expressions inside braces `{ }` are interpreted and the text representation substituted.
 
 ```R
 r <- 5.3
@@ -286,7 +286,7 @@ str_split_1(s, " ")
 #### Mutate strings
 
 Some languages (mainly European) distinguish between UPPERCASE and lowercase letters.
-There are a set of `stringr` functions to interconvert these, in locale-appropriate ways:
+There is a set of `stringr` functions to interconvert these, in locale-appropriate ways:
 
 - `str_to_lower()`
 - `str_to_upper()`
@@ -307,10 +307,10 @@ str_to_sentence("the cat sat on the mat")
 
 For substring replacement based on pattern matching, `str_replace()` changes the first occurrence of the pattern, `str_replace_all()` changes all occurrences.
 
-For substring replacement based on character indexing, there is an assignment form of str_sub().
+For substring replacement based on character indexing, there is an assignment form of `str_sub()`.
 
 ```R
- s <- "abcde"
+s <- "abcde"
 str_sub(s, 3, 4) <- "yz"
 s
 #> [1] "abyze"

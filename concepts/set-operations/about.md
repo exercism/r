@@ -1,4 +1,4 @@
-# Introduction
+# About
 
 R has no separate [Set][wiki-set] type, instead using a variety of functions to perform similar operations on vectors.
 
@@ -6,8 +6,10 @@ The [`%in%`][ref-match] operator tests for set membership.
 This infix operator is a synonym for the function `is.element()`.
 
 ```R
-2 %in% 1:10 # TRUE
-12 %in% 1:10 # FALSE
+2 %in% 1:10
+#> TRUE
+12 %in% 1:10
+#> FALSE
 ```
 
 Relevant functions include:
@@ -16,31 +18,31 @@ Relevant functions include:
 - [`union()`][ref-sets] to combine sets (mathematically, `A ∪ B`).
 - [`intersect()`][ref-sets] to find elements common to both sets (`A ∩ B`).
 - [`setdiff()`][ref-sets] to subtract one set from another (`A - B`).
-- [`setequal`][ref-sets] to test set equality, ignoring duplicates and ordering.
+- [`setequal()`][ref-sets] to test set equality, ignoring duplicates and ordering.
 
 ```R
-> set_1 <- c("a", "b", "c", "b", "a")
-> unique(set_1) # deduplicate
-[1] "a" "b" "c"
+set_1 <- c("a", "b", "c", "b", "a")
+unique(set_1) # deduplicate
+#> [1] "a" "b" "c"
 
-> set_2 <- c('a', "c", "d")
-> union(set_1, set_2) # values in either set
-[1] "a" "b" "c" "d"
+set_2 <- c("a", "c", "d")
+union(set_1, set_2) # values in either set
+#> [1] "a" "b" "c" "d"
 
-> intersect(set_1, set_2) # values in both sets
-[1] "a" "c"
+intersect(set_1, set_2) # values in both sets
+#> [1] "a" "c"
 
-> setdiff(set_1, set_2) # values in set_1 but not set_2
-[1] "b"
+setdiff(set_1, set_2) # values in set_1 but not set_2
+#> [1] "b"
 
-> setdiff(set_2, set_1) # values in set_2 but not set_1
-[1] "d"
+setdiff(set_2, set_1) # values in set_2 but not set_1
+#> [1] "d"
 
 setequal(set_1, c("c", "b", "a", "b")) # are elements the same after deduplication?
-[1] TRUE
+#> [1] TRUE
 ```
 
-In each case, the function returns a copy and leaves the arguments unchaged.
+In each case, the function returns a copy and leaves the arguments unchanged.
 
 ## Hash tables
 
@@ -49,7 +51,7 @@ These are useful for small problems but become slow for large sets.
 
 Various third-party packages implement [hash tables][wiki-hash], to improve performance in some contexts.
 
-For example, the [`hashtable`][ref-hashtable] package provides implementations of `hashmap` and `hashset`, which scale better.
+For example, the [`r2r`][ref-hashtable] package provides implementations of `hashmap` and `hashset`, which scale better.
 Like most external packages, this is not available within Exercism, but is worth investigating for real-world problems.
 
 [wiki-set]: https://en.wikipedia.org/wiki/Set_(abstract_data_type)

@@ -1,8 +1,8 @@
 # Instructions
 
-Ozan is putting together a playlist for an upcoming roadtrip. He doesn"t want to hear the same track more than once, but the playlist has gotten so long that he"s having trouble remembering which tracks have already been added.
+Ozan is putting together a playlist for an upcoming road trip. He doesn't want to hear the same track more than once, but the playlist has gotten so long that he's having trouble remembering which tracks have already been added.
 
-The API for Ozan"s music player only knows how to work with vectors. No explicit loops or if/else logic are possible. He needs your help!
+The API for Ozan's music player only knows how to work with vectors. No explicit loops or if/else logic are possible. He needs your help!
 
 ## 1. Remove duplicate tracks
 
@@ -51,7 +51,7 @@ Implement the `add_tracks` function, which takes a playlist and a vector of one 
 [1] "Selma - Bijelo Dugme"   "Atomic Dog - George Clinton"
 
 > add_tracks(playlist, c("The Chain - Fleetwood Mac", "Selma - Bijelo Dugme"))
-[1] "Selma - Bijelo Dugme"   "Atomic Dog - George Clinton" "The Chain - Fleetwood Mac"  
+[1] "Selma - Bijelo Dugme"   "Atomic Dog - George Clinton" "The Chain - Fleetwood Mac"
 
 ```
 
@@ -75,7 +75,7 @@ Implement the `delete_tracks` function, which takes a playlist and one or more t
 
 ## 5. Compare playlists
 
-Ozan meets a new friend and wonders how similar their tastes are. 
+Ozan meets a new friend and wonders how similar their tastes are.
 Implement the `find_common_tracks` function, which takes two playlists and returns a new playlist containing only tracks present in both.
 
 ```R
@@ -83,4 +83,4 @@ Implement the `find_common_tracks` function, which takes two playlists and retur
 > playlist_2 <- c("Andromeda - Weyes Blood", "Karma - Taylor Swift")
 > find_common_tracks(playlist_1, playlist_2)
 [1] "Karma - Taylor Swift"
-````
+```
