@@ -43,8 +43,8 @@ while (TRUE) {
 }
 
 x <- 12
-# no boolean clause 
-repeat { 
+# no boolean clause
+repeat {
   x <- x/3
   if (x <= 1) break
 }
@@ -78,7 +78,7 @@ If the current iteration fails to satisfy some condition, it is possible to skip
 ```R
 for (n in 1:10) {
     if (is_useless(n)) next
-     
+
     # we decided this iteration could be useful
     do_something_slow(n)
 }

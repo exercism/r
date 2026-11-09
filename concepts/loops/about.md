@@ -43,8 +43,8 @@ while (TRUE) {
 }
 
 x <- 12
-# no boolean clause 
-repeat { 
+# no boolean clause
+repeat {
   x <- x/3
   if (x <= 1) break
 }

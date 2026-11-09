@@ -10,12 +10,12 @@ She sees there is a good opportunity for automation and asks you, a freelance de
 ## 1. Monitor the humidity level of the room
 
 Your first mission is to write a piece of software to monitor the humidity level of the production room.
-There is already a sensor connected to the software of the company that returns periodically the humidity percentage of the room.
+There is already a sensor connected to the software of the company that periodically returns the humidity percentage of the room.
 
 You need to implement a function in the software that will throw an error if the humidity percentage is too high.
 The function should be called `check_humidity_level` and take the humidity percentage as a parameter.
 
-You should halt with an error (the message is not important) if the percentage exceeds 70%. 
+You should halt with an error (the message is not important) if the percentage exceeds 70%.
 Otherwise, issue a message that includes "humidity test passed", and return `TRUE` to confirm the measurement is good.
 
 ```R
@@ -84,7 +84,7 @@ monitor_the_machine(53, 200)
 
 # High humidity
 monitor_the_machine(90, 200)
-#> Error in check_humidity_level(pct_humidity) : 
+#> Error in check_humidity_level(pct_humidity) :
 #>   pct_humidity <= 70 is not TRUE
 
 # Faulty sensor
