@@ -1,3 +1,7 @@
+# These tests are auto-generated with test data from:
+# https://github.com/exercism/problem-specifications/tree/main/exercises/resistor-color-duo/canonical-data.json
+# File last updated on 2026-11-15
+
 source("./resistor-color-duo.R")
 library(testthat)
 
@@ -25,6 +29,6 @@ test_that("Ignore additional colors", {
   expect_equal(value(c("green", "brown", "orange")), 51)
 })
 
-test_that("Black and brown one digit", {
+test_that("Black and brown, one-digit", {
   expect_equal(value(c("black", "brown")), 1)
 })

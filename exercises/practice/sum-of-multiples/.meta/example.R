@@ -9,6 +9,7 @@ sum_of_multiples <- function(factors, limit) {
     
   }
   
+  factors <- factors[factors > 0]
   multiples <- unique(unlist(lapply(factors, FUN = get_mults)))
   
   return(sum(as.numeric(multiples)))

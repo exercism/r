@@ -1,0 +1,14 @@
+{
+  "cases": [
+    {
+      "description": "domain error for negative number",
+      "property": "squareRoot",
+      "input": {
+        "radicand": -65536
+      },
+      "expected": {
+        "error": "radicand must be positive"
+      }
+    }
+  ]
+}

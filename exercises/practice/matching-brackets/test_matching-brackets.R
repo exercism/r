@@ -1,84 +1,106 @@
+# These tests are auto-generated with test data from:
+# https://github.com/exercism/problem-specifications/tree/main/exercises/matching-brackets/canonical-data.json
+# File last updated on 2026-11-15
+
 source("./matching-brackets.R")
 library(testthat)
 
-test_that("Paired square brackets", {
-  expect_true(is_paired("[]"))
+test_that("paired square brackets", {
+  input <- "[]"
+  expect_true(is_paired(input))
 })
 
-test_that("Empty string", {
-  expect_true(is_paired(""))
+test_that("empty string", {
+  input <- ""
+  expect_true(is_paired(input))
 })
 
-test_that("Unpaired brackets", {
-  expect_false(is_paired("[["))
+test_that("unpaired brackets", {
+  input <- "[["
+  expect_false(is_paired(input))
 })
 
-test_that("Wrong ordered brackets", {
-  expect_false(is_paired("}{"))
+test_that("wrong ordered brackets", {
+  input <- "}{"
+  expect_false(is_paired(input))
 })
 
-test_that("Wrong closing bracket", {
-  expect_false(is_paired("{]"))
+test_that("wrong closing bracket", {
+  input <- "{]"
+  expect_false(is_paired(input))
 })
 
-test_that("Paired with whitespace", {
-  expect_true(is_paired("{ }"))
+test_that("paired with whitespace", {
+  input <- "{ }"
+  expect_true(is_paired(input))
 })
 
-test_that("Partially paired brackets", {
-  expect_false(is_paired("{[])"))
+test_that("partially paired brackets", {
+  input <- "{[])"
+  expect_false(is_paired(input))
 })
 
-test_that("Simple nested brackets", {
-  expect_true(is_paired("{[]}"))
+test_that("simple nested brackets", {
+  input <- "{[]}"
+  expect_true(is_paired(input))
 })
 
-test_that("Several paired brackets", {
-  expect_true(is_paired("{}[]"))
+test_that("several paired brackets", {
+  input <- "{}[]"
+  expect_true(is_paired(input))
 })
 
-test_that("Paired and nested brackets", {
-  expect_true(is_paired("([{}({}[])])"))
+test_that("paired and nested brackets", {
+  input <- "([{}({}[])])"
+  expect_true(is_paired(input))
 })
 
-test_that("Unopened closing brackets", {
-  expect_false(is_paired("{[)][]}"))
+test_that("unopened closing brackets", {
+  input <- "{[)][]}"
+  expect_false(is_paired(input))
 })
 
-test_that("Unpaired and nested brackets", {
-  expect_false(is_paired("([{])"))
+test_that("unpaired and nested brackets", {
+  input <- "([{])"
+  expect_false(is_paired(input))
 })
 
-test_that("Paired and wrong nested brackets", {
-  expect_false(is_paired("[({]})"))
+test_that("paired and wrong nested brackets", {
+  input <- "[({]})"
+  expect_false(is_paired(input))
 })
 
-test_that("Paired and wrong nested brackets but innermost are correct", {
-  expect_false(is_paired("[({}])"))
+test_that("paired and wrong nested brackets but innermost are correct", {
+  input <- "[({}])"
+  expect_false(is_paired(input))
 })
 
-test_that("Paired and incomplete brackets", {
-  expect_false(is_paired("{}["))
+test_that("paired and incomplete brackets", {
+  input <- "{}["
+  expect_false(is_paired(input))
 })
 
-test_that("Too many closing brackets", {
-  expect_false(is_paired("[]]"))
+test_that("too many closing brackets", {
+  input <- "[]]"
+  expect_false(is_paired(input))
 })
 
-test_that("Early unexpected brackets", {
-  expect_false(is_paired(")()"))
+test_that("early unexpected brackets", {
+  input <- ")()"
+  expect_false(is_paired(input))
 })
 
-test_that("Early mismatched brackets", {
-  expect_false(is_paired("{)()"))
+test_that("early mismatched brackets", {
+  input <- "{)()"
+  expect_false(is_paired(input))
 })
 
-test_that("Math expression", {
+test_that("math expression", {
   input <- "(((185 + 223.85) * 15) - 543)/2"
   expect_true(is_paired(input))
 })
 
-test_that("Complex latex expression", {
-  input <- "\\left(\\begin{array}{cc} \\frac{1}{3} & x\\ \\mathrm{e}^{x} &... x^2 \\end{array}\\right)" # nolint
+test_that("complex latex expression", {
+  input <- "\\left(\\begin{array}{cc} \\frac{1}{3} & x\\\\ \\mathrm{e}^{x} &... x^2 \\end{array}\\right)"
   expect_true(is_paired(input))
 })

@@ -1,0 +1,9 @@
+{%- import "generator_macros.j2" as macros with context -%}
+{{ macros.canonical_ref() }}
+
+{{ macros.header() }}
+{% for case in cases %}
+test_that("{{ case["description"] }}", {
+  expect_equal(value(c("{{ case["input"]["colors"] | join('", "') }}")), {{ case["expected"] }})
+})
+{% endfor -%}

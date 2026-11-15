@@ -1,0 +1,20 @@
+{%- import "generator_macros.j2" as macros with context -%}
+{{ macros.canonical_ref() }}
+
+{{ macros.header() }}
+{%- macro add_test(case) -%}
+test_that("{{ case["description"] }}", {
+{%- if case is error_case %}
+  expect_error(square_root({{ case["input"]["radicand"] }}))
+{%- else %}
+  expect_equal(square_root({{ case["input"]["radicand"] }}), {{ case["expected"] }})
+{%- endif %}
+})
+{%- endmacro %}
+{% for case in cases %}
+{{ add_test(case) }}
+{% endfor %}
+# Additional tests for this track
+{% for case in additional_cases %}
+{{ add_test(case) }}
+{% endfor -%}

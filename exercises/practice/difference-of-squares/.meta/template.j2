@@ -1,0 +1,19 @@
+{%- import "generator_macros.j2" as macros with context -%}
+{{ macros.canonical_ref() }}
+
+{{ macros.header() }}
+{%- macro add_test(case) -%}
+test_that("{{ case["description"] }}", {
+  input <- {{ case["input"]["number"] }}
+  expect_equal(difference_of_squares(input), {{ case["expected"] }})
+})
+{%- endmacro %}
+{% for group in cases %}
+{%- for case in group["cases"] if case["property"] == "differenceOfSquares" %}
+{{ add_test(case) }}
+{% endfor %}
+{%- endfor %}
+# Additional tests for this track
+{% for case in additional_cases %}
+{{ add_test(case) }}
+{% endfor -%}

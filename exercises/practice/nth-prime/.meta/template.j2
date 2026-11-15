@@ -1,0 +1,13 @@
+{%- import "generator_macros.j2" as macros with context -%}
+{{ macros.canonical_ref() }}
+
+{{ macros.header() }}
+{% for case in cases %}
+test_that("{{ case["description"] }}", {
+{%- if case is error_case %}
+  expect_error(prime({{ case["input"]["number"] }}))
+{%- else %}
+  expect_equal(prime({{ case["input"]["number"] }}), {{ case["expected"] }})
+{%- endif %}
+})
+{% endfor -%}

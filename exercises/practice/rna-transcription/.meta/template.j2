@@ -1,0 +1,21 @@
+{%- import "generator_macros.j2" as macros with context -%}
+{{ macros.canonical_ref() }}
+
+{{ macros.header() }}
+{%- macro add_test(case) -%}
+test_that("{{ case["description"] }}", {
+  dna <- "{{ case["input"]["dna"] }}"
+{%- if case is error_case %}
+  expect_error(to_rna(dna))
+{%- else %}
+  expect_equal(to_rna(dna), "{{ case["expected"] }}")
+{%- endif %}
+})
+{%- endmacro %}
+{% for case in cases %}
+{{ add_test(case) }}
+{% endfor %}
+# Additional tests for this track
+{% for case in additional_cases %}
+{{ add_test(case) }}
+{% endfor -%}

@@ -1,5 +1,15 @@
+# These tests are auto-generated with test data from:
+# https://github.com/exercism/problem-specifications/tree/main/exercises/rotational-cipher/canonical-data.json
+# File last updated on 2026-11-15
+
 source("./rotational-cipher.R")
 library(testthat)
+
+test_that("rotate a by 0, same output as input", {
+  text <- "a"
+  key <- 0
+  expect_equal(rotate(text, key), "a")
+})
 
 test_that("rotate a by 1", {
   text <- "a"
@@ -10,12 +20,6 @@ test_that("rotate a by 1", {
 test_that("rotate a by 26, same output as input", {
   text <- "a"
   key <- 26
-  expect_equal(rotate(text, key), "a")
-})
-
-test_that("rotate a by 0, same output as input", {
-  text <- "a"
-  key <- 0
   expect_equal(rotate(text, key), "a")
 })
 
@@ -58,8 +62,5 @@ test_that("rotate punctuation", {
 test_that("rotate all letters", {
   text <- "The quick brown fox jumps over the lazy dog."
   key <- 13
-  expect_equal(
-    rotate(text, key),
-    "Gur dhvpx oebja sbk whzcf bire gur ynml qbt."
-  )
+  expect_equal(rotate(text, key), "Gur dhvpx oebja sbk whzcf bire gur ynml qbt.")
 })
