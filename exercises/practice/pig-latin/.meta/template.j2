@@ -1,0 +1,13 @@
+{%- import "generator_macros.j2" as macros with context -%}
+{{ macros.canonical_ref() }}
+
+{{ macros.header() }}
+
+{% for group in cases %}
+# {{ group.description }}
+{%- for case in group.cases %}
+test_that("{{ casedescription }}", {
+  expect_equal(translate("{{ case.input.phrase }}"), "{{ case.expected }}")
+})
+{% endfor %}
+{%- endfor -%}

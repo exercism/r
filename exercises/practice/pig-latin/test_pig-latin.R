@@ -1,90 +1,105 @@
+# These tests are auto-generated with test data from:
+# https://github.com/exercism/problem-specifications/tree/main/exercises/pig-latin/canonical-data.json
+# File last updated on 2026-11-15
+
 source("./pig-latin.R")
 library(testthat)
 
-test_that("Word beginning with a", {
+
+# ay is added to words that start with vowels
+test_that("", {
   expect_equal(translate("apple"), "appleay")
 })
 
-test_that("Word beginning with e", {
+test_that("", {
   expect_equal(translate("ear"), "earay")
 })
 
-test_that("Word beginning with i", {
+test_that("", {
   expect_equal(translate("igloo"), "iglooay")
 })
 
-test_that("Word beginning with o", {
+test_that("", {
   expect_equal(translate("object"), "objectay")
 })
 
-test_that("Word beginning with u", {
+test_that("", {
   expect_equal(translate("under"), "underay")
 })
 
-test_that("Word beginning with a vowel and followed by a qu", {
+test_that("", {
   expect_equal(translate("equal"), "equalay")
 })
 
-test_that("Word beginning with p", {
+# first letter and ay are moved to the end of words that start with consonants
+test_that("", {
   expect_equal(translate("pig"), "igpay")
 })
 
-test_that("Word beginning with k", {
+test_that("", {
   expect_equal(translate("koala"), "oalakay")
 })
 
-test_that("Word beginning with x", {
+test_that("", {
   expect_equal(translate("xenon"), "enonxay")
 })
 
-test_that("Word beginning with q without a following u", {
+test_that("", {
   expect_equal(translate("qat"), "atqay")
 })
 
-test_that("Word beginning with ch", {
+test_that("", {
+  expect_equal(translate("liquid"), "iquidlay")
+})
+
+# some letter clusters are treated like a single consonant
+test_that("", {
   expect_equal(translate("chair"), "airchay")
 })
 
-test_that("Word beginning with qu", {
+test_that("", {
   expect_equal(translate("queen"), "eenquay")
 })
 
-test_that("Word beginning with qu and a preceding consonant", {
+test_that("", {
   expect_equal(translate("square"), "aresquay")
 })
 
-test_that("Word beginning with th", {
+test_that("", {
   expect_equal(translate("therapy"), "erapythay")
 })
 
-test_that("Word beginning with thr", {
+test_that("", {
   expect_equal(translate("thrush"), "ushthray")
 })
 
-test_that("Word beginning with sch", {
+test_that("", {
   expect_equal(translate("school"), "oolschay")
 })
 
-test_that("Word beginning with yt", {
+# some letter clusters are treated like a single vowel
+test_that("", {
   expect_equal(translate("yttria"), "yttriaay")
 })
 
-test_that("Word beginning with xr", {
+test_that("", {
   expect_equal(translate("xray"), "xrayay")
 })
 
-test_that("Y is treated like a consonant at the beginning of a word", {
+# position of y in a word determines if it is a consonant or a vowel
+test_that("", {
   expect_equal(translate("yellow"), "ellowyay")
 })
 
-test_that("Y is treated like a vowel at the end of a consonant cluster", {
+test_that("", {
   expect_equal(translate("rhythm"), "ythmrhay")
 })
 
-test_that("Y as second letter in two letter word", {
+test_that("", {
   expect_equal(translate("my"), "ymay")
 })
 
-test_that("A whole phrase", {
-  expect_equal(translate("quick fast run"), "ickquay astfay unray")
+# phrases are translated
+test_that("", {
+  expect_equal(translate("why do squids enjoy xrays"), "ywhay oday idssquay enjoyay xraysay")
 })
