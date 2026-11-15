@@ -1,0 +1,20 @@
+{%- import "generator_macros.j2" as macros with context -%}
+{{ macros.canonical_ref() }}
+
+{{ macros.header() }}
+{% for case in cases %}
+test_that("{{ case["description"] }}", {
+{%- if case["expected"] | length > 10 %}
+  expect_equal(
+    sieve({{ case["input"]["limit"] }}),
+    c(
+{%- for row in case["expected"] | batch(14) %}
+      {{ row | join(", ") }}{% if not loop.last %},{% endif %}
+{%- endfor %}
+    )
+  )
+{%- else %}
+  expect_equal(sieve({{ case["input"]["limit"] }}), c({{ case["expected"] | join(", ") }}))
+{%- endif %}
+})
+{% endfor -%}

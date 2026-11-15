@@ -6,7 +6,7 @@
 {% for group in cases %}
 # {{ group.description }}
 {%- for case in group.cases %}
-test_that("{{ casedescription }}", {
+test_that("{{ case.description }}", {
   expect_equal(translate("{{ case.input.phrase }}"), "{{ case.expected }}")
 })
 {% endfor %}

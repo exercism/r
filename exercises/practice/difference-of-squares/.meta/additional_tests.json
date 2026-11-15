@@ -1,0 +1,12 @@
+{
+  "cases": [
+    {
+      "description": "difference of squares 0",
+      "property": "differenceOfSquares",
+      "input": {
+        "number": 0
+      },
+      "expected": 0
+    }
+  ]
+}

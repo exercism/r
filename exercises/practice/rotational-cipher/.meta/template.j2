@@ -1,0 +1,11 @@
+{%- import "generator_macros.j2" as macros with context -%}
+{{ macros.canonical_ref() }}
+
+{{ macros.header() }}
+{% for case in cases %}
+test_that("{{ case["description"] }}", {
+  text <- "{{ case["input"]["text"] }}"
+  key <- {{ case["input"]["shiftKey"] }}
+  expect_equal(rotate(text, key), "{{ case["expected"] }}")
+})
+{% endfor -%}

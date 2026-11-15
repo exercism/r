@@ -1,0 +1,13 @@
+{%- import "generator_macros.j2" as macros with context -%}
+{{ macros.canonical_ref() }}
+
+{{ macros.header() }}
+{% for case in cases %}
+test_that("{{ case["description"] }}", {
+{%- if case["input"]["name"] is none %}
+  expect_equal(two_fer(), "{{ case["expected"] }}")
+{%- else %}
+  expect_equal(two_fer("{{ case["input"]["name"] }}"), "{{ case["expected"] }}")
+{%- endif %}
+})
+{% endfor -%}

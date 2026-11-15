@@ -1,3 +1,7 @@
+# These tests are auto-generated with test data from:
+# https://github.com/exercism/problem-specifications/tree/main/exercises/scrabble-score/canonical-data.json
+# File last updated on 2026-11-15
+
 source("./scrabble-score.R")
 library(testthat)
 

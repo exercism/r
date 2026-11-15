@@ -1,5 +1,14 @@
+# These tests are auto-generated with test data from:
+# https://github.com/exercism/problem-specifications/tree/main/exercises/rna-transcription/canonical-data.json
+# File last updated on 2026-11-15
+
 source("./rna-transcription.R")
 library(testthat)
+
+test_that("Empty RNA sequence", {
+  dna <- ""
+  expect_equal(to_rna(dna), "")
+})
 
 test_that("RNA complement of cytosine is guanine", {
   dna <- "C"
@@ -25,6 +34,8 @@ test_that("RNA complement", {
   dna <- "ACGTGGTCTTAA"
   expect_equal(to_rna(dna), "UGCACCAGAAUU")
 })
+
+# Additional tests for this track
 
 test_that("DNA correctly handles invalid input", {
   dna <- "U"

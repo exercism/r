@@ -1,0 +1,34 @@
+{
+  "cases": [
+    {
+      "description": "DNA correctly handles invalid input",
+      "property": "toRna",
+      "input": {
+        "dna": "U"
+      },
+      "expected": {
+        "error": "invalid dna strand"
+      }
+    },
+    {
+      "description": "DNA correctly handles completely invalid input",
+      "property": "toRna",
+      "input": {
+        "dna": "XXX"
+      },
+      "expected": {
+        "error": "invalid dna strand"
+      }
+    },
+    {
+      "description": "DNA correctly handles partially invalid input",
+      "property": "toRna",
+      "input": {
+        "dna": "ACGTXXXCTTAA"
+      },
+      "expected": {
+        "error": "invalid dna strand"
+      }
+    }
+  ]
+}
