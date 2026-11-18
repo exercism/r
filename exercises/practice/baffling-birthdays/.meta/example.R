@@ -1,5 +1,6 @@
 library(lubridate)
 library(dplyr)
+library(stringr)
 
 shared_birthday <- function(birthdates) {
   birthdays <- birthdates |> str_sub(6)

@@ -1,0 +1,115 @@
+#!/usr/bin/env bash
+
+# Synopsis:
+# Verify that each exercise's example/exemplar solution passes the tests.
+# You can either verify all exercises or a single exercise.
+
+# Example: verify all exercises
+# bin/verify-exercises
+
+# Example: verify single exercise
+# bin/verify-exercises -e two-fer
+
+set -eo pipefail
+
+die() { echo "$*" >&2; exit 1; }
+
+required_tool() {
+    command -v "${1}" >/dev/null 2>&1 ||
+        die "${1} is required but not installed. Please install it and make sure it's in your PATH."
+}
+
+required_tool jq
+
+copy_example_or_examplar_to_solution() {
+    jq -c '[.files.solution, .files.exemplar // .files.example] | transpose | map({src: .[1], dst: .[0]}) | .[]' .meta/config.json \
+    | while read -r src_and_dst; do
+        cp "$(jq -r '.src' <<< "${src_and_dst}")" "$(jq -r '.dst' <<< "${src_and_dst}")"
+    done
+}
+
+run_tests() {
+    # Runs from within the (temporary) exercise directory, where the example
+    # has already been copied over the stub. Each test file sources its
+    # solution with a relative path, so the working directory must stay here.
+    local test_files
+    test_files=$(jq -r '.files.test | join(" ")' .meta/config.json)
+
+    # shellcheck disable=SC2086
+    Rscript --vanilla -e '
+        suppressPackageStartupMessages(library(testthat))
+        failed <- FALSE
+        for (f in commandArgs(trailingOnly = TRUE)) {
+            res <- as.data.frame(test_file(f, reporter = "summary"))
+            if (any(res$failed > 0) || any(res$error)) failed <- TRUE
+        }
+        if (failed) quit(status = 1)
+    ' ${test_files}
+}
+
+verify_exercise() {
+    local dir
+    local slug
+    local tmp_dir
+
+    dir=$(realpath "${1}")
+    slug=$(basename "${dir}")
+    tmp_dir=$(mktemp -d -t "exercism-verify-${slug}-XXXXX")
+
+    echo "Verifying ${slug} exercise..."
+
+    (
+        trap 'rm -rf "$tmp_dir"' EXIT    # remove tempdir when subshell ends
+        cp -r "${dir}/." "${tmp_dir}"
+        cd "${tmp_dir}"
+
+        copy_example_or_examplar_to_solution
+        run_tests
+    )
+}
+
+verify_exercises() {
+    local exercise_slug="${1}"
+    local count=0
+    local failed=()
+
+    shopt -s nullglob
+    for exercise_dir in ./exercises/{concept,practice}/${exercise_slug}/; do
+        if [[ -d "${exercise_dir}" ]]; then
+            verify_exercise "${exercise_dir}" || failed+=("$(basename "${exercise_dir}")")
+            ((++count))
+        fi
+    done
+    ((count > 0)) || die 'no matching exercises found!'
+
+    if ((${#failed[@]} > 0)); then
+        echo "${#failed[@]} of ${count} exercise(s) failed: ${failed[*]}" >&2
+        exit 1
+    fi
+    echo "All ${count} exercise(s) passed."
+}
+
+usage() {
+    echo "Usage: bin/verify-exercises [-e|--exercise <slug>]"
+}
+
+exercise_slug='*'
+while (($# > 0)); do
+    case "${1}" in
+        -e|--exercise)
+            [[ -n "${2:-}" ]] || die "$(usage)"
+            exercise_slug="${2}"
+            shift 2
+            ;;
+        -h|--help)
+            usage
+            exit 0
+            ;;
+        *)
+            die "$(usage)"
+            ;;
+    esac
+done
+
+required_tool Rscript
+verify_exercises "${exercise_slug}"
