@@ -13,5 +13,6 @@
       ".meta/exemplar.R"
     ]
   },
+  "icon": "joiners-journey",
   "blurb": "Learn about dataframes by helping a cherry orchard wrangle some data"
 }

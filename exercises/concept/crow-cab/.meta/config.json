@@ -13,5 +13,6 @@
       ".meta/exemplar.R"
     ]
   },
+  "icon": "maps",
   "blurb": "Use complex numbers to encode intersection locations for a cab service"
 }
